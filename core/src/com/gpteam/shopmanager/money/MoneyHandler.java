@@ -5,4 +5,5 @@ package com.gpteam.shopmanager.money;
  */
 public class MoneyHandler {
     // nie kontrolowane przez gracza obiekty posiadajace pieniadze beda modyfikowane przez ta klase
+    // jak i pieniadze gracza !!!
 }
