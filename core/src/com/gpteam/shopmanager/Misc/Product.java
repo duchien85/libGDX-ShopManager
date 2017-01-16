@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager;
+package com.gpteam.shopmanager.Misc;
 
 import java.util.Calendar;
 import java.util.Date;
@@ -6,7 +6,7 @@ import java.util.Date;
 /*
  * Created by masmix on 23.12.2016.
  */
-class Product {
+public class Product {
     private String name;
     private String serialName;
     private String description;
@@ -15,7 +15,6 @@ class Product {
     private int quantity;
     private Date expirationDate;
 
-    public static int productSize;
 
     public Product(String name, String serialName, String description, float price, short quality, int quantity, Date expirationDate) {
         this.name = name;
@@ -25,7 +24,6 @@ class Product {
         this.quality = quality;
         this.quantity = quantity;
         this.expirationDate = expirationDate;
-        productSize++;
     }
 
     public String getName() {

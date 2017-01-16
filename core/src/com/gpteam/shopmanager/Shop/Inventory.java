@@ -1,4 +1,6 @@
-package com.gpteam.shopmanager;
+package com.gpteam.shopmanager.Shop;
+
+import com.gpteam.shopmanager.Misc.Product;
 
 import java.util.HashMap;
 

@@ -7,7 +7,7 @@ import java.util.Date;
  */
 public class GameDate {
     private Date currentDate;
-    private static Date dateStarted = new Date();
+    private Date dateStarted;
 
 
     public GameDate(Date currentDate) {
@@ -20,5 +20,13 @@ public class GameDate {
 
     public void setCurrentDate(Date currentDate) {
         this.currentDate = currentDate;
+    }
+
+    public void initDate() {
+        dateStarted = new Date();
+    }
+
+    public Date getDateStarted() {
+        return dateStarted;
     }
 }

@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager;
+package com.gpteam.shopmanager.Player;
 
 /*
  * Created by masmix on 24.12.2016.
