@@ -1,9 +1,13 @@
-package com.gpteam.shopmanager.Screens;
+package com.gpteam.shopmanager.screens;
 
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.gpteam.shopmanager.misc.Age;
+import com.gpteam.shopmanager.misc.Gender;
+import com.gpteam.shopmanager.misc.Name;
+import com.gpteam.shopmanager.player.Player;
 
 /*
  * Created by masmix on 23.12.2016.
@@ -20,6 +24,7 @@ public class GameScreen extends ScreenAdapter{
         this.batch = game.batch;
         this.camera = game.camera;
         this.balanceFont = game.balanceFont;
+
     }
 
     private void updateScene() {

@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.Money;
+package com.gpteam.shopmanager.money;
 
 /*
  * Created by masmix on 23.12.2016.
