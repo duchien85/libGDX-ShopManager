@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.Character;
+package com.gpteam.shopmanager.player.character;
 
 /*
  * Created by masmix on 16.01.2017.
