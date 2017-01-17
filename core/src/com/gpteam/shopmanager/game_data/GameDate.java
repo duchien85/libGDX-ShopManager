@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager;
+package com.gpteam.shopmanager.game_data;
 
 import java.util.Date;
 

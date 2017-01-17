@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager;
+package com.gpteam.shopmanager.npc;
 
 /*
  * Created by masmix on 24.12.2016.
