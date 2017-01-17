@@ -7,10 +7,10 @@ public class Name {
     private String name;
 
     public Name(String name) {
-        if (!(name.length() < 0) || !(name.length() > 25))
+        if (!(name.length() == 0) || !(name.length() > 25))
             this.name = name;
         else
-            throw new IllegalArgumentException("Name is either empty or too long.");
+            throw new IllegalArgumentException("name is either empty or too long.");
     }
 
     public String getName() {
