@@ -6,10 +6,6 @@ import com.badlogic.gdx.graphics.FPSLogger;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.gpteam.shopmanager.misc.Age;
-import com.gpteam.shopmanager.misc.Gender;
-import com.gpteam.shopmanager.misc.Name;
-import com.gpteam.shopmanager.player.Player;
 
 public class GameMain extends Game {
     public SpriteBatch batch;

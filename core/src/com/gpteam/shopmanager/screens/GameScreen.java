@@ -4,10 +4,6 @@ import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.Camera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.gpteam.shopmanager.misc.Age;
-import com.gpteam.shopmanager.misc.Gender;
-import com.gpteam.shopmanager.misc.Name;
-import com.gpteam.shopmanager.player.Player;
 
 /*
  * Created by masmix on 23.12.2016.

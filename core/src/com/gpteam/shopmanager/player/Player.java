@@ -1,9 +1,9 @@
 package com.gpteam.shopmanager.player;
 
-import com.gpteam.shopmanager.misc.Age;
-import com.gpteam.shopmanager.misc.Gender;
-import com.gpteam.shopmanager.misc.Name;
-import com.gpteam.shopmanager.misc.Stats;
+import com.gpteam.shopmanager.Character.Age;
+import com.gpteam.shopmanager.Character.Gender;
+import com.gpteam.shopmanager.Character.Name;
+import com.gpteam.shopmanager.Character.Stats;
 
 /*
  * Created by masmix on 16.01.2017.

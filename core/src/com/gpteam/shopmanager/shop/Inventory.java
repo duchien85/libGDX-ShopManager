@@ -1,6 +1,6 @@
 package com.gpteam.shopmanager.shop;
 
-import com.gpteam.shopmanager.misc.Product;
+import com.gpteam.shopmanager.product.Product;
 
 import java.util.HashMap;
 
@@ -24,7 +24,7 @@ public class Inventory {
         else
             throw new IndexOutOfBoundsException();
     }
-    
+
     public void add(Product product) {
         products.put(product.getSerialName(), product);
     }
