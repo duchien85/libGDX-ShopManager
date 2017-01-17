@@ -5,4 +5,5 @@ package com.gpteam.shopmanager.misc;
  */
 public enum Gender {
     MALE, FEMALE;
+    // TODO
 }
