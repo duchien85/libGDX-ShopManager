@@ -1,8 +1,6 @@
 package com.gpteam.shopmanager.player;
 
-import com.gpteam.shopmanager.player.character.Age;
 import com.gpteam.shopmanager.player.character.Gender;
-import com.gpteam.shopmanager.player.character.Name;
 import com.gpteam.shopmanager.player.character.Stats;
 
 /*
