@@ -5,11 +5,8 @@ package com.gpteam.shopmanager.player.character;
  */
 public class SkillHandler {
 
-    public SkillHandler() {
 
-    }
-
-    static class Skill {
+    static class SkillPL {
         String expertise = "Ekspertyza";
         String negotiation = "Negocjacja";
         String jobQuality = "Jakość pracy";
