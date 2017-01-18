@@ -5,6 +5,7 @@ package com.gpteam.shopmanager.Text;
  */
 final class PL {
     static void setLanguage() {
+        // klasa "Skill"
         Text.expertise = "Ekspertyza";
         Text.negotiation = "Negocjacja";
         Text.workQuality = "Jakość pracy";

@@ -9,13 +9,18 @@ public final class TextHandler {
     private HashMap<String, Object> languageMap;
 
     public TextHandler() {
+        languageMap = new HashMap<String, Object>();
         languageMap.put("EN", EN.class);
         languageMap.put("PL", PL.class);
     }
 
-    public void setRegion(String region) throws NoSuchMethodException {
-        if (languageMap.containsKey(region))
-            languageMap.get(region).getClass().getMethod("setLanguage");
+    public void setRegion(String region) {
+        if (region.equals("PL"))
+            PL.setLanguage();
+
+        else if (region.equals("EN"))
+            EN.setLanguage();
+
         else
             throw new IllegalArgumentException("There's no such region. Found: " + region + ".");
     }
