@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.product;
+package com.gpteam.shopmanager.Product;
 
 import java.util.Date;
 

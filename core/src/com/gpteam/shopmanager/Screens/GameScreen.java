@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.screens;
+package com.gpteam.shopmanager.Screens;
 
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.Camera;

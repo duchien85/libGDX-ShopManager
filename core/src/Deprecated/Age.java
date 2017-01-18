@@ -1,4 +1,4 @@
-package deprecated;
+package Deprecated;
 
 /*
  * Created by masmix on 16.01.2017.
