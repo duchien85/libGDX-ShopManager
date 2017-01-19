@@ -5,7 +5,7 @@ import com.gpteam.shopmanager.Text.Text;
 /*
  * Created by masmix on 18.01.2017.
  */
-final public class EN {
+public final class EN {
     public static void setLanguage() {
         // "Skill" class
         Text.expertise = "Expertise";

@@ -21,12 +21,12 @@ public class Character {
 
     public Character(String name, int age, Gender gender, Skill skill) {
         if (name.length() > maxNameLength || name.length() < minNameLength)
-            throw new IllegalArgumentException("name must contain at least 2 characters, up to 25. Found: " + name.length());
+            throw new IllegalArgumentException("Name must contain at least 2 characters, up to 25. Found: " + name.length());
         else
             this.name = name;
 
         if (age > maxAgeLength || age < minAgeLength)
-            throw new IllegalArgumentException("age must be at least 12 and no higher than 120. Found: " + age);
+            throw new IllegalArgumentException("Age must be at least 12 and no higher than 120. Found: " + age);
         else
             this.age = age;
 
@@ -36,12 +36,12 @@ public class Character {
 
     public Character(String name, int age, Gender gender) {
         if (name.length() > maxNameLength || name.length() < minNameLength)
-            throw new IllegalArgumentException("name must contain at least 2 characters, up to 25. Found: " + name.length());
+            throw new IllegalArgumentException("Name must contain at least 2 characters, up to 25. Found: " + name.length());
         else
             this.name = name;
 
         if (age > maxAgeLength || age < minAgeLength)
-            throw new IllegalArgumentException("age must be at least 12 and no higher than 120. Found: " + age);
+            throw new IllegalArgumentException("Age must be at least 12 and no higher than 120. Found: " + age);
         else
             this.age = age;
 
@@ -51,12 +51,12 @@ public class Character {
 
     public Character(String name, int age) {
         if (name.length() > maxNameLength || name.length() < minNameLength)
-            throw new IllegalArgumentException("name must contain at least 2 characters, up to 25. Found: " + name.length());
+            throw new IllegalArgumentException("Name must contain at least 2 characters, up to 25. Found: " + name.length());
         else
             this.name = name;
 
         if (age > maxAgeLength || age < minAgeLength)
-            throw new IllegalArgumentException("age must be at least 12 and no higher than 120. Found: " + age);
+            throw new IllegalArgumentException("Age must be at least 12 and no higher than 120. Found: " + age);
         else
             this.age = age;
 
@@ -69,7 +69,7 @@ public class Character {
 
     public Character(String name) {
         if (name.length() > maxNameLength || name.length() < minNameLength)
-            throw new IllegalArgumentException("name must contain at least 2 characters, up to 25. Found: " + name.length());
+            throw new IllegalArgumentException("Name must contain at least 2 characters, up to 25. Found: " + name.length());
         else
             this.name = name;
 
