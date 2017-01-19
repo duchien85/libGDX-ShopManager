@@ -7,19 +7,14 @@ import java.util.ArrayList;
  */
 public class NeedsHandler {
     private ArrayList<Needs> needs;
-    private Needs[] needs;
-    
-    public NeedsHandler(Needs[] needs) {
-    this.needs = needs;
-    }
 
     public NeedsHandler(ArrayList<Needs> needs) {
         this.needs = needs;
-        needs = new ArrayList<Needs>();
+        this.needs = new ArrayList<Needs>();
     }
-    
+
     public NeedsHandler() {
-    needs = new ArrayList<Needs>();
+        needs = new ArrayList<Needs>();
     }
 
     public void addNeed(Needs need) {
@@ -30,13 +25,27 @@ public class NeedsHandler {
     }
 
     public void addNeeds(Needs... need) {
-        for (int i = 0; i < need.length; i++)
-            needs.add(need[i]);
+        for (int i = 0; i < need.length; i++) {
+            if (needs.contains(need[i]))
+                continue;
+            else
+                needs.add(need[i]);
+        }
     }
 
     public void removeNeed(Needs need) {
         if (this.needs.contains(need.toString()))
             this.needs.remove(need);
     }
+
+    public void removeNeeds(Needs... need) {
+        for (int i = 0; i < need.length; i++) {
+            if (this.needs.contains(need[i].toString()))
+                this.needs.remove(need);
+        }
+    }
+
+    public ArrayList<Needs> getNeeds() {
+        return needs;
+    }
 }
-// TODO: zamienix  arraylist na array,z maksymalna wiellkoscia -ktora jest rowna ilosci potrseb
