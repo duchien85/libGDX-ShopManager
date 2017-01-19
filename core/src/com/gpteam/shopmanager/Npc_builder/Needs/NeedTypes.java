@@ -1,8 +1,10 @@
 package com.gpteam.shopmanager.Npc_builder.Needs;
 
+import java.util.AbstractCollection;
+
 /*
  * Created by masmix on 19.01.2017.
  */
-public enum NeedsTypes {
-    BASIC_NEEDS, EXCLUSIVE_NEEDS
+public enum NeedTypes {
+    BASIC_NEEDS, EXCLUSIVE_NEEDS;
 }

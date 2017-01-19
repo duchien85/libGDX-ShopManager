@@ -1,7 +1,7 @@
 package com.gpteam.shopmanager.Text;
 
 import java.util.HashMap;
-
+import com.gpteam.shopmanager.Text.Libraries.*;
 /*
  * Created by masmix on 18.01.2017.
  */
