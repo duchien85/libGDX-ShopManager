@@ -114,9 +114,9 @@ public class Character {
 
     public Skill getSkill() {
         return skill;
-    }
+    } // TODO
 
     public void setSkill(Skill skill) {
         this.skill = skill;
-    }
+    } // TODO
 }
