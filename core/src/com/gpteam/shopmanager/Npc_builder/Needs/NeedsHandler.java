@@ -29,8 +29,10 @@ public class NeedsHandler {
             needs.add(need[i]);
     }
 
-    public void removeNeed(Needs needs) {
-        if (this.needs.contains(needs.toString()))
-            this.needs.remove(needs);
+    public void removeNeed(Needs need) {
+        if (this.needs.contains(need.toString()))
+            this.needs.remove(need);
     }
 }
+
+
