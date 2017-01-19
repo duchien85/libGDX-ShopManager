@@ -5,4 +5,6 @@ package com.gpteam.shopmanager.Skill;
  */
 public class Skill {
     // TODO
+    // mortadelka
+    // jest bardzo smaczna
 }
