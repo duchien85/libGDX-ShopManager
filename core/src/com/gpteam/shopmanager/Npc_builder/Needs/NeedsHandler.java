@@ -12,6 +12,10 @@ public class NeedsHandler {
         this.needs = needs;
         needs = new ArrayList<Needs>();
     }
+    
+    public NeedsHandler() {
+    needs = new ArrayList<Needs>();
+    }
 
     public void addNeed(Needs need) {
         if (needs.contains(need))
