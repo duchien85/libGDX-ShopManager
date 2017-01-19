@@ -1,10 +1,12 @@
-package com.gpteam.shopmanager.Text;
+package com.gpteam.shopmanager.Text.Libraries;
+
+import com.gpteam.shopmanager.Text.Text;
 
 /*
  * Created by masmix on 18.01.2017.
  */
-final class PL {
-    static void setLanguage() {
+final public class PL {
+    public static void setLanguage() {
         // klasa "Skill"
         Text.expertise = "Ekspertyza";
         Text.negotiation = "Negocjacja";
