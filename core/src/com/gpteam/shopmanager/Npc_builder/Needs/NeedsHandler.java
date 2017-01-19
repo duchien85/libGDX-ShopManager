@@ -7,6 +7,11 @@ import java.util.ArrayList;
  */
 public class NeedsHandler {
     private ArrayList<Needs> needs;
+    private Needs[] needs;
+    
+    public NeedsHandler(Needs[] needs) {
+    this.needs = needs;
+    }
 
     public NeedsHandler(ArrayList<Needs> needs) {
         this.needs = needs;
@@ -34,5 +39,4 @@ public class NeedsHandler {
             this.needs.remove(need);
     }
 }
-
-
+// TODO: zamienix  arraylist na array,z maksymalna wiellkoscia -ktora jest rowna ilosci potrseb
