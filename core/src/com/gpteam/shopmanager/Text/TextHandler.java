@@ -10,18 +10,18 @@ public final class TextHandler {
 
     public TextHandler() {
         languageMap = new HashMap<String, Object>();
-        languageMap.put("EN", com.gpteam.shopmanager.Text.Libraries.EN.class);
-        languageMap.put("PL", com.gpteam.shopmanager.Text.Libraries.PL.class);
+        languageMap.put("EN", EN.class);
+        languageMap.put("PL", PL.class);
     }
 
-    public void setRegion(String region) {
-        if (region.equals("PL"))
-            com.gpteam.shopmanager.Text.Libraries.PL.setLanguage();
+    public void setLanguage(String language) {
+        if (language.equals("PL"))
+            PL.setLanguage();
 
-        else if (region.equals("EN"))
-            com.gpteam.shopmanager.Text.Libraries.EN.setLanguage();
+        else if (language.equals("EN"))
+            EN.setLanguage();
 
         else
-            throw new IllegalArgumentException("There's no such region. Found: " + region + ".");
+            throw new IllegalArgumentException("There's no such region. Found: " + language + ".");
     }
 }
