@@ -11,28 +11,12 @@ public class Character {
     private String name;
     private int age;
     private Gender gender;
-    private Skill skill;
 
-    private int maxNameLength = 25;
-    private int minNameLength = 2;
+    private static int maxNameLength = 25;
+    private static int minNameLength = 2;
 
-    private int maxAgeLength = 120;
-    private int minAgeLength = 16;
-
-    public Character(String name, int age, Gender gender, Skill skill) {
-        if (name.length() > maxNameLength || name.length() < minNameLength)
-            throw new IllegalArgumentException("Name must contain at least 2 characters, up to 25. Found: " + name.length());
-        else
-            this.name = name;
-
-        if (age > maxAgeLength || age < minAgeLength)
-            throw new IllegalArgumentException("Age must be at least 12 and no higher than 120. Found: " + age);
-        else
-            this.age = age;
-
-        this.gender = gender;
-        this.skill = skill;
-    }
+    private static int maxAgeLength = 120;
+    private static int minAgeLength = 16;
 
     public Character(String name, int age, Gender gender) {
         if (name.length() > maxNameLength || name.length() < minNameLength)
@@ -46,7 +30,6 @@ public class Character {
             this.age = age;
 
         this.gender = gender;
-        // radnom skill generating
     }
 
     public Character(String name, int age) {
@@ -64,7 +47,6 @@ public class Character {
             gender = Gender.FEMALE;
         else
             gender = Gender.MALE;
-        // radnom skill generating
     }
 
     public Character(String name) {
@@ -79,7 +61,6 @@ public class Character {
             gender = Gender.FEMALE;
         else
             gender = Gender.MALE;
-        // radnom skill generating
     }
 
     public String getName() {
@@ -111,12 +92,4 @@ public class Character {
     public void setGender(Gender gender) {
         this.gender = gender;
     }
-
-    public Skill getSkill() {
-        return skill;
-    } // TODO
-
-    public void setSkill(Skill skill) {
-        this.skill = skill;
-    } // TODO
 }
