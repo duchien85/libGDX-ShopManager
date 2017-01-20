@@ -64,9 +64,14 @@ public class NeedsHandler {
     }
 
     public void addNeeds(Needs... need) {
-        int availableArrayIndexes = needs.length - (getNextFreeIndex() - 1);
+        int availableIndexes;
 
-        for (int i = 0; i < availableArrayIndexes; i++) {
+        if (getNextFreeIndex() == -1)
+            return;
+        else
+            availableIndexes = needs.length - (getNextFreeIndex() - 1);
+
+        for (int i = 0; i < availableIndexes; i++) {
             if (Arrays.asList(needs).contains(need[i]))
                 continue;
             else
