@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.Npc_builder.Needs;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /*
@@ -18,6 +19,23 @@ public class NeedsHandler {
 
     public NeedsHandler() {
         initializeArray();
+    }
+
+    public String getNeed(String need) {
+        if (Arrays.asList(needs).contains(need))
+            return needs[getNeedIndex(need)];
+        else
+            return "No such need. Found: " + need + ".";
+    }
+
+    private int getNeedIndex(String need) {
+        for (int i = 0; i < maxNeedsLength; i++) {
+            if (needs[i].equals(need))
+                return i;
+            else
+                continue;
+        }
+        return -1;
     }
 
     private void initializeArray() {
