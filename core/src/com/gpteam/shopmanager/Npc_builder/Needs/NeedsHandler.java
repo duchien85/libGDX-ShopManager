@@ -1,6 +1,5 @@
 package com.gpteam.shopmanager.Npc_builder.Needs;
 
-import java.util.ArrayList;
 import java.util.Arrays;
 
 /*
@@ -14,11 +13,11 @@ public class NeedsHandler {
 
     public NeedsHandler(String... needs) {
         this.needs = needs;
-        initializeArray();
+        initializeNeedsContainer();
     }
 
     public NeedsHandler() {
-        initializeArray();
+        initializeNeedsContainer();
     }
 
     public String getNeed(String need) {
@@ -38,7 +37,7 @@ public class NeedsHandler {
         return -1;
     }
 
-    private void initializeArray() {
+    private void initializeNeedsContainer() {
         needs = new String[maxNeedsLength];
         for (int i = 0; i < maxNeedsLength; i++) {
             needs[i] = defaultValue;
