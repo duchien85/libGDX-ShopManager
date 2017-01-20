@@ -11,6 +11,7 @@ public class NeedsHandler {
     private int maxNeedsLength = 20;
     private String defaultValue = "0";
 
+
     public NeedsHandler(String... needs) {
         this.needs = needs;
         initializeNeedsContainer();
@@ -48,8 +49,9 @@ public class NeedsHandler {
         for (int i = 0; i < maxNeedsLength; i++) {
             if (needs[i] == defaultValue)
                 return i;
+
             else
-                break;
+                continue;
         }
         return -1;
     }
