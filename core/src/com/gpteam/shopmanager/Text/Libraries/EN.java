@@ -15,5 +15,9 @@ public final class EN {
 
         Text.workQuality = "Work Quality";
         Text.workQualityDescription = "";
+
+        Text.sex = "Sex";
+        Text.sexMale = "Man";
+        Text.sexFemale = "Woman";
     }
 }

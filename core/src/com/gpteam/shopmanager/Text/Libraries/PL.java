@@ -15,5 +15,9 @@ public final class PL {
 
         Text.workQuality = "Jakość pracy";
         Text.workQualityDescription = "";
+
+        Text.sex = "Płeć";
+        Text.sexMale = "Mężczyzna";
+        Text.sexFemale = "Kobieta";
     }
 }
