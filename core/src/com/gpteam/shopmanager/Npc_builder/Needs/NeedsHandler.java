@@ -1,51 +1,71 @@
 package com.gpteam.shopmanager.Npc_builder.Needs;
 
-import java.util.ArrayList;
+import java.util.Arrays;
 
 /*
  * Created by masmix on 19.01.2017.
  */
 public class NeedsHandler {
-    private ArrayList<Needs> needs;
+    private String[] needs;
 
-    public NeedsHandler(ArrayList<Needs> needs) {
+    private int maxNeedsLength = 20;
+    private String defaultValue = "0";
+
+    public NeedsHandler(String... needs) {
         this.needs = needs;
-        this.needs = new ArrayList<Needs>();
+        initializeArray();
     }
 
     public NeedsHandler() {
-        needs = new ArrayList<Needs>();
+        initializeArray();
+    }
+
+    private void initializeArray() {
+        needs = new String[maxNeedsLength];
+        for (int i = 0; i < maxNeedsLength; i++) {
+            needs[i] = defaultValue;
+        }
+    }
+
+    private int getNextFreeIndex() {
+        for (int i = 0; i < maxNeedsLength; i++) {
+            if (needs[i] == defaultValue)
+                return i;
+            else
+                break;
+        }
+        return -1;
     }
 
     public void addNeed(Needs need) {
-        if (needs.contains(need))
-            needs.add(need);
-        else
+        if (Arrays.asList(needs).contains(need))
             throw new IllegalArgumentException("Object already contains this need. Found: " + need);
+        else
+            needs[getNextFreeIndex()] = need.toString();
     }
 
     public void addNeeds(Needs... need) {
-        for (int i = 0; i < need.length; i++) {
-            if (needs.contains(need[i]))
+        int availableArrayIndexes = needs.length - (getNextFreeIndex() - 1);
+
+        for (int i = 0; i < availableArrayIndexes; i++) {
+            if (Arrays.asList(needs).contains(need[i]))
                 continue;
             else
-                needs.add(need[i]);
+                needs[getNextFreeIndex()] = need[i].toString();
         }
     }
 
     public void removeNeed(Needs need) {
-        if (this.needs.contains(need.toString()))
-            this.needs.remove(need);
+        if (Arrays.asList(needs).contains(need.toString()))
+            Arrays.asList(needs).remove(need);
     }
 
     public void removeNeeds(Needs... need) {
         for (int i = 0; i < need.length; i++) {
-            if (this.needs.contains(need[i].toString()))
-                this.needs.remove(need);
+            if (Arrays.asList(needs).contains(need[i]))
+                Arrays.asList(needs).remove(need[i]);
+            else
+                continue;
         }
-    }
-
-    public ArrayList<Needs> getNeeds() {
-        return needs;
     }
 }
