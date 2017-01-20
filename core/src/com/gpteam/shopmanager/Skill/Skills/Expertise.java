@@ -8,7 +8,7 @@ import com.gpteam.shopmanager.Variables.ExpertiseVariables;
  * Created by masmix on 20.01.2017.
  */
 public class Expertise {
-    private int skillLevel; // TODO zmienic na skillLevel
+    private int skillLevel;
 
     public void Expertise(int skillLevel) {
         if (skillLevel > SkillLogic.maxSkillLevel || skillLevel < SkillLogic.minSkillLevel)
