@@ -6,8 +6,10 @@ package com.gpteam.shopmanager.Text;
 public final class Text {
     public static String expertise;
     public static String expertiseDescription;
+
     public static String negotiation;
     public static String negotiationDescription;
+
     public static String workQuality;
     public static String workQualityDescription;
 }
