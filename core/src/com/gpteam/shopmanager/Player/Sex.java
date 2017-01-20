@@ -5,5 +5,4 @@ package com.gpteam.shopmanager.Player;
  */
 public enum Sex {
     MALE, FEMALE;
-    // TODO
 }
