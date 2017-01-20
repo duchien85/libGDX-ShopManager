@@ -34,13 +34,6 @@ public class GameMain extends Game {
         assetManager.load(("font.fnt"), BitmapFont.class);
         assetManager.finishLoading();
 
-        NeedsHandler needs = new NeedsHandler(Needs.DRINK, Needs.DRINK, Needs.ENTERTAINMENT);
-
-        needs.addNeed(Needs.ENTERTAINMENT);
-        needs.toString();
-        needs.removeNeed(Needs.ENTERTAINMENT);
-        needs.toString();
-
         batch = new SpriteBatch();
         balanceFont = assetManager.get("font.fnt", BitmapFont.class);
         setScreen(new GameScreen(this));
