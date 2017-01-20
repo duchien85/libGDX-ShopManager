@@ -7,6 +7,7 @@ import com.gpteam.shopmanager.Text.Text;
  */
 public final class PL {
     public static void setLanguage() {
+        System.out.println("Ustawiono PL");
         Text.expertise = "Ekspertyza";
         Text.expertiseDescription = "";
 
