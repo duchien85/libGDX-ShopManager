@@ -15,9 +15,24 @@ public final class TextHandler {
         languageMap.put("PL", PL.class);
     }
 
-    public void setLanguage(String language) throws NoSuchMethodException, InvocationTargetException, IllegalAccessException {
-        if (languageMap.containsKey(language))
-            languageMap.get(language).getDeclaredMethod("setLanguage").invoke(null);
+    public void setLanguage(String language) {
+        if (languageMap.containsKey(language)) {
+            try {
+                languageMap.get(language).getDeclaredMethod("setLanguage").invoke(null);
+            }
+            catch (NoSuchMethodException e) {
+                e.printStackTrace();
+                EN.setLanguage();
+            }
+            catch (InvocationTargetException e) {
+                e.printStackTrace();
+                EN.setLanguage();
+            }
+            catch (IllegalAccessException e) {
+                e.printStackTrace();
+                EN.setLanguage();
+            }
+        }
 
         else
             throw new IllegalArgumentException("There's no such region. Found: " + language + ".");
