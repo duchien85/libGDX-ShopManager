@@ -1,8 +1,8 @@
 package com.gpteam.shopmanager.Character;
 
 import com.badlogic.gdx.math.MathUtils;
-import com.gpteam.shopmanager.Player.Gender;
-import com.gpteam.shopmanager.Skill.Skill;
+import com.gpteam.shopmanager.Player.Sex;
+import com.gpteam.shopmanager.Text.Text;
 
 /*
  * Created by masmix on 17.01.2017.
@@ -10,7 +10,7 @@ import com.gpteam.shopmanager.Skill.Skill;
 public class Character {
     private String name;
     private int age;
-    private Gender gender;
+    private String sex;
 
     private static int maxNameLength = 25;
     private static int minNameLength = 2;
@@ -18,7 +18,7 @@ public class Character {
     private static int maxAgeLength = 120;
     private static int minAgeLength = 16;
 
-    public Character(String name, int age, Gender gender) {
+    public Character(String name, int age, Sex sex) {
         if (name.length() > maxNameLength || name.length() < minNameLength)
             throw new IllegalArgumentException("Name must contain at least 2 characters, up to 25. Found: " + name.length());
         else
@@ -29,7 +29,7 @@ public class Character {
         else
             this.age = age;
 
-        this.gender = gender;
+        this.setSex_(sex);
     }
 
     public Character(String name, int age) {
@@ -44,9 +44,9 @@ public class Character {
             this.age = age;
 
         if (MathUtils.random(0, 1) == 0)
-            gender = Gender.FEMALE;
+            sex = Text.sexMale;
         else
-            gender = Gender.MALE;
+            sex = Text.sexFemale;
     }
 
     public Character(String name) {
@@ -58,9 +58,9 @@ public class Character {
         age = MathUtils.random(minAgeLength, maxAgeLength);
 
         if (MathUtils.random(0, 1) == 0)
-            gender = Gender.FEMALE;
+            sex = Text.sexMale;
         else
-            gender = Gender.MALE;
+            sex = Text.sexFemale;
     }
 
     public String getName() {
@@ -85,11 +85,13 @@ public class Character {
             this.age = age;
     }
 
-    public Gender getGender() {
-        return gender;
-    }
+    private void setSex_(Sex sex) {
+        if (sex.equals(Sex.MALE))
+            this.sex = Text.sexMale;
 
-    public void setGender(Gender gender) {
-        this.gender = gender;
+        else if (sex.equals(Sex.FEMALE))
+            this.sex = Text.sexFemale;
+
+        else throw new IllegalArgumentException("Sex must be either male or female. Found: " + sex);
     }
 }
