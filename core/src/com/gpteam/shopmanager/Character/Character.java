@@ -10,7 +10,7 @@ import com.gpteam.shopmanager.Text.Text;
 public class Character {
     private String name;
     private int age;
-    private String sex;
+    private Sex sex;
 
     private static int maxNameLength = 25;
     private static int minNameLength = 2;
@@ -29,7 +29,7 @@ public class Character {
         else
             this.age = age;
 
-        this.setSex_(sex);
+        setSex_(sex);
     }
 
     public Character(String name, int age) {
@@ -44,9 +44,9 @@ public class Character {
             this.age = age;
 
         if (MathUtils.random(0, 1) == 0)
-            sex = Text.sexMale;
+            sex = Sex.MALE;
         else
-            sex = Text.sexFemale;
+            sex = Sex.FEMALE;
     }
 
     public Character(String name) {
@@ -58,9 +58,9 @@ public class Character {
         age = MathUtils.random(minAgeLength, maxAgeLength);
 
         if (MathUtils.random(0, 1) == 0)
-            sex = Text.sexMale;
+            sex = Sex.MALE;
         else
-            sex = Text.sexFemale;
+            sex = Sex.FEMALE;
     }
 
     public String getName() {
@@ -87,10 +87,10 @@ public class Character {
 
     private void setSex_(Sex sex) {
         if (sex.equals(Sex.MALE))
-            this.sex = Text.sexMale;
+            this.sex = sex;
 
         else if (sex.equals(Sex.FEMALE))
-            this.sex = Text.sexFemale;
+            this.sex = sex;
 
         else throw new IllegalArgumentException("Sex must be either male or female. Found: " + sex);
     }
