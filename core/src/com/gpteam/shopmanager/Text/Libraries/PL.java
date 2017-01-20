@@ -7,9 +7,13 @@ import com.gpteam.shopmanager.Text.Text;
  */
 public final class PL {
     public static void setLanguage() {
-        // klasa "Skill"
         Text.expertise = "Ekspertyza";
+        Text.expertiseDescription = "";
+
         Text.negotiation = "Negocjacja";
+        Text.negotiationDescription = "";
+
         Text.workQuality = "Jakość pracy";
+        Text.workQualityDescription = "";
     }
 }
