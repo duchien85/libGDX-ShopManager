@@ -6,13 +6,13 @@ import java.util.Arrays;
  * Created by masmix on 19.01.2017.
  */
 public class NeedsHandler {
-    private String[] needs;
+    private Needs[] needs;
 
     private int maxNeedsLength = 20;
-    private String defaultValue = "0";
+    private Needs defaultValue = Needs.NULL;
 
 
-    public NeedsHandler(String... needs) {
+    public NeedsHandler(Needs... needs) {
         this.needs = needs;
         initializeNeedsContainer();
     }
@@ -21,14 +21,14 @@ public class NeedsHandler {
         initializeNeedsContainer();
     }
 
-    public String getNeed(String need) {
+    public Needs getNeed(Needs need) {
         if (Arrays.asList(needs).contains(need))
             return needs[getNeedIndex(need)];
         else
             return "No such need. Found: " + need + ".";
     }
 
-    private int getNeedIndex(String need) {
+    private int getNeedIndex(Needs need) {
         for (int i = 0; i < maxNeedsLength; i++) {
             if (needs[i].equals(need))
                 return i;
@@ -39,7 +39,7 @@ public class NeedsHandler {
     }
 
     private void initializeNeedsContainer() {
-        needs = new String[maxNeedsLength];
+        needs = new Needs[maxNeedsLength];
         for (int i = 0; i < maxNeedsLength; i++) {
             needs[i] = defaultValue;
         }
@@ -60,36 +60,42 @@ public class NeedsHandler {
         if (Arrays.asList(needs).contains(need))
             throw new IllegalArgumentException("Object already contains this need. Found: " + need);
         else
-            needs[getNextFreeIndex()] = need.toString();
+            needs[getNextFreeIndex()] = need;
     }
 
     public void addNeeds(Needs... need) {
-        int availableIndexes;
+        int availableIndexes; // write new method for this?
+        int nextFreeIndex = getNextFreeIndex();
 
-        if (getNextFreeIndex() == -1)
-            return;
+        if (nextFreeIndex == -1)
+            return; // throw exception? which one?
         else
-            availableIndexes = needs.length - (getNextFreeIndex() - 1);
+            availableIndexes = needs.length - (nextFreeIndex - 1);
 
         for (int i = 0; i < availableIndexes; i++) {
             if (Arrays.asList(needs).contains(need[i]))
                 continue;
-            else
-                needs[getNextFreeIndex()] = need[i].toString();
+            else {
+                needs[nextFreeIndex++] = need[i];
+                //nextFreeIndex;
+                }
         }
     }
 
     public void removeNeed(Needs need) {
-        if (Arrays.asList(needs).contains(need.toString()))
+        if (Arrays.asList(needs).contains(need))
             Arrays.asList(needs).remove(need);
     }
 
-    public void removeNeeds(Needs... need) {
-        for (int i = 0; i < need.length; i++) {
-            if (Arrays.asList(needs).contains(need[i]))
-                Arrays.asList(needs).remove(need[i]);
+    public void removeNeeds(Needs... needs) {
+        for (int i = 0; i < needs.length; i++) {
+            if (Arrays.asList(this.needs).contains(needs[i]))
+                Arrays.asList(this.needs).remove(needs[i]);
             else
                 continue;
         }
     }
 }
+
+
+
