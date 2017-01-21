@@ -13,6 +13,7 @@ import com.gpteam.shopmanager.Screens.GameScreen;
 import com.gpteam.shopmanager.Text.TextHandler;
 
 import java.lang.reflect.InvocationTargetException;
+import java.util.ArrayList;
 
 public class GameMain extends Game {
     public SpriteBatch batch;
@@ -38,15 +39,8 @@ public class GameMain extends Game {
         assetManager.finishLoading();
 
         TextHandler textHandler = new TextHandler();
-        try {
-            textHandler.setLanguage("PL");
-        } catch (NoSuchMethodException e) {
-            e.printStackTrace();
-        } catch (IllegalAccessException e) {
-            e.printStackTrace();
-        } catch (InvocationTargetException e) {
-            e.printStackTrace();
-        }
+        textHandler.setLanguage("PL");
+
         batch = new SpriteBatch();
         balanceFont = assetManager.get("font.fnt", BitmapFont.class);
         setScreen(new GameScreen(this));
