@@ -20,22 +20,21 @@ public final class TextHandler {
     public void setLanguage(String language) {
         if (languageMap.containsKey(language)) {
             try {
-                languageMap.get(language).getDeclaredMethod("setLanguage").invoke(null);
+                languageMap.get(language).getDeclaredMethod("initialize").invoke(null);
             }
             catch (NoSuchMethodException e) {
+                EN.initialize();
                 e.printStackTrace();
-                EN.setLanguage();
             }
             catch (InvocationTargetException e) {
+                EN.initialize();
                 e.printStackTrace();
-                EN.setLanguage();
             }
             catch (IllegalAccessException e) {
+                EN.initialize();
                 e.printStackTrace();
-                EN.setLanguage();
             }
         }
-
         else
             throw new IllegalArgumentException("There's no such region. Found: " + language + ".");
     }
