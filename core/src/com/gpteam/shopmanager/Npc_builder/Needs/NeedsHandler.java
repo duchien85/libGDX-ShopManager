@@ -22,6 +22,23 @@ public class NeedsHandler {
         initializeNeedsContainer();
     }
 
+    public boolean contains(Needs need) {
+        if (Arrays.asList(needs).contains(need))
+            return true;
+        else
+            return false;
+
+    }
+
+    // TODO check if it's right
+    public boolean containsAll(Needs... need) {
+        if (Arrays.asList(needs).contains(need))
+            return true;
+        else
+            return false;
+
+    }
+
     public Needs getNeed(Needs need) {
         if (Arrays.asList(needs).contains(need))
             return needs[getNeedIndex(need)];
