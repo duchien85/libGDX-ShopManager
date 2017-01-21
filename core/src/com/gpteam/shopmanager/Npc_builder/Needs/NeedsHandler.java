@@ -27,12 +27,11 @@ public class NeedsHandler {
             return true;
         else
             return false;
-
     }
 
     // TODO check if it's right
-    public boolean containsAll(Needs... need) {
-        if (Arrays.asList(needs).contains(need))
+    public boolean containsAll(Needs... needs) {
+        if (Arrays.asList(this.needs).containsAll(Arrays.asList(needs)))
             return true;
         else
             return false;
