@@ -15,11 +15,11 @@ public class NeedsHandler {
 
     public NeedsHandler(Needs... needs) {
         this.needs = needs;
-        initializeNeedsContainer();
+        initializeNeedsArray();
     }
 
     public NeedsHandler() {
-        initializeNeedsContainer();
+        initializeNeedsArray();
     }
 
     public boolean contains(Needs need) {
@@ -53,13 +53,6 @@ public class NeedsHandler {
                 continue;
         }
         return -1;
-    }
-
-    private void initializeNeedsContainer() {
-        needs = new Needs[maxNeedsLength];
-        for (int i = 0; i < maxNeedsLength; i++) {
-            needs[i] = defaultValue;
-        }
     }
 
     private int getNextFreeIndex() {
@@ -105,11 +98,13 @@ public class NeedsHandler {
     }
 
     public void removeNeeds(Needs... needs) {
-        for (int i = 0; i < needs.length; i++) {
-            if (Arrays.asList(this.needs).contains(needs[i]))
-                Arrays.asList(this.needs).remove(needs[i]);
-            else
-                continue;
+        Arrays.asList(this.needs).removeAll(Arrays.asList(needs));
+    }
+
+    private void initializeNeedsArray() {
+        needs = new Needs[maxNeedsLength];
+        for (int i = 0; i < maxNeedsLength; i++) {
+            needs[i] = defaultValue;
         }
     }
 }
