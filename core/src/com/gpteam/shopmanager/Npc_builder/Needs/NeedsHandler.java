@@ -1,6 +1,7 @@
 package com.gpteam.shopmanager.Npc_builder.Needs;
 
 import java.util.Arrays;
+import java.util.NoSuchElementException;
 
 /*
  * Created by masmix on 19.01.2017.
@@ -25,7 +26,7 @@ public class NeedsHandler {
         if (Arrays.asList(needs).contains(need))
             return needs[getNeedIndex(need)];
         else
-            return "No such need. Found: " + need + ".";
+            throw new NoSuchElementException("No element found.");
     }
 
     private int getNeedIndex(Needs need) {
