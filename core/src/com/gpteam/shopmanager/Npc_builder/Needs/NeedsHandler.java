@@ -33,7 +33,6 @@ public class NeedsHandler {
             return true;
         else
             return false;
-
     }
 
     public Needs getNeed(Needs need) {
@@ -73,18 +72,17 @@ public class NeedsHandler {
 
     public void addNeeds(Needs... need) {
         int availableIndexes; // write new method for this?
-        int nextFreeIndex = getNextFreeIndex();
 
-        if (nextFreeIndex == -1)
+        if (getNextFreeIndex() == -1)
             return; // throw exception? which one?
         else
-            availableIndexes = needs.length - (nextFreeIndex - 1);
+            availableIndexes = needs.length - (getNextFreeIndex() - 1);
 
         for (int i = 0; i < availableIndexes; i++) {
             if (Arrays.asList(needs).contains(need[i]))
                 continue;
             else {
-                needs[nextFreeIndex++] = need[i];
+                needs[getNextFreeIndex()] = need[i];
                 //nextFreeIndex;
                 }
         }
