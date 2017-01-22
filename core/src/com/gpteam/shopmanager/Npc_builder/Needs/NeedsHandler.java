@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.Npc_builder.Needs;
 
+import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 
@@ -10,16 +11,13 @@ public class NeedsHandler {
     private Needs[] needs;
 
     private int maxNeedsLength = 20;
-    private Needs defaultValue = Needs.NULL;
 
 
     public NeedsHandler(Needs... needs) {
         this.needs = needs;
-        initializeNeedsArray();
     }
 
     public NeedsHandler() {
-        initializeNeedsArray();
     }
 
     public boolean contains(Needs need) {
@@ -57,7 +55,7 @@ public class NeedsHandler {
 
     private int getNextFreeIndex() {
         for (int i = 0; i < maxNeedsLength; i++) {
-            if (needs[i] == defaultValue)
+            if (needs[i] == null)
                 return i;
 
             else
@@ -99,13 +97,6 @@ public class NeedsHandler {
 
     public void removeNeeds(Needs... needs) {
         Arrays.asList(this.needs).removeAll(Arrays.asList(needs));
-    }
-
-    private void initializeNeedsArray() {
-        needs = new Needs[maxNeedsLength];
-        for (int i = 0; i < maxNeedsLength; i++) {
-            needs[i] = defaultValue;
-        }
     }
 }
 
