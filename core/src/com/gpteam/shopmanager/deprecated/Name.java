@@ -1,4 +1,4 @@
-package deprecated;
+package com.gpteam.shopmanager.deprecated;
 
 /*
  * Created by masmix on 16.01.2017.
