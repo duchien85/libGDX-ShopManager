@@ -6,7 +6,7 @@ package com.gpteam.shopmanager.Society;
 public class SocietyClassHandler {
     SocietyClass[] societyClass;
 
-    public SocietyClassHandler(SocietyClass[] societyClass) {
+    public SocietyClassHandler(SocietyClass... societyClass) {
         this.societyClass = societyClass;
     }
 }
