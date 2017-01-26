@@ -6,14 +6,8 @@ import com.badlogic.gdx.graphics.FPSLogger;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.gpteam.shopmanager.Npc_builder.Needs.NeedTypes;
-import com.gpteam.shopmanager.Npc_builder.Needs.Needs;
-import com.gpteam.shopmanager.Npc_builder.Needs.NeedsHandler;
 import com.gpteam.shopmanager.Screens.GameScreen;
 import com.gpteam.shopmanager.Text.TextHandler;
-
-import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
 
 public class GameMain extends Game {
     public SpriteBatch batch;
