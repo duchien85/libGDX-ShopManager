@@ -5,12 +5,12 @@ import com.gpteam.shopmanager.NPC.NPC;
 /*
  * Created by masmix on 19.01.2017.
  */
-class NPCBuilder {
+public class NPCBuilder {
 
     public NPCBuilder() {
     }
 
-    public NPC newNPC() {
+    public NPC newNPC(int amount) {
         return new NPC();
     }
 
