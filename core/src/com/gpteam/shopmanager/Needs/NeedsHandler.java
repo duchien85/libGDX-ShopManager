@@ -1,6 +1,5 @@
-package com.gpteam.shopmanager.Npc_builder.Needs;
+package com.gpteam.shopmanager.Needs;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 

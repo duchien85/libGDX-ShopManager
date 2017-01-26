@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.Npc_builder.Needs;
+package com.gpteam.shopmanager.Needs;
 
 import java.util.AbstractCollection;
 
