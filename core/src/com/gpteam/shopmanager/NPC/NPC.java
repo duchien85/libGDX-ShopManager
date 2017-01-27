@@ -1,7 +1,7 @@
 package com.gpteam.shopmanager.NPC;
 
 import com.gpteam.shopmanager.Money.MoneyHandler;
-import com.gpteam.shopmanager.Npc_builder.Needs.NeedsHandler;
+import com.gpteam.shopmanager.Needs.NeedsHandler;
 import com.gpteam.shopmanager.Society.SocietyClassHandler;
 
 /*
@@ -17,4 +17,6 @@ public class NPC {
         moneyHandler = new MoneyHandler();
         societyClassHandler = new SocietyClassHandler();
     }
+
+
 }
