@@ -17,11 +17,8 @@ public class NPCHandler {
         this.npcAmount = npcAmount;
     }
 
-    public NPC[] generateRandomNPC() {
-        for (int i = 0; i < npcAmount; i++) {
-            npcs[i] = npcBuilder.newNPC(npcAmount);
-        }
-        return npcs;
-    }
+//    public NPC[] generateRandomNPC() {
+//        // TODO figure out how to handle generating and storing npcs
+//    }
 
 }
