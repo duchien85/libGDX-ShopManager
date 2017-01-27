@@ -10,11 +10,26 @@ public class NPCBuilder {
     public NPCBuilder() {
     }
 
-    public NPC newNPC(int amount) {
+    public NPC newNPC() {
         return new NPC();
     }
 
     public NPC newNPC(boolean allRandom) {
+        if (allRandom)
+            return new NPC();
+        else
+            return new NPC();
+    }
+
+    public NPC[] newNPC(int amount) {
+        NPC[] container = new NPC[amount];
+
+        for (int i = 0; i < amount; i++)
+            container[i] = new NPC();
+        return container;
+    }
+
+    public NPC newNPC(int amount, boolean allRandom) {
         if (allRandom)
             return new NPC();
         else
