@@ -1,7 +1,7 @@
 package com.gpteam.shopmanager.Product;
 
 import java.util.Date;
-
+// TODO add constraints
 /*
  * Created by masmix on 23.12.2016.
  */
