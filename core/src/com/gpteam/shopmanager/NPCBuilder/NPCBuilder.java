@@ -11,8 +11,14 @@ public class NPCBuilder {
     private int npcQuantity;
     private NPC[] container;
 
+    public static final int MAX_NPC_QUANTITY = 10000;
+    public static final int MIN_NPC_QUANTITY = 0;
+
     public NPCBuilder(int npcQuantity) {
-        this.npcQuantity = npcQuantity;
+        if (npcQuantity > MAX_NPC_QUANTITY || npcQuantity < MIN_NPC_QUANTITY)
+            throw new IllegalArgumentException();
+        else
+            this.npcQuantity = npcQuantity;
     }
 
     public NPCBuilder() {
@@ -31,7 +37,10 @@ public class NPCBuilder {
     }
 
     public ArrayList<NPC> newNPCList(int npcQuantity) {
-        return new ArrayList<NPC>(npcQuantity);
+        if (npcQuantity > MAX_NPC_QUANTITY || npcQuantity < MIN_NPC_QUANTITY)
+            throw new IllegalArgumentException();
+        else
+            return new ArrayList<NPC>(npcQuantity);
     }
 
     public ArrayList<NPC> newNPCList() {
@@ -39,19 +48,31 @@ public class NPCBuilder {
     }
 
     public NPC[] newNPC(int npcQuantity) {
-        container = new NPC[npcQuantity];
+        if (npcQuantity > MAX_NPC_QUANTITY || npcQuantity < MIN_NPC_QUANTITY)
+            throw new IllegalArgumentException();
+        else
+            container = new NPC[npcQuantity];
 
         for (int i = 0; i < npcQuantity; i++)
             container[i] = new NPC();
+
         return container;
     }
 
     // TODO
-    public NPC newNPC(int amount, boolean allRandom) {
-        if (allRandom)
-            return new NPC();
-        else
-            return null;
+    public NPC[] newNPC(int npcAmount, boolean allRandom) {
+        if (npcAmount > MAX_NPC_QUANTITY || npcAmount < MIN_NPC_QUANTITY)
+            throw new IllegalArgumentException();
+        else {
+            if (allRandom) { // TODO random generation
+                container = new NPC[npcAmount];
+                return container;
+            }
+            else {
+                container = new NPC[npcAmount];
+                return container;
+            }
+        }
     }
 
     public NPC[] newNPC() {
