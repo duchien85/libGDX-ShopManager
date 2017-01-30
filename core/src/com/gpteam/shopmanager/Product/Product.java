@@ -13,9 +13,21 @@ public class Product {
     private short quality;
     private int quantity;
     private Date expirationDate;
+    private ProductType productType;
+    private ProductType[] productTypes;
 
+    public Product(String name, String serialName, String description, float price, short quality, int quantity, ProductType productType, Date expirationDate) {
+        this.name = name;
+        this.serialName = serialName;
+        this.description = description;
+        this.price = price;
+        this.quality = quality;
+        this.quantity = quantity;
+        this.productType = productType;
+        this.expirationDate = expirationDate;
+    }
 
-    public Product(String name, String serialName, String description, float price, short quality, int quantity, Date expirationDate) {
+    public Product(String name, String serialName, String description, float price, short quality, int quantity, Date expirationDate, ProductType... productTypes) {
         this.name = name;
         this.serialName = serialName;
         this.description = description;
@@ -23,6 +35,7 @@ public class Product {
         this.quality = quality;
         this.quantity = quantity;
         this.expirationDate = expirationDate;
+        this.productTypes = productTypes;
     }
 
     public String getName() {
