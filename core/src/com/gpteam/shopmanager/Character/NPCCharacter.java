@@ -9,6 +9,7 @@ import com.gpteam.shopmanager.Society.SocietyClassHandler;
  */
 public class NPCCharacter extends Character {
     NPCHandler npcHandler;
+    NPCBuilder npcBuilder;
 
 
     public NPCCharacter(String name, int age, Sex sex) {
