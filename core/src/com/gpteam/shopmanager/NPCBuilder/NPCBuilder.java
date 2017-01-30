@@ -6,8 +6,9 @@ import com.gpteam.shopmanager.NPC.NPC;
  * Created by masmix on 19.01.2017.
  */
 public class NPCBuilder {
-
-    public NPCBuilder() {
+    private int amount;
+    public NPCBuilder(int amount) {
+        this.amount = amount;
     }
 
     public NPC newNPC() {
