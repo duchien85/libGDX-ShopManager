@@ -18,5 +18,8 @@ public class NPC {
         societyClassHandler = new SocietyClassHandler();
     }
 
+    public NPC(boolean allRandom) {
+
+    }
 
 }
