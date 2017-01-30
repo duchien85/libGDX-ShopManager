@@ -15,8 +15,8 @@ public class NPCHandler {
     private ArrayList<NPC> npcs;
     private int npcQuantity;
 
-    private int maxNpcAmount = 10000;
-    private int minNpcAmount = 0;
+    public static final int MAX_NPC_AMOUNT = 10000;
+    public static final int MIN_NPC_AMOUNT = 0;
     
     private NeedsHandler needsHandler;
     private SocietyClassHandler societyHandler;
@@ -42,10 +42,11 @@ public class NPCHandler {
     }
 
     public void addNpcs(int npcAmount, boolean allRandom) {
-        if (npcAmount > maxNpcAmount || npcAmount < minNpcAmount)
+        if (npcAmount > MAX_NPC_AMOUNT || npcAmount < MIN_NPC_AMOUNT)
             throw new IllegalArgumentException();
         else
-            npcs.add(npcBuilder.newNPC(npcAmount, allRandom));
+            for (int i = 0; i < npcAmount; i++)
+                npcs.add(npcBuilder.newNPC(allRandom));
     }
 
 //    public NPC[] generateRandomNPC() {
