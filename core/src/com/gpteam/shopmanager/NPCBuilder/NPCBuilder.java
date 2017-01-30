@@ -2,39 +2,57 @@ package com.gpteam.shopmanager.NPCBuilder;
 
 import com.gpteam.shopmanager.NPC.NPC;
 
+import java.util.ArrayList;
+
 /*
  * Created by masmix on 19.01.2017.
  */
 public class NPCBuilder {
-    private int amount;
-    public NPCBuilder(int amount) {
-        this.amount = amount;
+    private int npcQuantity = 0;
+    private NPC[] container;
+
+    public NPCBuilder(int npcQuantity) {
+        this.npcQuantity = npcQuantity;
     }
 
-    public NPC newNPC() {
-        return new NPC();
+    public NPCBuilder() {
+
+    }
+
+    public void setNPCAmount() {
+
     }
 
     public NPC newNPC(boolean allRandom) {
-        if (allRandom)
+        if (allRandom) // TODO
             return new NPC();
         else
             return new NPC();
     }
 
-    public NPC[] newNPC(int amount) {
-        NPC[] container = new NPC[amount];
+    public ArrayList<NPC> newNPCList(int npcQuantity) {
+        return new ArrayList<NPC>(npcQuantity);
+    }
 
-        for (int i = 0; i < amount; i++)
+    public NPC[] newNPC(int npcQuantity) {
+        container = new NPC[npcQuantity];
+
+        for (int i = 0; i < npcQuantity; i++)
             container[i] = new NPC();
         return container;
     }
 
+    // TODO
     public NPC newNPC(int amount, boolean allRandom) {
         if (allRandom)
             return new NPC();
         else
             return null;
+    }
+
+    public NPC[] newNPC() {
+        container = new NPC[npcQuantity];
+        return container;
     }
 }
 
