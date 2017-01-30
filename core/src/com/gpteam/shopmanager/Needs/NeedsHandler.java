@@ -16,7 +16,11 @@ public class NeedsHandler {
         this.needs = needs;
     }
 
+    public NeedsHandler(boolean allRandom) {
+    }
+
     public NeedsHandler() {
+
     }
 
     public boolean contains(Needs need) {
