@@ -8,7 +8,7 @@ import java.util.ArrayList;
  * Created by masmix on 19.01.2017.
  */
 public class NPCBuilder {
-    private int npcQuantity = 0;
+    private int npcQuantity;
     private NPC[] container;
 
     public NPCBuilder(int npcQuantity) {
@@ -16,7 +16,7 @@ public class NPCBuilder {
     }
 
     public NPCBuilder() {
-
+        npcQuantity = 1;
     }
 
     public void setNPCAmount() {
@@ -31,6 +31,10 @@ public class NPCBuilder {
     }
 
     public ArrayList<NPC> newNPCList(int npcQuantity) {
+        return new ArrayList<NPC>(npcQuantity);
+    }
+
+    public ArrayList<NPC> newNPCList() {
         return new ArrayList<NPC>(npcQuantity);
     }
 
@@ -53,6 +57,21 @@ public class NPCBuilder {
     public NPC[] newNPC() {
         container = new NPC[npcQuantity];
         return container;
+    }
+
+    public ArrayList<NPC> addNpcs(int npcQuantity) {
+        ArrayList<NPC> npcs = new ArrayList<NPC>();
+
+        if (npcQuantity == 1) {
+            npcs.add(new NPC());
+            return npcs;
+        }
+        else {
+            for (int i = 0; i < npcQuantity; i++) {
+                npcs.add(new NPC());
+            }
+            return npcs;
+        }
     }
 }
 
