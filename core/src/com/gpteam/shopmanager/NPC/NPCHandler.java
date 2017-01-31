@@ -22,9 +22,8 @@ public class NPCHandler {
     private SocietyClassHandler societyHandler;
 
     public NPCHandler(int npcQuantity) {
-        npcBuilder = new NPCBuilder(npcQuantity);
+        npcBuilder = new NPCBuilder();
         npcs = npcBuilder.newNPCList(npcQuantity);
-        initialize(npcs, npcQuantity);
     }
 
     public int currentNpcCount() {
@@ -33,12 +32,16 @@ public class NPCHandler {
 
     public void initialize(ArrayList<NPC> npcs, int npcQuantity) {
         for (int i = 0; i < npcQuantity; i++) {
-            npcs.add(new NPC(true));
+            npcs.add(npcBuilder.newNPC());
         }
     }
 
     public void addNpcs(int npcAmount) {
-
+    if (npcAmount > MAX_NPC_AMOUNT || npcAmount < MIN_NPC_AMOUNT)
+            throw new IllegalArgumentException();
+        else
+            for (int i = 0; i < npcAmount; i++)
+                npcs.add(npcBuilder.newNPC());
     }
 
     public void addNpcs(int npcAmount, boolean allRandom) {
@@ -47,6 +50,13 @@ public class NPCHandler {
         else
             for (int i = 0; i < npcAmount; i++)
                 npcs.add(npcBuilder.newNPC(allRandom));
+    }
+    
+    public void removeNpc(NPC npc) {
+    if (npcs.contains(npc)
+    npcs.remove(npc)
+    else
+    throw new IllegalArgumentException();
     }
 
 //    public NPC[] generateRandomNPC() {
