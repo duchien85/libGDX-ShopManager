@@ -28,6 +28,10 @@ public class NPCBuilder {
     public void setNPCAmount() {
 
     }
+    
+    public NPC newNPC() {
+    return new NPC(); // TODO allRandom
+    }
 
     public NPC newNPC(boolean allRandom) {
         if (allRandom) // TODO
