@@ -25,7 +25,7 @@ public class NPCBuilder {
         npcQuantity = 1;
     }
 
-    public void setNPCAmount() {
+    public void setNPCQuantity() {
 
     }
     
@@ -41,14 +41,10 @@ public class NPCBuilder {
     }
 
     public ArrayList<NPC> newNPCList(int npcQuantity) {
-        if (npcQuantity > MAX_NPC_QUANTITY || npcQuantity < MIN_NPC_QUANTITY)
-            throw new IllegalArgumentException();
-        else
-            return new ArrayList<NPC>(npcQuantity);
-    }
-
-    public ArrayList<NPC> newNPCList() {
-        return new ArrayList<NPC>(npcQuantity);
+        ArrayList<NPC> npcs = new ArrayList<>();
+        
+        initialize(npcs, npcQuantity);
+        return npcs;
     }
 
     public NPC[] newNPC(int npcQuantity) {
@@ -78,25 +74,16 @@ public class NPCBuilder {
             }
         }
     }
-
-    public NPC[] newNPC() {
-        container = new NPC[npcQuantity];
-        return container;
-    }
-
-    public ArrayList<NPC> addNpcs(int npcQuantity) {
-        ArrayList<NPC> npcs = new ArrayList<NPC>();
-
-        if (npcQuantity == 1) {
-            npcs.add(new NPC());
-            return npcs;
-        }
-        else {
-            for (int i = 0; i < npcQuantity; i++) {
-                npcs.add(new NPC());
-            }
-            return npcs;
+    
+    public void initialize(ArrayList<NPC> npcs, int npcQuantity) {
+        for (int i = 0; i < npcQuantity; i++) {
+            npcs.add(npcBuilder.newNPC());
         }
     }
 }
+
+
+
+
+
 
