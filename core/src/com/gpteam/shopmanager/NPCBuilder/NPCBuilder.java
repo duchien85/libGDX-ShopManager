@@ -9,7 +9,6 @@ import java.util.ArrayList;
  */
 public class NPCBuilder {
     private int npcQuantity;
-    private NPC[] container;
 
     public static final int MAX_NPC_QUANTITY = 10000;
     public static final int MIN_NPC_QUANTITY = 0;
@@ -41,49 +40,15 @@ public class NPCBuilder {
     }
 
     public ArrayList<NPC> newNPCList(int npcQuantity) {
-        ArrayList<NPC> npcs = new ArrayList<>();
+        ArrayList<NPC> npcs = new ArrayList<NPC>();
         
         initialize(npcs, npcQuantity);
         return npcs;
     }
-
-    public NPC[] newNPC(int npcQuantity) {
-        if (npcQuantity > MAX_NPC_QUANTITY || npcQuantity < MIN_NPC_QUANTITY)
-            throw new IllegalArgumentException();
-        else
-            container = new NPC[npcQuantity];
-
-        for (int i = 0; i < npcQuantity; i++)
-            container[i] = new NPC();
-
-        return container;
-    }
-
-    // TODO
-    public NPC[] newNPC(int npcAmount, boolean allRandom) {
-        if (npcAmount > MAX_NPC_QUANTITY || npcAmount < MIN_NPC_QUANTITY)
-            throw new IllegalArgumentException();
-        else {
-            if (allRandom) { // TODO random generation
-                container = new NPC[npcAmount];
-                return container;
-            }
-            else {
-                container = new NPC[npcAmount];
-                return container;
-            }
-        }
-    }
     
     public void initialize(ArrayList<NPC> npcs, int npcQuantity) {
         for (int i = 0; i < npcQuantity; i++) {
-            npcs.add(npcBuilder.newNPC());
+            npcs.add(newNPC());
         }
     }
 }
-
-
-
-
-
-
