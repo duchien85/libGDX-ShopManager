@@ -12,9 +12,9 @@ import java.util.ArrayList;
 public class NPCHandler {
     private NPCBuilder npcBuilder;
     private ArrayList<NPC> npcs;
-    private int npcQuantity = 0;
     private NeedsHandler needsHandler;
     private SocietyClassHandler societyHandler;
+    private int npcQuantity = 0;
 
     public static final int MAX_NPC_AMOUNT = 10000;
     public static final int MIN_NPC_AMOUNT = 0;
