@@ -25,7 +25,6 @@ public class NPCBuilder {
     }
 
     public void setNPCQuantity() {
-
     }
     
     public NPC newNPC() {
@@ -33,10 +32,7 @@ public class NPCBuilder {
     }
 
     public NPC newNPC(boolean allRandom) {
-        if (allRandom) // TODO
-            return new NPC();
-        else
-            return new NPC();
+            return new NPC(allRandom);
     }
 
     public ArrayList<NPC> newNPCList(int npcQuantity) {
