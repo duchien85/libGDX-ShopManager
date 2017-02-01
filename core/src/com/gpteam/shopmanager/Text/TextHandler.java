@@ -17,6 +17,15 @@ public final class TextHandler {
         languageMap.put("PL", PL.class);
     }
 
+    public TextHandler(String language) {
+        languageMap = new HashMap<String, Class>();
+        // TODO save ArrayList to file, load when game is launched
+        languageMap.put("EN", EN.class);
+        languageMap.put("PL", PL.class);
+
+        setLanguage(language);
+    }
+
     public void setLanguage(String language) {
         if (languageMap.containsKey(language)) {
             try {
