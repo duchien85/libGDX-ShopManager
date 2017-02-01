@@ -1,5 +1,7 @@
 package com.gpteam.shopmanager.Needs;
 
+import com.badlogic.gdx.math.MathUtils;
+
 import java.util.Arrays;
 import java.util.NoSuchElementException;
 
@@ -8,23 +10,11 @@ import java.util.NoSuchElementException;
  */
 public class NeedsHandler {
     private Needs[] needs;
-
     private int maxNeedsLength = Needs.values().length;
 
 
-    public NeedsHandler() {
-    needs = new Needs[maxNeedsLength];
-    		for (Needs x : Needs.values())
-    				needs[x] = x;
-    }
-
     public NeedsHandler(boolean allRandom) {
-    int random = MathUtils.random(19);
-    		for (
-    }
-
-    public NeedsHandler() {
-
+        needs = Needs.values();
     }
 
     public boolean contains(Needs need) {
@@ -102,8 +92,10 @@ public class NeedsHandler {
 
     public void removeNeeds(Needs... needs) {
         Arrays.asList(this.needs).removeAll(Arrays.asList(needs));
+    }
     
-    public void update() //check?
+    public void check() {
+    }
 }
 
 
