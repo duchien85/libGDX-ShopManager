@@ -19,7 +19,9 @@ public class NPC {
     }
 
     public NPC(boolean allRandom) {
-
+        needsHandler = new NeedsHandler(allRandom);
+        moneyHandler = new MoneyHandler();
+        societyClassHandler = new SocietyClassHandler(allRandom);
     }
 
 }
