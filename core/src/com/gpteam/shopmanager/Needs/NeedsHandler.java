@@ -102,7 +102,8 @@ public class NeedsHandler {
 
     public void removeNeeds(Needs... needs) {
         Arrays.asList(this.needs).removeAll(Arrays.asList(needs));
-    }
+    
+    public void update() //check?
 }
 
 
