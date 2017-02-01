@@ -13,13 +13,10 @@ public class NeedsHandler {
     private int maxNeedsLength = Needs.values().length;
 
 
-    public NeedsHandler(boolean allRandom) {
+    public NeedsHandler() {
         needs = Needs.values();
     }
     
     public void check() {
     }
 }
-
-
-
