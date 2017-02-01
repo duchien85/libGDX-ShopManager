@@ -7,6 +7,7 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.gpteam.shopmanager.Screens.GameScreen;
+import com.gpteam.shopmanager.Society.SocietyClass;
 import com.gpteam.shopmanager.Text.TextHandler;
 
 public class GameMain extends Game {
@@ -34,6 +35,8 @@ public class GameMain extends Game {
 
         TextHandler textHandler = new TextHandler();
         textHandler.setLanguage("PL");
+
+        System.out.println(SocietyClass.values().length);
 
         batch = new SpriteBatch();
         balanceFont = assetManager.get("font.fnt", BitmapFont.class);
