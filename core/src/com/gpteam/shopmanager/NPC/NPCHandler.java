@@ -25,6 +25,10 @@ public class NPCHandler {
         npcBuilder = new NPCBuilder();
         npcs = npcBuilder.newNPCList(npcQuantity);
     }
+    
+    public NPCHandler() {
+    npcs = new ArrayList<>();
+    }
 
     public int currentNpcCount() {
         return npcQuantity;
