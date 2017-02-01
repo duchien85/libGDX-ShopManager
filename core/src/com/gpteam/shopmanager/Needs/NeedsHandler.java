@@ -9,14 +9,18 @@ import java.util.NoSuchElementException;
 public class NeedsHandler {
     private Needs[] needs;
 
-    private int maxNeedsLength = 20;
+    private int maxNeedsLength = Needs.values().length;
 
 
-    public NeedsHandler(Needs... needs) {
-        this.needs = needs;
+    public NeedsHandler() {
+    needs = new Needs[maxNeedsLength];
+    		for (Needs x : Needs.values())
+    				needs[x] = x;
     }
 
     public NeedsHandler(boolean allRandom) {
+    int random = MathUtils.random(19);
+    		for (
     }
 
     public NeedsHandler() {
