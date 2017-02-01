@@ -1,8 +1,8 @@
 package com.gpteam.shopmanager.Character;
 
 import com.gpteam.shopmanager.NPC.NPCHandler;
+import com.gpteam.shopmanager.NPCBuilder.NPCBuilder;
 import com.gpteam.shopmanager.Player.Sex;
-import com.gpteam.shopmanager.Society.SocietyClassHandler;
 
 /*
  * Created by masmix on 26.01.2017.
