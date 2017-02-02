@@ -2,7 +2,7 @@ package com.gpteam.shopmanager.NPC;
 
 import com.gpteam.shopmanager.Money.MoneyHandler;
 import com.gpteam.shopmanager.Needs.NeedsHandler;
-import com.gpteam.shopmanager.Society.SocietyClassHandler;
+import com.gpteam.shopmanager.Society.SocietyHandler;
 
 /*
  * Created by masmix on 26.01.2017.
@@ -10,18 +10,18 @@ import com.gpteam.shopmanager.Society.SocietyClassHandler;
 public class NPC {
     private NeedsHandler needsHandler;
     private MoneyHandler moneyHandler;
-    private SocietyClassHandler societyClassHandler;
+    private SocietyHandler societyHandler;
 
     public NPC() {
         needsHandler = new NeedsHandler();
         moneyHandler = new MoneyHandler();
-        societyClassHandler = new SocietyClassHandler();
+        societyHandler = new SocietyHandler();
     }
 
     public NPC(boolean allRandom) {
         needsHandler = new NeedsHandler(allRandom);
         moneyHandler = new MoneyHandler();
-        societyClassHandler = new SocietyClassHandler(allRandom);
+        societyHandler = new SocietyHandler(allRandom);
     }
 
 }
