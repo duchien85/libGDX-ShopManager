@@ -16,7 +16,16 @@ public class NeedsHandler {
     private static int needsLength = Needs.values().length;
 
     public NeedsHandler() {
-        initializeHashMap(needs, Needs.values().length);
+        initializeHashMap(needs, needsLength);
+    }
+
+    public NeedsHandler(boolean initializeNeedsHandler) {
+        if (initializeNeedsHandler)
+            initializeHashMap(needs, needsLength);
+    }
+
+    public int getNeedsLength() {
+        return needsLength;
     }
     
     public void check() {
