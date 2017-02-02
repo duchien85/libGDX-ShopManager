@@ -10,7 +10,7 @@ import java.util.NoSuchElementException;
  */
 public class NeedsHandler {
     private Needs[] needs;
-    private int maxNeedsLength = Needs.values().length;
+    private static int needsLength = Needs.values().length;
 
 
     public NeedsHandler() {
