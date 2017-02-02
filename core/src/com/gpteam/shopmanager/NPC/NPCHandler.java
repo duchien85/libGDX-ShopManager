@@ -1,8 +1,9 @@
 package com.gpteam.shopmanager.NPC;
 
+import com.gpteam.shopmanager.Character.NPCCharacter;
 import com.gpteam.shopmanager.NPCBuilder.NPCBuilder;
 import com.gpteam.shopmanager.Needs.NeedsHandler;
-import com.gpteam.shopmanager.Society.SocietyClassHandler;
+import com.gpteam.shopmanager.Society.SocietyHandler;
 
 import java.util.ArrayList;
 
@@ -10,10 +11,11 @@ import java.util.ArrayList;
  * Created by masmix on 26.01.2017.
  */
 public class NPCHandler {
+    private NPCCharacter npc;
     private NPCBuilder npcBuilder;
     private ArrayList<NPC> npcs;
     private NeedsHandler needsHandler;
-    private SocietyClassHandler societyHandler;
+    private SocietyHandler societyHandler;
     private int npcQuantity = 0;
 
     public static final int MAX_NPC_AMOUNT = 10000;
