@@ -6,6 +6,7 @@ import com.badlogic.gdx.math.Vector2;
 import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.Map;
 import java.util.NoSuchElementException;
 
 /*
@@ -13,15 +14,15 @@ import java.util.NoSuchElementException;
  */
 public class NeedsHandler {
     private HashMap<Needs, Integer> needs;
-    private static int needsLength = Needs.values().length;
+    private int needsLength;
 
     public NeedsHandler() {
-        initializeHashMap(needs, needsLength);
+        initialize();
     }
 
-    public NeedsHandler(boolean initializeNeedsHandler) {
-        if (initializeNeedsHandler)
-            initializeHashMap(needs, needsLength);
+    public NeedsHandler(boolean initialize) {
+        if (initialize)
+            initialize();
     }
 
     public int getNeedsLength() {
@@ -31,11 +32,20 @@ public class NeedsHandler {
     public void check() {
     }
 
-    private void initializeHashMap(HashMap<Needs, Integer> hashMap, int initialCapacity) {
-        hashMap = new HashMap<Needs, Integer>(initialCapacity);
-        for (HashMap.Entry<Needs, Integer> entry : hashMap.entrySet()) {
+    private void initialize() {
+        needsLength = Needs.values().length;
+        initializeHashMap();
+    }
+
+    private void initializeHashMap() {
+        needs = new HashMap<Needs, Integer>(needsLength);
+        fillHashMap();
+    }
+
+    private void fillHashMap() {
+        for (HashMap.Entry<Needs, Integer> entry : needs.entrySet()) {
             for (Needs x : Needs.values())
-                hashMap.put(x, null);
+                needs.put(x, null);
         }
     }
 }
