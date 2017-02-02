@@ -36,15 +36,15 @@ public class SocietyHandler {
 
     private void initializeContainer(boolean allRandom) {
         if (allRandom)
-            getRandomSocietyClasses();
-            societyClasses = new SocietyClass[SocietyClass.values().length];
+            societyClasses = getRandomSocietyClasses();
     }
 
     private void initializeContainer(SocietyClass[] societyClasses) {
         this.societyClasses = societyClasses;
     }
 
-    private void getRandomSocietyClasses() {
-
+    private SocietyClass[] getRandomSocietyClasses() {
+        // TODO method body
+        return null;
     }
 }
