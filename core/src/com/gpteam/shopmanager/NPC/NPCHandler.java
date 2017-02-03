@@ -6,6 +6,7 @@ import com.gpteam.shopmanager.Needs.NeedsHandler;
 import com.gpteam.shopmanager.Society.SocietyHandler;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 /*
  * Created by masmix on 26.01.2017.
@@ -68,11 +69,11 @@ public class NPCHandler {
             throw new IllegalArgumentException();
     }
     
-    public void removeNpcs(NPC... npcs) {
-    if(this.npcs.containsAll(npcs) //asList? on mobile..
-    this.npcs.removeAll(npcs)
-    else
-    throw new ;
+    public void removeNpcs(NPC... npcs) throws NoSuchFieldException {
+        if (this.npcs.containsAll(Arrays.asList(npcs))) // TODO in the future, check, if sending method argument "npcs", to "containsAll" method of "this.npc? works properly
+            this.npcs.removeAll(Arrays.asList(npcs));
+        else
+            throw new NoSuchFieldException("Provided array is not filled with npcs of this class instance only. System.getProperty(\"line.separator\")argument.toString: " + npcs.toString());
     }
 
 //    public NPC[] generateRandomNPC() {
