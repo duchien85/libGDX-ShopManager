@@ -67,6 +67,13 @@ public class NPCHandler {
         else
             throw new IllegalArgumentException();
     }
+    
+    public void removeNpcs(NPC... npcs) {
+    if(this.npcs.containsAll(npcs) //asList? on mobile..
+    this.npcs.removeAll(npcs)
+    else
+    throw new ;
+    }
 
 //    public NPC[] generateRandomNPC() {
 //        // TODO figure out how to handle generating and storing npcs
