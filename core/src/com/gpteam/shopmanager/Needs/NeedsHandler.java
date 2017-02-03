@@ -49,6 +49,10 @@ public class NeedsHandler {
         }
     }
     
+    public void updateValue(Needs need, int value) {
+    needs.put(need, value);
+    }
+    
     private class NeedsLogic {
     
     }
