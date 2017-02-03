@@ -43,9 +43,24 @@ public class NeedsHandler {
     }
 
     private void fillHashMap() {
-        for (HashMap.Entry<Needs, Integer> entry : needs.entrySet()) {
+        for (HashMap.Entry<Needs, Integer> entry : needs.entrySet()) { // potrzebne?
             for (Needs x : Needs.values())
                 needs.put(x, null);
         }
     }
+    
+    private class NeedsLogic {
+    
+    }
 }
+
+
+
+
+
+
+
+
+
+
+
