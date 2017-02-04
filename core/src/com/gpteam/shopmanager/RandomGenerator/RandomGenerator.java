@@ -2,6 +2,7 @@ package com.gpteam.shopmanager.RandomGenerator;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.gpteam.shopmanager.Character.CharacterInfo;
+import com.gpteam.shopmanager.IOHandlers.Loader;
 import com.gpteam.shopmanager.IOHandlers.OutputHandlers.NamesLoader;
 import com.gpteam.shopmanager.Player.Sex;
 import com.gpteam.shopmanager.Variables.Variables;
@@ -14,6 +15,10 @@ public class RandomGenerator {
 
     public RandomGenerator(NamesLoader namesLoader) {
         this.namesLoader = namesLoader;
+    }
+
+    public RandomGenerator() {
+        namesLoader = new NamesLoader();
     }
 
     public CharacterInfo generateRandomInfo() {
