@@ -2,6 +2,7 @@ package com.gpteam.shopmanager.NPC;
 
 import com.gpteam.shopmanager.Character.CharacterInfo;
 import com.gpteam.shopmanager.Needs.NeedsHandler;
+import com.gpteam.shopmanager.Society.SocietyClass;
 import com.gpteam.shopmanager.Society.SocietyClassHandler;
 
 /*
@@ -22,8 +23,16 @@ public class NPC {
     }
 
     public NPC(boolean allRandom) {
-        characterInfo = new CharacterInfo();
+        characterInfo = new CharacterInfo(allRandom);
         initialize();
+    }
+
+    public CharacterInfo getCharacterInfo() {
+        return characterInfo;
+    }
+
+    public SocietyClass getSocietyClass() {
+        return societyClassHandler.getSocietyClass();
     }
 
     private void initialize() {
