@@ -29,11 +29,11 @@ public class NPCBuilder {
     }
     
     public NPC newNPC() {
-    return new NPC(); // TODO allRandom
+        return new NPC(); // TODO allRandom
     }
 
     public NPC newNPC(boolean allRandom) {
-            return new NPC(allRandom);
+        return new NPC(allRandom);
     }
 
     public ArrayList<NPC> newNPCList(int npcQuantity) {
@@ -41,10 +41,23 @@ public class NPCBuilder {
         initialize(npcs, npcQuantity);
         return npcs;
     }
+
+    public ArrayList<NPC> newNPCList(int npcQuantity, int initialCapacity) {
+        ArrayList<NPC> npcs;
+
+        if (initialCapacity > MAX_NPC_QUANTITY || initialCapacity < MAX_NPC_QUANTITY) {
+            npcs = new ArrayList<NPC>();
+            initialize(npcs, npcQuantity);
+            return npcs;
+        } else {
+            npcs = new ArrayList<NPC>(initialCapacity);
+            initialize(npcs, npcQuantity);
+            return npcs;
+        }
+    }
     
     public void initialize(ArrayList<NPC> npcs, int npcQuantity) {
-        for (int i = 0; i < npcQuantity; i++) {
+        for (int i = 0; i < npcQuantity; i++)
             npcs.add(newNPC());
-        }
     }
 }
