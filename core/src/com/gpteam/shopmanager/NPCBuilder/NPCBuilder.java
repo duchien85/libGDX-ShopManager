@@ -8,20 +8,8 @@ import java.util.ArrayList;
  * Created by masmix on 19.01.2017.
  */
 public class NPCBuilder {
-    private int npcQuantity;
-
-
-
-    public NPCBuilder(int npcQuantity) {
-        this.npcQuantity = npcQuantity;
-    }
 
     public NPCBuilder() {
-        npcQuantity = 0;
-    }
-
-    public int getNPCQuantity() {
-        return npcQuantity;
     }
     
     public NPC newNPC() {
