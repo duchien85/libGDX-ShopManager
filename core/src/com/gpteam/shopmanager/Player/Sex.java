@@ -5,4 +5,8 @@ package com.gpteam.shopmanager.Player;
  */
 public enum Sex {
     MALE, FEMALE;
+
+    public static Sex getRandom() {
+        return values()[(int) (Math.random() * values().length)];
+    }
 }
