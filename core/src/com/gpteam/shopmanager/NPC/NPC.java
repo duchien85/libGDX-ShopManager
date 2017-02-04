@@ -1,27 +1,33 @@
 package com.gpteam.shopmanager.NPC;
 
-import com.gpteam.shopmanager.Money.MoneyHandler;
+import com.gpteam.shopmanager.Character.CharacterInfo;
 import com.gpteam.shopmanager.Needs.NeedsHandler;
-import com.gpteam.shopmanager.Society.SocietyHandler;
+import com.gpteam.shopmanager.Society.SocietyClassHandler;
 
 /*
  * Created by masmix on 26.01.2017.
  */
 public class NPC {
+    private CharacterInfo characterInfo;
     private NeedsHandler needsHandler;
-    private MoneyHandler moneyHandler;
-    private SocietyHandler societyHandler;
+    private SocietyClassHandler societyClassHandler;
 
     public NPC() {
-        needsHandler = new NeedsHandler();
-        moneyHandler = new MoneyHandler();
-        societyHandler = new SocietyHandler();
+    }
+
+    public NPC(CharacterInfo characterInfo, NeedsHandler needsHandler, SocietyClassHandler societyClassHandler) {
+        this.characterInfo = characterInfo;
+        this.needsHandler = needsHandler;
+        this.societyClassHandler = societyClassHandler;
     }
 
     public NPC(boolean allRandom) {
-        needsHandler = new NeedsHandler(allRandom);
-        moneyHandler = new MoneyHandler();
-        societyHandler = new SocietyHandler(allRandom);
+        characterInfo = new CharacterInfo();
+        initialize();
     }
 
+    private void initialize() {
+        needsHandler = new NeedsHandler();
+        societyClassHandler = new SocietyClassHandler();
+    }
 }
