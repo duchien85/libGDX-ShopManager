@@ -14,6 +14,7 @@ import java.util.NoSuchElementException;
  */
 public class NeedsHandler {
     private HashMap<Needs, Integer> needs;
+    private boolean containerInitialized = false;
 
     public NeedsHandler() {
         initialize();
@@ -45,8 +46,12 @@ public class NeedsHandler {
             fillHashMap(needs, values);
     }
 
-    private void initialize() {
-        fillHashMap();
+    public void initialize() {
+        if (containerInitialized) {
+            try { throw new InstantiationException("NeedsHandler has already been initialized."); }
+            catch (InstantiationException e) { e.printStackTrace(); }
+        } else
+            fillHashMap();
     }
 
     private void fillHashMap() {
