@@ -10,14 +10,10 @@ import java.util.ArrayList;
 public class NPCBuilder {
     private int npcQuantity;
 
-    public static final int MAX_NPC_QUANTITY = 10000;
-    public static final int MIN_NPC_QUANTITY = 0;
+
 
     public NPCBuilder(int npcQuantity) {
-        if (npcQuantity > MAX_NPC_QUANTITY || npcQuantity < MIN_NPC_QUANTITY)
-            throw new IllegalArgumentException();
-        else
-            this.npcQuantity = npcQuantity;
+        this.npcQuantity = npcQuantity;
     }
 
     public NPCBuilder() {
@@ -43,17 +39,9 @@ public class NPCBuilder {
     }
 
     public ArrayList<NPC> newNPCList(int npcQuantity, int initialCapacity) {
-        ArrayList<NPC> npcs;
-
-        if (initialCapacity > MAX_NPC_QUANTITY || initialCapacity < MAX_NPC_QUANTITY) {
-            npcs = new ArrayList<NPC>();
-            initialize(npcs, npcQuantity);
-            return npcs;
-        } else {
-            npcs = new ArrayList<NPC>(initialCapacity);
-            initialize(npcs, npcQuantity);
-            return npcs;
-        }
+        ArrayList<NPC> npcs = new ArrayList<NPC>(initialCapacity);
+        initialize(npcs, npcQuantity);
+        return npcs;
     }
     
     public void initialize(ArrayList<NPC> npcs, int npcQuantity) {
