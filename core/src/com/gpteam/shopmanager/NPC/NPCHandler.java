@@ -17,20 +17,16 @@ public class NPCHandler {
     private ArrayList<NPC> npcs;
     private NeedsHandler needsHandler;
     private SocietyHandler societyHandler;
-    private int npcQuantity = 0;
+    private int npcCount = 0;
 
     public static final int MAX_NPC_AMOUNT = 10000;
     public static final int MIN_NPC_AMOUNT = 0;
 
 
-    public NPCHandler(int npcQuantity) {
-        if (npcQuantity > MAX_NPC_AMOUNT || npcQuantity < MIN_NPC_AMOUNT)
-            throw new IllegalArgumentException("npcQuantity must be between 0 - 10000. Found: " + npcQuantity);
-        else {
-            npcBuilder = new NPCBuilder();
-            npcs = npcBuilder.newNPCList(npcQuantity);
-            this.npcQuantity += npcQuantity;
-        }
+    public NPCHandler(int npcCount) {
+        if (npcCount > MAX_NPC_AMOUNT || npcCount < MIN_NPC_AMOUNT)
+            throw new IllegalArgumentException("npcCount must be between 0 - 10000. Found: " + npcCount);
+        else initialize();
     }
     
     public NPCHandler() {
@@ -38,27 +34,28 @@ public class NPCHandler {
     }
 
     public int currentNpcCount() {
-        return npcQuantity;
+        return npcCount;
     }
 
-    public void addNpcs(int npcQuantity) {
-    if (npcQuantity > MAX_NPC_AMOUNT || npcQuantity < MIN_NPC_AMOUNT)
+    public void addNpcs(int npcCount) {
+    if (npcCount > MAX_NPC_AMOUNT || npcCount < MIN_NPC_AMOUNT)
             throw new IllegalArgumentException();
-        else
-            for (int i = 0; i < npcQuantity; i++)
+        else {
+            for (int i = 0; i < npcCount; i++)
                 npcs.add(npcBuilder.newNPC());
+        }
 
-        this.npcQuantity += npcQuantity;
+        this.npcCount += npcCount;
     }
 
-    public void addNpcs(int npcQuantity, boolean allRandom) {
-        if (npcQuantity > MAX_NPC_AMOUNT || npcQuantity < MIN_NPC_AMOUNT)
-            throw new IllegalArgumentException("npcQuantity must be between 0 - 10000. Found: " + npcQuantity);
+    public void addNpcs(int npcCount, boolean allRandom) {
+        if (npcCount > MAX_NPC_AMOUNT || npcCount < MIN_NPC_AMOUNT)
+            throw new IllegalArgumentException("npcCount must be between 0 - 10000. Found: " + npcCount);
         else
-            for (int i = 0; i < npcQuantity; i++)
+            for (int i = 0; i < npcCount; i++)
                 npcs.add(npcBuilder.newNPC(allRandom));
 
-        this.npcQuantity += npcQuantity;
+        this.npcCount += npcCount;
 
     }
     
@@ -79,4 +76,10 @@ public class NPCHandler {
 //    public NPC[] generateRandomNPC() {
 //        // TODO figure out how to handle generating and storing npcs
 //    }
+
+    private void initialize() {
+        npcBuilder = new NPCBuilder();
+        npcs = npcBuilder.newNPCList(npcCount);
+        this.npcCount += npcCount;
+    }
 }
