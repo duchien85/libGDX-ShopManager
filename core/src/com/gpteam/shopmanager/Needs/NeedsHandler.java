@@ -35,12 +35,14 @@ public class NeedsHandler {
     /************************************************************
      * @param needs Needs array to fill Needs container (key)
      * @param values Values array to fill Needs container (value)
+     *
      * <p>needs.length() must be equal to values.length()!</p>
      ************************************************************/
     private void initialize(Needs[] needs, int[] values) {
         if (needs.length == values.length)
             throw new IllegalArgumentException("Needs array must be the same length as Values array. Found:\nneeds: " + needs.length + "\nvalues: " + values.length);
-        fillHashMap(needs, values);
+        else
+            fillHashMap(needs, values);
     }
 
     private void initialize() {
