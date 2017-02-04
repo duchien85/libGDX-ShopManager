@@ -1,6 +1,6 @@
 package com.gpteam.shopmanager.NPC;
 
-import com.gpteam.shopmanager.Character.NPCCharacter;
+import com.gpteam.shopmanager.Character.NPCInfo;
 import com.gpteam.shopmanager.NPCBuilder.NPCBuilder;
 import com.gpteam.shopmanager.Needs.NeedsHandler;
 import com.gpteam.shopmanager.Society.SocietyHandler;
@@ -12,21 +12,24 @@ import java.util.Arrays;
  * Created by masmix on 26.01.2017.
  */
 public class NPCHandler {
-    private NPCCharacter npc;
-    private NPCBuilder npcBuilder;
     private ArrayList<NPC> npcs;
+    private int npcCount = 0;
+
+    private NPCInfo npcInfo;
+    private NPCBuilder npcBuilder;
     private NeedsHandler needsHandler;
     private SocietyHandler societyHandler;
-    private int npcCount = 0;
 
     public static final int MAX_NPC_AMOUNT = 10000;
     public static final int MIN_NPC_AMOUNT = 0;
 
-
     public NPCHandler(int npcCount) {
         if (npcCount > MAX_NPC_AMOUNT || npcCount < MIN_NPC_AMOUNT)
             throw new IllegalArgumentException("npcCount must be between 0 - 10000. Found: " + npcCount);
-        else initialize();
+        else {
+            this.npcCount = npcCount;
+            initialize();
+        }
     }
     
     public NPCHandler() {
@@ -56,7 +59,6 @@ public class NPCHandler {
                 npcs.add(npcBuilder.newNPC(allRandom));
 
         this.npcCount += npcCount;
-
     }
     
     public void removeNpc(NPC npc) {
@@ -70,7 +72,7 @@ public class NPCHandler {
         if (this.npcs.containsAll(Arrays.asList(npcs))) // TODO in the future, check, if sending method argument "npcs", to "containsAll" method of "this.npc? works properly
             this.npcs.removeAll(Arrays.asList(npcs));
         else
-            throw new NoSuchFieldException("Provided array is not filled with npcs of this class instance only.\nargument.toString: " + npcs.toString());
+            throw new NoSuchFieldException("Provided array is not filled with npcs of this class instance only.");
     }
 
 //    public NPC[] generateRandomNPC() {
