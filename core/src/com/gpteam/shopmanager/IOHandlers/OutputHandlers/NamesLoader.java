@@ -17,6 +17,11 @@ public class NamesLoader {
         names = new ArrayList<String>();
     }
 
+    public NamesLoader() {
+        loader = new Loader("names.txt");
+        names = new ArrayList<String>();
+    }
+
     public void load() {
         String line;
         try { while ((line = loader.getBufferedReader().readLine()) != null)
