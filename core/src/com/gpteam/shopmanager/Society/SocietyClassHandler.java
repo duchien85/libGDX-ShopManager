@@ -16,9 +16,8 @@ public class SocietyClassHandler {
         this.societyClass = societyClass;
     }
 
-    public SocietyClassHandler(boolean allRandom) {
-        if (allRandom)
-            societyClass = getRandomSocietyClass();
+    public SocietyClassHandler() {
+        societyClass = getRandomSocietyClass();
     }
 
     public SocietyClass getSocietyClass() {
