@@ -8,9 +8,6 @@ import com.gpteam.shopmanager.Player.Sex;
  * Created by masmix on 26.01.2017.
  */
 public class NPCCharacter extends Character {
-    NPCHandler npcHandler;
-    NPCBuilder npcBuilder;
-
 
     public NPCCharacter(String name, int age, Sex sex) {
         super(name, age, sex);
