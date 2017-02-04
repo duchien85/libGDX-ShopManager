@@ -1,9 +1,8 @@
 package com.gpteam.shopmanager.NPC;
 
-import com.gpteam.shopmanager.Character.NPCInfo;
 import com.gpteam.shopmanager.NPCBuilder.NPCBuilder;
 import com.gpteam.shopmanager.Needs.NeedsHandler;
-import com.gpteam.shopmanager.Society.SocietyHandler;
+import com.gpteam.shopmanager.Society.SocietyClassHandler;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -15,10 +14,9 @@ public class NPCHandler {
     private ArrayList<NPC> npcs;
     private int npcCount = npcs.size();
 
-    private NPCInfo npcInfo;
     private NPCBuilder npcBuilder;
     private NeedsHandler needsHandler;
-    private SocietyHandler societyHandler;
+    private SocietyClassHandler societyClassHandler;
 
     public static final int MAX_NPC_AMOUNT = 10000;
     public static final int MIN_NPC_AMOUNT = 0;
