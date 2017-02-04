@@ -10,4 +10,8 @@ public final class Variables {
 
     public final static int MAX_AGE_LENGTH = 120;
     public final static int MIN_AGE_LENGTH = 16;
+
+    // Skills
+    public final static int MAX_SKILL_LEVEL = 120;
+    public final static int MIN_SKILL_LEVEL = 0;
 }
