@@ -73,7 +73,7 @@ public class NPCHandler {
         if (this.npcs.containsAll(Arrays.asList(npcs))) // TODO in the future, check, if sending method argument "npcs", to "containsAll" method of "this.npc? works properly
             this.npcs.removeAll(Arrays.asList(npcs));
         else
-            throw new NoSuchFieldException("Provided array is not filled with npcs of this class instance only. System.getProperty(\"line.separator\")argument.toString: " + npcs.toString());
+            throw new NoSuchFieldException("Provided array is not filled with npcs of this class instance only.\nargument.toString: " + npcs.toString());
     }
 
 //    public NPC[] generateRandomNPC() {
