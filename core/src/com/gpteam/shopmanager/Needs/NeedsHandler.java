@@ -35,7 +35,7 @@ public class NeedsHandler {
      * @param needs Needs array to fill Needs container (key)
      * @param values Values array to fill Needs container (value)
      *
-     * <p>needs.length() must be equal to values.length()!</p>
+     * <p>needs.length must be equal to values.length</p>
      ************************************************************/
     private void initialize(Needs[] needs, int[] values) {
         if (needs.length == values.length)
@@ -46,8 +46,8 @@ public class NeedsHandler {
 
     public void initialize() {
         if (containerInitialized) {
-            try { throw new InstantiationException("NeedsHandler has already been initialized."); }
-            catch (InstantiationException e) { e.printStackTrace(); }
+            try { throw new InstantiationException("NeedsHandler has already been initialized.");
+            } catch (InstantiationException e) { e.printStackTrace(); }
         } else
             fillHashMap();
     }
@@ -63,6 +63,5 @@ public class NeedsHandler {
     }
     
     private class NeedsLogic {
-    
     }
 }
