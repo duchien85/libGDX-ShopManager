@@ -43,10 +43,8 @@ public class NeedsHandler {
     }
 
     private void fillHashMap() {
-        for (HashMap.Entry<Needs, Integer> entry : needs.entrySet()) { // potrzebne?
-            for (Needs x : Needs.values())
-                needs.put(x, null);
-        }
+        for (Needs x : Needs.values())
+            needs.put(x, null);
     }
     
     public void updateValue(Needs need, int value) {
