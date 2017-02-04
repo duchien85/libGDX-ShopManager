@@ -21,10 +21,11 @@ public class NPCBuilder {
     }
 
     public NPCBuilder() {
-        npcQuantity = 1;
+        npcQuantity = 0;
     }
 
-    public void setNPCQuantity() {
+    public int getNPCQuantity() {
+        return npcQuantity;
     }
     
     public NPC newNPC() {
@@ -37,7 +38,6 @@ public class NPCBuilder {
 
     public ArrayList<NPC> newNPCList(int npcQuantity) {
         ArrayList<NPC> npcs = new ArrayList<NPC>();
-        
         initialize(npcs, npcQuantity);
         return npcs;
     }
