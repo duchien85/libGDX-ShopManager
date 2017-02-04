@@ -25,6 +25,10 @@ public class NeedsHandler {
             initialize();
     }
 
+    public void updateNeedValue(Needs need, int value) {
+        needs.put(need, value);
+    }
+
     public int getNeedsLength() {
         return needsLength;
     }
@@ -42,10 +46,6 @@ public class NeedsHandler {
     private void fillHashMap() {
         for (Needs x : Needs.values())
             needs.put(x, null);
-    }
-    
-    public void updateValue(Needs need, int value) {
-        needs.put(need, value);
     }
     
     private class NeedsLogic {
