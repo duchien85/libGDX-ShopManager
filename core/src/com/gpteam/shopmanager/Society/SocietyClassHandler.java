@@ -10,41 +10,26 @@ import java.util.Arrays;
  * Created by masmix on 18.01.2017.
  */
 public class SocietyClassHandler {
-    SocietyClass[] societyClasses;
+    private SocietyClass societyClass;
 
-    public SocietyClassHandler(SocietyClass... societyClasses) {
-        initialize(societyClasses);
+    public SocietyClassHandler(SocietyClass societyClass) {
+        this.societyClass = societyClass;
     }
 
-    public SocietyClassHandler(boolean initialize, SocietyClass... societyClasses) {
-        if (initialize)
-            initialize(societyClasses);
-    }
-
-    public SocietyClassHandler(boolean initialize, boolean allRandom) {
-        if (initialize)
-            initialize(societyClasses);
-    }
-
-    private void initialize(SocietyClass[] societyClasses) {
-        initializeContainer(societyClasses);
-    }
-
-    private void initialize(boolean allRandom) {
-        initializeContainer(allRandom);
-    }
-
-    private void initializeContainer(boolean allRandom) {
+    public SocietyClassHandler(boolean allRandom) {
         if (allRandom)
-            societyClasses = getRandomSocietyClasses();
+            societyClass = getRandomSocietyClass();
     }
 
-    private void initializeContainer(SocietyClass[] societyClasses) {
-        this.societyClasses = societyClasses;
+    public SocietyClass getSocietyClass() {
+        return societyClass;
     }
 
-    private SocietyClass[] getRandomSocietyClasses() {
-        // TODO method body
-        return null;
+    public void setSocietyClass(SocietyClass societyClass) {
+        this.societyClass = societyClass;
+    }
+
+    private SocietyClass getRandomSocietyClass() {
+        return SocietyClass.getRandom();
     }
 }
