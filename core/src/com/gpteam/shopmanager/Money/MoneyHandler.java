@@ -10,7 +10,7 @@ public class MoneyHandler {
         money += amount;
     }
 
-    public void remove(float amount) {
+    public void substract(float amount) {
         money -= amount;
     }
 }
