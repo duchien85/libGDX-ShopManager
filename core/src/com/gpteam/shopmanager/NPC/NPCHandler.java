@@ -13,7 +13,7 @@ import java.util.Arrays;
  */
 public class NPCHandler {
     private ArrayList<NPC> npcs;
-    private int npcCount = 0;
+    private int npcCount = npcs.size();
 
     private NPCInfo npcInfo;
     private NPCBuilder npcBuilder;
@@ -27,7 +27,7 @@ public class NPCHandler {
         if (npcCount > MAX_NPC_AMOUNT || npcCount < MIN_NPC_AMOUNT)
             throw new IllegalArgumentException("npcCount must be between 0 - 10000. Found: " + npcCount);
         else {
-            this.npcCount = npcCount;
+            updateNpcCount();
             initialize();
         }
     }
@@ -80,8 +80,10 @@ public class NPCHandler {
 //    }
 
     private void initialize() {
-        npcBuilder = new NPCBuilder();
         npcs = npcBuilder.newNPCList(npcCount);
-        this.npcCount += npcCount;
+    }
+
+    private void updateNpcCount() {
+        npcCount = npcs.size();
     }
 }
