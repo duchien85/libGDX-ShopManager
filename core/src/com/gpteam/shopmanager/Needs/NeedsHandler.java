@@ -28,9 +28,6 @@ public class NeedsHandler {
     public int getNeedsLength() {
         return needsLength;
     }
-    
-    public void check() {
-    }
 
     private void initialize() {
         needsLength = Needs.values().length;
@@ -48,7 +45,7 @@ public class NeedsHandler {
     }
     
     public void updateValue(Needs need, int value) {
-    needs.put(need, value);
+        needs.put(need, value);
     }
     
     private class NeedsLogic {
