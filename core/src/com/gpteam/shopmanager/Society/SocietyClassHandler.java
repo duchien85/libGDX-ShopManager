@@ -9,19 +9,19 @@ import java.util.Arrays;
 /*
  * Created by masmix on 18.01.2017.
  */
-public class SocietyHandler {
+public class SocietyClassHandler {
     SocietyClass[] societyClasses;
 
-    public SocietyHandler(SocietyClass... societyClasses) {
+    public SocietyClassHandler(SocietyClass... societyClasses) {
         initialize(societyClasses);
     }
 
-    public SocietyHandler(boolean initialize, SocietyClass... societyClasses) {
+    public SocietyClassHandler(boolean initialize, SocietyClass... societyClasses) {
         if (initialize)
             initialize(societyClasses);
     }
 
-    public SocietyHandler(boolean initialize, boolean allRandom) {
+    public SocietyClassHandler(boolean initialize, boolean allRandom) {
         if (initialize)
             initialize(societyClasses);
     }
