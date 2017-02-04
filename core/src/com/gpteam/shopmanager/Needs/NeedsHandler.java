@@ -21,16 +21,14 @@ public class NeedsHandler {
     }
 
     public NeedsHandler(boolean initialize) {
-        if (initialize)
-            initialize();
-    }
-
-    public NeedsHandler(Needs[] needs, int[] values) {
-        initialize();
+        if (initialize) initialize();
     }
 
     public void updateNeedValue(Needs need, int value) {
-        needs.put(need, value);
+        if (needs.containsKey(need) && needs.containsValue(value))
+            needs.put(need, value);
+        else
+            throw new IllegalArgumentException("Need and value not found in HashMap. Found: " + need.name() + ", " + value);
     }
 
     /************************************************************
