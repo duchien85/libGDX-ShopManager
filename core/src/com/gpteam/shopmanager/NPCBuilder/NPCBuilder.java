@@ -16,9 +16,8 @@ public class NPCBuilder {
         return new NPC();
     }
 
-    public NPC newNPC(boolean allRandom) {
-        return new NPC(allRandom);
-    }
+    // TODO society class specific builder method
+    // newNPC(SocietyClass societyClass) - creates npcs only from this society class
 
     public ArrayList<NPC> newNPCList(int npcQuantity) {
         ArrayList<NPC> npcs = new ArrayList<NPC>(npcQuantity);
