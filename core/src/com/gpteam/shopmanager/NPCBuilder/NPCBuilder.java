@@ -13,7 +13,7 @@ public class NPCBuilder {
     }
     
     public NPC newNPC() {
-        return new NPC(); // TODO allRandom
+        return new NPC();
     }
 
     public NPC newNPC(boolean allRandom) {
