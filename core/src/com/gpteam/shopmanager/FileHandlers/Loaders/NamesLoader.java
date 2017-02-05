@@ -1,9 +1,11 @@
-package com.gpteam.shopmanager.IOHandlers.OutputHandlers;
+package com.gpteam.shopmanager.FileHandlers.Loaders;
 
-import com.gpteam.shopmanager.IOHandlers.Loader;
+import com.gpteam.shopmanager.FileHandlers.Loader;
 
 import java.io.IOException;
 import java.util.ArrayList;
+
+import static com.gpteam.shopmanager.Variables.Variables.NAMES_PATH;
 
 /*
  * Created by masmix on 02.02.2017.
@@ -18,7 +20,7 @@ public class NamesLoader {
     }
 
     public NamesLoader() {
-        loader = new Loader("names.txt");
+        loader = new Loader(NAMES_PATH);
         names = new ArrayList<String>();
     }
 
