@@ -4,6 +4,8 @@ import com.badlogic.gdx.math.MathUtils;
 import com.gpteam.shopmanager.Player.Sex;
 import com.gpteam.shopmanager.Text.Text;
 
+import static com.gpteam.shopmanager.Variables.Variables.*;
+
 /*
  * Created by masmix on 17.01.2017.
  */
@@ -12,50 +14,30 @@ public class Character {
     private int age;
     private Sex sex;
 
-    private static int maxNameLength = 25;
-    private static int minNameLength = 2;
-
-    private static int maxAgeLength = 120;
-    private static int minAgeLength = 16;
-
     public Character(String name, int age, Sex sex) {
-        if (name.length() > maxNameLength || name.length() < minNameLength)
-            throw new IllegalArgumentException("Name must contain at least 2 characters, up to 25. Found: " + name.length());
-        else
+        if (validate(name, age, sex)) {
             this.name = name;
-
-        if (age > maxAgeLength || age < minAgeLength)
-            throw new IllegalArgumentException("Age must be at least 12 and no higher than 120. Found: " + age);
-        else
             this.age = age;
-
-        setSex_(sex);
+            this.sex = sex;
+        } else throw new IllegalArgumentException("One of the arguments was invalid. Name: " + name + ", age: " + age + ", sex: " + sex.toString());
     }
 
     public Character(String name, int age) {
-        if (name.length() > maxNameLength || name.length() < minNameLength)
-            throw new IllegalArgumentException("Name must contain at least 2 characters, up to 25. Found: " + name.length());
-        else
+        if (validate(name, age)) {
             this.name = name;
-
-        if (age > maxAgeLength || age < minAgeLength)
-            throw new IllegalArgumentException("Age must be at least 12 and no higher than 120. Found: " + age);
-        else
             this.age = age;
-
-        if (MathUtils.random(0, 1) == 0)
-            sex = Sex.MALE;
-        else
-            sex = Sex.FEMALE;
+            if (MathUtils.random(0, 1) == 0)
+                sex = Sex.MALE;
+            else
+                sex = Sex.FEMALE;
+        }
     }
 
     public Character(String name) {
-        if (name.length() > maxNameLength || name.length() < minNameLength)
-            throw new IllegalArgumentException("Name must contain at least 2 characters, up to 25. Found: " + name.length());
-        else
+        if (validate(name))
             this.name = name;
 
-        age = MathUtils.random(minAgeLength, maxAgeLength);
+        age = MathUtils.random(MIN_AGE_LENGTH, MAX_AGE_LENGTH);
 
         if (MathUtils.random(0, 1) == 0)
             sex = Sex.MALE;
@@ -68,9 +50,7 @@ public class Character {
     }
 
     public void setName(String name) {
-        if (name.length() > maxNameLength || name.length() < minNameLength)
-            throw new IllegalArgumentException("name must contain at least 2 characters, up to 25. Found: " + name.length());
-        else
+        if (validate(name))
             this.name = name;
     }
 
@@ -79,19 +59,50 @@ public class Character {
     }
 
     public void setAge(int age) {
-        if (age > maxAgeLength || age < minAgeLength)
-            throw new IllegalArgumentException("age must be at least 12 and no higher than 120. Found: " + age);
-        else
+        if (validate(age))
             this.age = age;
     }
 
     private void setSex_(Sex sex) {
-        if (sex.equals(Sex.MALE))
+        if (validate(sex))
             this.sex = sex;
+    }
+
+    private boolean validate(String name, int age) {
+        if (validate(name) && validate(age))
+            return true;
+        else
+            return false;
+    }
+
+    private boolean validate(String name, int age, Sex sex) {
+        if (validate(name) && validate(age) && validate(sex))
+            return true;
+        else
+            return false;
+    }
+
+    private boolean validate(String name) {
+        if (name.length() > MAX_NAME_LENGTH || name.length() < MIN_NAME_LENGTH)
+            throw new IllegalArgumentException("Name must contain at least 2 characters, up to 25. Found: " + name.length());
+        else
+            return true;
+    }
+
+    private boolean validate(int age) {
+        if (age > MAX_AGE_LENGTH || age < MIN_AGE_LENGTH)
+            throw new IllegalArgumentException("Age must be at least 12 and no higher than 120. Found: " + age);
+        else
+            return true;
+    }
+
+    private boolean validate(Sex sex) {
+        if (sex.equals(Sex.MALE))
+            return true;
 
         else if (sex.equals(Sex.FEMALE))
-            this.sex = sex;
+            return true;
 
-        else throw new IllegalArgumentException("Sex must be either male or female. Found: " + sex);
+        else throw new IllegalArgumentException("Sex must be either male or female. Found: " + sex.toString());
     }
 }
