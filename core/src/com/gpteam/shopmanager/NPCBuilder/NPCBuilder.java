@@ -25,12 +25,6 @@ public class NPCBuilder {
         initialize(npcs, npcQuantity);
         return npcs;
     }
-
-    public ArrayList<NPC> newNPCList(int npcQuantity) {
-        ArrayList<NPC> npcs = new ArrayList<NPC>(npcQuantity);
-        initialize(npcs, npcQuantity);
-        return npcs;
-    }
     
     public void initialize(ArrayList<NPC> npcs, int npcQuantity) {
         for (int i = 0; i < npcQuantity; i++)
