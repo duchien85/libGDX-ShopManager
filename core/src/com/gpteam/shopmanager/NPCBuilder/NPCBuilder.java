@@ -21,13 +21,13 @@ public class NPCBuilder {
     }
 
     public ArrayList<NPC> newNPCList(int npcQuantity) {
-        ArrayList<NPC> npcs = new ArrayList<NPC>();
+        ArrayList<NPC> npcs = new ArrayList<NPC>(npcQuantity);
         initialize(npcs, npcQuantity);
         return npcs;
     }
 
-    public ArrayList<NPC> newNPCList(int npcQuantity, int initialCapacity) {
-        ArrayList<NPC> npcs = new ArrayList<NPC>(initialCapacity);
+    public ArrayList<NPC> newNPCList(int npcQuantity) {
+        ArrayList<NPC> npcs = new ArrayList<NPC>(npcQuantity);
         initialize(npcs, npcQuantity);
         return npcs;
     }
