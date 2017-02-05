@@ -1,6 +1,7 @@
 package com.gpteam.shopmanager.NPC;
 
 import com.gpteam.shopmanager.Character.CharacterInfo;
+import com.gpteam.shopmanager.Needs.Needs;
 import com.gpteam.shopmanager.Needs.NeedsHandler;
 import com.gpteam.shopmanager.Society.SocietyClass;
 import com.gpteam.shopmanager.Society.SocietyClassHandler;
@@ -14,6 +15,7 @@ public class NPC {
     private SocietyClassHandler societyClassHandler;
 
     public NPC() {
+        initialize(true);
     }
 
     public NPC(CharacterInfo characterInfo, NeedsHandler needsHandler, SocietyClassHandler societyClassHandler) {
@@ -22,9 +24,8 @@ public class NPC {
         this.societyClassHandler = societyClassHandler;
     }
 
-    public NPC(boolean allRandom) {
-        characterInfo = new CharacterInfo(allRandom);
-        initialize();
+    public NPC(boolean random) {
+        initialize(random);
     }
 
     public CharacterInfo getCharacterInfo() {
@@ -35,7 +36,16 @@ public class NPC {
         return societyClassHandler.getSocietyClass();
     }
 
-    private void initialize() {
+    public int getNeedValue(Needs need) {
+        return needsHandler.getNeedValue(need);
+    }
+
+    private void initialize(boolean random) {
+        characterInfo = new CharacterInfo(random);
+        initializeHandlers();
+    }
+
+    private void initializeHandlers() {
         needsHandler = new NeedsHandler();
         societyClassHandler = new SocietyClassHandler();
     }
