@@ -5,7 +5,4 @@ package com.gpteam.shopmanager.Needs;
  */
 public class NeedsLogic {
     // TODO handling of Needs growth and decrease - multiplied by some scaling factor / algorythm?
-    NeedsHandler needsHandler;
-
-
 }
