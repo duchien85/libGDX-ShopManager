@@ -31,6 +31,11 @@ public class NeedsHandler {
             throw new IllegalArgumentException("Needs container does not contain provided need. Found: " + need.toString());
     }
 
+    public Needs getNeed(Needs need) {
+        // TODO figure out this method
+        return null;
+    }
+
     public void updateNeedValue(Needs need, int value) {
         if (needs.containsKey(need) && needs.containsValue(value))
             needs.put(need, value);
