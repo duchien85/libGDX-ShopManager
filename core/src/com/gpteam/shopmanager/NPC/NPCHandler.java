@@ -21,6 +21,8 @@ public class NPCHandler {
     private NeedsHandler needsHandler;
     private SocietyClassHandler societyClassHandler;
 
+    // TODO COME UP WITH BEST WAY TO HANDLE VALIDATING ARGUMENTS AND ASSIGNING THEM TO CLASS VARIABLES !!! (Character class needs exact same thing)
+
     public NPCHandler(int npcCount) {
         if (npcCount > MAX_NPC_AMOUNT || npcCount < MIN_NPC_AMOUNT)
             throw new IllegalArgumentException("npcCount must be between 0 - 10000. Found: " + npcCount);
@@ -54,7 +56,7 @@ public class NPCHandler {
             throw new IllegalArgumentException("npcCount must be between 0 - 10000. Found: " + npcCount);
         else
             for (int i = 0; i < npcCount; i++)
-                npcs.add(npcBuilder.newNPC(allRandom));
+                npcs.add(npcBuilder.newNPC());
 
         this.npcCount += npcCount;
     }
