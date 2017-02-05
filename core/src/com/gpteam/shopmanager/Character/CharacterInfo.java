@@ -21,7 +21,9 @@ public class CharacterInfo {
     public CharacterInfo(boolean allRandom) {
         if (allRandom) {
             randomGenerator = new RandomGenerator();
-            randomGenerator.generateRandomInfo();
+            name = randomGenerator.getRandomName();
+            age = randomGenerator.getRandomAge();
+            sex = randomGenerator.getRandomSex();
         }
     }
 
