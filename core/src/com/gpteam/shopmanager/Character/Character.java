@@ -19,7 +19,7 @@ public class Character {
             this.name = name;
             this.age = age;
             this.sex = sex;
-        } else throw new IllegalArgumentException("One of the arguments was invalid. Name: " + name + ", age: " + age + ", sex: " + sex.toString());
+        } else throw new IllegalArgumentException("One of the arguments was invalid. Found: name: " + name + ", age: " + age + ", sex: " + sex.toString());
     }
 
     public Character(String name, int age) {
