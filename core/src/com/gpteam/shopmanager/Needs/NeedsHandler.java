@@ -24,11 +24,18 @@ public class NeedsHandler {
         if (initialize) initialize();
     }
 
+    public int getNeedValue(Needs need) {
+        if (needs.containsKey(need))
+            return needs.get(need);
+        else
+            throw new IllegalArgumentException("Needs container does not contain provided need. Found: " + need.toString());
+    }
+
     public void updateNeedValue(Needs need, int value) {
         if (needs.containsKey(need) && needs.containsValue(value))
             needs.put(need, value);
         else
-            throw new IllegalArgumentException("Need and value not found in HashMap. Found: " + need.name() + ", " + value);
+            throw new IllegalArgumentException("Need and value not found in HashMap. Found: " + need.toString() + ", " + value);
     }
 
     /************************************************************
@@ -38,7 +45,7 @@ public class NeedsHandler {
      * <p>needs.length must be equal to values.length</p>
      ************************************************************/
     private void initialize(Needs[] needs, int[] values) {
-        if (needs.length == values.length)
+        if (needs.length != values.length)
             throw new IllegalArgumentException("Needs array must be the same length as Values array. Found:\nneeds: " + needs.length + "\nvalues: " + values.length);
         else
             fillHashMap(needs, values);
