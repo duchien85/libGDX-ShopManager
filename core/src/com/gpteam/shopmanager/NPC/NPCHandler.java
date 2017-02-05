@@ -7,6 +7,9 @@ import com.gpteam.shopmanager.Society.SocietyClassHandler;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import static com.gpteam.shopmanager.Variables.Variables.MAX_NPC_AMOUNT;
+import static com.gpteam.shopmanager.Variables.Variables.MIN_NPC_AMOUNT;
+
 /*
  * Created by masmix on 26.01.2017.
  */
@@ -17,9 +20,6 @@ public class NPCHandler {
     private NPCBuilder npcBuilder;
     private NeedsHandler needsHandler;
     private SocietyClassHandler societyClassHandler;
-
-    public static final int MAX_NPC_AMOUNT = 10000;
-    public static final int MIN_NPC_AMOUNT = 0;
 
     public NPCHandler(int npcCount) {
         if (npcCount > MAX_NPC_AMOUNT || npcCount < MIN_NPC_AMOUNT)
@@ -66,11 +66,11 @@ public class NPCHandler {
             throw new IllegalArgumentException();
     }
     
-    public void removeNpcs(NPC... npcs) throws NoSuchFieldException {
+    public void removeNpcs(NPC... npcs) {
         if (this.npcs.containsAll(Arrays.asList(npcs))) // TODO in the future, check, if sending method argument "npcs", to "containsAll" method of "this.npc? works properly
             this.npcs.removeAll(Arrays.asList(npcs));
         else
-            throw new NoSuchFieldException("Provided array is not filled with npcs of this class instance only.");
+            throw new IllegalArgumentException("Provided array is not filled with npcs of this class instance only.");
     }
 
 //    public NPC[] generateRandomNPC() {
