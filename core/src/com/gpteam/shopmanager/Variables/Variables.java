@@ -1,9 +1,9 @@
 package com.gpteam.shopmanager.Variables;
 
+import com.gpteam.shopmanager.Character.CharacterInfo;
 import com.gpteam.shopmanager.FileHandlers.Loaders.NamesLoader;
 import com.gpteam.shopmanager.NPC.NPCHandler;
 import com.gpteam.shopmanager.Skill.SkillLogic;
-import com.gpteam.shopmanager.Character.Character;
 
 /*
  * Created by masmix on 04.02.2017.
@@ -17,7 +17,7 @@ public final class Variables {
     public final static String NAMES_PATH = "names.txt";
 
     /**************************************************
-     * {@link Character}
+     * {@link CharacterInfo}
      **************************************************/
     public final static int MAX_NAME_LENGTH = 25;
     public final static int MIN_NAME_LENGTH = 2;
