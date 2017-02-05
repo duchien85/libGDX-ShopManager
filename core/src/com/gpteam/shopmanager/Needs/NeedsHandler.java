@@ -14,6 +14,7 @@ import java.util.NoSuchElementException;
  */
 public class NeedsHandler {
     private HashMap<Needs, Integer> needs;
+    private NeedsLogic needsLogic;
     private boolean containerInitialized = false;
 
     public NeedsHandler() {
@@ -72,8 +73,5 @@ public class NeedsHandler {
     private void fillHashMap(Needs[] needs, int[] values) {
         for (int i = 0; i < needs.length; i++)
             this.needs.put(needs[i], values[i]);
-    }
-    
-    private class NeedsLogic {
     }
 }
