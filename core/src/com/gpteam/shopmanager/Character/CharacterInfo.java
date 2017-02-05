@@ -26,7 +26,8 @@ public class CharacterInfo {
     }
 
     public void setName(String name) {
-        this.name = name;
+        if (validate(name))
+            this.name = name;
     }
 
     public int getAge() {
@@ -34,7 +35,8 @@ public class CharacterInfo {
     }
 
     public void setAge(int age) {
-        this.age = age;
+        if (validate(age))
+            this.age = age;
     }
 
     public Sex getSex() {
@@ -42,7 +44,8 @@ public class CharacterInfo {
     }
 
     public void setSex(Sex sex) {
-        this.sex = sex;
+        if (validate(sex))
+            this.sex = sex;
     }
 
     private void initialize() {
