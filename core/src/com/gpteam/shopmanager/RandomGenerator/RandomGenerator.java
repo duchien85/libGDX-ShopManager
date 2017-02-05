@@ -2,10 +2,10 @@ package com.gpteam.shopmanager.RandomGenerator;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.gpteam.shopmanager.Character.CharacterInfo;
-import com.gpteam.shopmanager.IOHandlers.Loader;
-import com.gpteam.shopmanager.IOHandlers.OutputHandlers.NamesLoader;
+import com.gpteam.shopmanager.FileHandlers.Loaders.NamesLoader;
 import com.gpteam.shopmanager.Player.Sex;
-import com.gpteam.shopmanager.Variables.Variables;
+
+import static com.gpteam.shopmanager.Variables.Variables.*;
 
 /*
  * Created by masmix on 04.02.2017.
@@ -18,10 +18,10 @@ public class RandomGenerator {
     }
 
     public RandomGenerator() {
-        namesLoader = new NamesLoader();
+        initialize();
     }
 
-    public CharacterInfo generateRandomInfo() {
+    public CharacterInfo generateRandomCharacterInfo() {
         return new CharacterInfo(getRandomName(), getRandomAge(), getRandomSex());
     }
 
@@ -33,7 +33,7 @@ public class RandomGenerator {
     }
 
     public int getRandomAge() {
-        return MathUtils.random(Variables.MIN_AGE_LENGTH, Variables.MAX_AGE_LENGTH);
+        return MathUtils.random(MIN_AGE_LENGTH, MAX_AGE_LENGTH);
     }
 
     public Sex getRandomSex() {
@@ -41,9 +41,17 @@ public class RandomGenerator {
     }
 
     private boolean validateName(String name) {
-        if (name.length() > Variables.MAX_NAME_LENGTH || name.length() < Variables.MIN_NAME_LENGTH)
+        if (name.length() > MAX_NAME_LENGTH || name.length() < MIN_NAME_LENGTH)
             return false;
         else
             return true;
+    }
+
+    private void initialize() {
+        initializeNamesLoader();
+    }
+
+    private void initializeNamesLoader() {
+        namesLoader = new NamesLoader();
     }
 }
