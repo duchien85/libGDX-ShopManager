@@ -25,18 +25,18 @@ public class RandomGenerator {
         return new CharacterInfo(getRandomName(), getRandomAge(), getRandomSex());
     }
 
-    private String getRandomName() {
+    public String getRandomName() {
         String name;
         do { name = namesLoader.getNames().get(MathUtils.random(0, namesLoader.getNames().size() - 1));
         } while (validateName(name));
         return name;
     }
 
-    private int getRandomAge() {
+    public int getRandomAge() {
         return MathUtils.random(Variables.MIN_AGE_LENGTH, Variables.MAX_AGE_LENGTH);
     }
 
-    private Sex getRandomSex() {
+    public Sex getRandomSex() {
         return Sex.getRandom();
     }
 
