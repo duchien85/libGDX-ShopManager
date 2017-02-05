@@ -10,7 +10,6 @@ public class CharacterInfo {
     private String name;
     private int age;
     private Sex sex;
-    private RandomGenerator randomGenerator;
 
     public CharacterInfo(String name, int age, Sex sex) {
         this.name = name;
@@ -18,13 +17,8 @@ public class CharacterInfo {
         this.sex = sex;
     }
 
-    public CharacterInfo(boolean allRandom) {
-        if (allRandom) {
-            randomGenerator = new RandomGenerator();
-            name = randomGenerator.getRandomName();
-            age = randomGenerator.getRandomAge();
-            sex = randomGenerator.getRandomSex();
-        }
+    public CharacterInfo() {
+        initialize();
     }
 
     public String getName() {
@@ -49,5 +43,12 @@ public class CharacterInfo {
 
     public void setSex(Sex sex) {
         this.sex = sex;
+    }
+
+    private void initialize() {
+        RandomGenerator randomGenerator = new RandomGenerator();
+        name = randomGenerator.getRandomName();
+        age = randomGenerator.getRandomAge();
+        sex = randomGenerator.getRandomSex();
     }
 }
