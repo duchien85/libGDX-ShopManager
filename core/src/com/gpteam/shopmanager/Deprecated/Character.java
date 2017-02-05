@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.Character;
+package com.gpteam.shopmanager.Deprecated;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.gpteam.shopmanager.Player.Sex;
@@ -63,7 +63,7 @@ public class Character {
             this.age = age;
     }
 
-    private void setSex_(Sex sex) {
+    private void setSex(Sex sex) {
         if (validate(sex))
             this.sex = sex;
     }
