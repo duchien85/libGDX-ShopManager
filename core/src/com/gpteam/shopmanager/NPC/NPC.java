@@ -15,17 +15,13 @@ public class NPC {
     private SocietyClassHandler societyClassHandler;
 
     public NPC() {
-        initialize(true);
+        initialize();
     }
 
     public NPC(CharacterInfo characterInfo, NeedsHandler needsHandler, SocietyClassHandler societyClassHandler) {
         this.characterInfo = characterInfo;
         this.needsHandler = needsHandler;
         this.societyClassHandler = societyClassHandler;
-    }
-
-    public NPC(boolean random) {
-        initialize(random);
     }
 
     public CharacterInfo getCharacterInfo() {
@@ -40,8 +36,8 @@ public class NPC {
         return needsHandler.getNeedValue(need);
     }
 
-    private void initialize(boolean random) {
-        characterInfo = new CharacterInfo(random);
+    private void initialize() {
+        characterInfo = new CharacterInfo();
         initializeHandlers();
     }
 
