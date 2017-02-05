@@ -24,14 +24,14 @@ public class GameMain extends Game {
     public GameMain() {
         camera = new OrthographicCamera();
         fpsLogger = new FPSLogger();
-//        assetManager = new AssetManager();
+        assetManager = new AssetManager();
         camera.position.set(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 0);
     }
 
     @Override
     public void create() {
-//        assetManager.load(("font.fnt"), BitmapFont.class);
-//        assetManager.finishLoading();
+        assetManager.load(("font.fnt"), BitmapFont.class);
+        assetManager.finishLoading();
 
         TextHandler textHandler = new TextHandler("PL");
 
