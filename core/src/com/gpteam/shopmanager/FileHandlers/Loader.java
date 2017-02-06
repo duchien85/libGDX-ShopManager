@@ -15,8 +15,8 @@ public final class Loader {
     private FileReader fileReader;
     private BufferedReader bufferedReader;
 
-    public Loader(String fileName) {
-        file = new File(fileName);
+    public Loader(String filePath) {
+        file = new File(filePath);
         try { fileReader = new FileReader(file); } catch (FileNotFoundException e) { e.printStackTrace(); }
         bufferedReader = new BufferedReader(fileReader);
     }
