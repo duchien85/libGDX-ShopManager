@@ -21,7 +21,7 @@ public class RandomGenerator {
         initialize();
     }
 
-    public CharacterInfo generateRandomCharacterInfo() {
+    public CharacterInfo generateCharacterInfo() {
         return new CharacterInfo(getRandomName(), getRandomAge(), getRandomSex());
     }
 
