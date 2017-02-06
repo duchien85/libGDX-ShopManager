@@ -17,7 +17,7 @@ public class RandomGenerator {
         this.namesLoader = namesLoader;
     }
 
-    public RandomGenerator() {
+     public RandomGenerator() {
         initialize();
     }
 
@@ -26,10 +26,7 @@ public class RandomGenerator {
     }
 
     public String getRandomName() {
-        String name;
-        do { name = namesLoader.getNames().get(MathUtils.random(0, namesLoader.getNames().size() - 1));
-        } while (validateName(name));
-        return name;
+        return namesLoader.getNames().get(MathUtils.random(0, namesLoader.getNames().size() - 1));
     }
 
     public int getRandomAge() {
@@ -38,13 +35,6 @@ public class RandomGenerator {
 
     public Sex getRandomSex() {
         return Sex.getRandom();
-    }
-
-    private boolean validateName(String name) {
-        if (name.length() > MAX_NAME_LENGTH || name.length() < MIN_NAME_LENGTH)
-            return false;
-        else
-            return true;
     }
 
     private void initialize() {
