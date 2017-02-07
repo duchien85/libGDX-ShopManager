@@ -39,13 +39,12 @@ public class NPCHandler {
     }
 
     public void addNpcs(int npcCount) {
-    if (npcCount > MAX_NPC_AMOUNT || npcCount < MIN_NPC_AMOUNT)
+        if (npcCount > MAX_NPC_AMOUNT || npcCount < MIN_NPC_AMOUNT)
             throw new IllegalArgumentException();
         else {
             for (int i = 0; i < npcCount; i++)
                 npcs.add(npcBuilder.newNPC());
         }
-
         this.npcCount += npcCount;
     }
 
