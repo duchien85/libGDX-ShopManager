@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.Shop;
+package com.gpteam.shopmanager.Inventory;
 
 import com.gpteam.shopmanager.Product.Product;
 
@@ -13,16 +13,14 @@ public class Inventory {
 
     public Inventory(Product... products) {
         this.products = new HashMap();
-        for (Product x : products) {
-            this.products.put(x.getSerialName(), x);
-        }
+        initialize(products);
     }
 
     public void remove(Product product) {
-        if (!(products.get(product.getSerialName()).getSerialName().isEmpty()))
-            products.remove(product.getSerialName());
-        else
+        if (products.get(product.getSerialName()).getSerialName().isEmpty())
             throw new IndexOutOfBoundsException();
+        else
+            products.remove(product.getSerialName());
     }
 
     public void add(Product product) {
@@ -31,5 +29,10 @@ public class Inventory {
 
     public Product getProduct(String productSerialName) {
         return products.get(productSerialName);
+    }
+
+    private void initialize(Product[] products) {
+        for (Product x : products)
+            this.products.put(x.getSerialName(), x);
     }
 }
