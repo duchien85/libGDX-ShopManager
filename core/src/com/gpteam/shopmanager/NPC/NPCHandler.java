@@ -18,8 +18,6 @@ public class NPCHandler {
     private int npcCount = npcs.size();
 
     private NPCBuilder npcBuilder;
-    private NeedsHandler needsHandler;
-    private SocietyClassHandler societyClassHandler;
 
     // TODO COME UP WITH BEST WAY TO HANDLE VALIDATING ARGUMENTS AND ASSIGNING THEM TO CLASS VARIABLES !!! (Character class needs exact same thing)
 
