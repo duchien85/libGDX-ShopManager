@@ -14,7 +14,6 @@ public class Product {
     private int quantity;
     private Date expirationDate;
     private ProductType productType;
-    private ProductType[] productTypes;
 
     public Product(String name, String serialName, String description, float price, short quality, int quantity, ProductType productType, Date expirationDate) {
         this.name = name;
@@ -27,7 +26,7 @@ public class Product {
         this.expirationDate = expirationDate;
     }
 
-    public Product(String name, String serialName, String description, float price, short quality, int quantity, Date expirationDate, ProductType... productTypes) {
+    public Product(String name, String serialName, String description, float price, short quality, int quantity, Date expirationDate, ProductType productType) {
         this.name = name;
         this.serialName = serialName;
         this.description = description;
@@ -35,7 +34,6 @@ public class Product {
         this.quality = quality;
         this.quantity = quantity;
         this.expirationDate = expirationDate;
-        this.productTypes = productTypes;
     }
 
     public String getName() {
