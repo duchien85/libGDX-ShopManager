@@ -27,9 +27,11 @@ public class NeedsHandler {
             //return 1; // for later, when engine is done.
     }
 
-    public Needs getNeed(Needs need) {
-        // TODO figure out this method
-        return null;
+    public int getNeed(Needs need) {
+        if (needs.containsKey(need))
+            return needs.get(need);
+        else
+            return 1;
     }
 
     public void updateNeedValue(Needs need, int value) {
