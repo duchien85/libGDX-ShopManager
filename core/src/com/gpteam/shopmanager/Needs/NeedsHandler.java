@@ -34,7 +34,7 @@ public class NeedsHandler {
             return 1;
     }
 
-    public void updateNeedValue(Needs need, int value) {
+    public void updateNeed(Needs need, int value) {
         if (needs.containsKey(need) && needs.containsValue(value))
             needs.put(need, value);
         else
