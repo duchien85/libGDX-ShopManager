@@ -9,4 +9,9 @@ import java.util.HashMap;
  */
 public class Engine {
     private HashMap<String,Class> modules;
+
+    public void initialize() {
+        modules = new HashMap<String, Class>();
+        modules.put("ErrorHandler", ErrorHandler.class);
+    }
 }
