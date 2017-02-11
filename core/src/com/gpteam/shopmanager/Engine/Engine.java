@@ -14,4 +14,11 @@ public class Engine {
         modules = new HashMap<String, Class>();
         modules.put("ErrorHandler", ErrorHandler.class);
     }
+
+    public void invoke(String className, String methodName) {
+        try { modules.get(className).getDeclaredMethod(methodName);
+        } catch (NoSuchMethodException e) {
+            ErrorHandler.handleNoSuchMethodException("No such method. Found: " + methodName);
+        }
+    }
 }
