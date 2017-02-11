@@ -7,4 +7,9 @@ public class ErrorHandler {
     public void handleIllegalArgumentException(String message) {
         throw new IllegalArgumentException(message);
     }
+
+    public static void handleNoSuchMethodException(String message) {
+        try { throw new NoSuchMethodException(message);
+        } catch (NoSuchMethodException e) { e.printStackTrace(); }
+    }
 }
