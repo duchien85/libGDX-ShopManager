@@ -23,6 +23,8 @@ public class NeedsHandler {
             return needs.get(need);
         else
             throw new IllegalArgumentException("Needs container does not contain provided need. Found: " + need.toString());
+                // TODO important: move throwing of exceptions from other classes to one module of the engine, that will handle it.
+            //return 1; // for later, when engine is done.
     }
 
     public Needs getNeed(Needs need) {
