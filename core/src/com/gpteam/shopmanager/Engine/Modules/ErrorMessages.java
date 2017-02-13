@@ -7,4 +7,5 @@ import com.gpteam.shopmanager.Text.Text;
  */
 public final class ErrorMessages {
     public static final String SET_TRAFFIC_LOAD_EXCEPTION_MESSAGE = Text.setTrafficLoadException;
+    public static final String VALIDATE_TRAFFIC_LOAD_EXCEPTION_MESSAGE = Text.validateTrafficLoadException;
 }
