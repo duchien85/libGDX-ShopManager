@@ -1,9 +1,7 @@
 package com.gpteam.shopmanager.FileHandlers;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
+import java.io.*;
+import java.util.ArrayList;
 
 import static com.gpteam.shopmanager.Variables.Variables.NAMES_PATH;
 
@@ -25,6 +23,15 @@ public final class Loader {
         file = new File(NAMES_PATH);
         try { fileReader = new FileReader(file); } catch (FileNotFoundException e) { e.printStackTrace(); }
         bufferedReader = new BufferedReader(fileReader);
+    }
+
+    public ArrayList<String> read() {
+        String line;
+        ArrayList<String> strings = new ArrayList<String>();
+        try { while ((line = getBufferedReader().readLine()) != null)
+            strings.add(line);
+        } catch (IOException e) { e.printStackTrace(); }
+        return strings;
     }
 
     public BufferedReader getBufferedReader() {
