@@ -24,4 +24,9 @@ public class TrafficHandler {
     private void setTrafficLoad(int trafficLoad) {
         this.trafficLoad = trafficLoad;
     }
+
+    private void validateTrafficLoad(int trafficLoad) {
+        if (!(Validator.validateTrafficLoad(trafficLoad)))
+            ErrorHandler.handleIllegalArgumentException(VALIDATE_TRAFFIC_LOAD_EXCEPTION_MESSAGE);
+    }
 }
