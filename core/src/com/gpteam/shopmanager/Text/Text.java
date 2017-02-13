@@ -23,4 +23,6 @@ public final class Text {
     public static String middleclass;
     public static String teenager;
     public static String student;
+
+    public static String setTrafficLoadException;
 }
