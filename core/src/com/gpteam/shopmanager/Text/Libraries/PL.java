@@ -19,5 +19,12 @@ public final class PL {
         Text.sex = "Płeć";
         Text.sexMale = "Mężczyzna";
         Text.sexFemale = "Kobieta";
+
+        Text.rich = "Bogaci";
+        Text.poor = "Biedni";
+        Text.drunk = "Pijacy";
+        Text.middleclass = "Klasa Srednia";
+        Text.teenager = "Nastolatkowie";
+        Text.student = "Studenci";
     }
 }
