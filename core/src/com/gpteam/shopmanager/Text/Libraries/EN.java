@@ -29,7 +29,5 @@ public final class EN {
         Text.middleclass = "Middle class";
         Text.teenager = "Teenager";
         Text.student = "Student";
-
-        Text.setTrafficLoadException = "Traffic load must be between " + MIN_TRAFFIC_LOAD + " and " + MAX_TRAFFIC_LOAD + ". ";
     }
 }
