@@ -51,4 +51,5 @@ public final class Text {
      * {@link TrafficHandler}
      **************************************************/
     public static String setTrafficLoadException;
+    public static String validateTrafficLoadException;
 }
