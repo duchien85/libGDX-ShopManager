@@ -16,13 +16,11 @@ public final class Text {
     public static String expertise;
     public static String expertiseDescription;
 
-
     /**
      * {@link }
      **************************************************/
     public static String negotiation;
     public static String negotiationDescription;
-
 
     /**
      * {@link CharacterInfo}
@@ -30,14 +28,12 @@ public final class Text {
     public static String workQuality;
     public static String workQualityDescription;
 
-
     /**
      * {@link CharacterInfo}
      **************************************************/
     public static String sex;
     public static String sexMale;
     public static String sexFemale;
-
 
     /**
      * {@link SocietyClass}
@@ -48,7 +44,6 @@ public final class Text {
     public static String middleclass;
     public static String teenager;
     public static String student;
-
 
     /**
      * {@link TrafficHandler}
