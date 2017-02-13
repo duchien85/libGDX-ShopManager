@@ -16,4 +16,11 @@ public final class Text {
     public static String sex;
     public static String sexMale;
     public static String sexFemale;
+
+    public static String rich;
+    public static String poor;
+    public static String drunk;
+    public static String middleclass;
+    public static String teenager;
+    public static String student;
 }
