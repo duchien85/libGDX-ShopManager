@@ -17,6 +17,11 @@ public class TrafficHandler {
         trafficLoad = RandGen.getTrafficLoad();
     }
 
+    public TrafficHandler(int trafficLoad) {
+        validateTrafficLoad(trafficLoad);
+        this.trafficLoad = trafficLoad;
+    }
+
     public int getTrafficLoad() {
         return trafficLoad;
     }
