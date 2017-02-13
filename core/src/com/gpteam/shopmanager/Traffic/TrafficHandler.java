@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.Traffic;
 
+import com.gpteam.shopmanager.Engine.Modules.Validator;
 import com.gpteam.shopmanager.RandomGenerator.RandGen;
 
 /*
@@ -14,5 +15,10 @@ public class TrafficHandler {
 
     public int getTrafficLoad() {
         return trafficLoad;
+    }
+
+    public void setTrafficLoad(int trafficLoad) {
+        if (Validator.validateTrafficLoad(trafficLoad))
+            this.trafficLoad = trafficLoad;
     }
 }
