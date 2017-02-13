@@ -58,8 +58,7 @@ public class NeedsHandler {
         if (containerInitialized) {
             try { throw new InstantiationException("NeedsHandler has already been initialized.");
             } catch (InstantiationException e) { e.printStackTrace(); }
-        } else
-            fillHashMap();
+        } else fillHashMap();
     }
 
     private void fillHashMap() {
