@@ -13,7 +13,9 @@ public final class Text {
     public static String negotiation;
     public static String negotiationDescription;
 
-
+    /**************************************************
+     * {@link CharacterInfo}
+     **************************************************/
     public static String workQuality;
     public static String workQualityDescription;
 
