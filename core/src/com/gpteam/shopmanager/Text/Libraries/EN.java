@@ -19,5 +19,12 @@ public final class EN {
         Text.sex = "Sex";
         Text.sexMale = "Man";
         Text.sexFemale = "Woman";
+
+        Text.rich = "Rich";
+        Text.poor = "Poor";
+        Text.drunk = "Drunk";
+        Text.middleclass = "Middle class";
+        Text.teenager = "Teenager";
+        Text.student = "Student";
     }
 }
