@@ -13,7 +13,7 @@ public class TrafficHandler {
     private int trafficLoad;
 
     public TrafficHandler() {
-        trafficLoad = new RandGen().getTrafficLoad();
+        trafficLoad = RandGen.getTrafficLoad();
     }
 
     public int getTrafficLoad() {
