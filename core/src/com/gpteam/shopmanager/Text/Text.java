@@ -3,6 +3,8 @@ package com.gpteam.shopmanager.Text;
 import com.gpteam.shopmanager.Traffic.TrafficHandler;
 import com.gpteam.shopmanager.Society.SocietyClass;
 import com.gpteam.shopmanager.Character.CharacterInfo;
+import com.gpteam.shopmanager.Variables.Variables;
+
 /*
  * Created by masmix on 18.01.2017.
  */
@@ -50,6 +52,5 @@ public final class Text {
     /**************************************************
      * {@link TrafficHandler}
      **************************************************/
-    public static String setTrafficLoadException;
-    public static String validateTrafficLoadException;
+    public static final String VALIDATE_TRAFFIC_LOAD_EXCEPTION = "Traffic load must be between " + Variables.MIN_TRAFFIC_LOAD + " and " + Variables.MAX_TRAFFIC_LOAD + ". ";
 }
