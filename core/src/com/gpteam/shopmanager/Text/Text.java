@@ -10,28 +10,28 @@ import com.gpteam.shopmanager.Skill.Skills.Expertise;
  * Created by masmix on 18.01.2017.
  */
 public final class Text {
-    /**************************************************
+    /**
      * {@link Expertise}
      **************************************************/
     public static String expertise;
     public static String expertiseDescription;
 
 
-    /**************************************************
+    /**
      * {@link }
      **************************************************/
     public static String negotiation;
     public static String negotiationDescription;
 
 
-    /**************************************************
+    /**
      * {@link CharacterInfo}
      **************************************************/
     public static String workQuality;
     public static String workQualityDescription;
 
 
-    /**************************************************
+    /**
      * {@link CharacterInfo}
      **************************************************/
     public static String sex;
@@ -39,7 +39,7 @@ public final class Text {
     public static String sexFemale;
 
 
-    /**************************************************
+    /**
      * {@link SocietyClass}
      **************************************************/
     public static String rich;
@@ -50,7 +50,7 @@ public final class Text {
     public static String student;
 
 
-    /**************************************************
+    /**
      * {@link TrafficHandler}
      **************************************************/
     public static final String VALIDATE_TRAFFIC_LOAD_EXCEPTION = "Traffic load must be between " + Variables.MIN_TRAFFIC_LOAD + " and " + Variables.MAX_TRAFFIC_LOAD + ". ";
