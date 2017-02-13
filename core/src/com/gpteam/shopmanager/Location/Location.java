@@ -1,6 +1,7 @@
 package com.gpteam.shopmanager.Location;
 
 import com.gpteam.shopmanager.Society.SocietyClass;
+import com.gpteam.shopmanager.Traffic.TrafficHandler;
 
 import java.util.ArrayList;
 
@@ -9,5 +10,5 @@ import java.util.ArrayList;
  */
 public class Location {
     private ArrayList<SocietyClass> societyClasses;
-
+    private TrafficHandler trafficHandler;
 }
