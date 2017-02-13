@@ -4,6 +4,7 @@ import com.gpteam.shopmanager.Character.CharacterInfo;
 import com.gpteam.shopmanager.FileHandlers.Loaders.NamesLoader;
 import com.gpteam.shopmanager.NPC.NPCHandler;
 import com.gpteam.shopmanager.Skill.SkillLogic;
+import com.gpteam.shopmanager.Traffic.TrafficHandler;
 
 /*
  * Created by masmix on 04.02.2017.
@@ -35,4 +36,10 @@ public final class Variables {
      **************************************************/
     public final static int MAX_NPC_AMOUNT = 10000;
     public final static int MIN_NPC_AMOUNT = 0;
+
+    /**************************************************
+     * {@link TrafficHandler}
+     **************************************************/
+    public final static int MAX_TRAFFIC_LOAD = 100;
+    public final static int MIN_TRAFFIC_LOAD = 0;
 }
