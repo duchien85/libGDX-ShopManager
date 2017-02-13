@@ -29,6 +29,10 @@ public final class RandGen {
         return namesLoader.getNames().get(MathUtils.random(0, namesLoader.getNames().size() - 1));
     }
 
+    public int getTrafficLoad() {
+        return MathUtils.random(MIN_TRAFFIC_LOAD, MAX_TRAFFIC_LOAD);
+    }
+
     public int getRandomAge() {
         return MathUtils.random(MIN_AGE_LENGTH, MAX_AGE_LENGTH);
     }
