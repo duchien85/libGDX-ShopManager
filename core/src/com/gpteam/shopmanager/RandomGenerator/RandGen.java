@@ -21,7 +21,7 @@ public final class RandGen {
         initialize();
     }
 
-    /**************************************************
+    /**
      * {@link CharacterInfo}
      * @return CharacterInfo object, with random name,
      * age and sex.
