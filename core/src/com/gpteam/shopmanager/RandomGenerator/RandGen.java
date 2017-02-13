@@ -10,7 +10,7 @@ import static com.gpteam.shopmanager.Variables.Variables.*;
 /*
  * Created by masmix on 04.02.2017.
  */
-public class RandGen {
+public final class RandGen {
     private NamesLoader namesLoader;
 
     public RandGen(NamesLoader namesLoader) {
