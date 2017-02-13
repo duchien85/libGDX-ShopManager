@@ -4,7 +4,6 @@ import com.gpteam.shopmanager.Engine.Modules.ErrorHandler;
 import com.gpteam.shopmanager.Engine.Modules.Validator;
 import com.gpteam.shopmanager.RandomGenerator.RandGen;
 
-import static com.gpteam.shopmanager.Engine.Modules.ErrorMessages.SET_TRAFFIC_LOAD_EXCEPTION_MESSAGE;
 import static com.gpteam.shopmanager.Engine.Modules.ErrorMessages.VALIDATE_TRAFFIC_LOAD_EXCEPTION_MESSAGE;
 
 /*
