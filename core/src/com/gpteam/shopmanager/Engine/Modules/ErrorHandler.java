@@ -4,7 +4,7 @@ package com.gpteam.shopmanager.Engine.Modules;
  * Created by masmix on 11.02.2017.
  */
 public final class ErrorHandler {
-    public static void handleIllegalArgumentException(String message) {
+    public static void throwIllegalArgumentException(String message) {
         throw new IllegalArgumentException(message);
     }
 
