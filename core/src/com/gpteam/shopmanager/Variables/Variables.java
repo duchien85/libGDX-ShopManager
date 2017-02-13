@@ -12,8 +12,7 @@ import com.gpteam.shopmanager.Traffic.TrafficHandler;
 public final class Variables {
     /**************************************************
      * {@link NamesLoader}
-     * NAMES_PATH is the location
-     * of txt file with random names
+     * NAMES_PATH - location of file with random names
      **************************************************/
     public final static String NAMES_PATH = "names.txt";
 
