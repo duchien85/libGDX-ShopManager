@@ -11,4 +11,8 @@ public class TrafficHandler {
     public TrafficHandler() {
         trafficLoad = new RandGen().getTrafficLoad();
     }
+
+    public int getTrafficLoad() {
+        return trafficLoad;
+    }
 }
