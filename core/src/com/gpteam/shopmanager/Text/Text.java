@@ -4,13 +4,14 @@ import com.gpteam.shopmanager.Traffic.TrafficHandler;
 import com.gpteam.shopmanager.Society.SocietyClass;
 import com.gpteam.shopmanager.Character.CharacterInfo;
 import com.gpteam.shopmanager.Variables.Variables;
+import com.gpteam.shopmanager.Skill.Skills.Expertise;
 
 /*
  * Created by masmix on 18.01.2017.
  */
 public final class Text {
     /**************************************************
-     * {@link }
+     * {@link Expertise}
      **************************************************/
     public static String expertise;
     public static String expertiseDescription;
