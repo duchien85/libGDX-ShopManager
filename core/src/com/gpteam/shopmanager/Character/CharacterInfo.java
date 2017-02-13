@@ -1,7 +1,7 @@
 package com.gpteam.shopmanager.Character;
 
 import com.gpteam.shopmanager.Player.Sex;
-import com.gpteam.shopmanager.RandomGenerator.RandomGenerator;
+import com.gpteam.shopmanager.RandomGenerator.RandGen;
 
 import static com.gpteam.shopmanager.Variables.Variables.*;
 
@@ -49,10 +49,10 @@ public class CharacterInfo {
     }
 
     private void initialize() {
-        RandomGenerator randomGenerator = new RandomGenerator();
-        name = randomGenerator.getRandomName();
-        age = randomGenerator.getRandomAge();
-        sex = randomGenerator.getRandomSex();
+        RandGen randGenerator = new RandGen();
+        name = randGenerator.getRandomName();
+        age = randGenerator.getRandomAge();
+        sex = randGenerator.getRandomSex();
     }
 
     private void assign(String name, int age, Sex sex) {

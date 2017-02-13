@@ -10,14 +10,14 @@ import static com.gpteam.shopmanager.Variables.Variables.*;
 /*
  * Created by masmix on 04.02.2017.
  */
-public class RandomGenerator {
+public class RandGen {
     private NamesLoader namesLoader;
 
-    public RandomGenerator(NamesLoader namesLoader) {
+    public RandGen(NamesLoader namesLoader) {
         this.namesLoader = namesLoader;
     }
 
-     public RandomGenerator() {
+     public RandGen() {
         initialize();
     }
 
