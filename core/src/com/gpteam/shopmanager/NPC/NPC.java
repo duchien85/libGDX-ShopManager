@@ -23,6 +23,12 @@ public class NPC {
         this.needsHandler = needsHandler;
         this.societyClassHandler = societyClassHandler;
     }
+    
+    public NPC(SocietyClass societyClass) {
+    			 characterInfo = new CharacterInfo();
+    			 needsHandler = new NeedsHandler();
+    			 socieyClassHandler = new SocietyClassHandler(societyClass);
+    }
 
     public CharacterInfo getCharacterInfo() {
         return characterInfo;
