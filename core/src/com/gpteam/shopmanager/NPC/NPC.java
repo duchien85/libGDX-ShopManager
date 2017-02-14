@@ -25,9 +25,9 @@ public class NPC {
     }
     
     public NPC(SocietyClass societyClass) {
-    			 characterInfo = new CharacterInfo();
-    			 needsHandler = new NeedsHandler();
-    			 socieyClassHandler = new SocietyClassHandler(societyClass);
+        characterInfo = new CharacterInfo();
+        needsHandler = new NeedsHandler();
+        societyClassHandler = new SocietyClassHandler(societyClass);
     }
 
     public CharacterInfo getCharacterInfo() {
