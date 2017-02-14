@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.Engine.Modules;
+package com.gpteam.shopmanager.Engine.Modules.ErrorHandling;
 
 import com.gpteam.shopmanager.Text.Text;
 
