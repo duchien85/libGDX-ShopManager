@@ -4,6 +4,7 @@ import com.gpteam.shopmanager.Character.CharacterInfo;
 import com.gpteam.shopmanager.FileHandlers.Loaders.NamesLoader;
 import com.gpteam.shopmanager.NPC.NPCHandler;
 import com.gpteam.shopmanager.Skill.SkillLogic;
+import com.gpteam.shopmanager.Traffic.TrafficHandler;
 
 /*
  * Created by masmix on 04.02.2017.
@@ -11,8 +12,7 @@ import com.gpteam.shopmanager.Skill.SkillLogic;
 public final class Variables {
     /**************************************************
      * {@link NamesLoader}
-     * NAMES_PATH is the location
-     * of txt file with random names
+     * NAMES_PATH - location of file with random names
      **************************************************/
     public final static String NAMES_PATH = "names.txt";
 
@@ -35,4 +35,10 @@ public final class Variables {
      **************************************************/
     public final static int MAX_NPC_AMOUNT = 10000;
     public final static int MIN_NPC_AMOUNT = 0;
+
+    /**************************************************
+     * {@link TrafficHandler}
+     **************************************************/
+    public final static int MAX_TRAFFIC_LOAD = 100;
+    public final static int MIN_TRAFFIC_LOAD = 0;
 }

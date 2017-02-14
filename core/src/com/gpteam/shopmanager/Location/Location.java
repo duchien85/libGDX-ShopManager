@@ -11,4 +11,8 @@ import java.util.ArrayList;
 public class Location {
     private ArrayList<SocietyClass> societyClasses;
     private TrafficHandler trafficHandler;
+
+    private void initialize() {
+        trafficHandler = new TrafficHandler();
+    }
 }

@@ -2,6 +2,9 @@ package com.gpteam.shopmanager.Text.Libraries;
 
 import com.gpteam.shopmanager.Text.Text;
 
+import static com.gpteam.shopmanager.Variables.Variables.MAX_TRAFFIC_LOAD;
+import static com.gpteam.shopmanager.Variables.Variables.MIN_TRAFFIC_LOAD;
+
 /*
  * Created by masmix on 18.01.2017.
  */

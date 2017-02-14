@@ -21,12 +21,21 @@ public final class RandGen {
         initialize();
     }
 
+    /**
+     * {@link CharacterInfo}
+     * @return CharacterInfo object, with random name,
+     * age and sex.
+     **************************************************/
     public CharacterInfo generateCharacterInfo() {
         return new CharacterInfo(getRandomName(), getRandomAge(), getRandomSex());
     }
 
     public String getRandomName() {
         return namesLoader.getNames().get(MathUtils.random(0, namesLoader.getNames().size() - 1));
+    }
+
+    public static int getTrafficLoad() {
+        return MathUtils.random(MIN_TRAFFIC_LOAD, MAX_TRAFFIC_LOAD);
     }
 
     public int getRandomAge() {
