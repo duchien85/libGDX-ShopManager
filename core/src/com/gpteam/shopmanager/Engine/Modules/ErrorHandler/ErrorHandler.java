@@ -1,6 +1,4 @@
-package com.gpteam.shopmanager.Engine.Modules.ErrorHandling;
-
-import javax.xml.transform.ErrorListener;
+package com.gpteam.shopmanager.Engine.Modules.ErrorHandler;
 
 /*
  * Created by masmix on 11.02.2017.
