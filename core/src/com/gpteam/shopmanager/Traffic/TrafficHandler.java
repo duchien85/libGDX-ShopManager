@@ -1,10 +1,10 @@
 package com.gpteam.shopmanager.Traffic;
 
-import com.gpteam.shopmanager.Engine.Modules.ErrorHandling.ErrorHandler;
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
 import com.gpteam.shopmanager.Engine.Modules.Validator;
 import com.gpteam.shopmanager.RandomGenerator.RandGen;
 
-import static com.gpteam.shopmanager.Engine.Modules.ErrorHandling.ErrorMessages.VALIDATE_TRAFFIC_LOAD_EXCEPTION_MESSAGE;
+import static com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorMessages.VALIDATE_TRAFFIC_LOAD_EXCEPTION_MESSAGE;
 
 /*
  * Created by masmix on 13.02.2017.

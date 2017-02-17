@@ -1,6 +1,6 @@
 package com.gpteam.shopmanager.Engine;
 
-import com.gpteam.shopmanager.Engine.Modules.ErrorHandling.ErrorHandler;
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
 
 import java.util.HashMap;
 
