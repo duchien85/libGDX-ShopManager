@@ -44,9 +44,4 @@ public final class Text {
     public static String middleclass;
     public static String teenager;
     public static String student;
-
-    /**
-     * {@link TrafficHandler}
-     **************************************************/
-    public static final String TRAFFIC_LOAD_EXCEPTION = "Traffic load must be between " + Variables.MIN_TRAFFIC_LOAD + " and " + Variables.MAX_TRAFFIC_LOAD + ". ";
 }
