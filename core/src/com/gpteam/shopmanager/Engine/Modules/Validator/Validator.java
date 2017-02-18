@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.Engine.Modules;
+package com.gpteam.shopmanager.Engine.Modules.Validator;
 
 import static com.gpteam.shopmanager.Variables.Variables.MAX_TRAFFIC_LOAD;
 import static com.gpteam.shopmanager.Variables.Variables.MIN_TRAFFIC_LOAD;
