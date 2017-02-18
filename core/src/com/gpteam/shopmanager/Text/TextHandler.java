@@ -18,9 +18,9 @@ public final class TextHandler {
     }
 
     /**
-     * @param language The language the game is suppose
-     *                 to be in. Available languages:
-     *                 - EN (English)
+     * @param language Language the game is suppose
+     *                to be in. Available languages:<p>
+     *                 - EN (English)<p>
      *                 - PL (Polish)
      **************************************************/
     public TextHandler(String language) {
