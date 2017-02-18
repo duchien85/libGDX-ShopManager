@@ -1,7 +1,7 @@
 package com.gpteam.shopmanager.Traffic;
 
 import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
-import com.gpteam.shopmanager.Engine.Modules.Validator;
+import com.gpteam.shopmanager.Engine.Modules.Validator.Validator;
 import com.gpteam.shopmanager.RandomGenerator.RandGen;
 
 import static com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorMessages.TRAFFIC_LOAD_EXCEPTION;
