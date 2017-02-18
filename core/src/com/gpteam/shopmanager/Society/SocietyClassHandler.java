@@ -2,6 +2,7 @@ package com.gpteam.shopmanager.Society;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.gpteam.shopmanager.NPC.NPC;
+import com.gpteam.shopmanager.RandomGenerator.RandGen;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -17,7 +18,7 @@ public class SocietyClassHandler {
     }
 
     public SocietyClassHandler() {
-        societyClass = getRandomSocietyClass();
+        societyClass = RandGen.getSocietyClass();
     }
 
     public SocietyClass getSocietyClass() {
