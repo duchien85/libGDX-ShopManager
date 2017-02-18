@@ -48,7 +48,7 @@ public final class RandGen {
     }
     /**************************************************/
 
-    public SocietyClass getSocietyClass() {
+    public static SocietyClass getSocietyClass() {
         return SocietyClass.getRandom();
     }
 
