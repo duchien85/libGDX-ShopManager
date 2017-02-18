@@ -12,7 +12,7 @@ public final class TextHandler {
     public TextHandler() {
         languageMap = new HashMap<String, Class>();
 
-        // TODO save ArrayList to file, load when game is launched
+        // TODO save HashMap to file, load when game is launched
         languageMap.put("EN", EN.class);
         languageMap.put("PL", PL.class);
     }
@@ -25,7 +25,7 @@ public final class TextHandler {
      **************************************************/
     public TextHandler(String language) {
         languageMap = new HashMap<String, Class>();
-        // TODO save ArrayList to file, load when game is launched
+        // TODO save HashMap to file, load when game is launched
         languageMap.put("EN", EN.class);
         languageMap.put("PL", PL.class);
 
