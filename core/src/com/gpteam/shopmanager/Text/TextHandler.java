@@ -17,6 +17,12 @@ public final class TextHandler {
         languageMap.put("PL", PL.class);
     }
 
+    /**
+     * @param language The language the game is suppose
+     *                 to be in. Available languages:
+     *                 - EN (English)
+     *                 - PL (Polish)
+     **************************************************/
     public TextHandler(String language) {
         languageMap = new HashMap<String, Class>();
         // TODO save ArrayList to file, load when game is launched
