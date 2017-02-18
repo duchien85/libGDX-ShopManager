@@ -28,8 +28,4 @@ public class SocietyClassHandler {
     public void setSocietyClass(SocietyClass societyClass) {
         this.societyClass = societyClass;
     }
-
-    private SocietyClass getRandomSocietyClass() {
-        return SocietyClass.getRandom();
-    }
 }
