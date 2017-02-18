@@ -46,7 +46,7 @@ public final class RandGen {
     public Sex getRandomSex() {
         return Sex.getRandom();
     }
-    /**************************************************/
+    ///////////////////////////////////////////////////
 
     public static SocietyClass getSocietyClass() {
         return SocietyClass.getRandom();
