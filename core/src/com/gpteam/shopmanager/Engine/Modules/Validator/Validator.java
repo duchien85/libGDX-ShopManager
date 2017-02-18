@@ -12,10 +12,7 @@ public final class Validator {
     }
 
     private static boolean validate(int trafficLoad) {
-        if (trafficLoad > MIN_TRAFFIC_LOAD && trafficLoad < MAX_TRAFFIC_LOAD)
-            return true;
-        else
-            return false;
+        return trafficLoad > MIN_TRAFFIC_LOAD && trafficLoad < MAX_TRAFFIC_LOAD;
     }
 
 
