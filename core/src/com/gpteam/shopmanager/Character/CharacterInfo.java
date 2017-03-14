@@ -83,10 +83,10 @@ public class CharacterInfo {
     }
 
     private boolean validate(int age) {
-        if (age > MAX_AGE_LENGTH || age < MIN_AGE_LENGTH)
-            throw new IllegalArgumentException("Age must be at least 12 and no higher than 120. Found: " + age);
-        else
+        if (age <= MAX_AGE_LENGTH && age >= MIN_AGE_LENGTH)
             return true;
+        else
+            throw new IllegalArgumentException("Age must be at least 12 and no higher than 120. Found: " + age);
     }
 
     private boolean validate(Sex sex) {
