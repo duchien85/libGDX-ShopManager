@@ -49,13 +49,12 @@ public class NPCHandler {
     }
 
     public void addNpcs(int npcCount, boolean allRandom) {
-        if (npcCount > MAX_NPC_AMOUNT || npcCount < MIN_NPC_AMOUNT)
-            throw new IllegalArgumentException("npcCount must be between 0 - 10000. Found: " + npcCount);
-        else
+        if (npcCount <= MAX_NPC_AMOUNT && npcCount >= MIN_NPC_AMOUNT) {
             for (int i = 0; i < npcCount; i++)
                 npcs.add(npcBuilder.newNPC());
-
-        this.npcCount += npcCount;
+            this.npcCount += npcCount;
+        }
+        else throw new IllegalArgumentException("npcCount must be between 0 - 10000. Found: " + npcCount);
     }
     
     public void removeNpc(NPC npc) {
