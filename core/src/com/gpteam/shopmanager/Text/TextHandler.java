@@ -28,7 +28,6 @@ public final class TextHandler {
         // TODO save HashMap to file, load when game is launched
         languageMap.put("EN", EN.class);
         languageMap.put("PL", PL.class);
-
         setLanguage(language);
     }
 

@@ -20,6 +20,4 @@ public final class Validator {
     else
         return false;
      */
-
-
 }
