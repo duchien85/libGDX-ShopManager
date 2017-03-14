@@ -76,10 +76,10 @@ public class CharacterInfo {
     }
 
     private boolean validate(String name) {
-        if (name.length() > MAX_NAME_LENGTH || name.length() < MIN_NAME_LENGTH)
-            throw new IllegalArgumentException("Name must contain at least 2 characters, up to 25. Found: " + name.length());
-        else
+        if (name.length() < MAX_NAME_LENGTH && name.length() > MIN_NAME_LENGTH)
             return true;
+        else
+            throw new IllegalArgumentException("Name must contain at least 2 characters, up to 25. Found: " + name.length());
     }
 
     private boolean validate(int age) {
