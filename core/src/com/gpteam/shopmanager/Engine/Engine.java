@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.Engine;
 
+import com.gpteam.shopmanager.Economy.Economy;
 import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
 
 import java.util.HashMap;
@@ -9,6 +10,7 @@ import java.util.HashMap;
  */
 public class Engine {
     private HashMap<String,Class> modules;
+    private Economy economy;
 
     public Engine() {
         initialize();
