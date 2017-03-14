@@ -27,4 +27,8 @@ public class Engine {
             ErrorHandler.handleNoSuchMethodException("No such method. Found: " + methodName);
         }
     }
+
+    public void update() {
+        economy.update();
+    }
 }
