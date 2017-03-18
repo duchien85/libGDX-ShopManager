@@ -5,6 +5,8 @@ import com.gpteam.shopmanager.Engine.Modules.Validator.Validator;
 import com.gpteam.shopmanager.RandomGenerator.RandGen;
 
 import static com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorMessages.TRAFFIC_LOAD_EXCEPTION;
+import static com.gpteam.shopmanager.Variables.Variables.MAX_TRAFFIC_LOAD;
+import static com.gpteam.shopmanager.Variables.Variables.MIN_TRAFFIC_LOAD;
 
 /*
  * Created by masmix on 13.02.2017.
@@ -17,7 +19,7 @@ public class TrafficHandler {
     }
 
     public TrafficHandler(int trafficLoad) {
-        if (Validator.validateTrafficLoad(trafficLoad))
+        if (validate(trafficLoad))
             this.trafficLoad = trafficLoad;
         else
             ErrorHandler.handleIllegalArgumentException(TRAFFIC_LOAD_EXCEPTION);
@@ -29,5 +31,9 @@ public class TrafficHandler {
 
     private void setTrafficLoad(int trafficLoad) {
         this.trafficLoad = trafficLoad;
+    }
+
+    private static boolean validate(int trafficLoad) {
+        return trafficLoad >= MIN_TRAFFIC_LOAD && trafficLoad <= MAX_TRAFFIC_LOAD;
     }
 }
