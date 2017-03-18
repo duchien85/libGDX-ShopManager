@@ -14,4 +14,8 @@ public class Economy {
     public BigDecimal getTotalMoney() {
     		return totalMoney;
     }
+
+    public void addTotalMoney(BigDecimal money) {
+        totalMoney = totalMoney.add(money);
+    }
 }
