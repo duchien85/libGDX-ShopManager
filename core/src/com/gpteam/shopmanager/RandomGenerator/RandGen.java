@@ -14,10 +14,6 @@ import static com.gpteam.shopmanager.Variables.Variables.*;
 public final class RandGen {
     private NamesLoader namesLoader;
 
-    public RandGen(NamesLoader namesLoader) {
-        this.namesLoader = namesLoader;
-    }
-
      public RandGen() {
         initialize();
     }
@@ -46,7 +42,6 @@ public final class RandGen {
     public Sex getRandomSex() {
         return Sex.getRandom();
     }
-    ///////////////////////////////////////////////////
 
     public static SocietyClass getSocietyClass() {
         return SocietyClass.getRandom();
