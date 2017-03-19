@@ -39,7 +39,7 @@ public final class RandGen {
         return MathUtils.random(MIN_AGE_LENGTH, MAX_AGE_LENGTH);
     }
 
-    public Sex getRandomSex() {
+    public static Sex getRandomSex() {
         return Sex.getRandom();
     }
 
