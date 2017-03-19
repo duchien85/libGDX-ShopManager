@@ -10,7 +10,7 @@ import static com.gpteam.shopmanager.Variables.Variables.NAMES_PATH;
 /*
  * Created by masmix on 02.02.2017.
  */
-public class NamesLoader {
+public final class NamesLoader {
     private ArrayList<String> names;
     private Loader loader;
 
