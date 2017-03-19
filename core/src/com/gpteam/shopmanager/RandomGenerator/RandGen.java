@@ -35,7 +35,7 @@ public final class RandGen {
         return MathUtils.random(MIN_TRAFFIC_LOAD, MAX_TRAFFIC_LOAD);
     }
 
-    public int getRandomAge() {
+    public static int getRandomAge() {
         return MathUtils.random(MIN_AGE_LENGTH, MAX_AGE_LENGTH);
     }
 
