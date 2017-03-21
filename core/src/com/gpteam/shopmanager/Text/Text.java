@@ -27,10 +27,6 @@ public final class Text {
      **************************************************/
     public static String workQuality;
     public static String workQualityDescription;
-
-    /**
-     * {@link CharacterInfo}
-     **************************************************/
     public static String sex;
     public static String sexMale;
     public static String sexFemale;
