@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.Character;
 
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
 import com.gpteam.shopmanager.Player.Sex;
 import com.gpteam.shopmanager.RandomGenerator.RandGen;
 
@@ -28,6 +29,8 @@ public class CharacterInfo {
     public void setName(String name) {
         if (validate(name))
             this.name = name;
+        else
+            ErrorHandler.handleIllegalArgumentException("Sex must be either male or female. Found: " + sex.toString());
     }
 
     public int getAge() {
@@ -46,6 +49,8 @@ public class CharacterInfo {
     public void setSex(Sex sex) {
         if (validate(sex))
             this.sex = sex;
+        else
+            ErrorHandler.handleIllegalArgumentException("Sex must be either male or female. Found: " + sex.toString());
     }
 
     private void initialize() {
@@ -65,7 +70,7 @@ public class CharacterInfo {
         if (validate(name, age, sex))
             assign(name, age, sex);
         else
-            throw new IllegalArgumentException("One of the arguments was invalid. Found: name: " + name + ", age: " + age + ", sex: " + sex.toString());
+            ErrorHandler.handleIllegalArgumentException("One of the arguments was invalid. Found: name: " + name + ", age: " + age + ", sex: " + sex.toString());
     }
 
     private boolean validate(String name, int age, Sex sex) {
@@ -79,23 +84,17 @@ public class CharacterInfo {
         if (name.length() < MAX_NAME_LENGTH && name.length() > MIN_NAME_LENGTH)
             return true;
         else
-            throw new IllegalArgumentException("Name must contain at least 2 characters, up to 25. Found: " + name.length());
+            ErrorHandler.handleIllegalArgumentException("Name must contain at least 2 characters, up to 25. Found: " + name.length());
     }
 
     private boolean validate(int age) {
         if (age <= MAX_AGE_LENGTH && age >= MIN_AGE_LENGTH)
             return true;
         else
-            throw new IllegalArgumentException("Age must be at least 12 and no higher than 120. Found: " + age);
+            ErrorHandler.handleIllegalArgumentException("Age must be at least 12 and no higher than 120. Found: " + age);
     }
 
     private boolean validate(Sex sex) {
-        if (sex.equals(Sex.MALE))
-            return true;
-
-        else if (sex.equals(Sex.FEMALE))
-            return true;
-
-        else throw new IllegalArgumentException("Sex must be either male or female. Found: " + sex.toString());
+        return sex.equals(Sex.MALE) || sex.equals(Sex.FEMALE);
     }
 }
