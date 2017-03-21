@@ -65,13 +65,6 @@ public class CharacterInfo {
         sex = randGen.getRandomSex();
     }
 
-    private void validateAndAssign(String name, int age, Sex sex) {
-        if (validate(name, age, sex))
-            assign(name, age, sex);
-        else
-            ErrorHandler.handleIllegalArgumentException("One of the arguments was invalid. Found: name: " + name + ", age: " + age + ", sex: " + sex.toString());
-    }
-
     private void assign(String name, int age, Sex sex) {
         this.name = name;
         this.age = age;
