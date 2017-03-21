@@ -30,6 +30,10 @@ public final class Text {
     public static String sex;
     public static String sexMale;
     public static String sexFemale;
+    public static String constructorErrorMessage;
+    public static String constructorErrorAge;
+    public static String constructorErrorSex;
+
 
     /**
      * {@link SocietyClass}
