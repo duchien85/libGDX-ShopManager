@@ -15,7 +15,10 @@ public class CharacterInfo {
     private Sex sex;
 
     public CharacterInfo(String name, int age, Sex sex) {
-        validateAndAssign(name, age, sex);
+        if (validate(name, age, sex))
+            assign(name, age, sex);
+        else
+            ErrorHandler.handleIllegalArgumentException("One of the arguments was invalid. Found: name: " + name + ", age: " + age + ", sex: " + sex.toString());
     }
 
     public CharacterInfo() {
@@ -62,17 +65,17 @@ public class CharacterInfo {
         sex = randGen.getRandomSex();
     }
 
-    private void assign(String name, int age, Sex sex) {
-        this.name = name;
-        this.age = age;
-        this.sex = sex;
-    }
-
     private void validateAndAssign(String name, int age, Sex sex) {
         if (validate(name, age, sex))
             assign(name, age, sex);
         else
             ErrorHandler.handleIllegalArgumentException("One of the arguments was invalid. Found: name: " + name + ", age: " + age + ", sex: " + sex.toString());
+    }
+
+    private void assign(String name, int age, Sex sex) {
+        this.name = name;
+        this.age = age;
+        this.sex = sex;
     }
 
     private boolean validate(String name, int age, Sex sex) {
