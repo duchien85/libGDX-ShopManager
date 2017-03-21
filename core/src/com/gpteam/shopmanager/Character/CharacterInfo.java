@@ -76,10 +76,7 @@ public class CharacterInfo {
     }
 
     private boolean validate(String name, int age, Sex sex) {
-        if (validate(name) && validate(age) && validate(sex))
-            return true;
-        else
-            return false;
+        return validate(name) && validate(age) && validate(sex);
     }
 
     private boolean validate(String name) {
