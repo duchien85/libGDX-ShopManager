@@ -40,6 +40,8 @@ public class CharacterInfo {
     public void setAge(int age) {
         if (validate(age))
             this.age = age;
+        else
+            ErrorHandler.handleIllegalArgumentException("Age must be at least 12 and no higher than 120. Found: " + age);
     }
 
     public Sex getSex() {
