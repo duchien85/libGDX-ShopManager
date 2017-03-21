@@ -1,6 +1,8 @@
 package com.gpteam.shopmanager.Character;
 
 import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorListener;
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorType;
 import com.gpteam.shopmanager.Player.Sex;
 import com.gpteam.shopmanager.RandomGenerator.RandGen;
 
@@ -17,8 +19,10 @@ public class CharacterInfo {
     public CharacterInfo(String name, int age, Sex sex) {
         if (validate(name, age, sex))
             assign(name, age, sex);
-        else
+        else {
+            ErrorListener.notify(ErrorType.INVALID_CHAR_INFO);
             ErrorHandler.handleIllegalArgumentException("One of the arguments was invalid. Found: name: " + name + ", age: " + age + ", sex: " + sex.toString());
+        }
     }
 
     public CharacterInfo() {
@@ -32,8 +36,10 @@ public class CharacterInfo {
     public void setName(String name) {
         if (validate(name))
             this.name = name;
-        else
+        else {
+            ErrorListener.notify(ErrorType.INVALID_NAME);
             ErrorHandler.handleIllegalArgumentException("Name must contain at least 2 characters, up to 25. Found: " + name.length());
+        }
     }
 
     public int getAge() {
@@ -43,8 +49,10 @@ public class CharacterInfo {
     public void setAge(int age) {
         if (validate(age))
             this.age = age;
-        else
+        else {
+            ErrorListener.notify(ErrorType.INVALID_AGE);
             ErrorHandler.handleIllegalArgumentException("Age must be at least 12 and no higher than 120. Found: " + age);
+        }
     }
 
     public Sex getSex() {
@@ -54,8 +62,10 @@ public class CharacterInfo {
     public void setSex(Sex sex) {
         if (validate(sex))
             this.sex = sex;
-        else
+        else {
+            ErrorListener.notify(ErrorType.INVALID_AGE);
             ErrorHandler.handleIllegalArgumentException("Sex must be either male or female. Found: " + sex.toString());
+        }
     }
 
     private void initialize() {
