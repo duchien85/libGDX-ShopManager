@@ -5,4 +5,8 @@ package com.gpteam.shopmanager.Engine.Modules.ErrorHandler;
  */
 public final class ErrorListener {
     private static ErrorType errorType;
+
+    public static void notify(ErrorType errorType) {
+
+    }
 }
