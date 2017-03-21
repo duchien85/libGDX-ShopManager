@@ -30,7 +30,7 @@ public class CharacterInfo {
         if (validate(name))
             this.name = name;
         else
-            ErrorHandler.handleIllegalArgumentException("Sex must be either male or female. Found: " + sex.toString());
+            ErrorHandler.handleIllegalArgumentException("Name must contain at least 2 characters, up to 25. Found: " + name.length());
     }
 
     public int getAge() {
@@ -82,6 +82,7 @@ public class CharacterInfo {
 
     private boolean validate(String name) {
         return name.length() < MAX_NAME_LENGTH && name.length() > MIN_NAME_LENGTH;
+
     }
 
     private boolean validate(int age) {
