@@ -87,7 +87,6 @@ public class CharacterInfo {
 
     private boolean validate(String name) {
         return name.length() < MAX_NAME_LENGTH && name.length() > MIN_NAME_LENGTH;
-
     }
 
     private boolean validate(int age) {
