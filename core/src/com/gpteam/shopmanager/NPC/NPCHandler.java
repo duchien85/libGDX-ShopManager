@@ -80,4 +80,17 @@ public class NPCHandler {
     private void updateNpcCount() {
         npcCount = npcs.size();
     }
+    
+    private boolean validate(int npcCount) {
+    			return npcCount <= MAX_NPC_AMOUNT && npcCount >= MIN_NPC_COUNT;
+    }
 }
+
+
+
+
+
+
+
+
+
