@@ -29,5 +29,9 @@ public final class PL {
         Text.middleclass = "Klasa Srednia";
         Text.teenager = "Nastolatkowie";
         Text.student = "Studenci";
+
+        Text.constructorErrorMessage = "Jeden z argumentów był niewłaściwy. Znaleziono: imie:  ";
+        Text.constructorErrorAge = ", wiek: ";
+        Text.constructorErrorSex = ", płeć: ";
     }
 }

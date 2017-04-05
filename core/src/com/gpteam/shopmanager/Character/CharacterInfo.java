@@ -1,5 +1,8 @@
 package com.gpteam.shopmanager.Character;
 
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorListener;
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorType;
 import com.gpteam.shopmanager.Player.Sex;
 import com.gpteam.shopmanager.RandomGenerator.RandGen;
 
@@ -14,7 +17,12 @@ public class CharacterInfo {
     private Sex sex;
 
     public CharacterInfo(String name, int age, Sex sex) {
-        validateAndAssign(name, age, sex);
+        if (validate(name, age, sex))
+            assign(name, age, sex);
+        else {
+            ErrorListener.notify(ErrorType.INVALID_CHAR_INFO);
+            ErrorHandler.handleIllegalArgumentException("One of the arguments was invalid. Found: name: " + name + ", age: " + age + ", sex: " + sex.toString());
+        }
     }
 
     public CharacterInfo() {
@@ -28,6 +36,10 @@ public class CharacterInfo {
     public void setName(String name) {
         if (validate(name))
             this.name = name;
+        else {
+            ErrorListener.notify(ErrorType.INVALID_NAME);
+            ErrorHandler.handleIllegalArgumentException("Name must contain at least 2 characters, up to 25. Found: " + name.length());
+        }
     }
 
     public int getAge() {
@@ -37,6 +49,10 @@ public class CharacterInfo {
     public void setAge(int age) {
         if (validate(age))
             this.age = age;
+        else {
+            ErrorListener.notify(ErrorType.INVALID_AGE);
+            ErrorHandler.handleIllegalArgumentException("Age must be at least 12 and no higher than 120. Found: " + age);
+        }
     }
 
     public Sex getSex() {
@@ -46,6 +62,10 @@ public class CharacterInfo {
     public void setSex(Sex sex) {
         if (validate(sex))
             this.sex = sex;
+        else {
+            ErrorListener.notify(ErrorType.INVALID_AGE);
+            ErrorHandler.handleIllegalArgumentException("Sex must be either male or female. Found: " + sex.toString());
+        }
     }
 
     private void initialize() {
@@ -61,41 +81,19 @@ public class CharacterInfo {
         this.sex = sex;
     }
 
-    private void validateAndAssign(String name, int age, Sex sex) {
-        if (validate(name, age, sex))
-            assign(name, age, sex);
-        else
-            throw new IllegalArgumentException("One of the arguments was invalid. Found: name: " + name + ", age: " + age + ", sex: " + sex.toString());
-    }
-
     private boolean validate(String name, int age, Sex sex) {
-        if (validate(name) && validate(age) && validate(sex))
-            return true;
-        else
-            return false;
+        return validate(name) && validate(age) && validate(sex);
     }
 
     private boolean validate(String name) {
-        if (name.length() < MAX_NAME_LENGTH && name.length() > MIN_NAME_LENGTH)
-            return true;
-        else
-            throw new IllegalArgumentException("Name must contain at least 2 characters, up to 25. Found: " + name.length());
+        return name.length() < MAX_NAME_LENGTH && name.length() > MIN_NAME_LENGTH;
     }
 
     private boolean validate(int age) {
-        if (age <= MAX_AGE_LENGTH && age >= MIN_AGE_LENGTH)
-            return true;
-        else
-            throw new IllegalArgumentException("Age must be at least 12 and no higher than 120. Found: " + age);
+        return age <= MAX_AGE_LENGTH && age >= MIN_AGE_LENGTH;
     }
 
     private boolean validate(Sex sex) {
-        if (sex.equals(Sex.MALE))
-            return true;
-
-        else if (sex.equals(Sex.FEMALE))
-            return true;
-
-        else throw new IllegalArgumentException("Sex must be either male or female. Found: " + sex.toString());
+        return sex.equals(Sex.MALE) || sex.equals(Sex.FEMALE);
     }
 }

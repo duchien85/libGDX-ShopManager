@@ -23,9 +23,7 @@ public class Engine {
 
     public void invoke(String className, String methodName) {
         try { modules.get(className).getDeclaredMethod(methodName);
-        } catch (NoSuchMethodException e) {
-            ErrorHandler.handleNoSuchMethodException("No such method. Found: " + methodName);
-        }
+        } catch (NoSuchMethodException e) { ErrorHandler.handleNoSuchMethodException("No such method. Found: " + methodName); }
     }
 
     public void update() {

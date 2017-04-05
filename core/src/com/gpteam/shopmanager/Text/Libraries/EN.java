@@ -29,5 +29,9 @@ public final class EN {
         Text.middleclass = "Middle class";
         Text.teenager = "Teenager";
         Text.student = "Student";
+
+        Text.constructorErrorMessage = "One of the arguments was invalid. Found: name: ";
+        Text.constructorErrorAge = ", age: ";
+        Text.constructorErrorSex = ", sex: ";
     }
 }
