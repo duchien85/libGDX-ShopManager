@@ -22,7 +22,7 @@ public class NPCHandler {
     // TODO COME UP WITH BEST WAY TO HANDLE VALIDATING ARGUMENTS AND ASSIGNING THEM TO CLASS VARIABLES !!! (Character class needs exact same thing)
 
     public NPCHandler(int npcCount) {
-        if (npcCount <= MAX_NPC_AMOUNT && npcCount >= MIN_NPC_AMOUNT) {
+        if (validate(npcCount)) {
             updateNpcCount();
             initialize();
         }
