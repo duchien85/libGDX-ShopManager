@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.Engine;
 
+import com.badlogic.gdx.Gdx;
 import com.gpteam.shopmanager.Economy.Economy;
 import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
 
@@ -8,12 +9,26 @@ import java.util.HashMap;
 /*
  * Created by masmix on 07.02.2017.
  */
-public class Engine {
+public class Engine implements Runnable {
     private HashMap<String,Class> modules;
     private Economy economy;
 
     public Engine() {
         initialize();
+    }
+
+    @Override
+    public void run() {
+        // normal, "my" stuff
+
+
+        // graphic stuff goes to libGDX:
+        Gdx.app.postRunnable(new Runnable() {
+            @Override
+            public void run() {
+            }
+        });
+
     }
 
     public void initialize() {
