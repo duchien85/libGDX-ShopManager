@@ -1,5 +1,7 @@
 package com.gpteam.shopmanager.Money;
 
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
+
 /*
  * Created by masmix on 23.12.2016.
  */
@@ -11,6 +13,9 @@ public class MoneyHandler {
     }
 
     public void sub(float amount) {
-        money -= amount;
+        if (!(amount > money))
+            money -= amount;
+        else
+            ErrorHandler.handleIllegalArgumentException("MSG");
     }
 }
