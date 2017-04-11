@@ -9,5 +9,6 @@ public class AI {
     public void goToShop() {
     }
 
-
+    public void makeShoppingList() {
+    }
 }
