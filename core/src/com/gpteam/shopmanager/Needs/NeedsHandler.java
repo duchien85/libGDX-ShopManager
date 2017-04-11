@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.Needs;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /*
@@ -32,6 +33,10 @@ public class NeedsHandler {
             return needs.get(need);
         else
             return 1;
+    }
+
+    public HashMap<Needs, Integer> getNeedsHashMap() {
+        return needs;
     }
 
     public void updateNeed(Needs need, int value) {
