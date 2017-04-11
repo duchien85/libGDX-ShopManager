@@ -42,3 +42,5 @@ public final class Variables {
     public final static int MAX_TRAFFIC_LOAD = 100;
     public final static int MIN_TRAFFIC_LOAD = 0;
 }
+
+// PROBABLY REMOVE THIS CLASS
