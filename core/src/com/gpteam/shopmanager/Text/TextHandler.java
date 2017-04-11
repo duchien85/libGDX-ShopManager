@@ -2,6 +2,12 @@ package com.gpteam.shopmanager.Text;
 
 import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
+
+import com.gpteam.shopmanager.Character.CharacterInfo;
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorListener;
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorType;
+import com.gpteam.shopmanager.Player.Sex;
 import com.gpteam.shopmanager.Text.Libraries.*;
 /*
  * Created by masmix on 18.01.2017.
@@ -49,7 +55,9 @@ public final class TextHandler {
                 e.printStackTrace();
             }
         }
-        else
-            throw new IllegalArgumentException("There's no such region. Found: " + language + ".");
+        else {
+//            ErrorListener.notify();
+            ErrorHandler.handleIllegalArgumentException("There's no such region. Found: " + language + ".");
+        }
     }
 }
