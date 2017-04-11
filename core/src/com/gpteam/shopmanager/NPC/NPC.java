@@ -1,6 +1,7 @@
 package com.gpteam.shopmanager.NPC;
 
 import com.gpteam.shopmanager.Character.CharacterInfo;
+import com.gpteam.shopmanager.NPC.AI.AI;
 import com.gpteam.shopmanager.Needs.Needs;
 import com.gpteam.shopmanager.Needs.NeedsHandler;
 import com.gpteam.shopmanager.Society.SocietyClass;
@@ -9,7 +10,7 @@ import com.gpteam.shopmanager.Society.SocietyClassHandler;
 /*
  * Created by masmix on 26.01.2017.
  */
-public class NPC {
+public class NPC extends AI {
     private CharacterInfo characterInfo;
     private NeedsHandler needsHandler;
     private SocietyClassHandler societyClassHandler;
