@@ -1,5 +1,7 @@
 package com.gpteam.shopmanager.Needs;
 
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
+
 import java.util.HashMap;
 
 /*
@@ -22,9 +24,8 @@ public class Needs {
         if (needs.containsKey(need))
             return needs.get(need);
         else
-            throw new IllegalArgumentException("Needs container does not contain provided need. Found: " + need.toString());
-                // TODO important: move throwing of exceptions from other classes to one module of the engine, that will handle it.
-            //return 1; // for later, when engine is done.
+            ErrorHandler.handleIllegalArgumentException("Needs container does not contain provided need. Found: " + need.toString());
+        return 0;
     }
 
     public int getNeed(ENeeds need) {
@@ -42,7 +43,7 @@ public class Needs {
         if (needs.containsKey(need) && needs.containsValue(value))
             needs.put(need, value);
         else
-            throw new IllegalArgumentException("Need and value not found in HashMap. Found: " + need.toString() + ", " + value);
+            ErrorHandler.handleIllegalArgumentException("Need and value not found in HashMap. Found: " + need.toString() + ", " + value);
     }
 
     /************************************************************
@@ -53,7 +54,7 @@ public class Needs {
      ************************************************************/
     private void initialize(ENeeds[] needs, int[] values) {
         if (needs.length != values.length)
-            throw new IllegalArgumentException("Needs array must be the same length as Values array. Found:\nneeds: " + needs.length + "\nvalues: " + values.length);
+            ErrorHandler.handleIllegalArgumentException(("Needs array must be the same length as Values array. Found:\nneeds: " + needs.length + "\nvalues: " + values.length);
         else
             fillHashMap(needs, values);
     }
