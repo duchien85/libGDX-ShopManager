@@ -11,4 +11,7 @@ public class AI {
 
     public void makeShoppingList() {
     }
+
+    public void browse() {
+    }
 }
