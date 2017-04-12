@@ -54,7 +54,7 @@ public class Needs {
      ************************************************************/
     private void initialize(ENeeds[] needs, int[] values) {
         if (needs.length != values.length)
-            ErrorHandler.handleIllegalArgumentException(("Needs array must be the same length as Values array. Found:\nneeds: " + needs.length + "\nvalues: " + values.length);
+            ErrorHandler.handleIllegalArgumentException(("Needs array must be the same length as Values array. Found:\nneeds: " + needs.length + "\nvalues: " + values.length));
         else
             fillHashMap(needs, values);
     }
