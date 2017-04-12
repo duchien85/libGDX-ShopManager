@@ -39,6 +39,12 @@ public class Inventory {
         products.put(product.getSerialName(), product);
     }
 
+    public void put(Product... products) {
+        for (Product x : products) {
+            this.products.put(x.getSerialName(), x);
+        }
+    }
+
     public Product getProduct(String productSerialName) {
         return products.get(productSerialName);
     }
