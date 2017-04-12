@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.Text;
 
+import com.gpteam.shopmanager.Needs.Needs;
 import com.gpteam.shopmanager.Society.ESocietyClass;
 import com.gpteam.shopmanager.Character.CharacterInfo;
 import com.gpteam.shopmanager.Skill.Skills.Expertise;
@@ -42,4 +43,9 @@ public final class Text {
     public static String middleclass;
     public static String teenager;
     public static String student;
+
+    /**
+     * {@link Needs}
+     **************************************************/
+    public static String ERROR_MESSAGE_1;
 }
