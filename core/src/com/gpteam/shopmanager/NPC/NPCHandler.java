@@ -1,8 +1,6 @@
 package com.gpteam.shopmanager.NPC;
 
-import com.gpteam.shopmanager.NPCBuilder.NPCBuilder;
-import com.gpteam.shopmanager.Needs.NeedsHandler;
-import com.gpteam.shopmanager.Society.SocietyClassHandler;
+import com.gpteam.shopmanager.NPC.NPCBuilder.NPCBuilder;
 
 import java.util.ArrayList;
 import java.util.Arrays;

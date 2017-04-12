@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.NPCBuilder;
+package com.gpteam.shopmanager.NPC.NPCBuilder;
 
 import com.gpteam.shopmanager.NPC.NPC;
 
