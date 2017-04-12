@@ -67,7 +67,7 @@ public class CharacterInfo {
         if (validate(sex))
             this.sex = sex;
         else {
-            ErrorListener.notify(ErrorType.INVALID_AGE);
+            ErrorListener.notify(ErrorType.INVALID_SEX);
             ErrorHandler.handleIllegalArgumentException("Sex must be either male or female. Found: " + sex.toString());
         }
     }
