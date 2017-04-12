@@ -12,7 +12,7 @@ public class Inventory {
 
 
     public Inventory(Product... products) {
-        this.products = new HashMap();
+        this.products = new HashMap<String, Product>();
         initialize(products);
     }
 
