@@ -22,7 +22,7 @@ public class Inventory {
     }
 
     public void remove(Product product) {
-        if (products.get(product.getSerialName()).equals(product))
+        if (products.containsKey(product.getSerialName()))
             products.remove(product.getSerialName());
         else
             ErrorHandler.handleIllegalArgumentException("msg");
