@@ -40,9 +40,8 @@ public class Inventory {
     }
 
     public void put(Product... products) {
-        for (Product x : products) {
+        for (Product x : products)
             this.products.put(x.getSerialName(), x);
-        }
     }
 
     public Product getProduct(String productSerialName) {
