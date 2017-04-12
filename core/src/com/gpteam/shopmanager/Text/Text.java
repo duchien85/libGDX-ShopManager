@@ -1,9 +1,7 @@
 package com.gpteam.shopmanager.Text;
 
-import com.gpteam.shopmanager.Traffic.TrafficHandler;
-import com.gpteam.shopmanager.Society.SocietyClass;
+import com.gpteam.shopmanager.Society.ESocietyClass;
 import com.gpteam.shopmanager.Character.CharacterInfo;
-import com.gpteam.shopmanager.Variables.Variables;
 import com.gpteam.shopmanager.Skill.Skills.Expertise;
 
 /*
@@ -36,7 +34,7 @@ public final class Text {
 
 
     /**
-     * {@link SocietyClass}
+     * {@link ESocietyClass}
      **************************************************/
     public static String rich;
     public static String poor;

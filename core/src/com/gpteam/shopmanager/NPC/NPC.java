@@ -2,45 +2,45 @@ package com.gpteam.shopmanager.NPC;
 
 import com.gpteam.shopmanager.Character.CharacterInfo;
 import com.gpteam.shopmanager.NPC.AI.AI;
+import com.gpteam.shopmanager.Needs.ENeeds;
 import com.gpteam.shopmanager.Needs.Needs;
-import com.gpteam.shopmanager.Needs.NeedsHandler;
+import com.gpteam.shopmanager.Society.ESocietyClass;
 import com.gpteam.shopmanager.Society.SocietyClass;
-import com.gpteam.shopmanager.Society.SocietyClassHandler;
 
 /*
  * Created by masmix on 26.01.2017.
  */
 public class NPC extends AI {
     private CharacterInfo characterInfo;
-    private NeedsHandler needsHandler;
-    private SocietyClassHandler societyClassHandler;
+    private Needs needs;
+    private SocietyClass societyClass;
 
     public NPC() {
         initialize();
     }
 
-    public NPC(CharacterInfo characterInfo, NeedsHandler needsHandler, SocietyClassHandler societyClassHandler) {
+    public NPC(CharacterInfo characterInfo, Needs needs, SocietyClass societyClass) {
         this.characterInfo = characterInfo;
-        this.needsHandler = needsHandler;
-        this.societyClassHandler = societyClassHandler;
+        this.needs = needs;
+        this.societyClass = societyClass;
     }
     
-    public NPC(SocietyClass societyClass) {
+    public NPC(ESocietyClass ESocietyClass) {
         characterInfo = new CharacterInfo();
-        needsHandler = new NeedsHandler();
-        societyClassHandler = new SocietyClassHandler(societyClass);
+        needs = new Needs();
+        societyClass = new SocietyClass(ESocietyClass);
     }
 
     public CharacterInfo getCharacterInfo() {
         return characterInfo;
     }
 
-    public SocietyClass getSocietyClass() {
-        return societyClassHandler.getSocietyClass();
+    public ESocietyClass getSocietyClass() {
+        return societyClass.getESocietyClass();
     }
 
-    public int getNeedValue(Needs need) {
-        return needsHandler.getNeedValue(need);
+    public int getNeedValue(ENeeds need) {
+        return needs.getNeedValue(need);
     }
 
     private void initialize() {
@@ -49,7 +49,7 @@ public class NPC extends AI {
     }
 
     private void initializeHandlers() {
-        needsHandler = new NeedsHandler();
-        societyClassHandler = new SocietyClassHandler();
+        needs = new Needs();
+        societyClass = new SocietyClass();
     }
 }
