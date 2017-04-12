@@ -12,6 +12,7 @@ public class Economy {
     private float economyBar;
     
     public float getEconomyBar() {
+        return economyBar;
     }
     
     public void raiseEconomyBar(float amount) {
