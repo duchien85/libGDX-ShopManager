@@ -60,10 +60,11 @@ public class Needs {
     }
 
     public void initialize() {
-        if (containerInitialized) {
-            try { throw new InstantiationException("NeedsHandler has already been initialized.");
-            } catch (InstantiationException e) { e.printStackTrace(); }
-        } else fillHashMap();
+        if (!containerInitialized) {
+            fillHashMap(); }
+        else
+            try { throw new InstantiationException("NeedsHandler has already been initialized."); }
+            catch (InstantiationException e) { e.printStackTrace(); }
     }
 
     private void fillHashMap() {
