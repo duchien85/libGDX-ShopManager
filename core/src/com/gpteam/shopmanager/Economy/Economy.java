@@ -6,7 +6,7 @@ import java.math.BigDecimal;
  * Created by masmix on 02.02.2017.
  */
 public class Economy {
-    private BigDecimal totalMoney;
+    private BigDecimal totalMoney; //needed?
     private float economyBar;
     
     public float getEconomyBar() {
