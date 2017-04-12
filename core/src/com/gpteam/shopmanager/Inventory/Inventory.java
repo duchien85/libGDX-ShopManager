@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.Inventory;
 
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
 import com.gpteam.shopmanager.Product.Product;
 
 import java.util.HashMap;
@@ -21,10 +22,10 @@ public class Inventory {
     }
 
     public void remove(Product product) {
-        if (products.get(product.getSerialName()).getSerialName().isEmpty())
-            throw new IndexOutOfBoundsException();
-        else
+        if (products.get(product.getSerialName()).equals(product))
             products.remove(product.getSerialName());
+        else
+            ErrorHandler.handleIllegalArgumentException("msg");
     }
 
     public void add(Product product) {
@@ -40,3 +41,10 @@ public class Inventory {
             this.products.put(x.getSerialName(), x);
     }
 }
+
+//    public void remove(Product product) {
+//        if (products.get(product.getSerialName()).getSerialName().isEmpty())
+//            throw new IndexOutOfBoundsException();
+//        else
+//            products.remove(product.getSerialName());
+//    }
