@@ -18,6 +18,13 @@ public class Economy {
     else
     		ErrorHandler.handleIllegalArgumentException("msg");
     }
+    
+    public void lowerEconomyBar(float amount) {
+    		if (amount != null && amount != 0)
+    		economyBar -= amount;
+    		else
+    		ErrorHandler.handleIllegalArgumentException("msg");
+    }
 
     public void update() {
     }
