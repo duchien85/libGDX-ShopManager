@@ -1,5 +1,7 @@
 package com.gpteam.shopmanager.Economy;
 
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
+
 import java.math.BigDecimal;
 
 /*
@@ -13,16 +15,16 @@ public class Economy {
     }
     
     public void raiseEconomyBar(float amount) {
-    if (amount != null && amount != 0)
-    		economyBar += amount;
-    else
-    		ErrorHandler.handleIllegalArgumentException("msg");
+        if (amount != 0)
+            economyBar += amount;
+        else
+            ErrorHandler.handleIllegalArgumentException("msg");
     }
     
     public void lowerEconomyBar(float amount) {
-    		if (amount != null && amount != 0)
+        if (amount != 0)
     		economyBar -= amount;
-    		else
+        else
     		ErrorHandler.handleIllegalArgumentException("msg");
     }
 
