@@ -13,10 +13,6 @@ public abstract class Engine implements Runnable {
     private HashMap<String,Class> modules;
     private Economy economy;
 
-    public Engine() {
-        initialize();
-    }
-
     @Override
     public void run() {
         // normal, "my" stuff
