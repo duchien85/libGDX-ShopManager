@@ -35,7 +35,7 @@ public class Inventory {
         }
     }
 
-    public void add(Product product) {
+    public void put(Product product) {
         products.put(product.getSerialName(), product);
     }
 
