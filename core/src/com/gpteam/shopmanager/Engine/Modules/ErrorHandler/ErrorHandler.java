@@ -15,11 +15,4 @@ public final class ErrorHandler {
         try { throw new NoSuchMethodException(message);
         } catch (NoSuchMethodException e) { e.printStackTrace(); }
     }
-
-    /**
-     * {@link CharacterInfo}
-     */
-    public String getCharacterInfo(String name, int age, Sex sex) {
-        return name + ", age: " + age + ", sex: " + sex.toString();
-    }
 }
