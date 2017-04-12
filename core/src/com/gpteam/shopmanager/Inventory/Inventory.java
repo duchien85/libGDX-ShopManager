@@ -16,6 +16,10 @@ public class Inventory {
         initialize(products);
     }
 
+    public Inventory() {
+        products = new HashMap<String, Product>();
+    }
+
     public void remove(Product product) {
         if (products.get(product.getSerialName()).getSerialName().isEmpty())
             throw new IndexOutOfBoundsException();
