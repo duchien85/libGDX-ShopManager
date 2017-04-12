@@ -9,7 +9,7 @@ import java.util.HashMap;
 /*
  * Created by masmix on 07.02.2017.
  */
-public class Engine implements Runnable {
+public abstract class Engine implements Runnable {
     private HashMap<String,Class> modules;
     private Economy economy;
 
@@ -28,7 +28,6 @@ public class Engine implements Runnable {
             public void run() {
             }
         });
-
     }
 
     public void initialize() {
