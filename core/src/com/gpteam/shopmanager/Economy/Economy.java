@@ -12,9 +12,9 @@ public class Economy {
     public float getEconomyBar() {
     }
     
-    public void raiseEconomyBar(float value) {
-    if (value != null && value != 0)
-    		economyBar += value;
+    public void raiseEconomyBar(float amount) {
+    if (amount != null && amount != 0)
+    		economyBar += amount;
     else
     		ErrorHandler.handleIllegalArgumentException("msg");
     }
