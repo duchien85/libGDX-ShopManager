@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.Location;
+package com.gpteam.shopmanager.Deprecated.Location;
 
 import com.gpteam.shopmanager.Society.SocietyClass;
 import com.gpteam.shopmanager.Traffic.TrafficHandler;
