@@ -28,6 +28,13 @@ public class Inventory {
             ErrorHandler.handleIllegalArgumentException("msg");
     }
 
+    public void remove(Product... products) {
+        for (Product x : products) {
+            if (this.products.containsKey(x.getSerialName()))
+                this.products.remove(x.getSerialName());
+        }
+    }
+
     public void add(Product product) {
         products.put(product.getSerialName(), product);
     }
