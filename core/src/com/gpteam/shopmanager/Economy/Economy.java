@@ -7,6 +7,10 @@ import java.math.BigDecimal;
  */
 public class Economy {
     private BigDecimal totalMoney;
+    private float economyBar;
+    
+    public float getEconomyBar() {
+    }
 
     public void update() {
     }
