@@ -10,6 +10,7 @@ import java.math.BigDecimal;
 public class Economy {
     private BigDecimal totalMoney; //needed?
     private float economyBar;
+    private static final float MAX_ECONOMY_BAR_VALUE = 5.0f;
     
     public float getEconomyBar() {
         return economyBar;
