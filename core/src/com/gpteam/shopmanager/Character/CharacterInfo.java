@@ -29,8 +29,9 @@ public class CharacterInfo {
         initialize();
     }
 
-    public String getCharacterInfo(String name, int age, Sex sex) {
-        return name + ", age: " + age + ", sex: " + sex.toString();
+    @Override
+    public String toString() {
+        return "name: " + name + ", age: " + age + ", sex: " + sex.toString();
     }
 
     public String getName() {
