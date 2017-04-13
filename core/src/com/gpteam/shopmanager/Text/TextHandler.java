@@ -18,6 +18,8 @@ public final class TextHandler {
     public TextHandler() {
         languageMap = new HashMap<String, Class>();
 
+//        setLanguage(""); // TODO Add checking for system language
+
         // TODO save HashMap to file, load when game is launched
         languageMap.put("EN", EN.class);
         languageMap.put("PL", PL.class);
