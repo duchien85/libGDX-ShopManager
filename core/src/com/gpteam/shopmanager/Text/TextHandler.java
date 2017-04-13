@@ -44,15 +44,7 @@ public final class TextHandler {
             try {
                 languageMap.get(language).getDeclaredMethod("initialize").invoke(null);
             }
-            catch (NoSuchMethodException e) {
-                EN.initialize();
-                e.printStackTrace();
-            }
-            catch (InvocationTargetException e) {
-                EN.initialize();
-                e.printStackTrace();
-            }
-            catch (IllegalAccessException e) {
+            catch (Exception e) {
                 EN.initialize();
                 e.printStackTrace();
             }
