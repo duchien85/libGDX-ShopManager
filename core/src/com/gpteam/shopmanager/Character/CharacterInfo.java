@@ -34,6 +34,13 @@ public class CharacterInfo {
         return "name: " + name + ", age: " + age + ", sex: " + sex.toString();
     }
 
+    public void setCharacterInfo(String name, int age, Sex sex) {
+            if (validate(name, age, sex))
+                assign(name, age, sex);
+            else
+                ErrorHandler.handleIllegalArgumentException("");
+    }
+
     public String getName() {
         return name;
     }
