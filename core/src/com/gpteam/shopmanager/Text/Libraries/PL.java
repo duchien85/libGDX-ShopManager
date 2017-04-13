@@ -24,6 +24,7 @@ public final class PL {
         Text.constructorErrorMessage = "Jeden z argumentów był niewłaściwy. Znaleziono: imie:  ";
         Text.constructorErrorAge = ", wiek: ";
         Text.constructorErrorSex = ", płeć: ";
+        Text.setCharacterInfoError = "";
 
         Text.rich = "Bogaci";
         Text.poor = "Biedni";

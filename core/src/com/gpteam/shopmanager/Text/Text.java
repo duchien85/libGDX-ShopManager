@@ -32,7 +32,7 @@ public final class Text {
     public static String constructorErrorMessage;
     public static String constructorErrorAge;
     public static String constructorErrorSex;
-
+    public static String setCharacterInfoError;
 
     /**
      * {@link ESocietyClass}

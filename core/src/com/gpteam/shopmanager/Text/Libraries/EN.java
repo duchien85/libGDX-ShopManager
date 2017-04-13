@@ -24,6 +24,7 @@ public final class EN {
         Text.constructorErrorMessage = "One of the arguments was invalid. Found: name: ";
         Text.constructorErrorAge = ", age: ";
         Text.constructorErrorSex = ", sex: ";
+        Text.setCharacterInfoError = "";
 
         Text.rich = "Rich";
         Text.poor = "Poor";
