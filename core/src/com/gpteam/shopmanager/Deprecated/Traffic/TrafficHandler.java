@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.Traffic;
+package com.gpteam.shopmanager.Deprecated.Traffic;
 
 import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
 import com.gpteam.shopmanager.RandomGenerator.RandGen;
