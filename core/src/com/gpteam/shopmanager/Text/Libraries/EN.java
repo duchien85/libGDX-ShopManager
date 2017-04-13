@@ -32,5 +32,6 @@ public final class EN {
         Text.teenager = "Teenager";
         Text.student = "Student";
 
+        Text.ERROR_MESSAGE_1 = "";
     }
 }

@@ -31,5 +31,7 @@ public final class PL {
         Text.middleclass = "Klasa Srednia";
         Text.teenager = "Nastolatkowie";
         Text.student = "Studenci";
+
+        Text.ERROR_MESSAGE_1 = "";
     }
 }
