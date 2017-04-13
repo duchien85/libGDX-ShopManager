@@ -1,7 +1,7 @@
 package com.gpteam.shopmanager.Deprecated.Location;
 
 import com.gpteam.shopmanager.Society.ESocietyClass;
-import com.gpteam.shopmanager.Traffic.TrafficHandler;
+import com.gpteam.shopmanager.Deprecated.Traffic.TrafficHandler;
 
 import java.util.ArrayList;
 
