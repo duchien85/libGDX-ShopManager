@@ -18,10 +18,12 @@ public final class EN {
 
         Text.workQuality = "Work Quality";
         Text.workQualityDescription = "";
-
         Text.sex = "Sex";
         Text.sexMale = "Man";
         Text.sexFemale = "Woman";
+        Text.constructorErrorMessage = "One of the arguments was invalid. Found: name: ";
+        Text.constructorErrorAge = ", age: ";
+        Text.constructorErrorSex = ", sex: ";
 
         Text.rich = "Rich";
         Text.poor = "Poor";
@@ -30,8 +32,5 @@ public final class EN {
         Text.teenager = "Teenager";
         Text.student = "Student";
 
-        Text.constructorErrorMessage = "One of the arguments was invalid. Found: name: ";
-        Text.constructorErrorAge = ", age: ";
-        Text.constructorErrorSex = ", sex: ";
     }
 }

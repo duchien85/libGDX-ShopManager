@@ -18,10 +18,12 @@ public final class PL {
 
         Text.workQuality = "Jakość pracy";
         Text.workQualityDescription = "";
-
         Text.sex = "Płeć";
         Text.sexMale = "Mężczyzna";
         Text.sexFemale = "Kobieta";
+        Text.constructorErrorMessage = "Jeden z argumentów był niewłaściwy. Znaleziono: imie:  ";
+        Text.constructorErrorAge = ", wiek: ";
+        Text.constructorErrorSex = ", płeć: ";
 
         Text.rich = "Bogaci";
         Text.poor = "Biedni";
@@ -29,9 +31,5 @@ public final class PL {
         Text.middleclass = "Klasa Srednia";
         Text.teenager = "Nastolatkowie";
         Text.student = "Studenci";
-
-        Text.constructorErrorMessage = "Jeden z argumentów był niewłaściwy. Znaleziono: imie:  ";
-        Text.constructorErrorAge = ", wiek: ";
-        Text.constructorErrorSex = ", płeć: ";
     }
 }
