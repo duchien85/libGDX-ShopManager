@@ -25,6 +25,9 @@ public final class PL {
         Text.constructorErrorAge = ", wiek: ";
         Text.constructorErrorSex = ", płeć: ";
         Text.setCharacterInfoError = "";
+        Text.ERROR_SET_NAME = "Imię jest za krótkie lub za długie. Imię musi mieć co najmniej 2 litery, do 25";
+        Text.ERROR_SET_AGE = "Nieprawidłowy wiek. Wiek powinien zawierać się między 12 a 120";
+        Text.ERROR_SET_SEX = "Nieprawidłowa płeć";
 
         Text.rich = "Bogaci";
         Text.poor = "Biedni";

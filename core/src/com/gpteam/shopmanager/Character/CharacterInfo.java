@@ -5,6 +5,7 @@ import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorListener;
 import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorType;
 import com.gpteam.shopmanager.Player.Sex;
 import com.gpteam.shopmanager.RandomGenerator.RandGen;
+import com.gpteam.shopmanager.Text.Text;
 
 import static com.gpteam.shopmanager.Variables.Variables.*;
 
@@ -50,7 +51,7 @@ public class CharacterInfo {
             this.name = name;
         else {
             ErrorListener.notify(ErrorType.INVALID_NAME);
-            ErrorHandler.handleIllegalArgumentException("Name must contain at least 2 characters, up to 25. Found: " + name.length());
+            ErrorHandler.handleIllegalArgumentException(Text.ERROR_SET_NAME);
         }
     }
 
@@ -63,7 +64,7 @@ public class CharacterInfo {
             this.age = age;
         else {
             ErrorListener.notify(ErrorType.INVALID_AGE);
-            ErrorHandler.handleIllegalArgumentException("Age must be at least 12 and no higher than 120. Found: " + age);
+            ErrorHandler.handleIllegalArgumentException(Text.ERROR_SET_AGE);
         }
     }
 
@@ -76,7 +77,7 @@ public class CharacterInfo {
             this.sex = sex;
         else {
             ErrorListener.notify(ErrorType.INVALID_SEX);
-            ErrorHandler.handleIllegalArgumentException("Sex must be either male or female. Found: " + sex.toString());
+            ErrorHandler.handleIllegalArgumentException(Text.ERROR_SET_SEX);
         }
     }
 

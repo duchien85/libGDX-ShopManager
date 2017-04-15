@@ -33,6 +33,9 @@ public final class Text {
     public static String constructorErrorAge;
     public static String constructorErrorSex;
     public static String setCharacterInfoError;
+    public static String ERROR_SET_NAME;
+    public static String ERROR_SET_AGE;
+    public static String ERROR_SET_SEX;
 
     /**
      * {@link ESocietyClass}
