@@ -28,7 +28,7 @@ public final class Loader {
     public void initialize() {
     }
 
-    public ArrayList<String> read() {
+    public ArrayList<String> getAll() {
         String line;
         ArrayList<String> strings = new ArrayList<String>();
         try { while ((line = getBufferedReader().readLine()) != null)
