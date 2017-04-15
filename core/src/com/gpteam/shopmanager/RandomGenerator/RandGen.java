@@ -23,6 +23,8 @@ public final class RandGen {
     }
 
     public String getRandomName() {
+        if (!initialized)
+            Loader.initialize();
         ArrayList<String> names = Loader.getAll();
         return names.get(MathUtils.random(0, names.size() - 1));
     }
