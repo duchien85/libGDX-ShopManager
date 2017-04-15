@@ -14,11 +14,6 @@ import static com.gpteam.shopmanager.Variables.Variables.*;
  * Created by masmix on 04.02.2017.
  */
 public final class RandGen {
-    /**
-     * {@link CharacterInfo}
-     * @return CharacterInfo object, with random name,
-     * age and sex.
-     **************************************************/
     public CharacterInfo generateCharacterInfo() {
         return new CharacterInfo(getRandomName(), getRandomAge(), getRandomSex());
     }
