@@ -1,8 +1,5 @@
 package com.gpteam.shopmanager.Engine.Modules.ErrorHandler;
 
-import com.gpteam.shopmanager.Character.CharacterInfo;
-import com.gpteam.shopmanager.Player.Sex;
-
 /*
  * Created by masmix on 11.02.2017.
  */
