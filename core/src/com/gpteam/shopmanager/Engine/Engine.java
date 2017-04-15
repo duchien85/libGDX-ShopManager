@@ -33,8 +33,8 @@ public abstract class Engine implements Runnable {
 
     @SuppressWarnings("unchecked")
     public void invoke(String className, String methodName) {
-        try { modules.get(className).getDeclaredMethod(methodName).invoke(null);
-        } catch (Exception ex) { ErrorHandler.handleNoSuchMethodException("No such method. Found: " + methodName); }
+        try { modules.get(className).getDeclaredMethod(methodName).invoke(null); }
+        catch (Exception ex) { ErrorHandler.handleNoSuchMethodException("No such method. Found: " + methodName); }
     }
 
     public void update() {
