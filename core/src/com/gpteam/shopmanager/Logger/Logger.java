@@ -6,6 +6,6 @@ import java.util.ArrayList;
  * Created by masmix on 14.02.2017.
  */
 public final class Logger {
-    private ArrayList<String> messages;
-    private String message;
+    private static ArrayList<String> messages;
+    private static String message;
 }
