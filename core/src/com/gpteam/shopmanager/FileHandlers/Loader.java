@@ -19,6 +19,12 @@ public final class Loader {
         bufferedReader = new BufferedReader(fileReader);
     }
 
+    public void initialize(String filePath) {
+        file = new File(filePath);
+        try { fileReader = new FileReader(file); } catch (FileNotFoundException e) { e.printStackTrace(); }
+        bufferedReader = new BufferedReader(fileReader);
+    }
+
     public ArrayList<String> getAll() {
         String line;
         ArrayList<String> strings = new ArrayList<String>();
