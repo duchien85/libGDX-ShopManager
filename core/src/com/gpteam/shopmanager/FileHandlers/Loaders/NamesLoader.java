@@ -11,8 +11,8 @@ import static com.gpteam.shopmanager.Variables.Variables.NAMES_PATH;
  * Created by masmix on 02.02.2017.
  */
 public final class NamesLoader {
-    private ArrayList<String> names;
-    private Loader loader;
+    private static ArrayList<String> names;
+    private static Loader loader;
 
     public NamesLoader(Loader loader) {
         this.loader = loader;
