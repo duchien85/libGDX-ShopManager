@@ -13,18 +13,6 @@ public final class Loader {
     private FileReader fileReader;
     private BufferedReader bufferedReader;
 
-    public Loader(String filePath) {
-        file = new File(filePath);
-        try { fileReader = new FileReader(file); } catch (FileNotFoundException e) { e.printStackTrace(); }
-        bufferedReader = new BufferedReader(fileReader);
-    }
-
-    public Loader() {
-        file = new File(NAMES_PATH);
-        try { fileReader = new FileReader(file); } catch (FileNotFoundException e) { e.printStackTrace(); }
-        bufferedReader = new BufferedReader(fileReader);
-    }
-
     public void initialize() {
     }
 
