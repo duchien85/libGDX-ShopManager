@@ -24,6 +24,9 @@ public final class NamesLoader {
         names = new ArrayList<String>();
     }
 
+    public void initialize() {
+    }
+
     public void load() {
         String line;
         try { while ((line = loader.getBufferedReader().readLine()) != null)
