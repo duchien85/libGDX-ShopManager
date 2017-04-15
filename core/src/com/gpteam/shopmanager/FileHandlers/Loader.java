@@ -31,9 +31,11 @@ public final class Loader {
     public ArrayList<String> getAll() {
         String line;
         ArrayList<String> strings = new ArrayList<String>();
-        try { while ((line = getBufferedReader().readLine()) != null)
+        try {
+            while ((line = getBufferedReader().readLine()) != null)
             strings.add(line);
         } catch (IOException e) { e.printStackTrace(); }
+
         return strings;
     }
 
