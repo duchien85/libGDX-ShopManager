@@ -14,16 +14,6 @@ public final class NamesLoader {
     private static ArrayList<String> names;
     private static Loader loader;
 
-    public NamesLoader(Loader loader) {
-        this.loader = loader;
-        names = new ArrayList<String>();
-    }
-
-    public NamesLoader() {
-        loader = new Loader(NAMES_PATH);
-        names = new ArrayList<String>();
-    }
-
     public void initialize() {
     }
 
