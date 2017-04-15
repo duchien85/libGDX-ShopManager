@@ -15,6 +15,8 @@ public final class NamesLoader {
     private static Loader loader;
 
     public void initialize() {
+        loader = new Loader(NAMES_PATH);
+        names = new ArrayList<String>();
     }
 
     public void load() {
