@@ -25,6 +25,9 @@ public final class Loader {
         bufferedReader = new BufferedReader(fileReader);
     }
 
+    public void initialize() {
+    }
+
     public ArrayList<String> read() {
         String line;
         ArrayList<String> strings = new ArrayList<String>();
