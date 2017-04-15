@@ -20,7 +20,7 @@ public final class Loader {
         String line;
         ArrayList<String> strings = new ArrayList<String>();
         try {
-            while ((line = getBufferedReader().readLine()) != null)
+            while ((line = bufferedReader.readLine()) != null)
             strings.add(line);
         } catch (IOException e) { e.printStackTrace(); }
 
