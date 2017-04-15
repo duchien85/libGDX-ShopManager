@@ -1,7 +1,7 @@
 package com.gpteam.shopmanager.Variables;
 
 import com.gpteam.shopmanager.Character.CharacterInfo;
-import com.gpteam.shopmanager.FileHandlers.Loaders.NamesLoader;
+import com.gpteam.shopmanager.Deprecated.NamesLoader;
 import com.gpteam.shopmanager.NPC.NPCHandler;
 import com.gpteam.shopmanager.Skill.SkillLogic;
 import com.gpteam.shopmanager.Deprecated.Traffic.TrafficHandler;

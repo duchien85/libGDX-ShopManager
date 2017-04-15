@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.FileHandlers.Loaders;
+package com.gpteam.shopmanager.Deprecated;
 
 import com.gpteam.shopmanager.FileHandlers.Loader;
 
@@ -14,10 +14,17 @@ public final class NamesLoader {
     private static ArrayList<String> names;
     private static Loader loader;
 
-    public void initialize() {
-        loader = new Loader(NAMES_PATH);
-        names = new ArrayList<String>();
-    }
+//    public void initialize() {
+//        loader = new Loader(NAMES_PATH);
+//        names = new ArrayList<String>();
+//    }
+//
+//    public void initialize(String namesPath) {
+//        if (!(namesPath.isEmpty()))
+//            loader = new Loader(NAMES_PATH);
+//        else
+//            names = new ArrayList<String>();
+//    }
 
     public void load() {
         String line;
