@@ -3,7 +3,7 @@ package com.gpteam.shopmanager.Deprecated.Traffic;
 import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
 import com.gpteam.shopmanager.RandomGenerator.RandGen;
 
-import static com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorMessages.TRAFFIC_LOAD_EXCEPTION;
+import static com.gpteam.shopmanager.Deprecated.ErrorMessages.TRAFFIC_LOAD_EXCEPTION;
 import static com.gpteam.shopmanager.Variables.Variables.MAX_TRAFFIC_LOAD;
 import static com.gpteam.shopmanager.Variables.Variables.MIN_TRAFFIC_LOAD;
 

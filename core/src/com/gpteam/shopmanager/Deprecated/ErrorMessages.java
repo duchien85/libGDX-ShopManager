@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.Engine.Modules.ErrorHandler;
+package com.gpteam.shopmanager.Deprecated;
 
 import com.gpteam.shopmanager.Text.Text;
 import com.gpteam.shopmanager.Variables.Variables;
