@@ -44,4 +44,11 @@ public final class RandGen {
     public static ESocietyClass getSocietyClass() {
         return ESocietyClass.getRandom();
     }
+
+    public void initialize() {
+        if (!initialized) {
+            Loader.initialize();
+            initialized = true;
+        }
+    }
 }
