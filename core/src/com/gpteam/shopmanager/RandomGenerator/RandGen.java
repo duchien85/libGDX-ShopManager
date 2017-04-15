@@ -14,6 +14,8 @@ import static com.gpteam.shopmanager.Variables.Variables.*;
  * Created by masmix on 04.02.2017.
  */
 public final class RandGen {
+    private static boolean initialized = false;
+
     public CharacterInfo generateCharacterInfo() {
         return new CharacterInfo(getRandomName(), getRandomAge(), getRandomSex());
     }
@@ -40,5 +42,6 @@ public final class RandGen {
     }
 
     private void initialize() {
+        Loader.initialize();
     }
 }
