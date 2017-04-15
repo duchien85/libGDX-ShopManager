@@ -17,6 +17,8 @@ public final class RandGen {
     private static boolean initialized = false;
 
     public CharacterInfo generateCharacterInfo() {
+        if (!initialized)
+            Loader.initialize();
         return new CharacterInfo(getRandomName(), getRandomAge(), getRandomSex());
     }
 
