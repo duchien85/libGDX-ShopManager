@@ -13,19 +13,19 @@ public final class Loader {
     private static FileReader fileReader;
     private static BufferedReader bufferedReader;
 
-    public void initialize() {
+    public static void initialize() {
         file = new File(NAMES_PATH);
         try { fileReader = new FileReader(file); } catch (FileNotFoundException e) { e.printStackTrace(); }
         bufferedReader = new BufferedReader(fileReader);
     }
 
-    public void initialize(String filePath) {
+    public static void initialize(String filePath) {
         file = new File(filePath);
         try { fileReader = new FileReader(file); } catch (FileNotFoundException e) { e.printStackTrace(); }
         bufferedReader = new BufferedReader(fileReader);
     }
 
-    public ArrayList<String> getAll() {
+    public static ArrayList<String> getAll() {
         String line;
         ArrayList<String> strings = new ArrayList<String>();
         try {
@@ -36,7 +36,7 @@ public final class Loader {
         return strings;
     }
 
-    public BufferedReader getBufferedReader() {
+    public static BufferedReader getBufferedReader() {
         return bufferedReader;
     }
 }
