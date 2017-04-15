@@ -21,7 +21,7 @@ public final class PL {
         Text.sex = "Płeć";
         Text.sexMale = "Mężczyzna";
         Text.sexFemale = "Kobieta";
-        Text.constructorErrorMessage = "Jeden z argumentów był niewłaściwy. Znaleziono: imie:  ";
+        Text.constructorErrorMessage = "Jeden z argumentów był niewłaściwy";
         Text.constructorErrorAge = ", wiek: ";
         Text.constructorErrorSex = ", płeć: ";
         Text.setCharacterInfoError = "";
