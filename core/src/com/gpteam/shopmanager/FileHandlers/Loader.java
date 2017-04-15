@@ -14,6 +14,9 @@ public final class Loader {
     private static BufferedReader bufferedReader;
 
     public void initialize() {
+        file = new File(NAMES_PATH);
+        try { fileReader = new FileReader(file); } catch (FileNotFoundException e) { e.printStackTrace(); }
+        bufferedReader = new BufferedReader(fileReader);
     }
 
     public ArrayList<String> getAll() {
