@@ -31,6 +31,7 @@ public abstract class Engine implements Runnable {
         modules.put("ErrorHandler", ErrorHandler.class);
     }
 
+    @SuppressWarnings("unchecked")
     public void invoke(String className, String methodName) {
         try { modules.get(className).getDeclaredMethod(methodName).invoke(null);
         } catch (Exception ex) { ErrorHandler.handleNoSuchMethodException("No such method. Found: " + methodName); }
