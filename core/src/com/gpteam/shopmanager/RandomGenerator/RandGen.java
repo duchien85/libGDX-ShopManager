@@ -17,14 +17,12 @@ public final class RandGen {
     private static boolean initialized = false;
 
     public CharacterInfo generateCharacterInfo() {
-        if (!initialized)
-            Loader.initialize();
+        initialize();
         return new CharacterInfo(getRandomName(), getRandomAge(), getRandomSex());
     }
 
     public String getRandomName() {
-        if (!initialized)
-            Loader.initialize();
+        initialize();
         ArrayList<String> names = Loader.getAll();
         return names.get(MathUtils.random(0, names.size() - 1));
     }
