@@ -2,8 +2,11 @@ package com.gpteam.shopmanager.RandomGenerator;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.gpteam.shopmanager.Character.CharacterInfo;
+import com.gpteam.shopmanager.FileHandlers.Loader;
 import com.gpteam.shopmanager.Player.Sex;
 import com.gpteam.shopmanager.Society.ESocietyClass;
+
+import java.util.ArrayList;
 
 import static com.gpteam.shopmanager.Variables.Variables.*;
 
@@ -26,7 +29,8 @@ public final class RandGen {
     }
 
     public String getRandomName() {
-        return namesLoader.getNames().get(MathUtils.random(0, namesLoader.getNames().size() - 1));
+        ArrayList<String> names = Loader.getAll();
+        return names.get(MathUtils.random(0, names.size() - 1));
     }
 
     public static int getTrafficLoad() {
