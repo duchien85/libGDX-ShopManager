@@ -2,7 +2,6 @@ package com.gpteam.shopmanager.RandomGenerator;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.gpteam.shopmanager.Character.CharacterInfo;
-import com.gpteam.shopmanager.Deprecated.NamesLoader;
 import com.gpteam.shopmanager.Player.Sex;
 import com.gpteam.shopmanager.Society.ESocietyClass;
 
@@ -12,7 +11,6 @@ import static com.gpteam.shopmanager.Variables.Variables.*;
  * Created by masmix on 04.02.2017.
  */
 public final class RandGen {
-    private NamesLoader namesLoader;
 
      public RandGen() {
         initialize();
