@@ -48,10 +48,5 @@ public final class RandGen {
     }
 
     private void initialize() {
-        initializeNamesLoader();
-    }
-
-    private void initializeNamesLoader() {
-        namesLoader = new NamesLoader();
     }
 }
