@@ -29,10 +29,10 @@ public final class Text {
     public static String sex;
     public static String sexMale;
     public static String sexFemale;
-    public static String constructorErrorMessage;
-    public static String constructorErrorAge;
-    public static String constructorErrorSex;
-    public static String setCharacterInfoError;
+    public static String ERROR_CONSTRUCTOR;
+    public static String ERROR_CONSTRUCTOR_AGE;
+    public static String ERROR_CONSTRUCTOR_SEX;
+    public static String ERROR_CHARACTER_INFO;
     public static String ERROR_SET_NAME;
     public static String ERROR_SET_AGE;
     public static String ERROR_SET_SEX;

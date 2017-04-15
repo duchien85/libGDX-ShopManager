@@ -2,9 +2,6 @@ package com.gpteam.shopmanager.Text.Libraries;
 
 import com.gpteam.shopmanager.Text.Text;
 
-import static com.gpteam.shopmanager.Variables.Variables.MAX_TRAFFIC_LOAD;
-import static com.gpteam.shopmanager.Variables.Variables.MIN_TRAFFIC_LOAD;
-
 /*
  * Created by masmix on 18.01.2017.
  */
@@ -21,10 +18,10 @@ public final class EN {
         Text.sex = "Sex";
         Text.sexMale = "Man";
         Text.sexFemale = "Woman";
-        Text.constructorErrorMessage = "One of the arguments was invalid";
-        Text.constructorErrorAge = ", age: ";
-        Text.constructorErrorSex = ", sex: ";
-        Text.setCharacterInfoError = "";
+        Text.ERROR_CONSTRUCTOR = "One of the arguments was invalid";
+        Text.ERROR_CONSTRUCTOR_AGE = ", age: ";
+        Text.ERROR_CONSTRUCTOR_SEX = ", sex: ";
+        Text.ERROR_CHARACTER_INFO = "";
         Text.ERROR_SET_NAME = "Invalid name. Name is either too long or too short. It must contain at least 2 characters, up to 25";
         Text.ERROR_SET_AGE = "Invalid age. Age must be at least 12 and no higher than 120";
         Text.ERROR_SET_SEX = "Invalid sex. Sex must be either male or female";
