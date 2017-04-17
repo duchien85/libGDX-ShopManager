@@ -21,7 +21,7 @@ public final class RandGen {
         return new CharacterInfo(getRandomName(), getRandomAge(), getRandomSex());
     }
 
-    public String getRandomName() {
+    public static String getRandomName() {
         initialize();
         ArrayList<String> names = Loader.getAll();
         return names.get(MathUtils.random(0, names.size() - 1));
