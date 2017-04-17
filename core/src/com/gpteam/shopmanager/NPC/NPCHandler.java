@@ -13,7 +13,7 @@ import static com.gpteam.shopmanager.Variables.Variables.MIN_NPC_AMOUNT;
  */
 public class NPCHandler {
     private ArrayList<NPC> npcs;
-    private int npcCount = npcs.size();
+    private int npcCount;
 
     private NPCBuilder npcBuilder;
 
