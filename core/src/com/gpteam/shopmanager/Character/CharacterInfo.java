@@ -82,10 +82,9 @@ public class CharacterInfo {
     }
 
     private void initialize() {
-        RandGen randGen = new RandGen();
-        name = randGen.getRandomName();
-        age = randGen.getRandomAge();
-        sex = randGen.getRandomSex();
+        name = RandGen.getRandomName();
+        age = RandGen.getRandomAge();
+        sex = RandGen.getRandomSex();
     }
 
     private void assign(String name, int age, Sex sex) {
