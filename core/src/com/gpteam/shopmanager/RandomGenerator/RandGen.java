@@ -43,7 +43,7 @@ public final class RandGen {
         return ESocietyClass.getRandom();
     }
 
-    public void initialize() {
+    public static void initialize() {
         if (!initialized) {
             Loader.initialize();
             initialized = true;
