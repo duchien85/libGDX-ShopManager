@@ -22,7 +22,7 @@ public final class NPCBuilder {
         return npcs;
     }
     
-    public void initialize(ArrayList<NPC> npcs, int npcQuantity) {
+    public static void initialize(ArrayList<NPC> npcs, int npcQuantity) {
         for (int i = 0; i < npcQuantity; i++)
             npcs.add(newNPC());
     }
