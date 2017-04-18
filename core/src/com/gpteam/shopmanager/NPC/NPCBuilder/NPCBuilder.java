@@ -7,10 +7,7 @@ import java.util.ArrayList;
 /*
  * Created by masmix on 19.01.2017.
  */
-public class NPCBuilder {
-
-    public NPCBuilder() {
-    }
+public final class NPCBuilder {
     
     public NPC newNPC() {
         return new NPC();
