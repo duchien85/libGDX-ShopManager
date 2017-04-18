@@ -16,7 +16,7 @@ public final class NPCBuilder {
     // TODO society class specific builder method
     // newNPC(SocietyClass societyClass) - creates npcs only from this society class
 
-    public ArrayList<NPC> newNPCList(int npcQuantity) {
+    public static ArrayList<NPC> newNPCList(int npcQuantity) {
         ArrayList<NPC> npcs = new ArrayList<NPC>(npcQuantity);
         initialize(npcs, npcQuantity);
         return npcs;
