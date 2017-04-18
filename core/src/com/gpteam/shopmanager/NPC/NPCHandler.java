@@ -35,7 +35,7 @@ public class NPCHandler {
     }
 
     public void addNpcs(int npcCount) {
-        if (npcCount <= MAX_NPC_AMOUNT && npcCount >= MIN_NPC_AMOUNT) {
+        if (validate(npcCount)) {
             for (int i = 0; i < npcCount; i++)
                 npcs.add(NPCBuilder.newNPC());
             this.npcCount += npcCount;
@@ -46,7 +46,7 @@ public class NPCHandler {
     }
 
     public void addNpcs(int npcCount, boolean allRandom) {
-        if (npcCount <= MAX_NPC_AMOUNT && npcCount >= MIN_NPC_AMOUNT) {
+        if (validate(npcCount)) {
             for (int i = 0; i < npcCount; i++)
                 npcs.add(NPCBuilder.newNPC());
             this.npcCount += npcCount;
