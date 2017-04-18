@@ -15,7 +15,6 @@ public class NPCHandler {
     private ArrayList<NPC> npcs;
     private int npcCount;
 
-    private NPCBuilder npcBuilder;
 
     // TODO COME UP WITH BEST WAY TO HANDLE VALIDATING ARGUMENTS AND ASSIGNING THEM TO CLASS VARIABLES !!! (Character class needs exact same thing)
 
@@ -38,7 +37,7 @@ public class NPCHandler {
     public void addNpcs(int npcCount) {
         if (npcCount <= MAX_NPC_AMOUNT && npcCount >= MIN_NPC_AMOUNT) {
             for (int i = 0; i < npcCount; i++)
-                npcs.add(npcBuilder.newNPC());
+                npcs.add(NPCBuilder.newNPC());
             this.npcCount += npcCount;
         }
         else throw new IllegalArgumentException();
@@ -49,7 +48,7 @@ public class NPCHandler {
     public void addNpcs(int npcCount, boolean allRandom) {
         if (npcCount <= MAX_NPC_AMOUNT && npcCount >= MIN_NPC_AMOUNT) {
             for (int i = 0; i < npcCount; i++)
-                npcs.add(npcBuilder.newNPC());
+                npcs.add(NPCBuilder.newNPC());
             this.npcCount += npcCount;
         }
         else throw new IllegalArgumentException("npcCount must be between 0 - 10000. Found: " + npcCount);
@@ -72,7 +71,7 @@ public class NPCHandler {
 //    }
 
     private void initialize() {
-        npcs = npcBuilder.newNPCList(npcCount);
+        npcs = NPCBuilder.newNPCList(npcCount);
     }
 
     private void updateNpcCount() {
