@@ -9,7 +9,7 @@ import java.util.ArrayList;
  */
 public final class NPCBuilder {
     
-    public NPC newNPC() {
+    public static NPC newNPC() {
         return new NPC();
     }
 
