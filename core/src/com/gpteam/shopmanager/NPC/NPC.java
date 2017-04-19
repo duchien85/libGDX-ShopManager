@@ -24,10 +24,10 @@ public class NPC extends AI {
         this.societyClass = societyClass;
     }
     
-    public NPC(SocietyClass ESocietyClass) {
+    public NPC(SocietyClass societyClass) {
         characterInfo = new CharacterInfo();
         needs = new Needs();
-        societyClass = ESocietyClass;
+        societyClass = societyClass;
     }
 
     public CharacterInfo getCharacterInfo() {
