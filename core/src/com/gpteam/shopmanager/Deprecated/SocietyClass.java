@@ -1,15 +1,14 @@
 package com.gpteam.shopmanager.Deprecated;
 
 import com.gpteam.shopmanager.RandomGenerator.RandGen;
-import com.gpteam.shopmanager.Society.ESocietyClass;
 
 /*
  * Created by masmix on 18.01.2017.
  */
 public class SocietyClass {
-    private com.gpteam.shopmanager.Society.ESocietyClass ESocietyClass;
+    private com.gpteam.shopmanager.Society.SocietyClass ESocietyClass;
 
-    public SocietyClass(ESocietyClass ESocietyClass) {
+    public SocietyClass(com.gpteam.shopmanager.Society.SocietyClass ESocietyClass) {
         this.ESocietyClass = ESocietyClass;
     }
 
@@ -17,11 +16,11 @@ public class SocietyClass {
         ESocietyClass = RandGen.getSocietyClass();
     }
 
-    public ESocietyClass getESocietyClass() {
+    public com.gpteam.shopmanager.Society.SocietyClass getESocietyClass() {
         return ESocietyClass;
     }
 
-    public void setESocietyClass(ESocietyClass ESocietyClass) {
+    public void setESocietyClass(com.gpteam.shopmanager.Society.SocietyClass ESocietyClass) {
         this.ESocietyClass = ESocietyClass;
     }
 }

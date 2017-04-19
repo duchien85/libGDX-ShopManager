@@ -4,7 +4,7 @@ import com.badlogic.gdx.math.MathUtils;
 import com.gpteam.shopmanager.Character.CharacterInfo;
 import com.gpteam.shopmanager.FileHandlers.Loader;
 import com.gpteam.shopmanager.Player.Sex;
-import com.gpteam.shopmanager.Society.ESocietyClass;
+import com.gpteam.shopmanager.Society.SocietyClass;
 
 import java.util.ArrayList;
 
@@ -39,8 +39,8 @@ public final class RandGen {
         return Sex.getRandom();
     }
 
-    public static ESocietyClass getSocietyClass() {
-        return ESocietyClass.getRandom();
+    public static SocietyClass getSocietyClass() {
+        return SocietyClass.getRandom();
     }
 
     public static void initialize() {

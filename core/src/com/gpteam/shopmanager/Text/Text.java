@@ -1,7 +1,7 @@
 package com.gpteam.shopmanager.Text;
 
 import com.gpteam.shopmanager.Needs.Needs;
-import com.gpteam.shopmanager.Society.ESocietyClass;
+import com.gpteam.shopmanager.Society.SocietyClass;
 import com.gpteam.shopmanager.Character.CharacterInfo;
 import com.gpteam.shopmanager.Skill.Skills.Expertise;
 
@@ -38,7 +38,7 @@ public final class Text {
     public static String ERROR_SET_SEX;
 
     /**
-     * {@link ESocietyClass}
+     * {@link SocietyClass}
      **************************************************/
     public static String rich;
     public static String poor;
