@@ -6,4 +6,5 @@ package com.gpteam.shopmanager.City;
 public class City {
     private String name;
     private int population;
+    private Area[] areas;
 }
