@@ -14,7 +14,7 @@ public final class Logger {
 
 //    private static ArrayList<String> messages = new ArrayList<String>();
 //    private static String message;
-
+    private static ArrayList<Log> logs = new ArrayList<Log>();
 
     public void receiveLog(Log log) {
     }
