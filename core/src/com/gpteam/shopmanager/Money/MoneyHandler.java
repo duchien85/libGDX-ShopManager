@@ -22,4 +22,8 @@ public class MoneyHandler {
     public float getMoney() {
         return money;
     }
+
+    public void setMoney(float money) {
+        this.money = money;
+    }
 }
