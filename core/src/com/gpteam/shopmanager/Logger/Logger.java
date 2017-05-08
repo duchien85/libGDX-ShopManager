@@ -12,6 +12,10 @@ public final class Logger {
     // messages important for the logger should be handled with
     // regular arrays.
 
-    private static ArrayList<String> messages;
-    private static String message;
+//    private static ArrayList<String> messages = new ArrayList<String>();
+//    private static String message;
+
+
+    public void receiveLog(Log log) {
+    }
 }
