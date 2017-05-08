@@ -6,6 +6,12 @@ import java.util.ArrayList;
  * Created by masmix on 14.02.2017.
  */
 public final class Logger {
+    // One universal way of sending and receiving packed strings
+    // =========================================================
+    // Both sending and receiving of packed strings that contain
+    // messages important for the logger should be handled with
+    // regular arrays.
+
     private static ArrayList<String> messages;
     private static String message;
 }
