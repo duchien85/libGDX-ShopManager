@@ -18,4 +18,8 @@ public class MoneyHandler {
         else
             ErrorHandler.handleIllegalArgumentException("MSG");
     }
+
+    public float getMoney() {
+        return money;
+    }
 }
