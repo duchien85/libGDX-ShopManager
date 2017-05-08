@@ -15,7 +15,20 @@ public final class Logger {
 //    private static ArrayList<String> messages = new ArrayList<String>();
 //    private static String message;
     private static ArrayList<Log> logs = new ArrayList<Log>();
+    private static int index = 0;
+    private static int length = 0;
 
-    public void receiveLog(Log log) {
+    public static void receiveLog(Log log) {
+        length++;
+        logs.add(log);
+    }
+
+    public static Log getNextLog() {
+        if (index < length)
+            return logs.get(index++);
+        else {
+            index = 0;
+            return null;
+        }
     }
 }
