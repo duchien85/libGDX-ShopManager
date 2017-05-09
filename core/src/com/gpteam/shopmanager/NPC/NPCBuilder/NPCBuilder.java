@@ -9,7 +9,6 @@ import java.util.ArrayList;
  * Created by masmix on 19.01.2017.
  */
 public final class NPCBuilder {
-    
     public static NPC newNPC() {
         return new NPC();
     }
@@ -22,7 +21,7 @@ public final class NPCBuilder {
 
     public static ArrayList<NPC> newNPCArrayList(int npcQuantity, SocietyClass societyClass) {
         ArrayList<NPC> npcs = new ArrayList<NPC>(npcQuantity);
-        initialize(npcs, npcQuantity);
+        initialize(npcs, npcQuantity, societyClass);
         return npcs;
     }
     
