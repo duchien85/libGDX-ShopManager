@@ -13,7 +13,7 @@ public class MoneyHandler {
     }
 
     public void sub(float amount) {
-        if (!(amount > money))
+        if (amount <= money)
             money -= amount;
         else
             ErrorHandler.handleIllegalArgumentException("MSG");
