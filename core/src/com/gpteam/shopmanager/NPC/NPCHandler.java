@@ -71,7 +71,7 @@ public class NPCHandler {
 //    }
 
     private void initialize() {
-        npcs = NPCBuilder.newNPCList(npcCount);
+        npcs = NPCBuilder.newNPCArrayList(npcCount);
     }
 
     private void updateNpcCount() {

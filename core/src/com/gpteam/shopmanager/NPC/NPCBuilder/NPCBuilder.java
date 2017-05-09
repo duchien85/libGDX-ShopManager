@@ -14,13 +14,13 @@ public final class NPCBuilder {
         return new NPC();
     }
 
-    public static ArrayList<NPC> newNPCList(int npcQuantity) {
+    public static ArrayList<NPC> newNPCArrayList(int npcQuantity) {
         ArrayList<NPC> npcs = new ArrayList<NPC>(npcQuantity);
         initialize(npcs, npcQuantity);
         return npcs;
     }
 
-    public static ArrayList<NPC> newNPCList(int npcQuantity, SocietyClass societyClass) {
+    public static ArrayList<NPC> newNPCArrayList(int npcQuantity, SocietyClass societyClass) {
         ArrayList<NPC> npcs = new ArrayList<NPC>(npcQuantity);
         initialize(npcs, npcQuantity);
         return npcs;
