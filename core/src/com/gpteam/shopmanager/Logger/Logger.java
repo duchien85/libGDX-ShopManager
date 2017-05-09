@@ -9,8 +9,8 @@ public final class Logger {
     // One universal way of sending and receiving packed strings
     // =========================================================
     // Both sending and receiving of packed strings that contain
-    // messages important for the logger should be handled with
-    // regular arrays.
+    // messages important for the logger must be handled
+    // with regular arrays.
 
 //    private static ArrayList<String> messages = new ArrayList<String>();
 //    private static String message;
@@ -30,5 +30,9 @@ public final class Logger {
             index = 0;
             return null;
         }
+    }
+
+    public ArrayList<Log> getAllLogs() {
+        return logs;
     }
 }
