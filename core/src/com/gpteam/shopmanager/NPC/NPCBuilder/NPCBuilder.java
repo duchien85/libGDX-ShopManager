@@ -1,6 +1,7 @@
 package com.gpteam.shopmanager.NPC.NPCBuilder;
 
 import com.gpteam.shopmanager.NPC.NPC;
+import com.gpteam.shopmanager.Society.SocietyClass;
 
 import java.util.ArrayList;
 
@@ -13,10 +14,13 @@ public final class NPCBuilder {
         return new NPC();
     }
 
-    // TODO society class specific builder method
-    // newNPC(SocietyClass societyClass) - creates npcs only from this society class
-
     public static ArrayList<NPC> newNPCList(int npcQuantity) {
+        ArrayList<NPC> npcs = new ArrayList<NPC>(npcQuantity);
+        initialize(npcs, npcQuantity);
+        return npcs;
+    }
+
+    public static ArrayList<NPC> newNPCList(int npcQuantity, SocietyClass societyClass) {
         ArrayList<NPC> npcs = new ArrayList<NPC>(npcQuantity);
         initialize(npcs, npcQuantity);
         return npcs;
@@ -25,5 +29,10 @@ public final class NPCBuilder {
     public static void initialize(ArrayList<NPC> npcs, int npcQuantity) {
         for (int i = 0; i < npcQuantity; i++)
             npcs.add(newNPC());
+    }
+
+    public static void initialize(ArrayList<NPC> npcs, int npcQuantity, SocietyClass societyClass) {
+        for (int i = 0; i < npcQuantity; i++)
+            npcs.add(new NPC(societyClass));
     }
 }
