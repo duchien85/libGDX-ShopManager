@@ -13,4 +13,12 @@ public class Log {
         this.log = log;
         this.errorType = errorType;
     }
+
+    public String[] getLog() {
+        return log;
+    }
+
+    public ErrorType getErrorType() {
+        return errorType;
+    }
 }
