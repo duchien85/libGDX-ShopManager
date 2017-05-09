@@ -27,7 +27,7 @@ public final class RandGen {
         return names.get(MathUtils.random(0, names.size() - 1));
     }
 
-    public static int getTrafficLoad() {
+    public static int getRandomTrafficLoad() {
         return MathUtils.random(MIN_TRAFFIC_LOAD, MAX_TRAFFIC_LOAD);
     }
 
@@ -39,7 +39,7 @@ public final class RandGen {
         return Sex.getRandom();
     }
 
-    public static SocietyClass getSocietyClass() {
+    public static SocietyClass getRandomSocietyClass() {
         return SocietyClass.getRandom();
     }
 

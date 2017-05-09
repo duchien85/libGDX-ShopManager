@@ -13,7 +13,7 @@ public class SocietyClass {
     }
 
     public SocietyClass() {
-        ESocietyClass = RandGen.getSocietyClass();
+        ESocietyClass = RandGen.getRandomSocietyClass();
     }
 
     public com.gpteam.shopmanager.Society.SocietyClass getESocietyClass() {
