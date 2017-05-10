@@ -16,10 +16,6 @@ public class Needs {
         initialize();
     }
 
-    public Needs(boolean initialize) {
-        if (initialize) initialize();
-    }
-
     public int getNeedValue(ENeeds need) {
         if (needs.containsKey(need))
             return needs.get(need);
