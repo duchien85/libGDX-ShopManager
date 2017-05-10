@@ -16,14 +16,6 @@ public class Needs {
         initialize();
     }
 
-    public int getNeedValue(ENeeds need) {
-        if (needs.containsKey(need))
-            return needs.get(need);
-        else
-            ErrorHandler.handleIllegalArgumentException("Needs container does not contain provided need. Found: " + need.toString());
-        return 0;
-    }
-
     public int getNeed(ENeeds need) {
         if (needs.containsKey(need))
             return needs.get(need);
