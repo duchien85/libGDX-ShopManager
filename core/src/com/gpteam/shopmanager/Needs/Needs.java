@@ -40,10 +40,10 @@ public class Needs {
     }
 
     public void updateNeed(ENeeds need, int value) {
-        if (needs.containsKey(need) && needs.containsValue(value))
+        if (needs.containsKey(need))
             needs.put(need, value);
         else
-            ErrorHandler.handleIllegalArgumentException("Need and value not found in HashMap. Found: " + need.toString() + ", " + value);
+            ErrorHandler.handleIllegalArgumentException("Need not found in HashMap. Found: " + need.toString() + ", " + value);
     }
 
     /************************************************************
