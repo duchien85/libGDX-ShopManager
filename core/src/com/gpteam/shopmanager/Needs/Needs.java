@@ -57,7 +57,7 @@ public class Needs {
 
     private void fillHashMap() {
         for (ENeeds x : ENeeds.values())
-            needs.put(x, null);
+            needs.put(x, 10);
     }
 
     private void fillHashMap(ENeeds[] needs, int[] values) {
