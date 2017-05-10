@@ -20,7 +20,7 @@ public class Needs {
         if (needs.containsKey(need))
             return needs.get(need);
         else
-            return 1;
+            ErrorHandler.handleIllegalArgumentException("Needs container does not contain provided need.");
     }
 
     public HashMap<ENeeds, Integer> getNeedsHashMap() {
