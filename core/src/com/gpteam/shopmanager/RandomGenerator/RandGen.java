@@ -16,7 +16,7 @@ import static com.gpteam.shopmanager.Variables.Variables.*;
 public final class RandGen {
     private static boolean initialized = false;
 
-    public CharacterInfo generateCharacterInfo() {
+    public static CharacterInfo generateCharacterInfo() {
         initialize();
         return new CharacterInfo(getRandomName(), getRandomAge(), getRandomSex());
     }
