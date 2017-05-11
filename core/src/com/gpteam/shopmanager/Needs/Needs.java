@@ -21,6 +21,7 @@ public class Needs {
             return needs.get(need);
         else
             ErrorHandler.handleIllegalArgumentException("Needs container does not contain provided need.");
+        return 1;
     }
 
     public HashMap<ENeeds, Integer> getNeedsHashMap() {
