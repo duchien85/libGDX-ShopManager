@@ -2,8 +2,6 @@ package com.gpteam.shopmanager.Time;
 
 import org.joda.time.DateTime;
 
-import java.util.Date;
-
 public final class Time implements Runnable {
     // liczenie czasu, metoda endOfDay()? ktora inkrementuje dzien do przodu
     private static DateTime date;
