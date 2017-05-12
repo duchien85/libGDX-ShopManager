@@ -29,6 +29,13 @@ public class Expertise {
             ErrorHandler.handleIllegalArgumentException("MSG");
     }
 
+    public void removeSkillLevel(short skillLevel) {
+        if (validate(skillLevel))
+            this.skillLevel -= skillLevel;
+        else
+            ErrorHandler.handleIllegalArgumentException("MSG");
+    }
+
     public String getName() {
         return Text.expertise;
     }
