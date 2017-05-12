@@ -36,4 +36,8 @@ public class Expertise {
     public String getDescription() {
         return Text.expertiseDescription;
     }
+
+    private boolean validate(short skillLevel) {
+        return skillLevel <= Variables.MAX_SKILL_LEVEL && skillLevel >= Variables.MIN_SKILL_LEVEL;
+    }
 }
