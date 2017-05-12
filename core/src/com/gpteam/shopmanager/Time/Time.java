@@ -6,7 +6,7 @@ import java.util.Date;
 
 public final class Time implements Runnable {
     // liczenie czasu, metoda endOfDay()? ktora inkrementuje dzien do przodu
-    private static DateTime date = new DateTime();
+    private static DateTime date;
 
     @Override
     public void run() {
@@ -27,5 +27,9 @@ public final class Time implements Runnable {
             }
             date.plusHours(1);
         }
+    }
+
+    public static void initialize() {
+        date = new DateTime();
     }
 }
