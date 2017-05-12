@@ -12,10 +12,10 @@ public class Expertise {
     private short skillLevel;
 
     public Expertise(short skillLevel) {
-        if (skillLevel > Variables.MAX_SKILL_LEVEL || skillLevel < Variables.MIN_SKILL_LEVEL)
-            throw new IllegalArgumentException("Wrong skill amount (0 - 120). Found: " + skillLevel + ".");
-        else
+        if (validate(skillLevel))
             this.skillLevel = skillLevel;
+        else
+            ErrorHandler.handleIllegalArgumentException("Incorrect skill level.");
     }
 
     public short getSkillLevel() {
