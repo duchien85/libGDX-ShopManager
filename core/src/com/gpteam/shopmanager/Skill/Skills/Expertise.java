@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.Skill.Skills;
 
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
 import com.gpteam.shopmanager.Skill.SkillLogic;
 import com.gpteam.shopmanager.Text.Text;
 import com.gpteam.shopmanager.Variables.Variables;
@@ -19,6 +20,13 @@ public class Expertise {
 
     public short getSkillLevel() {
         return skillLevel;
+    }
+
+    public void addSkillLevel(short skillLevel) {
+        if (validate(skillLevel))
+            this.skillLevel += skillLevel;
+        else
+            ErrorHandler.handleIllegalArgumentException("MSG");
     }
 
     public String getName() {
