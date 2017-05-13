@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.Time;
 
+import com.gpteam.shopmanager.Variables.Variables;
 import org.joda.time.DateTime;
 
 public final class Time implements Runnable {
@@ -10,15 +11,15 @@ public final class Time implements Runnable {
     public void run() {
         for (int i = 0; i <= 23; i++) {
             for (int j = 0; j <= 59; j++) {
-                for (int k = 0; k <= 59; k++) {
-                    if (i == 23 && j == 59 && k == 59) {
+                for (int k = 0; k <= Variables.SECONDS - 1; k++) {
+                    if (i == 23 && j == 59 && k == Variables.SECONDS - 1) {
                         date.plusDays(1);
                         i = 0;
                         j = 0;
                         k = 0;
                     }
                     date.plusSeconds(1);
-                    try { Thread.sleep(1000); }
+                    try { Thread.sleep(Variables.DELAY); }
                     catch (InterruptedException e) { e.printStackTrace(); }
                 }
                 date.plusMinutes(1);
