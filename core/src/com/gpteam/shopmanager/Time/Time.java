@@ -13,9 +13,9 @@ public final class Time implements Runnable {
                 for (int k = 1; k <= Variables.SECONDS; k++) {
                     if (i == 24 && j == 60 && k == Variables.SECONDS) {
                         date.plusDays(1);
-                        i = 0;
-                        j = 0;
-                        k = 0;
+                        i = 1;
+                        j = 1;
+                        k = 1;
                     }
                     date.plusSeconds(1);
                     try { Thread.sleep(Variables.DELAY); }
