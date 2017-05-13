@@ -61,9 +61,7 @@ public class NPCHandler {
     }
     
     public void removeNpcs(NPC... npcs) {
-        if (this.npcs.containsAll(Arrays.asList(npcs))) // TODO in the future, check, if sending method argument "npcs", to "containsAll" method of "this.npc? works properly
             this.npcs.removeAll(Arrays.asList(npcs));
-        else throw new IllegalArgumentException("Provided array is not filled with npcs of this class instance only.");
     }
 
 //    public NPC[] generateRandomNPC() {
