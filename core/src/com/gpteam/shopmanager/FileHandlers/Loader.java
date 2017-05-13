@@ -31,6 +31,8 @@ public final class Loader {
     }
 
     public static ArrayList<String> getAll() {
+        if (!initialized)
+            initialize();
         String line;
         ArrayList<String> strings = new ArrayList<String>();
         try {
@@ -46,6 +48,8 @@ public final class Loader {
     }
 
     public static BufferedReader getBufferedReader() {
+        if (!initialized)
+            initialize();
         return bufferedReader;
     }
 }
