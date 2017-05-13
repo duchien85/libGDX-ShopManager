@@ -1,6 +1,7 @@
 package com.gpteam.shopmanager.NPC;
 
 import com.gpteam.shopmanager.NPC.NPCBuilder.NPCBuilder;
+import com.gpteam.shopmanager.Society.SocietyClass;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -42,6 +43,13 @@ public class NPCHandler {
             updateNpcCount();
         }
         else throw new IllegalArgumentException();
+    }
+
+    public void addNpcs(int npcCount, SocietyClass societyClass) {
+        if (validate(npcCount)) {
+            for (int i = 0; i < npcCount; i++)
+                npcs.add(NPCBuilder.newNPC(societyClass));
+        }
     }
 
     public void addNpcs(int npcCount, boolean allRandom) {
