@@ -42,8 +42,6 @@ public class NPCHandler {
             updateNpcCount();
         }
         else throw new IllegalArgumentException();
-
-
     }
 
     public void addNpcs(int npcCount, boolean allRandom) {
@@ -82,7 +80,7 @@ public class NPCHandler {
     }
     
     private boolean validate(int npcCount) {
-    			return npcCount + this.npcCount <= MAX_NPC_AMOUNT && npcCount + this.npcCount >= MIN_NPC_AMOUNT;
+        return npcCount + this.npcCount <= MAX_NPC_AMOUNT && npcCount + this.npcCount >= MIN_NPC_AMOUNT;
     }
 }
 
