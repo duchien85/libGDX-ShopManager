@@ -39,7 +39,7 @@ public class NPC extends AI {
     }
 
     public int getNeedValue(ENeeds need) {
-        return needs.getNeedValue(need);
+        return needs.getNeed(need);
     }
 
     private void initialize() {
