@@ -4,7 +4,6 @@ import com.gpteam.shopmanager.Variables.Variables;
 import org.joda.time.DateTime;
 
 public final class Time implements Runnable {
-    // liczenie czasu, metoda endOfDay()? ktora inkrementuje dzien do przodu
     private static DateTime date;
 
     @Override
