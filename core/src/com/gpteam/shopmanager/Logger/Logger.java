@@ -12,8 +12,6 @@ public final class Logger {
     // messages important for the logger must be handled
     // with regular arrays.
 
-//    private static ArrayList<String> messages = new ArrayList<String>();
-//    private static String message;
     private static ArrayList<Log> logs = new ArrayList<Log>();
     private static int index = 0;
     private static int length = 0;
