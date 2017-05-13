@@ -12,6 +12,10 @@ public class Needs {
     private NeedsLogic needsLogic;
     private boolean containerInitialized = false;
 
+    public enum ENeeds {
+        HUNGER, ENTERTAINMENT, APPAREL, HAPPINESS, LUXURY, FIX, AWARNESS
+    }
+
     public Needs() {
         initialize();
     }
