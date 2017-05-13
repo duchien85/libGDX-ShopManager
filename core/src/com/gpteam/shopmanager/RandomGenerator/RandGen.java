@@ -14,15 +14,11 @@ import static com.gpteam.shopmanager.Variables.Variables.*;
  * Created by masmix on 04.02.2017.
  */
 public final class RandGen {
-    private static boolean initialized = false;
-
     public static CharacterInfo generateCharacterInfo() {
-        initialize();
         return new CharacterInfo(getRandomName(), getRandomAge(), getRandomSex());
     }
 
     public static String getRandomName() {
-        initialize();
         ArrayList<String> names = Loader.getAll();
         return names.get(MathUtils.random(0, names.size() - 1));
     }
@@ -41,12 +37,5 @@ public final class RandGen {
 
     public static int getRandomTrafficLoad() {
         return MathUtils.random(MIN_TRAFFIC_LOAD, MAX_TRAFFIC_LOAD);
-    }
-
-    public static void initialize() {
-        if (!initialized) {
-            Loader.initialize();
-            initialized = true;
-        }
     }
 }
