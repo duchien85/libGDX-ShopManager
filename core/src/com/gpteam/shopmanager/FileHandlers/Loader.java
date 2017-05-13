@@ -15,13 +15,11 @@ public final class Loader {
     private static boolean initialized = false;
 
     public static void initialize() {
-        if (!initialized) {
             file = new File(NAMES_PATH);
             try { fileReader = new FileReader(file); }
             catch (FileNotFoundException e) { e.printStackTrace(); }
             bufferedReader = new BufferedReader(fileReader);
             initialized = true;
-        }
     }
 
     public static void initialize(String filePath) {
