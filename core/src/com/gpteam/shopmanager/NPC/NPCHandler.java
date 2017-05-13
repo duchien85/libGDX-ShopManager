@@ -77,7 +77,7 @@ public class NPCHandler {
     }
     
     private boolean validate(int npcCount) {
-    			return npcCount <= MAX_NPC_AMOUNT && npcCount >= MIN_NPC_AMOUNT;
+    			return npcCount + this.npcCount <= MAX_NPC_AMOUNT && npcCount + this.npcCount >= MIN_NPC_AMOUNT;
     }
 }
 
