@@ -17,14 +17,14 @@ public class Economy {
     }
     
     public void raiseEconomyBar(float amount) {
-        if (amount != 0 && amount <= MAX_ECONOMY_BAR_VALUE)
+        if (amount > 0 && amount + MAX_ECONOMY_BAR_VALUE <= MAX_ECONOMY_BAR_VALUE)
             economyBar += amount;
         else
             ErrorHandler.handleIllegalArgumentException("msg");
     }
     
     public void lowerEconomyBar(float amount) {
-        if (amount != 0 && amount <= economyBar)
+        if (amount < 0 && amount <= economyBar)
     		economyBar -= amount;
         else
     		ErrorHandler.handleIllegalArgumentException("msg");
