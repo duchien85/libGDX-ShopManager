@@ -9,10 +9,10 @@ public final class Time implements Runnable {
 
     @Override
     public void run() {
-        for (int i = 0; i <= 23; i++) {
-            for (int j = 0; j <= 59; j++) {
-                for (int k = 0; k <= Variables.SECONDS - 1; k++) {
-                    if (i == 23 && j == 59 && k == Variables.SECONDS - 1) {
+        for (int i = 1; i <= 24; i++) {
+            for (int j = 1; j <= 60; j++) {
+                for (int k = 1; k <= Variables.SECONDS; k++) {
+                    if (i == 24 && j == 60 && k == Variables.SECONDS) {
                         date.plusDays(1);
                         i = 0;
                         j = 0;
