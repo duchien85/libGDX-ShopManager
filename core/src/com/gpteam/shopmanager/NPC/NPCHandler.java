@@ -39,6 +39,7 @@ public class NPCHandler {
             for (int i = 0; i < npcCount; i++)
                 npcs.add(NPCBuilder.newNPC());
             this.npcCount += npcCount;
+            updateNpcCount();
         }
         else throw new IllegalArgumentException();
 
@@ -50,18 +51,22 @@ public class NPCHandler {
             for (int i = 0; i < npcCount; i++)
                 npcs.add(NPCBuilder.newNPC());
             this.npcCount += npcCount;
+            updateNpcCount();
         }
         else throw new IllegalArgumentException("npcCount must be between 0 - 10000. Found: " + npcCount);
     }
     
     public void removeNpc(NPC npc) {
-        if (npcs.contains(npc))
+        if (npcs.contains(npc)) {
             npcs.remove(npc);
+            updateNpcCount();
+        }
         else throw new IllegalArgumentException();
     }
     
     public void removeNpcs(NPC... npcs) {
             this.npcs.removeAll(Arrays.asList(npcs));
+            updateNpcCount();
     }
 
 //    public NPC[] generateRandomNPC() {
