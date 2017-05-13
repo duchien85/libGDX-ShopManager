@@ -20,10 +20,8 @@ public final  class EventHandler {
         updateSize();
         if (index <= size - 1)
             return events.get(index++);
-        else {
-            index = 0;
+        else
             return null;
-        }
     }
 
     private static void updateSize() {
