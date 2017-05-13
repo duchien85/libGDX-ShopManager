@@ -6,4 +6,5 @@ import java.util.ArrayList;
  * Created by masmix on 13.05.2017.
  */
 public final  class EventHandler {
+    private static ArrayList<Event> events;
 }
