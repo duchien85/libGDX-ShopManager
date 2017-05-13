@@ -41,6 +41,10 @@ public final class Loader {
         return strings;
     }
 
+    public static boolean isInitialized() {
+        return initialized;
+    }
+
     public static BufferedReader getBufferedReader() {
         return bufferedReader;
     }
