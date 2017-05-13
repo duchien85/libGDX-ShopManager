@@ -29,5 +29,5 @@ public final class Time implements Runnable {
 
     public static void initialize() {
         date = new DateTime();
-    }
+    } // TODO Add start date
 }
