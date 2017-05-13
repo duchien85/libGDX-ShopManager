@@ -5,6 +5,7 @@ import com.gpteam.shopmanager.Deprecated.NamesLoader;
 import com.gpteam.shopmanager.NPC.NPCHandler;
 import com.gpteam.shopmanager.Skill.SkillLogic;
 import com.gpteam.shopmanager.Deprecated.Traffic.TrafficHandler;
+import com.gpteam.shopmanager.Time.Time;
 
 /*
  * Created by masmix on 04.02.2017.
@@ -41,6 +42,15 @@ public final class Variables {
      **************************************************/
     public final static int MAX_TRAFFIC_LOAD = 100;
     public final static int MIN_TRAFFIC_LOAD = 0;
+
+    /**************************************************
+     * {@link Time}
+     * DELAY - in milliseconds
+     * (1 second = 1000 milliseconds)
+     * SECONDS - amount of seconds in a minute
+     **************************************************/
+    public final static int DELAY = 500;
+    public final static int SECONDS = 10;
 }
 
 // PROBABLY REMOVE THIS CLASS
