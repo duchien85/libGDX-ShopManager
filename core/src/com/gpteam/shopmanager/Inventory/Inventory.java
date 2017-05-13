@@ -52,6 +52,9 @@ public class Inventory {
         for (Product x : products)
             this.products.put(x.getSerialName(), x);
     }
+    
+    public class InventoryListener {
+    }
 }
 
 //    public void remove(Product product) {
