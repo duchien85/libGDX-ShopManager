@@ -27,10 +27,6 @@ public final class RandGen {
         return names.get(MathUtils.random(0, names.size() - 1));
     }
 
-    public static int getRandomTrafficLoad() {
-        return MathUtils.random(MIN_TRAFFIC_LOAD, MAX_TRAFFIC_LOAD);
-    }
-
     public static int getRandomAge() {
         return MathUtils.random(MIN_AGE_LENGTH, MAX_AGE_LENGTH);
     }
@@ -41,6 +37,10 @@ public final class RandGen {
 
     public static SocietyClass getRandomSocietyClass() {
         return SocietyClass.getRandom();
+    }
+
+    public static int getRandomTrafficLoad() {
+        return MathUtils.random(MIN_TRAFFIC_LOAD, MAX_TRAFFIC_LOAD);
     }
 
     public static void initialize() {
