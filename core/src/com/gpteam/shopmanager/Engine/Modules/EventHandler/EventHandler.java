@@ -7,4 +7,8 @@ import java.util.ArrayList;
  */
 public final  class EventHandler {
     private static ArrayList<Event> events;
+
+    public static void add(Event event) {
+        events.add(event);
+    }
 }
