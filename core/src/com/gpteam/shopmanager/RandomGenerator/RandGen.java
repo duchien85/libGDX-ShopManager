@@ -15,14 +15,10 @@ import static com.gpteam.shopmanager.Variables.Variables.*;
  */
 public final class RandGen {
     public static CharacterInfo generateCharacterInfo() {
-        if (!Loader.isInitialized())
-            Loader.initialize();
         return new CharacterInfo(getRandomName(), getRandomAge(), getRandomSex());
     }
 
     public static String getRandomName() {
-        if (!Loader.isInitialized())
-            Loader.initialize();
         ArrayList<String> names = Loader.getAll();
         return names.get(MathUtils.random(0, names.size() - 1));
     }
