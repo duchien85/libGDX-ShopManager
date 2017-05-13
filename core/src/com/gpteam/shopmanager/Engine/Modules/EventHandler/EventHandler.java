@@ -17,7 +17,12 @@ public final  class EventHandler {
 
     public static Event getNext() {
         updateSize();
-        return events.get(index++);
+        if (index <= size - 1)
+            return events.get(index++);
+        else {
+            index = 0;
+            return null;
+        }
     }
 
     private static void updateSize() {
