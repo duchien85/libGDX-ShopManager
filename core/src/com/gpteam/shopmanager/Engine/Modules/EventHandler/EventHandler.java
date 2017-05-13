@@ -13,6 +13,7 @@ public final  class EventHandler {
 
     public static void add(Event event) {
         events.add(event);
+        updateSize();
     }
 
     public static Event getNext() {
