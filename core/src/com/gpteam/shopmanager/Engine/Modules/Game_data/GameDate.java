@@ -17,6 +17,11 @@ public class GameDate {
         realDateStarted = currentDate;
     }
 
+    public GameDate(Date dateStarted) {
+        this.dateStarted = dateStarted;
+        currentDate = dateStarted;
+    }
+
     public Date getCurrentDate() {
         return currentDate;
     }
