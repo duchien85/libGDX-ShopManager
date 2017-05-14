@@ -23,6 +23,10 @@ public class Date {
         calendar = new GregorianCalendar(year, month, day);
     }
 
+    public boolean equals(Date otherDate) {
+        return getYear() == otherDate.getYear() && getMonth() == otherDate.getMonth() && getDay() == otherDate.getDay();
+    }
+
     public int getYear() {
         return calendar.get(Calendar.YEAR);
     }
