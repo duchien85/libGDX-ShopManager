@@ -14,7 +14,7 @@ public class Date {
     }
 
     /**
-     *
+     * YYYY.MM.DDDD
      * @param year
      * @param month 1 - 12
      * @param day 1 - 31
