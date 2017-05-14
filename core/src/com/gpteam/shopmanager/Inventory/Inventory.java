@@ -2,7 +2,6 @@ package com.gpteam.shopmanager.Inventory;
 
 import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
 import com.gpteam.shopmanager.Product.Product;
-import com.gpteam.shopmanager.Product.ProductView;
 
 import java.util.ArrayList;
 import java.util.HashMap;
