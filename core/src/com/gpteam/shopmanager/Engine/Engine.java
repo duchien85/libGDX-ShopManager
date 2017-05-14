@@ -4,6 +4,7 @@ import com.badlogic.gdx.Gdx;
 import com.gpteam.shopmanager.Economy.Economy;
 import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
 import com.gpteam.shopmanager.Engine.Modules.Game_data.GameDate;
+import com.gpteam.shopmanager.Time.Time;
 
 import java.util.HashMap;
 
@@ -14,6 +15,7 @@ public abstract class Engine implements Runnable {
     private HashMap<String,Class> modules;
     private Economy economy;
     private GameDate gameDate;
+    private Time time;
 
     @Override
     public void run() {
