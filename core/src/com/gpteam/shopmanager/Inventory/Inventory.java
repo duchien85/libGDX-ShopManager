@@ -45,7 +45,15 @@ public class Inventory {
         }
     }
 
-    public void getProductDescription(String productViewSerialName) {
+    public String getProductDescription(String pVSerialName) {
+        return products.get(pVSerialName).getDescription();
+    }
+
+    public String[] getAllProductDescription() {
+        String[] descriptions = new String[products.size() - 1];
+        for (int i = 0; i < descriptions.length; i++) {
+            descriptions[i] = products.get()
+        }
     }
 
     public Product getProduct(String productViewSerialName) {
