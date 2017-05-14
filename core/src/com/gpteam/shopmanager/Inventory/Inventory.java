@@ -4,6 +4,7 @@ import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
 import com.gpteam.shopmanager.Product.Product;
 import com.gpteam.shopmanager.Product.ProductView;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 
 /*
@@ -11,7 +12,7 @@ import java.util.HashMap;
  */
 public class Inventory {
     private HashMap<String, Product> products;
-
+    private ArrayList<String> serialNames;
 
     public Inventory(Product... products) {
         this.products = new HashMap<String, Product>();
