@@ -2,8 +2,8 @@ package com.gpteam.shopmanager.Time;
 
 import com.gpteam.shopmanager.Variables.Variables;
 
-public final class Time implements Runnable {
-    private static Date date;
+public class Time implements Runnable {
+    private Date date;
 
     @Override
     public void run() {
@@ -27,6 +27,6 @@ public final class Time implements Runnable {
         }
     }
 
-    public static void initialize() {
+    public void initialize() {
     } // TODO Add start date
 }
