@@ -9,6 +9,10 @@ import java.util.GregorianCalendar;
 public class Date {
     private Calendar calendar;
 
+    public Date() {
+        calendar = new GregorianCalendar();
+    }
+
     /**
      *
      * @param year
@@ -53,5 +57,33 @@ public class Date {
 
     public void setCalendar(Calendar calendar) {
         this.calendar = calendar;
+    }
+
+    public int getHour() {
+        return calendar.get(Calendar.HOUR_OF_DAY);
+    }
+
+    public int getMinute() {
+        return calendar.get(Calendar.MINUTE);
+    }
+
+    public int getSecond() {
+        return calendar.get(Calendar.SECOND);
+    }
+
+    public void plusSeconds(int seconds) {
+        calendar.set(Calendar.SECOND, calendar.get(Calendar.SECOND) + seconds);
+    }
+
+    public void plusMinutes(int minutes) {
+        calendar.set(Calendar.MINUTE, calendar.get(Calendar.MINUTE) + minutes);
+    }
+
+    public void plusHours(int hours) {
+        calendar.set(Calendar.HOUR_OF_DAY, calendar.get(Calendar.HOUR_OF_DAY) + hours);
+    }
+
+    public void plusDays(int days) {
+        calendar.set(Calendar.DAY_OF_MONTH, calendar.get(Calendar.DAY_OF_MONTH) + days);
     }
 }
