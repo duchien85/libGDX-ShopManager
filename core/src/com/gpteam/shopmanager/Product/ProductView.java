@@ -1,12 +1,12 @@
 package com.gpteam.shopmanager.Product;
 
+import com.gpteam.shopmanager.Text.Text;
+
 /*
  * Created by masmix on 14.05.2017.
  */
-public class ProductView {
-    private String serialName;
-
-    public String getSerialName() {
-        return serialName;
-    }
+public final class ProductView {
+    /** Apple */
+    public static String appleName = Text.appleName;
+    public static final String appleSerialName = "apple";
 }
