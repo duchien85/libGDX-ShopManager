@@ -8,5 +8,6 @@ import com.gpteam.shopmanager.Text.Text;
 public final class ProductView {
     /** Apple */
     public static String appleName = Text.appleName;
+    public static String appleDescription = Text.appleDescription;
     public static final String APPLE_SNAME = "apple";
 }
