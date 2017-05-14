@@ -13,6 +13,10 @@ public class Economy {
     private static final float MAX_ECONOMY_BAR_VALUE = 5.0f;
     private static final float MIN_ECONOMY_BAR_VALUE = 0.0f;
 
+    public Economy() {
+        economyBar = 0.0f;
+    }
+
     public Economy(float economyBar) {
         if (economyBar >= MIN_ECONOMY_BAR_VALUE && economyBar <= MAX_ECONOMY_BAR_VALUE)
             this.economyBar = economyBar;
