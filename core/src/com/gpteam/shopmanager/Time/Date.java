@@ -17,7 +17,7 @@ public class Date {
      *
      * @param year
      * @param month 1 - 12
-     * @param day
+     * @param day 1 - 31
      */
     public Date(int year, int month, int day) {
         calendar = new GregorianCalendar(year, month, day);
