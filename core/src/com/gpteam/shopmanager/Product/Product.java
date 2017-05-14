@@ -6,18 +6,42 @@ import java.util.Date;
  * Created by masmix on 23.12.2016.
  */
 public class Product {
+    private String name;
     private String serialName;
+    private String description;
     private float price;
     private short quality;
     private int quantity;
     private Date expirationDate;
 
-    public Product(String pVSerialName, float price, short quality, int quantity, Date expirationDate) {
-        this.serialName = serialName;
+    public Product(String pVName, String pVSerialName, String pVDescription, float price, short quality, int quantity, Date expirationDate) {
+        this.name = pVName;
+        this.serialName = pVSerialName;
+        this.description = pVDescription;
         this.price = price;
         this.quality = quality;
         this.quantity = quantity;
         this.expirationDate = expirationDate;
+    }
+
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setSerialName(String serialName) {
+        this.serialName = serialName;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
     }
 
     public String getSerialName() {
