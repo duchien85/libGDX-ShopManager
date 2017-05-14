@@ -68,7 +68,4 @@ public class Inventory {
             serialNames.add(x.getSerialName());
         }
     }
-    
-    public class InventoryListener {
-    }
 }
