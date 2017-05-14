@@ -31,6 +31,9 @@ public class NPCHandler {
         npcs = new ArrayList<NPC>();
     }
 
+    public void startSimulation() {
+    }
+
     public int currentNpcCount() {
         return npcCount;
     }
