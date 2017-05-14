@@ -18,7 +18,7 @@ public abstract class Engine implements Runnable {
     @Override
     public void run() {
         // normal, "my" stuff
-
+        initialize();
 
         // graphic stuff goes to libGDX:
         Gdx.app.postRunnable(new Runnable() {
