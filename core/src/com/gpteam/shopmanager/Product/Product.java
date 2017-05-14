@@ -1,6 +1,9 @@
 package com.gpteam.shopmanager.Product;
 
-import java.util.Date;
+import com.gpteam.shopmanager.Time.Date;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
 // TODO add constraints
 /*
  * Created by masmix on 23.12.2016.
@@ -12,8 +15,18 @@ public class Product {
     private float price;
     private short quality;
     private int quantity;
-    private Date expirationDate;
+    private com.gpteam.shopmanager.Time.Date expirationDate;
 
+    /**
+     *
+     * @param pVName Product name from ProductView class
+     * @param pVSerialName Product serial name from ProductView class
+     * @param pVDescription Product description from ProductView class
+     * @param price
+     * @param quality
+     * @param quantity
+     * @param expirationDate format: YYYY.MM.DD
+     */
     public Product(String pVName, String pVSerialName, String pVDescription, float price, short quality, int quantity, Date expirationDate) {
         this.name = pVName;
         this.serialName = pVSerialName;
