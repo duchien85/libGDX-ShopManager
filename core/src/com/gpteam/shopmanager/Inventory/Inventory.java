@@ -46,8 +46,6 @@ public class Inventory {
     }
 
     public void getProductDescription(String productViewSerialName) {
-        if (products.containsKey(productViewSerialName))
-//            products.get(productView.getSerialName()).getDescription();
     }
 
     public Product getProduct(String productViewSerialName) {
