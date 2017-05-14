@@ -45,8 +45,8 @@ public final class Variables {
 
     /**************************************************
      * {@link Time}
-     * DELAY - in milliseconds
-     * (1 second = 1000 milliseconds)
+     * DELAY - time between time incrementation
+     * in milliseconds (1 second = 1000 milliseconds)
      * SECONDS - amount of seconds in a minute
      **************************************************/
     public final static int DELAY = 500;
