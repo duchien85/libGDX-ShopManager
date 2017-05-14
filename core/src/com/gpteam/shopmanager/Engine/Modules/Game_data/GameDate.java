@@ -1,6 +1,6 @@
-package com.gpteam.shopmanager.Game_data;
+package com.gpteam.shopmanager.Engine.Modules.Game_data;
 
-import java.util.Date;
+import com.gpteam.shopmanager.Time.Date;
 
 /*
  * Created by masmix on 23.12.2016.
