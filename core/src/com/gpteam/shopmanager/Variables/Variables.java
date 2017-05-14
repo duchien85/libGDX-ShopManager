@@ -3,6 +3,7 @@ package com.gpteam.shopmanager.Variables;
 import com.gpteam.shopmanager.Character.CharacterInfo;
 import com.gpteam.shopmanager.Deprecated.NamesLoader;
 import com.gpteam.shopmanager.NPC.NPCHandler;
+import com.gpteam.shopmanager.Needs.Needs;
 import com.gpteam.shopmanager.Skill.SkillLogic;
 import com.gpteam.shopmanager.Deprecated.Traffic.TrafficHandler;
 import com.gpteam.shopmanager.Time.Time;
@@ -51,6 +52,12 @@ public final class Variables {
      **************************************************/
     public final static int DELAY = 500;
     public final static int SECONDS = 10;
+
+    /**************************************************
+     * {@link Needs}
+     **************************************************/
+    public final static int MIN_NEED_VALUE = 0;
+    public final static int MAX_NEED_VALUE = 100;
 }
 
 // PROBABLY REMOVE THIS CLASS
