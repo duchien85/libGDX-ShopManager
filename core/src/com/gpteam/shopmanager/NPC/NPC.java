@@ -2,8 +2,8 @@ package com.gpteam.shopmanager.NPC;
 
 import com.gpteam.shopmanager.Character.CharacterInfo;
 import com.gpteam.shopmanager.NPC.AI.AI;
-import com.gpteam.shopmanager.Needs.ENeeds;
 import com.gpteam.shopmanager.Needs.Needs;
+import com.gpteam.shopmanager.Needs.Needs.ENeeds;
 import com.gpteam.shopmanager.Society.SocietyClass;
 
 /*
@@ -39,7 +39,7 @@ public class NPC extends AI {
     }
 
     public int getNeedValue(ENeeds need) {
-        return needs.getNeedValue(need);
+        return needs.getNeed(need);
     }
 
     private void initialize() {

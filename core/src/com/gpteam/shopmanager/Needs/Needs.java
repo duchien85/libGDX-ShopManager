@@ -12,27 +12,20 @@ public class Needs {
     private NeedsLogic needsLogic;
     private boolean containerInitialized = false;
 
+    public enum ENeeds {
+        HUNGER, ENTERTAINMENT, APPAREL, HAPPINESS, LUXURY, FIX, AWARNESS
+    }
+
     public Needs() {
         initialize();
-    }
-
-    public Needs(boolean initialize) {
-        if (initialize) initialize();
-    }
-
-    public int getNeedValue(ENeeds need) {
-        if (needs.containsKey(need))
-            return needs.get(need);
-        else
-            ErrorHandler.handleIllegalArgumentException("Needs container does not contain provided need. Found: " + need.toString());
-        return 0;
     }
 
     public int getNeed(ENeeds need) {
         if (needs.containsKey(need))
             return needs.get(need);
         else
-            return 1;
+            ErrorHandler.handleIllegalArgumentException("Needs container does not contain provided need.");
+        return 1;
     }
 
     public HashMap<ENeeds, Integer> getNeedsHashMap() {
@@ -40,10 +33,10 @@ public class Needs {
     }
 
     public void updateNeed(ENeeds need, int value) {
-        if (needs.containsKey(need) && needs.containsValue(value))
+        if (needs.containsKey(need))
             needs.put(need, value);
         else
-            ErrorHandler.handleIllegalArgumentException("Need and value not found in HashMap. Found: " + need.toString() + ", " + value);
+            ErrorHandler.handleIllegalArgumentException("Need not found in HashMap. Found: " + need.toString() + ", " + value);
     }
 
     /************************************************************
@@ -69,7 +62,7 @@ public class Needs {
 
     private void fillHashMap() {
         for (ENeeds x : ENeeds.values())
-            needs.put(x, null);
+            needs.put(x, 10);
     }
 
     private void fillHashMap(ENeeds[] needs, int[] values) {

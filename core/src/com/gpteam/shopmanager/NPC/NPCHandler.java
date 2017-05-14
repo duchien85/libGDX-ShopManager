@@ -1,6 +1,7 @@
 package com.gpteam.shopmanager.NPC;
 
 import com.gpteam.shopmanager.NPC.NPCBuilder.NPCBuilder;
+import com.gpteam.shopmanager.Society.SocietyClass;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -13,7 +14,7 @@ import static com.gpteam.shopmanager.Variables.Variables.MIN_NPC_AMOUNT;
  */
 public class NPCHandler {
     private ArrayList<NPC> npcs;
-    private int npcCount;
+    private int npcCount = 0;
 
 
     // TODO COME UP WITH BEST WAY TO HANDLE VALIDATING ARGUMENTS AND ASSIGNING THEM TO CLASS VARIABLES !!! (Character class needs exact same thing)
@@ -39,10 +40,16 @@ public class NPCHandler {
             for (int i = 0; i < npcCount; i++)
                 npcs.add(NPCBuilder.newNPC());
             this.npcCount += npcCount;
+            updateNpcCount();
         }
         else throw new IllegalArgumentException();
+    }
 
-
+    public void addNpcs(int npcCount, SocietyClass societyClass) {
+        if (validate(npcCount)) {
+            for (int i = 0; i < npcCount; i++)
+                npcs.add(NPCBuilder.newNPC(societyClass));
+        }
     }
 
     public void addNpcs(int npcCount, boolean allRandom) {
@@ -50,20 +57,22 @@ public class NPCHandler {
             for (int i = 0; i < npcCount; i++)
                 npcs.add(NPCBuilder.newNPC());
             this.npcCount += npcCount;
+            updateNpcCount();
         }
         else throw new IllegalArgumentException("npcCount must be between 0 - 10000. Found: " + npcCount);
     }
     
     public void removeNpc(NPC npc) {
-        if (npcs.contains(npc))
+        if (npcs.contains(npc)) {
             npcs.remove(npc);
+            updateNpcCount();
+        }
         else throw new IllegalArgumentException();
     }
     
     public void removeNpcs(NPC... npcs) {
-        if (this.npcs.containsAll(Arrays.asList(npcs))) // TODO in the future, check, if sending method argument "npcs", to "containsAll" method of "this.npc? works properly
             this.npcs.removeAll(Arrays.asList(npcs));
-        else throw new IllegalArgumentException("Provided array is not filled with npcs of this class instance only.");
+            updateNpcCount();
     }
 
 //    public NPC[] generateRandomNPC() {
@@ -71,7 +80,7 @@ public class NPCHandler {
 //    }
 
     private void initialize() {
-        npcs = NPCBuilder.newNPCList(npcCount);
+        npcs = NPCBuilder.newNPCArrayList(npcCount);
     }
 
     private void updateNpcCount() {
@@ -79,7 +88,7 @@ public class NPCHandler {
     }
     
     private boolean validate(int npcCount) {
-    			return npcCount <= MAX_NPC_AMOUNT && npcCount >= MIN_NPC_AMOUNT;
+        return npcCount + this.npcCount <= MAX_NPC_AMOUNT && npcCount + this.npcCount >= MIN_NPC_AMOUNT;
     }
 }
 

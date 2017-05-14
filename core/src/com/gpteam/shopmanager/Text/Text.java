@@ -1,6 +1,7 @@
 package com.gpteam.shopmanager.Text;
 
 import com.gpteam.shopmanager.Needs.Needs;
+import com.gpteam.shopmanager.Product.ProductView;
 import com.gpteam.shopmanager.Society.SocietyClass;
 import com.gpteam.shopmanager.Character.CharacterInfo;
 import com.gpteam.shopmanager.Skill.Skills.Expertise;
@@ -51,4 +52,10 @@ public final class Text {
      * {@link Needs}
      **************************************************/
     public static String ERROR_MESSAGE_1;
+
+    /**
+     * {@link ProductView}
+     **************************************************/
+    public static String appleName;
+    public static String appleDescription;
 }

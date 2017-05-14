@@ -12,11 +12,14 @@ public final class Loader {
     private static File file;
     private static FileReader fileReader;
     private static BufferedReader bufferedReader;
+    private static boolean initialized = false;
 
     public static void initialize() {
-        file = new File(NAMES_PATH);
-        try { fileReader = new FileReader(file); } catch (FileNotFoundException e) { e.printStackTrace(); }
-        bufferedReader = new BufferedReader(fileReader);
+            file = new File(NAMES_PATH);
+            try { fileReader = new FileReader(file); }
+            catch (FileNotFoundException e) { e.printStackTrace(); }
+            bufferedReader = new BufferedReader(fileReader);
+            initialized = true;
     }
 
     public static void initialize(String filePath) {
@@ -26,6 +29,8 @@ public final class Loader {
     }
 
     public static ArrayList<String> getAll() {
+        if (!initialized)
+            initialize();
         String line;
         ArrayList<String> strings = new ArrayList<String>();
         try {
@@ -37,6 +42,8 @@ public final class Loader {
     }
 
     public static BufferedReader getBufferedReader() {
+        if (!initialized)
+            initialize();
         return bufferedReader;
     }
 }

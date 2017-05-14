@@ -11,23 +11,31 @@ public class Economy {
     private BigDecimal totalMoney; //needed?
     private float economyBar;
     private static final float MAX_ECONOMY_BAR_VALUE = 5.0f;
-    
+    private static final float MIN_ECONOMY_BAR_VALUE = 0.0f;
+
     public float getEconomyBar() {
         return economyBar;
     }
     
     public void raiseEconomyBar(float amount) {
-        if (amount != 0 && amount <= MAX_ECONOMY_BAR_VALUE)
+        if (amount >= MIN_ECONOMY_BAR_VALUE && amount + MAX_ECONOMY_BAR_VALUE <= MAX_ECONOMY_BAR_VALUE)
             economyBar += amount;
         else
             ErrorHandler.handleIllegalArgumentException("msg");
     }
     
     public void lowerEconomyBar(float amount) {
-        if (amount != 0 && amount <= economyBar)
+        if (amount <= economyBar)
     		economyBar -= amount;
         else
     		ErrorHandler.handleIllegalArgumentException("msg");
+    }
+    
+    public void setEconomyBar(float economyBar) {
+        if (economyBar >= MIN_ECONOMY_BAR_VALUE && economyBar <= MAX_ECONOMY_BAR_VALUE)
+            this.economyBar = economyBar;
+        else
+            ErrorHandler.handleIllegalArgumentException("msg");
     }
 
     public void update() {
