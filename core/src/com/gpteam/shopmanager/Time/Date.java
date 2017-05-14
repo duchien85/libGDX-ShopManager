@@ -24,7 +24,7 @@ public class Date {
     }
 
     public boolean equals(Date otherDate) {
-        return getYear() == otherDate.getYear() && getMonth() == otherDate.getMonth() && getDay() == otherDate.getDay();
+        return getYear() == otherDate.getYear() && getMonth() == otherDate.getMonth() + 1 && getDay() == otherDate.getDay();
     }
 
     public int getYear() {
