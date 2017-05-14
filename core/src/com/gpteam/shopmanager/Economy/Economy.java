@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.Economy;
 
+import com.badlogic.gdx.math.MathUtils;
 import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
 
 import java.math.BigDecimal;
@@ -10,6 +11,7 @@ import java.math.BigDecimal;
 public class Economy {
     private BigDecimal totalMoney; //needed?
     private float economyBar;
+    private float dailyVariation;
     private static final float MIN_DAILY_VARIATION = 0.0f;
     private static final float MAX_DAILY_VARIATION = 0.7f;
     private static final float MAX_ECONOMY_BAR_VALUE = 5.0f;
@@ -52,6 +54,12 @@ public class Economy {
     }
 
     public void update() {
+        dailyVariation = MathUtils.random(MIN_DAILY_VARIATION, MAX_DAILY_VARIATION);
+        if (economyBar + dailyVariation >= MIN_ECONOMY_BAR_VALUE && economyBar + dailyVariation <= MAX_ECONOMY_BAR_VALUE)
+            economyBar += dailyVariation;
+        // TODO add more logic to daily variation
+        // for example: if economyBar is 4.9f, and daily variation gets a random +0.3
+        // add 0.1 instead of doing nothing
     }
     
     public BigDecimal getTotalMoney() {
