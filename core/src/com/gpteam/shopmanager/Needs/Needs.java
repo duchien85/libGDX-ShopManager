@@ -1,6 +1,7 @@
 package com.gpteam.shopmanager.Needs;
 
 import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.Variables.Variables;
 
 import java.util.HashMap;
 
@@ -33,7 +34,7 @@ public class Needs {
     }
 
     public void updateNeed(ENeeds need, int value) {
-        if (needs.containsKey(need))
+        if (needs.containsKey(need) && value >= Variables.MIN_NEED_VALUE && value <= Variables.MAX_NEED_VALUE)
             needs.put(need, value);
         else
             ErrorHandler.handleIllegalArgumentException("Need not found in HashMap. Found: " + need.toString() + ", " + value);
