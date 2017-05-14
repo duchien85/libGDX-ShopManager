@@ -15,7 +15,7 @@ public class Product {
     private float price;
     private short quality;
     private int quantity;
-    private com.gpteam.shopmanager.Time.Date expirationDate;
+    private Date expirationDate;
 
     /**
      *
