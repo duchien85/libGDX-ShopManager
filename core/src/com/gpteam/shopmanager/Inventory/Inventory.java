@@ -50,8 +50,8 @@ public class Inventory {
 //            products.get(productView.getSerialName()).getDescription();
     }
 
-    public Product getProduct(String productSerialName) {
-        return products.get(productSerialName);
+    public Product getProduct(String productView) {
+        return products.get(productView);
     }
 
     private void initialize(Product[] products) {
