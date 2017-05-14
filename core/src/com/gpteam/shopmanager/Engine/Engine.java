@@ -3,6 +3,7 @@ package com.gpteam.shopmanager.Engine;
 import com.badlogic.gdx.Gdx;
 import com.gpteam.shopmanager.Economy.Economy;
 import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.Engine.Modules.Game_data.GameDate;
 
 import java.util.HashMap;
 
@@ -12,6 +13,7 @@ import java.util.HashMap;
 public abstract class Engine implements Runnable {
     private HashMap<String,Class> modules;
     private Economy economy;
+    private GameDate gameDate;
 
     @Override
     public void run() {
@@ -29,6 +31,7 @@ public abstract class Engine implements Runnable {
     public void initialize() {
         modules = new HashMap<String, Class>();
         modules.put("ErrorHandler", ErrorHandler.class);
+        gameDate = new GameDate();
     }
 
     @SuppressWarnings("unchecked")
