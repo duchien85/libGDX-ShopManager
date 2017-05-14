@@ -12,8 +12,8 @@ public class Economy {
     private BigDecimal totalMoney; //needed?
     private float economyBar;
     private float dailyVariation;
-    private static final float MIN_DAILY_VARIATION = 0.0f;
-    private static final float MAX_DAILY_VARIATION = 0.7f;
+    private static final float MIN_DAILY_VARIATION = -0.4f;
+    private static final float MAX_DAILY_VARIATION = 0.4f;
     private static final float MAX_ECONOMY_BAR_VALUE = 5.0f;
     private static final float MIN_ECONOMY_BAR_VALUE = 0.0f;
 
