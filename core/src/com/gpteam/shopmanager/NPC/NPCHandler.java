@@ -14,7 +14,7 @@ import static com.gpteam.shopmanager.Variables.Variables.MIN_NPC_AMOUNT;
  */
 public class NPCHandler {
     private ArrayList<NPC> npcs;
-    private int npcCount;
+    private int npcCount = 0;
 
 
     // TODO COME UP WITH BEST WAY TO HANDLE VALIDATING ARGUMENTS AND ASSIGNING THEM TO CLASS VARIABLES !!! (Character class needs exact same thing)
