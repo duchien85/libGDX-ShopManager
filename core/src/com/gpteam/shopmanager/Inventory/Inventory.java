@@ -56,10 +56,3 @@ public class Inventory {
     public class InventoryListener {
     }
 }
-
-//    public void remove(Product product) {
-//        if (products.get(product.getSerialName()).getSerialName().isEmpty())
-//            throw new IndexOutOfBoundsException();
-//        else
-//            products.remove(product.getSerialName());
-//    }
