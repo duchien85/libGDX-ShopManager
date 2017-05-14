@@ -8,6 +8,7 @@ import com.gpteam.shopmanager.Time.Date;
 public class GameDate {
     private Date currentDate;
     private Date dateStarted;
+    private Date realDateStarted;
 
 
     public GameDate(Date currentDate) {
