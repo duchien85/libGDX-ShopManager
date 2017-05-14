@@ -41,7 +41,7 @@ public class Inventory {
     public void remove(String[] pVSerialName) {
         for (int i = 0; i < pVSerialName.length; i++) {
             if (this.products.containsKey(pVSerialName[i]))
-                this.products.remove(pVSerialName);
+                this.products.remove(pVSerialName[i]);
         }
     }
 
