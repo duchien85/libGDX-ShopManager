@@ -33,7 +33,10 @@ public abstract class Engine implements Runnable {
     public void initialize() {
         modules = new HashMap<String, Class>();
         modules.put("ErrorHandler", ErrorHandler.class);
+
+        economy = new Economy();
         gameDate = new GameDate();
+        time = new Time();
     }
 
     @SuppressWarnings("unchecked")
