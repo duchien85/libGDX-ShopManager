@@ -31,7 +31,7 @@ public class Economy {
     }
     
     public void setEconomyBar(float economyBar) {
-    		if (amount > 0 && amount <= MAX_ECONOMY_BAR_VALUE)
+    		if (economyBar > 0 && economyBar <= MAX_ECONOMY_BAR_VALUE)
     				this.economyBar = economyBar;
     		else
     				ErrorHandler.handleIllegalArgumentException("msg");
