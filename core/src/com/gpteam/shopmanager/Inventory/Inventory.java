@@ -51,11 +51,12 @@ public class Inventory {
         return products.get(pVSerialName).getDescription();
     }
 
-    public String[] getAllProductDescription() {
+    public String[] getAllProductDescriptions() {
         String[] descriptions = new String[products.size() - 1];
         for (int i = 0; i < descriptions.length; i++) {
-            descriptions[i] = products.get()
+            descriptions[i] = products.get(serialNames.get(i)).getDescription();
         }
+        return descriptions;
     }
 
     public Product getProduct(String productViewSerialName) {
