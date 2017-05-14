@@ -25,6 +25,7 @@ public class Inventory {
 
     public void put(Product product) {
         products.put(product.getSerialName(), product);
+        serialNames.add(product.getSerialName());
     }
 
     public void put(Product... products) {
@@ -62,8 +63,10 @@ public class Inventory {
     }
 
     private void initialize(Product[] products) {
-        for (Product x : products)
+        for (Product x : products) {
             this.products.put(x.getSerialName(), x);
+            serialNames.add(x.getSerialName());
+        }
     }
     
     public class InventoryListener {
