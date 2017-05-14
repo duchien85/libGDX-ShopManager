@@ -31,17 +31,17 @@ public class Inventory {
             this.products.put(x.getSerialName(), x);
     }
 
-    public void remove(Product product) {
-        if (products.containsKey(product.getSerialName()))
-            products.remove(product.getSerialName());
+    public void remove(String pVSerialName) {
+        if (products.containsKey(pVSerialName))
+            products.remove(pVSerialName);
         else
             ErrorHandler.handleIllegalArgumentException("msg");
     }
 
-    public void remove(Product... products) {
-        for (Product x : products) {
-            if (this.products.containsKey(x.getSerialName()))
-                this.products.remove(x.getSerialName());
+    public void remove(String[] pVSerialName) {
+        for (int i = 0; i < pVSerialName.length; i++) {
+            if (this.products.containsKey(pVSerialName[i]))
+                this.products.remove(pVSerialName);
         }
     }
 
