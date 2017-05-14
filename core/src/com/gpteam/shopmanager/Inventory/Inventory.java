@@ -2,6 +2,7 @@ package com.gpteam.shopmanager.Inventory;
 
 import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
 import com.gpteam.shopmanager.Product.Product;
+import com.gpteam.shopmanager.Product.ProductView;
 
 import java.util.HashMap;
 
@@ -42,6 +43,11 @@ public class Inventory {
             if (this.products.containsKey(x.getSerialName()))
                 this.products.remove(x.getSerialName());
         }
+    }
+
+    public void getProductDescription(ProductView productView) {
+        if (products.containsKey(productView.getSerialName()))
+//            products.get(productView.getSerialName()).getDescription();
     }
 
     public Product getProduct(String productSerialName) {
