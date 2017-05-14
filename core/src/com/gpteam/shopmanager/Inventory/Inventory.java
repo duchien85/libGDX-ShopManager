@@ -21,6 +21,15 @@ public class Inventory {
         products = new HashMap<String, Product>();
     }
 
+    public void put(Product product) {
+        products.put(product.getSerialName(), product);
+    }
+
+    public void put(Product... products) {
+        for (Product x : products)
+            this.products.put(x.getSerialName(), x);
+    }
+
     public void remove(Product product) {
         if (products.containsKey(product.getSerialName()))
             products.remove(product.getSerialName());
@@ -33,15 +42,6 @@ public class Inventory {
             if (this.products.containsKey(x.getSerialName()))
                 this.products.remove(x.getSerialName());
         }
-    }
-
-    public void put(Product product) {
-        products.put(product.getSerialName(), product);
-    }
-
-    public void put(Product... products) {
-        for (Product x : products)
-            this.products.put(x.getSerialName(), x);
     }
 
     public Product getProduct(String productSerialName) {
