@@ -45,13 +45,13 @@ public class Inventory {
         }
     }
 
-    public void getProductDescription(ProductView productView) {
-        if (products.containsKey(productView.getSerialName()))
+    public void getProductDescription(String productViewSerialName) {
+        if (products.containsKey(productViewSerialName))
 //            products.get(productView.getSerialName()).getDescription();
     }
 
-    public Product getProduct(String productView) {
-        return products.get(productView);
+    public Product getProduct(String productViewSerialName) {
+        return products.get(productViewSerialName);
     }
 
     private void initialize(Product[] products) {
