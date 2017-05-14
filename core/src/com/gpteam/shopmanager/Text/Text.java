@@ -57,4 +57,5 @@ public final class Text {
      * {@link ProductView}
      **************************************************/
     public static String appleName;
+    public static String appleDescription;
 }
