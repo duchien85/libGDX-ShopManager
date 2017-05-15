@@ -15,11 +15,13 @@ public class Inventory {
 
     public Inventory(Product... products) {
         this.products = new HashMap<String, Product>();
+        serialNames = new ArrayList<String>();
         initialize(products);
     }
 
     public Inventory() {
         products = new HashMap<String, Product>();
+        serialNames = new ArrayList<String>();
     }
 
     public void put(Product product) {
