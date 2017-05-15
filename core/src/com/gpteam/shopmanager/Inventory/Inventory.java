@@ -73,8 +73,8 @@ public class Inventory {
         return descriptions;
     }
 
-    public Product getProduct(String productViewSerialName) {
-        return products.get(productViewSerialName);
+    public Product getProduct(String pViewSerialName) {
+        return products.get(pViewSerialName);
     }
 
     private void initialize(Product[] products) {
