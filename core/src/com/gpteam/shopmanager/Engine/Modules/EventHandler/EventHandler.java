@@ -6,6 +6,10 @@ import java.util.ArrayList;
  * Created by masmix on 13.05.2017.
  */
 public final class EventHandler {
+			private EventHandler() {
+			ErrorHandler.handleUnsupportedOperationException("msg");
+			}
+
     private static ArrayList<Event> events = new ArrayList<Event>();
     private static int size;
     private static int index = 0;
