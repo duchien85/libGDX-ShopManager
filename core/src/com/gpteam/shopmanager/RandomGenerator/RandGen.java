@@ -2,7 +2,7 @@ package com.gpteam.shopmanager.RandomGenerator;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.gpteam.shopmanager.Character.CharacterInfo;
-import com.gpteam.shopmanager.FileHandlers.Loader;
+import com.gpteam.shopmanager.Loader.Loader;
 import com.gpteam.shopmanager.Player.Sex;
 import com.gpteam.shopmanager.Society.SocietyClass;
 

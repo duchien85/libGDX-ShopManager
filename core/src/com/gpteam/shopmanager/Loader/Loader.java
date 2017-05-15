@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.FileHandlers;
+package com.gpteam.shopmanager.Loader;
 
 import java.io.*;
 import java.util.ArrayList;

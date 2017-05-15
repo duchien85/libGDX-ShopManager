@@ -1,11 +1,9 @@
 package com.gpteam.shopmanager.Deprecated;
 
-import com.gpteam.shopmanager.FileHandlers.Loader;
+import com.gpteam.shopmanager.Loader.Loader;
 
 import java.io.IOException;
 import java.util.ArrayList;
-
-import static com.gpteam.shopmanager.Variables.Variables.NAMES_PATH;
 
 /*
  * Created by masmix on 02.02.2017.
