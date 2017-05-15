@@ -59,5 +59,3 @@ public final class Variables {
     public final static int MIN_NEED_VALUE = 0;
     public final static int MAX_NEED_VALUE = 100;
 }
-
-// PROBABLY REMOVE THIS CLASS
