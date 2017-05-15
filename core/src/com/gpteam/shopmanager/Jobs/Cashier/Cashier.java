@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.Worker;
+package com.gpteam.shopmanager.Jobs.Cashier;
 
 import com.gpteam.shopmanager.Character.CharacterInfo;
 import com.gpteam.shopmanager.Skill.Skills.Expertise;
@@ -6,7 +6,7 @@ import com.gpteam.shopmanager.Skill.Skills.Expertise;
 /*
  * Created by masmix on 15.05.2017.
  */
-public class Worker {
+public class Cashier {
     private CharacterInfo characterInfo;
 
     private Expertise expertise;
