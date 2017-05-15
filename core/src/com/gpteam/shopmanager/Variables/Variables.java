@@ -13,6 +13,9 @@ import com.gpteam.shopmanager.Time.Time;
  * Created by masmix on 04.02.2017.
  */
 public final class Variables {
+			private Variables() {
+					ErrorHandler.handleUnsupportedOperationException("msg");
+			}
     /**************************************************
      * {@link NamesLoader}
      * NAMES_PATH - location of file with random names
