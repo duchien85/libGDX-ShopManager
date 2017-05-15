@@ -90,6 +90,9 @@ public class Product {
         if (this.quantity + quantity <= Variables.MAX_QUANTITY && this.quantity + quantity >= Variables.MIN_QUANTITY);
     }
 
+    public void subQuantity(int quantity) {
+    }
+
     public Date getExpirationDate() {
         return expirationDate;
     }
