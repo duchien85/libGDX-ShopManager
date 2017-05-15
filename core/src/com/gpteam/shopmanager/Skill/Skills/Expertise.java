@@ -10,6 +10,10 @@ import com.gpteam.shopmanager.Variables.Variables;
  */
 public class Expertise {
     private short skillLevel;
+    
+    public Expertise() {
+    		skillLevel = 0;
+    }
 
     public Expertise(short skillLevel) {
         if (skillLevel <= Variables.MAX_SKILL_LEVEL && skillLevel >= Variables.MIN_SKILL_LEVEL)
