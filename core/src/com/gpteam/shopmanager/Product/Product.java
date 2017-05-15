@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.Product;
 
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
 import com.gpteam.shopmanager.Time.Date;
 import com.gpteam.shopmanager.Variables.Variables;
 
@@ -87,7 +88,10 @@ public class Product {
     }
 
     public void addQuantity(int quantity) {
-        if (this.quantity + quantity <= Variables.MAX_QUANTITY && this.quantity + quantity >= Variables.MIN_QUANTITY);
+        if (this.quantity + quantity <= Variables.MAX_QUANTITY && this.quantity + quantity >= Variables.MIN_QUANTITY)
+            this.quantity += quantity;
+        else
+            ErrorHandler.handleIllegalArgumentException("msg");
     }
 
     public void subQuantity(int quantity) {
