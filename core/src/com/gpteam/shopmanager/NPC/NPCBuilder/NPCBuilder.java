@@ -9,6 +9,10 @@ import java.util.ArrayList;
  * Created by masmix on 19.01.2017.
  */
 public final class NPCBuilder {
+			private NPCBuilder() {
+			ErrorHandler.handleUnsupportedOperationException("msg");
+			}
+
     public static NPC newNPC() {
         return new NPC();
     }
