@@ -22,14 +22,14 @@ public class Expertise {
         return skillLevel;
     }
 
-    public void addSkillLevel(short skillLevel) {
+    public void raiseSkill(short skillLevel) {
         if (validate(skillLevel))
             this.skillLevel += skillLevel;
         else
             ErrorHandler.handleIllegalArgumentException("MSG");
     }
 
-    public void removeSkillLevel(short skillLevel) {
+    public void lowerSkill(short skillLevel) {
         if (validate(skillLevel))
             this.skillLevel -= skillLevel;
         else
