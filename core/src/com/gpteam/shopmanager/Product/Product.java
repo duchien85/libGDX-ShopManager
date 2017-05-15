@@ -88,19 +88,11 @@ public class Product {
     }
 
     public void addQuantity(int quantity) {
-        if (this.quantity + quantity <= Variables.MAX_QUANTITY && this.quantity + quantity >= Variables.MIN_QUANTITY)
-            this.quantity += quantity;
-        else
-            ErrorHandler.handleIllegalArgumentException("msg");
+        this.quantity += quantity;
     }
 
     public void subQuantity(int quantity) {
-        if (this.quantity - quantity <= Variables.MAX_QUANTITY && this.quantity - quantity >= Variables.MIN_QUANTITY)
-            this.quantity -= quantity;
-        else if (this.quantity - quantity < 0)
-            this.quantity = 0;
-        else
-            ErrorHandler.handleIllegalArgumentException("msg");
+        this.quantity -= quantity;
     }
 
     public Date getExpirationDate() {
