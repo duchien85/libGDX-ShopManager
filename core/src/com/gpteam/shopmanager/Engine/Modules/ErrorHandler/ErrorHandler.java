@@ -4,6 +4,9 @@ package com.gpteam.shopmanager.Engine.Modules.ErrorHandler;
  * Created by masmix on 11.02.2017.
  */
 public final class ErrorHandler {
+		private ErrorHandler() {
+		ErrorHandler.handleUnsupportedOperationException("msg");
+		}
     public static void handleIllegalArgumentException(String message) {
         throw new IllegalArgumentException(message);
     }
