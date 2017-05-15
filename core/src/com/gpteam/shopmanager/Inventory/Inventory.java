@@ -34,14 +34,14 @@ public class Inventory {
             this.products.put(x.getSerialName(), x);
     }
 
-    public void remove(String pVSerialName) {
+    public void removeProducts(String pVSerialName) {
         if (products.containsKey(pVSerialName))
             products.remove(pVSerialName);
         else
             ErrorHandler.handleIllegalArgumentException("msg");
     }
 
-    public void remove(String[] pVSerialName) {
+    public void removeProduct(String[] pVSerialName) {
         for (int i = 0; i < pVSerialName.length; i++) {
             if (this.products.containsKey(pVSerialName[i]))
                 this.products.remove(pVSerialName[i]);
