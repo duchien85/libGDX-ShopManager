@@ -32,6 +32,10 @@ public class Date {
         return calendar.get(Calendar.YEAR) + "." + calendar.get(Calendar.MONTH) + "." + calendar.get(Calendar.DAY_OF_MONTH);
     }
 
+    public long getTime() {
+        return calendar.getTimeInMillis();
+    }
+
     public int getYear() {
         return calendar.get(Calendar.YEAR);
     }
