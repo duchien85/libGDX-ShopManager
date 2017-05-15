@@ -44,10 +44,6 @@ public class NPC extends AI {
 
     private void initialize() {
         characterInfo = new CharacterInfo();
-        initializeHandlers();
-    }
-
-    private void initializeHandlers() {
         needs = new Needs();
         societyClass = SocietyClass.getRandom();
     }
