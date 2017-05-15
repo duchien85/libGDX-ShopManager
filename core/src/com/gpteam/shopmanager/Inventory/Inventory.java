@@ -48,6 +48,11 @@ public class Inventory {
         }
     }
 
+    public void subProductQuantity(String pVSerialName, int quantity) {
+        if (products.get(pVSerialName).getQuantity() > 0)
+        products.get(pVSerialName).subQuantity(quantity);
+    }
+
     public String getProductDescription(String pVSerialName) {
         return products.get(pVSerialName).getDescription();
     }
