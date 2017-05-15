@@ -23,7 +23,7 @@ public class Expertise {
     }
 
     public void raiseSkill(short skillLevel) {
-        if (skillLevel + this.skillLevel <= Variables.MAX_SKILL_LEVEL && skillLevel + this.skillLevel >= Variables.MIN_SKILL_LEVEL)
+        if (this.skillLevel + skillLevel <= Variables.MAX_SKILL_LEVEL && this.skillLevel + skillLevel >= Variables.MIN_SKILL_LEVEL)
             this.skillLevel += skillLevel;
         else
             ErrorHandler.handleIllegalArgumentException("MSG");
