@@ -11,6 +11,10 @@ public final class Logger {
     // Both sending and receiving of packed strings that contain
     // messages important for the logger must be handled
     // with regular arrays.
+    
+    private Logger() {
+    ErrorHandler.handleUnsupportedOperationException("msg");
+    }
 
     private static ArrayList<Log> logs = new ArrayList<Log>();
     private static int index = 0;
