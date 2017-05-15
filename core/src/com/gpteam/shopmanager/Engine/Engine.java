@@ -11,11 +11,15 @@ import java.util.HashMap;
 /*
  * Created by masmix on 07.02.2017.
  */
-public abstract class Engine implements Runnable {
+public final class Engine implements Runnable {
     private HashMap<String,Class> modules;
     private Economy economy;
     private GameDate gameDate;
     private Time time;
+    
+    private Engine() {
+    		ErrorHandler.handleUnsupportedOperationException("msg");
+    }
 
     @Override
     public void run() {
