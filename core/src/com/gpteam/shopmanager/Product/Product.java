@@ -1,6 +1,7 @@
 package com.gpteam.shopmanager.Product;
 
 import com.gpteam.shopmanager.Time.Date;
+import com.gpteam.shopmanager.Variables.Variables;
 
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -83,6 +84,10 @@ public class Product {
 
     public void setQuantity(int quantity) {
         this.quantity = quantity;
+    }
+
+    public void addQuantity(int quantity) {
+        if (this.quantity + quantity <= Variables.MAX_QUANTITY && this.quantity + quantity >= Variables.MIN_QUANTITY);
     }
 
     public Date getExpirationDate() {
