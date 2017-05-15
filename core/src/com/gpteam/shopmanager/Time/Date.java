@@ -27,6 +27,11 @@ public class Date {
         return getYear() == otherDate.getYear() && getMonth() == otherDate.getMonth() && getDay() == otherDate.getDay();
     }
 
+    @Override
+    public String toString() {
+        return calendar.get(Calendar.YEAR) + "." + calendar.get(Calendar.MONTH) + "." + calendar.get(Calendar.DAY_OF_MONTH);
+    }
+
     public int getYear() {
         return calendar.get(Calendar.YEAR);
     }
