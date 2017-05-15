@@ -10,6 +10,9 @@ import com.gpteam.shopmanager.Skill.Skills.Expertise;
  * Created by masmix on 18.01.2017.
  */
 public final class Text {
+			private Text() {
+			ErrorHandler.handleUnsupportedOperationException("msg");
+			}
     /**
      * {@link Expertise}
      **************************************************/
