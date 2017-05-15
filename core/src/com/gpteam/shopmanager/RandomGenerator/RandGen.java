@@ -14,6 +14,10 @@ import static com.gpteam.shopmanager.Variables.Variables.*;
  * Created by masmix on 04.02.2017.
  */
 public final class RandGen {
+			private RandGen() {
+			ErrorHandler.handleUnsupportedOperationException("msg");
+			}
+
     private static ArrayList<String> names = Loader.getAll();
 
     public static CharacterInfo generateCharacterInfo() {
