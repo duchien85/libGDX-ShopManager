@@ -29,10 +29,10 @@ public class Product {
      * @param quantity
      * @param expirationDate format: YYYY.MM.DD
      */
-    public Product(String pVName, String pVSerialName, String pVDescription, float price, short quality, int quantity, Date expirationDate) {
-        this.name = pVName;
-        this.serialName = pVSerialName;
-        this.description = pVDescription;
+    public Product(String[] pVProduct, float price, short quality, int quantity, Date expirationDate) {
+        this.name = pVProduct[0];
+        this.serialName = pVProduct[1];
+        this.description = pVProduct[2];
         this.price = price;
         this.quality = quality;
         this.quantity = quantity;
