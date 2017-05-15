@@ -12,7 +12,7 @@ public class Expertise {
     private short skillLevel;
 
     public Expertise(short skillLevel) {
-        if (validate(skillLevel))
+        if (skillLevel <= Variables.MAX_SKILL_LEVEL && skillLevel >= Variables.MIN_SKILL_LEVEL)
             this.skillLevel = skillLevel;
         else
             ErrorHandler.handleIllegalArgumentException("Incorrect skill level.");
@@ -42,9 +42,5 @@ public class Expertise {
 
     public String getDescription() {
         return Text.expertiseDescription;
-    }
-
-    private boolean validate(short skillLevel) {
-        return skillLevel <= Variables.MAX_SKILL_LEVEL && skillLevel >= Variables.MIN_SKILL_LEVEL;
     }
 }
