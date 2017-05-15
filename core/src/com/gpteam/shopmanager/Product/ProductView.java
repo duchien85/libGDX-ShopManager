@@ -10,5 +10,5 @@ public final class ProductView {
     public static String appleName = Text.appleName;
     public static String appleDescription = Text.appleDescription;
     public static final String APPLE_SERIALNAME = "apple";
-    public static final String[] APPLE = { appleName, appleDescription, APPLE_SERIALNAME };
+    public static String[] APPLE = { appleName, APPLE_SERIALNAME, appleDescription };
 }
