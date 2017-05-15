@@ -9,6 +9,7 @@ import java.math.BigDecimal;
  * Created by masmix on 02.02.2017.
  */
 public class Economy {
+// TODO make class final
     private BigDecimal totalMoney; //needed?
     private float economyBar;
     private float dailyVariation;
