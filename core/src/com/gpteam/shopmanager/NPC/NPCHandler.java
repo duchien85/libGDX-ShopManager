@@ -94,12 +94,3 @@ public class NPCHandler {
         return npcCount + this.npcCount <= MAX_NPC_AMOUNT && npcCount + this.npcCount >= MIN_NPC_AMOUNT;
     }
 }
-
-
-
-
-
-
-
-
-
