@@ -13,6 +13,10 @@ import com.gpteam.shopmanager.Text.Libraries.*;
  * Created by masmix on 18.01.2017.
  */
 public final class TextHandler {
+			private TextHandler() {
+			ErrorHandler.handleUnsupportedOperationException("msg");
+			}
+
     private HashMap<String, Class> languageMap;
 
     public TextHandler() {
