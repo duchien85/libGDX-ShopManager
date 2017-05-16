@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.Engine.Modules.Text;
 
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
 import com.gpteam.shopmanager.Needs.Needs;
 import com.gpteam.shopmanager.Product.ProductView;
 import com.gpteam.shopmanager.Society.SocietyClass;
@@ -10,9 +11,9 @@ import com.gpteam.shopmanager.Skill.Skills.Expertise;
  * Created by masmix on 18.01.2017.
  */
 public final class Text {
-			private Text() {
-			ErrorHandler.handleUnsupportedOperationException("msg");
-			}
+    private Text() {
+        ErrorHandler.handleUnsupportedOperationException("msg");
+    }
     /**
      * {@link Expertise}
      **************************************************/
