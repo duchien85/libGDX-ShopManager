@@ -16,25 +16,6 @@ public final class TextHandler {
 
     private static HashMap<String, Class> languageMap = new HashMap<String, Class>();
 
-    public TextHandler() {
-        languageMap = new HashMap<String, Class>();
-
-//        setLanguage(""); // TODO Add checking for system language
-
-        // TODO save HashMap to file, load when game is launched
-        languageMap.put("EN", EN.class);
-        languageMap.put("PL", PL.class);
-    }
-
-
-    public TextHandler(String language) {
-        languageMap = new HashMap<String, Class>();
-        // TODO save HashMap to file, load when game is launched
-        languageMap.put("EN", EN.class);
-        languageMap.put("PL", PL.class);
-        setLanguage(language);
-    }
-
     public static void initialize() {
         languageMap.put("EN", EN.class);
         languageMap.put("PL", PL.class);
