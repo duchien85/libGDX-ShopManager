@@ -30,10 +30,8 @@ public final class Logger {
     public static Log getNextLog() {
         if (index < length)
             return logs.get(index++);
-        else {
-            index = 0;
+        else
             return null;
-        }
     }
 
     public ArrayList<Log> getAllLogs() {
