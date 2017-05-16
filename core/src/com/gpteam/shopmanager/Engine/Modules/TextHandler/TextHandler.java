@@ -39,7 +39,7 @@ public final class TextHandler implements Module {
                 languageMap.get(language).getDeclaredMethod("initialize").invoke(null);
             }
             catch (Exception e) {
-                EN.initialize();
+                com.gpteam.shopmanager.Engine.Modules.TextHandler.Libraries.EN.initialize();
                 e.printStackTrace();
             }
         }
