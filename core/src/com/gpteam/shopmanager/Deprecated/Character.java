@@ -2,7 +2,6 @@ package com.gpteam.shopmanager.Deprecated;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.gpteam.shopmanager.Player.Sex;
-import com.gpteam.shopmanager.Text.Text;
 
 import static com.gpteam.shopmanager.Variables.Variables.*;
 

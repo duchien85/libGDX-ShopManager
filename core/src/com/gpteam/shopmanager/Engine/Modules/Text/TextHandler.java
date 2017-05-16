@@ -1,14 +1,9 @@
-package com.gpteam.shopmanager.Text;
+package com.gpteam.shopmanager.Engine.Modules.Text;
 
-import java.lang.reflect.InvocationTargetException;
 import java.util.HashMap;
 
-import com.gpteam.shopmanager.Character.CharacterInfo;
 import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
-import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorListener;
-import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorType;
-import com.gpteam.shopmanager.Player.Sex;
-import com.gpteam.shopmanager.Text.Libraries.*;
+
 /*
  * Created by masmix on 18.01.2017.
  */
@@ -25,16 +20,16 @@ public final class TextHandler {
 //        setLanguage(""); // TODO Add checking for system language
 
         // TODO save HashMap to file, load when game is launched
-        languageMap.put("EN", EN.class);
-        languageMap.put("PL", PL.class);
+        languageMap.put("EN", com.gpteam.shopmanager.Engine.Modules.Text.Libraries.EN.class);
+        languageMap.put("PL", com.gpteam.shopmanager.Engine.Modules.Text.Libraries.PL.class);
     }
 
 
     public TextHandler(String language) {
         languageMap = new HashMap<String, Class>();
         // TODO save HashMap to file, load when game is launched
-        languageMap.put("EN", EN.class);
-        languageMap.put("PL", PL.class);
+        languageMap.put("EN", com.gpteam.shopmanager.Engine.Modules.Text.Libraries.EN.class);
+        languageMap.put("PL", com.gpteam.shopmanager.Engine.Modules.Text.Libraries.PL.class);
         setLanguage(language);
     }
 
@@ -50,7 +45,7 @@ public final class TextHandler {
                 languageMap.get(language).getDeclaredMethod("initialize").invoke(null);
             }
             catch (Exception e) {
-                EN.initialize();
+                com.gpteam.shopmanager.Engine.Modules.Text.Libraries.EN.initialize();
                 e.printStackTrace();
             }
         }

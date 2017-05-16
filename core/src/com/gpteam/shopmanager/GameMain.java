@@ -8,7 +8,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.gpteam.shopmanager.Screens.GameScreen;
 import com.gpteam.shopmanager.Society.SocietyClass;
-import com.gpteam.shopmanager.Text.TextHandler;
+import com.gpteam.shopmanager.Engine.Modules.Text.TextHandler;
 
 public class GameMain extends Game {
     public SpriteBatch batch;

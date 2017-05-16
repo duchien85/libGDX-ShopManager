@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.Text;
+package com.gpteam.shopmanager.Engine.Modules.Text;
 
 import com.gpteam.shopmanager.Needs.Needs;
 import com.gpteam.shopmanager.Product.ProductView;
