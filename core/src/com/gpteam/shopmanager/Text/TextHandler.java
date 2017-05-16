@@ -17,7 +17,7 @@ public final class TextHandler {
 			ErrorHandler.handleUnsupportedOperationException("msg");
 			}
 
-    private HashMap<String, Class> languageMap;
+    private HashMap<String, Class> languageMap = new HashMap<String, Class>();
 
     public TextHandler() {
         languageMap = new HashMap<String, Class>();
