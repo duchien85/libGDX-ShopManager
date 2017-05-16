@@ -30,7 +30,7 @@ public final class TextHandler implements Module {
      *                 - EN (English)<p>
      *                 - PL (Polish)
      **************************************************/
-    public void setLanguage(String language) {
+    public static void setLanguage(String language) {
         if (languageMap.containsKey(language)) {
             try {
                 languageMap.get(language).getDeclaredMethod("initialize").invoke(null);
