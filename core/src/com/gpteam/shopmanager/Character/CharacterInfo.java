@@ -5,7 +5,7 @@ import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorListener;
 import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorType;
 import com.gpteam.shopmanager.Player.Sex;
 import com.gpteam.shopmanager.RandomGenerator.RandGen;
-import com.gpteam.shopmanager.Engine.Modules.Text.Text;
+import com.gpteam.shopmanager.Engine.Modules.TextHandler.Text;
 
 import static com.gpteam.shopmanager.Variables.Variables.*;
 

@@ -1,10 +1,10 @@
-package com.gpteam.shopmanager.Engine.Modules.Text;
+package com.gpteam.shopmanager.Engine.Modules.TextHandler;
 
 import java.util.HashMap;
 
 import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
-import com.gpteam.shopmanager.Engine.Modules.Text.Libraries.EN;
-import com.gpteam.shopmanager.Engine.Modules.Text.Libraries.PL;
+import com.gpteam.shopmanager.Engine.Modules.TextHandler.Libraries.EN;
+import com.gpteam.shopmanager.Engine.Modules.TextHandler.Libraries.PL;
 
 /*
  * Created by masmix on 18.01.2017.
