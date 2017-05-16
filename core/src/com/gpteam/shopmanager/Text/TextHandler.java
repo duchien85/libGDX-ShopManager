@@ -29,12 +29,7 @@ public final class TextHandler {
         languageMap.put("PL", PL.class);
     }
 
-    /**
-     * @param language Language the game is suppose
-     *                to be in. Available languages:<p>
-     *                 - EN (English)<p>
-     *                 - PL (Polish)
-     **************************************************/
+
     public TextHandler(String language) {
         languageMap = new HashMap<String, Class>();
         // TODO save HashMap to file, load when game is launched
@@ -43,6 +38,12 @@ public final class TextHandler {
         setLanguage(language);
     }
 
+    /**
+     * @param language Language the game is suppose
+     *                to be in. Available languages:<p>
+     *                 - EN (English)<p>
+     *                 - PL (Polish)
+     **************************************************/
     public void setLanguage(String language) {
         if (languageMap.containsKey(language)) {
             try {
