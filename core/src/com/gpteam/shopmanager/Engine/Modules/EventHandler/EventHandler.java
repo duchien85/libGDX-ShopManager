@@ -1,5 +1,8 @@
 package com.gpteam.shopmanager.Engine.Modules.EventHandler;
 
+import com.gpteam.shopmanager.Engine.Interfaces.Module;
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
+
 import java.util.ArrayList;
 
 /*

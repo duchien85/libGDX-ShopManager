@@ -2,6 +2,7 @@ package com.gpteam.shopmanager.Variables;
 
 import com.gpteam.shopmanager.Character.CharacterInfo;
 import com.gpteam.shopmanager.Deprecated.NamesLoader;
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
 import com.gpteam.shopmanager.NPC.NPCHandler;
 import com.gpteam.shopmanager.Needs.Needs;
 import com.gpteam.shopmanager.Product.Product;
@@ -13,9 +14,9 @@ import com.gpteam.shopmanager.Time.Time;
  * Created by masmix on 04.02.2017.
  */
 public final class Variables {
-			private Variables() {
-					ErrorHandler.handleUnsupportedOperationException("msg");
-			}
+    private Variables() {
+        ErrorHandler.handleUnsupportedOperationException("msg");
+    }
     /**************************************************
      * {@link NamesLoader}
      * NAMES_PATH - location of file with random names
