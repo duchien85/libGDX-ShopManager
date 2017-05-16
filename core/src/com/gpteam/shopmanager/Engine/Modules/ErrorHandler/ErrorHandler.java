@@ -1,9 +1,11 @@
 package com.gpteam.shopmanager.Engine.Modules.ErrorHandler;
 
+import com.gpteam.shopmanager.Engine.Interfaces.Module;
+
 /*
  * Created by masmix on 11.02.2017.
  */
-public final class ErrorHandler {
+public final class ErrorHandler implements Module {
     private ErrorHandler() {
 		ErrorHandler.handleUnsupportedOperationException("msg");
 		}

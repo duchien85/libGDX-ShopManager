@@ -2,6 +2,7 @@ package com.gpteam.shopmanager.Engine.Modules.TextHandler;
 
 import java.util.HashMap;
 
+import com.gpteam.shopmanager.Engine.Interfaces.Module;
 import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
 import com.gpteam.shopmanager.Engine.Modules.TextHandler.Libraries.EN;
 import com.gpteam.shopmanager.Engine.Modules.TextHandler.Libraries.PL;
@@ -9,7 +10,7 @@ import com.gpteam.shopmanager.Engine.Modules.TextHandler.Libraries.PL;
 /*
  * Created by masmix on 18.01.2017.
  */
-public final class TextHandler {
+public final class TextHandler implements Module {
     private TextHandler() {
 			ErrorHandler.handleUnsupportedOperationException("msg");
 			}
