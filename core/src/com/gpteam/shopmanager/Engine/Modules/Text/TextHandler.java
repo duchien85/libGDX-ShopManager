@@ -35,6 +35,11 @@ public final class TextHandler {
         setLanguage(language);
     }
 
+    public static void initialize() {
+        languageMap.put("EN", EN.class);
+        languageMap.put("PL", PL.class);
+    }
+
     /**
      * @param language Language the game is suppose
      *                to be in. Available languages:<p>
