@@ -3,6 +3,8 @@ package com.gpteam.shopmanager.Engine.Modules.Text;
 import java.util.HashMap;
 
 import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.Engine.Modules.Text.Libraries.EN;
+import com.gpteam.shopmanager.Engine.Modules.Text.Libraries.PL;
 
 /*
  * Created by masmix on 18.01.2017.
@@ -20,16 +22,16 @@ public final class TextHandler {
 //        setLanguage(""); // TODO Add checking for system language
 
         // TODO save HashMap to file, load when game is launched
-        languageMap.put("EN", com.gpteam.shopmanager.Engine.Modules.Text.Libraries.EN.class);
-        languageMap.put("PL", com.gpteam.shopmanager.Engine.Modules.Text.Libraries.PL.class);
+        languageMap.put("EN", EN.class);
+        languageMap.put("PL", PL.class);
     }
 
 
     public TextHandler(String language) {
         languageMap = new HashMap<String, Class>();
         // TODO save HashMap to file, load when game is launched
-        languageMap.put("EN", com.gpteam.shopmanager.Engine.Modules.Text.Libraries.EN.class);
-        languageMap.put("PL", com.gpteam.shopmanager.Engine.Modules.Text.Libraries.PL.class);
+        languageMap.put("EN", EN.class);
+        languageMap.put("PL", PL.class);
         setLanguage(language);
     }
 
@@ -45,7 +47,7 @@ public final class TextHandler {
                 languageMap.get(language).getDeclaredMethod("initialize").invoke(null);
             }
             catch (Exception e) {
-                com.gpteam.shopmanager.Engine.Modules.Text.Libraries.EN.initialize();
+                EN.initialize();
                 e.printStackTrace();
             }
         }
