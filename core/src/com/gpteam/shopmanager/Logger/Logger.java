@@ -15,7 +15,7 @@ public final class Logger {
     // with regular arrays.
     
     private Logger() {
-    ErrorHandler.handleUnsupportedOperationException("msg");
+        ErrorHandler.handleUnsupportedOperationException("msg");
     }
 
     private static ArrayList<Log> logs = new ArrayList<Log>();
