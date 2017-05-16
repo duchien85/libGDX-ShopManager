@@ -17,6 +17,9 @@ public final class TextHandler implements Module {
 
     private static HashMap<String, Class> languageMap = new HashMap<String, Class>();
 
+    public static final String EN = "EN";
+    public static final String PL = "PL";
+
     public static void initialize() {
         languageMap.put("EN", EN.class);
         languageMap.put("PL", PL.class);
