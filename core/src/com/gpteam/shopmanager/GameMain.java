@@ -33,8 +33,6 @@ public class GameMain extends Game {
         assetManager.load(("font.fnt"), BitmapFont.class);
         assetManager.finishLoading();
 
-        TextHandler textHandler = new TextHandler("PL");
-
         System.out.println(SocietyClass.values().length);
 
         batch = new SpriteBatch();
