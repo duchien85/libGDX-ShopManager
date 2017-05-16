@@ -16,4 +16,8 @@ public final class ErrorHandler {
         try { throw new NoSuchMethodException(message);
         } catch (NoSuchMethodException e) { e.printStackTrace(); }
     }
+
+    public static void handleUnsupportedOperationException(String message) {
+        throw new UnsupportedOperationException();
+    }
 }
