@@ -1,5 +1,7 @@
 package com.gpteam.shopmanager.Logger;
 
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
+
 import java.util.ArrayList;
 
 /*

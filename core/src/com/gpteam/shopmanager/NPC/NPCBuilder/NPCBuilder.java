@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.NPC.NPCBuilder;
 
+import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
 import com.gpteam.shopmanager.NPC.NPC;
 import com.gpteam.shopmanager.Society.SocietyClass;
 
@@ -9,9 +10,9 @@ import java.util.ArrayList;
  * Created by masmix on 19.01.2017.
  */
 public final class NPCBuilder {
-			private NPCBuilder() {
-			ErrorHandler.handleUnsupportedOperationException("msg");
-			}
+    private NPCBuilder() {
+        ErrorHandler.handleUnsupportedOperationException("msg");
+    }
 
     public static NPC newNPC() {
         return new NPC();
