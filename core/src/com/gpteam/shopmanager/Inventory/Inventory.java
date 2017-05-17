@@ -92,12 +92,12 @@ public class Inventory {
             products.get(pVSerialName).addQuantity(quantity);
     }
     
-    public void setProductQuantity(String pVSerialName, int quantity)
+    public void setProductQuantity(String pVSerialName, int quantity) {
         if (quantity >= Variables.MIN_QUANTITY && quantity <= Variables.MAX_QUANTITY)
             products.get(pVSerialName).setQuantity(quantity);
         else
             ErrorHandler.handleIllegalArgumentException("msg");
-}
+    }
     
     public Date getProductExpirationDate(String pVSerialName) {
         return products.get(pVSerialName).getExpirationDate();
