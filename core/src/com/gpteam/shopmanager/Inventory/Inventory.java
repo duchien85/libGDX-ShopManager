@@ -60,6 +60,8 @@ public class Inventory {
     public void setProductPrice(String pVSerialName, float price) {
         if (price >= 0)
             products.get(pVSerialName).setPrice(price);
+        else
+            ErrorHandler.handleIllegalArgumentException("msg);
     }
     
     public short getProductQuality(String pVSerialName) {
