@@ -9,16 +9,17 @@ import java.math.BigDecimal;
  * Created by masmix on 02.02.2017.
  */
 public final class Economy {
-    private Economy() {
-        ErrorHandler.handleUnsupportedOperationException("msg");
-    }
-    private BigDecimal totalMoney; //needed?
-    private float economyBar;
-    private float dailyVariation;
+    private static BigDecimal totalMoney; //needed?
+    private static float economyBar;
+    private static float dailyVariation;
     private static final float MIN_DAILY_VARIATION = -0.4f;
     private static final float MAX_DAILY_VARIATION = 0.4f;
     private static final float MAX_ECONOMY_BAR_VALUE = 5.0f;
     private static final float MIN_ECONOMY_BAR_VALUE = 0.0f;
+
+    private Economy() {
+        ErrorHandler.handleUnsupportedOperationException("msg");
+    }
 
 
     public float getEconomyBar() {
