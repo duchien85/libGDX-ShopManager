@@ -62,7 +62,7 @@ public class Inventory {
         if (price >= 0)
             products.get(pVSerialName).setPrice(price);
         else
-            ErrorHandler.handleIllegalArgumentException("msg);
+            ErrorHandler.handleIllegalArgumentException("msg");
     }
     
     public short getProductQuality(String pVSerialName) {
