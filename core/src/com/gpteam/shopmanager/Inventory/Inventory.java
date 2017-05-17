@@ -58,7 +58,8 @@ public class Inventory {
     }
     
     public void setProductPrice(String pVSerialName, float price) {
-        products.get(pVSerialName).setPrice(price);
+        if (price >= 0)
+            products.get(pVSerialName).setPrice(price);
     }
     
     public short getProductQuality(String pVSerialName) {
