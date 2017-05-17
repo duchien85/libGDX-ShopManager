@@ -68,11 +68,6 @@ public class Inventory {
         return products.get(pVSerialName).getQuality();
     }
     
-    public void setProductQuality(String pVSerialName, short quality) {
-        
-        products.get(pVSerialName).setQuality(quality);
-    }
-    
     public int getProductQuantity(String pVSerialName) {
         return products.get(pVSerialName).getQuantity();
     }
