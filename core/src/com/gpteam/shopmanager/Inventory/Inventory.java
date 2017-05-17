@@ -80,6 +80,10 @@ public class Inventory {
     public void setProductQuality(String pVSerialName, short quality) {
         products.get(pVSerialName).setQuality(quality);
     }
+    
+    public int getProductQuantity(String pVSerialName) {
+        return products.get(pVSerialName).getQuantity();
+    }
 
     public String[] getAllProductDescriptions() {
         String[] descriptions = new String[products.size() - 1];
