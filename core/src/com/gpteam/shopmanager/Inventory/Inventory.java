@@ -67,6 +67,13 @@ public class Inventory {
     public short getProductQuality(String pVSerialName) {
         return products.get(pVSerialName).getQuality();
     }
+                                                        
+    public short subProductQuality(String pVSerialName, short quality) {
+        if (quality <= Variables.MAX_QUALITY && quality >= Variables.MIN_QUALITY)
+            products.get(pVSerialName).subQuality(quality);
+        else
+            ErrorHandler.handleIllegalArgumentException("msg");
+    }
     
     public int getProductQuantity(String pVSerialName) {
         return products.get(pVSerialName).getQuantity();
