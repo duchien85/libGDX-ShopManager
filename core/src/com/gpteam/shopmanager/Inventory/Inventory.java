@@ -49,18 +49,6 @@ public class Inventory {
         }
     }
 
-    public void subProductQuantity(String pVSerialName, int quantity) {
-        if (products.get(pVSerialName).getQuantity() - quantity < 0)
-            products.get(pVSerialName).setQuantity(0);
-        else
-            products.get(pVSerialName).subQuantity(quantity);
-    }
-
-    public void addProductQuantity(String pVSerialName, int quantity) {
-        if (products.get(pVSerialName).getQuantity() + quantity <= Variables.MAX_QUANTITY)
-            products.get(pVSerialName).addQuantity(quantity);
-    }
-
     public String getProductDescription(String pVSerialName) {
         return products.get(pVSerialName).getDescription();
     }
@@ -83,6 +71,18 @@ public class Inventory {
     
     public int getProductQuantity(String pVSerialName) {
         return products.get(pVSerialName).getQuantity();
+    }
+    
+    public void subProductQuantity(String pVSerialName, int quantity) {
+        if (products.get(pVSerialName).getQuantity() - quantity < 0)
+            products.get(pVSerialName).setQuantity(0);
+        else
+            products.get(pVSerialName).subQuantity(quantity);
+    }
+
+    public void addProductQuantity(String pVSerialName, int quantity) {
+        if (products.get(pVSerialName).getQuantity() + quantity <= Variables.MAX_QUANTITY)
+            products.get(pVSerialName).addQuantity(quantity);
     }
 
     public String[] getAllProductDescriptions() {
