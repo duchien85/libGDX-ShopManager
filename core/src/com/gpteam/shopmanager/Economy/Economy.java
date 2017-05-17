@@ -40,7 +40,7 @@ public final class Economy {
     }
     
     public static void setEconomyBar(float economyBar_) {
-        if (economyBar >= MIN_ECONOMY_BAR_VALUE && economyBar <= MAX_ECONOMY_BAR_VALUE)
+        if (economyBar_ >= MIN_ECONOMY_BAR_VALUE && economyBar_ <= MAX_ECONOMY_BAR_VALUE)
             economyBar = economyBar_;
         else
             ErrorHandler.handleIllegalArgumentException("msg");
