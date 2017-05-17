@@ -103,9 +103,8 @@ public class Inventory {
 
     public String[] getAllProductDescriptions() {
         String[] descriptions = new String[products.size() - 1];
-        for (int i = 0; i < descriptions.length; i++) {
+        for (int i = 0; i < descriptions.length; i++)
             descriptions[i] = products.get(serialNames.get(i)).getDescription();
-        }
         return descriptions;
     }
 
