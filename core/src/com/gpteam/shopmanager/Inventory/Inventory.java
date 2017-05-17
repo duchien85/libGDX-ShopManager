@@ -72,6 +72,10 @@ public class Inventory {
     public void setProductPrice(String pVSerialName, float price) {
         products.get(pVSerialName).setPrice(price);
     }
+    
+    public short getProductQuality(String pVSerialName) {
+        return products.get(pVSerialName).getQuality();
+    }
 
     public String[] getAllProductDescriptions() {
         String[] descriptions = new String[products.size() - 1];
