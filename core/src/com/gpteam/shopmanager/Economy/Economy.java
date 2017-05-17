@@ -9,7 +9,6 @@ import java.math.BigDecimal;
  * Created by masmix on 02.02.2017.
  */
 public final class Economy {
-    private static BigDecimal totalMoney; //needed?
     private static float economyBar;
     private static float dailyVariation;
     private static final float MIN_DAILY_VARIATION = -0.4f;
@@ -54,13 +53,5 @@ public final class Economy {
         // TODO add more logic to daily variation
         // for example: if economyBar is 4.9f, and daily variation gets a random +0.3
         // add 0.1 instead of doing nothing
-    }
-    
-    public static BigDecimal getTotalMoney() {
-    		return totalMoney;
-    }
-
-    public static void addTotalMoney(BigDecimal money) {
-        totalMoney = totalMoney.add(money);
     }
 }
