@@ -69,6 +69,7 @@ public class Inventory {
     }
     
     public void setProductQuality(String pVSerialName, short quality) {
+        
         products.get(pVSerialName).setQuality(quality);
     }
     
@@ -84,7 +85,8 @@ public class Inventory {
     }
 
     public void addProductQuantity(String pVSerialName, int quantity) {
-        if (products.get(pVSerialName).getQuantity() + quantity <= Variables.MAX_QUANTITY)
+        if (products.get(pVSerialName).getQuantity() + quantity <= Variables.MAX_QUANTITY && 
+            products.get(pVSerialName).getQuantity() + quantity >= Variables.MIN_QUANTITY)
             products.get(pVSerialName).addQuantity(quantity);
     }
     
