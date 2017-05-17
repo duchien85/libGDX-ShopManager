@@ -80,6 +80,10 @@ public class Product {
     public void setQuality(short quality) {
         this.quality = quality;
     }
+    
+    public void subQuality(short quality) {
+        this.quality -= quality;
+    }
 
     public int getQuantity() {
         return quantity;
