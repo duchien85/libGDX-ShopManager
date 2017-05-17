@@ -22,32 +22,32 @@ public final class Economy {
     }
 
 
-    public float getEconomyBar() {
+    public static float getEconomyBar() {
         return economyBar;
     }
     
-    public void raiseEconomyBar(float amount) {
+    public static void raiseEconomyBar(float amount) {
         if (amount >= MIN_ECONOMY_BAR_VALUE && amount + MAX_ECONOMY_BAR_VALUE <= MAX_ECONOMY_BAR_VALUE)
             economyBar += amount;
         else
             ErrorHandler.handleIllegalArgumentException("msg");
     }
     
-    public void lowerEconomyBar(float amount) {
+    public static void lowerEconomyBar(float amount) {
         if (amount <= economyBar)
     		economyBar -= amount;
         else
     		ErrorHandler.handleIllegalArgumentException("msg");
     }
     
-    public void setEconomyBar(float economyBar) {
+    public static void setEconomyBar(float economyBar_) {
         if (economyBar >= MIN_ECONOMY_BAR_VALUE && economyBar <= MAX_ECONOMY_BAR_VALUE)
-            this.economyBar = economyBar;
+            economyBar = economyBar_;
         else
             ErrorHandler.handleIllegalArgumentException("msg");
     }
 
-    public void update() {
+    public static void update() {
         dailyVariation = MathUtils.random(MIN_DAILY_VARIATION, MAX_DAILY_VARIATION);
         if (economyBar + dailyVariation >= MIN_ECONOMY_BAR_VALUE && economyBar + dailyVariation <= MAX_ECONOMY_BAR_VALUE)
             economyBar += dailyVariation;
@@ -56,11 +56,11 @@ public final class Economy {
         // add 0.1 instead of doing nothing
     }
     
-    public BigDecimal getTotalMoney() {
+    public static BigDecimal getTotalMoney() {
     		return totalMoney;
     }
 
-    public void addTotalMoney(BigDecimal money) {
+    public static void addTotalMoney(BigDecimal money) {
         totalMoney = totalMoney.add(money);
     }
 }
