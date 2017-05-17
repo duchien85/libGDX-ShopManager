@@ -69,7 +69,7 @@ public class Inventory {
         return products.get(pVSerialName).getQuality();
     }
                                                         
-    public short subProductQuality(String pVSerialName, short quality) {
+    public void subProductQuality(String pVSerialName, short quality) {
         if (quality <= Variables.MAX_QUALITY && quality >= Variables.MIN_QUALITY)
             products.get(pVSerialName).subQuality(quality);
         else
