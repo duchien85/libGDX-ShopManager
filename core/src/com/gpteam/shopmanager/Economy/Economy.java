@@ -8,7 +8,7 @@ import java.math.BigDecimal;
 /*
  * Created by masmix on 02.02.2017.
  */
-public class Economy {
+public final class Economy {
     private Economy() {
         ErrorHandler.handleUnsupportedOperationException("msg");
     }
