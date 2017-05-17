@@ -29,6 +29,8 @@ public class Product {
      * @param quantity
      * @param expirationDate format: YYYY.MM.DD
      */
+    // TODO When language will be changed, strings from "pVProduct" array
+    // will not change. Find a way to fix this.
     public Product(String[] pVProduct, float price, short quality, int quantity, Date expirationDate) {
         this.name = pVProduct[0];
         this.serialName = pVProduct[1];
