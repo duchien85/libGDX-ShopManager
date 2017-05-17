@@ -84,6 +84,10 @@ public class Inventory {
         if (products.get(pVSerialName).getQuantity() + quantity <= Variables.MAX_QUANTITY)
             products.get(pVSerialName).addQuantity(quantity);
     }
+    
+    public Date getProductExpirationDate(String pVSerialName) {
+        return products.get(pVSerialName).getExpirationDate();
+    }
 
     public String[] getAllProductDescriptions() {
         String[] descriptions = new String[products.size() - 1];
