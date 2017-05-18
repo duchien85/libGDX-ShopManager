@@ -11,7 +11,7 @@ import java.util.HashMap;
 /*
  * Created by masmix on 07.02.2017.
  */
-public final class Engine implements Runnable {
+public class Engine implements Runnable {
     private HashMap<String,Class> modules;
     private Economy economy;
     private GameDate gameDate;
