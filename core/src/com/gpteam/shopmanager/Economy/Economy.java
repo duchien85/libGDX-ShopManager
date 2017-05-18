@@ -8,9 +8,9 @@ import java.math.BigDecimal;
 /*
  * Created by masmix on 02.02.2017.
  */
-public final class Economy {
-    private static float economyBar;
-    private static float dailyVariation;
+public class Economy {
+    private float economyBar;
+    private float dailyVariation;
     private static final float MIN_DAILY_VARIATION = -0.4f;
     private static final float MAX_DAILY_VARIATION = 0.4f;
     private static final float MAX_ECONOMY_BAR_VALUE = 5.0f;
@@ -21,32 +21,32 @@ public final class Economy {
     }
 
 
-    public static float getEconomyBar() {
+    public float getEconomyBar() {
         return economyBar;
     }
     
-    public static void raiseEconomyBar(float amount) {
+    public void raiseEconomyBar(float amount) {
         if (amount >= MIN_ECONOMY_BAR_VALUE && amount + MAX_ECONOMY_BAR_VALUE <= MAX_ECONOMY_BAR_VALUE)
             economyBar += amount;
         else
             ErrorHandler.handleIllegalArgumentException("msg");
     }
     
-    public static void lowerEconomyBar(float amount) {
+    public void lowerEconomyBar(float amount) {
         if (amount <= economyBar)
     		economyBar -= amount;
         else
     		ErrorHandler.handleIllegalArgumentException("msg");
     }
     
-    public static void setEconomyBar(float economyBar_) {
-        if (economyBar_ >= MIN_ECONOMY_BAR_VALUE && economyBar_ <= MAX_ECONOMY_BAR_VALUE)
-            economyBar = economyBar_;
+    public void setEconomyBar(float economyBar) {
+        if (economyBar >= MIN_ECONOMY_BAR_VALUE && economyBar <= MAX_ECONOMY_BAR_VALUE)
+            this.economyBar = economyBar;
         else
             ErrorHandler.handleIllegalArgumentException("msg");
     }
 
-    public static void update() {
+    public void update() {
         dailyVariation = MathUtils.random(MIN_DAILY_VARIATION, MAX_DAILY_VARIATION);
         if (economyBar + dailyVariation >= MIN_ECONOMY_BAR_VALUE && economyBar + dailyVariation <= MAX_ECONOMY_BAR_VALUE)
             economyBar += dailyVariation;
