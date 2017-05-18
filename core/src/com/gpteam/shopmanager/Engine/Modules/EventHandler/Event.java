@@ -13,6 +13,6 @@ public class Event {
     }
 
     public String getText() {
-        return text;
+        return text[1];
     }
 }
