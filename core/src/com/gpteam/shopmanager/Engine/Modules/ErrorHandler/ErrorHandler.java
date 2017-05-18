@@ -7,8 +7,8 @@ import com.gpteam.shopmanager.Engine.Interfaces.Module;
  */
 public final class ErrorHandler implements Module {
     private ErrorHandler() {
-		ErrorHandler.handleUnsupportedOperationException("msg");
-		}
+	ErrorHandler.handleUnsupportedOperationException("msg");
+    }
 
     public static void handleIllegalArgumentException(String message) {
         throw new IllegalArgumentException(message);
