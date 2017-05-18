@@ -50,8 +50,11 @@ public class Economy {
         dailyVariation = MathUtils.random(MIN_DAILY_VARIATION, MAX_DAILY_VARIATION);
         if (economyBar + dailyVariation >= MIN_ECONOMY_BAR_VALUE && economyBar + dailyVariation <= MAX_ECONOMY_BAR_VALUE)
             economyBar += dailyVariation;
-        // TODO add more logic to daily variation
-        // for example: if economyBar is 4.9f, and daily variation gets a random +0.3
-        // add 0.1 instead of doing nothing
+
+        else if (economyBar + dailyVariation > MAX_ECONOMY_BAR_VALUE)
+            economyBar = MAX_ECONOMY_BAR_VALUE;
+
+        else if (economyBar + dailyVariation < MIN_DAILY_VARIATION)
+            economyBar = MIN_ECONOMY_BAR_VALUE;
     }
 }
