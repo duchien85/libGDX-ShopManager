@@ -16,7 +16,6 @@ public final class EventHandler implements Module {
     private static ArrayList<Event> events = new ArrayList<Event>();
     private static int size;
     private static int index = 0;
-    private static int id = 0;
 
     public static void add(Event event) {
         events.add(event);
