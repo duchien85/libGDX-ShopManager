@@ -11,6 +11,10 @@ public class Event {
         this.text[0] = class;
         this.text[1] = text;
     }
+    
+    public String getClass() {
+        return text[0];
+    }
 
     public String getText() {
         return text[1];
