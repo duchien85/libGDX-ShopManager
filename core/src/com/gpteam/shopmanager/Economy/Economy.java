@@ -13,10 +13,6 @@ public class Economy {
     private float economyBar;
     private float dailyVariation;
 
-    private Economy() {
-        ErrorHandler.handleUnsupportedOperationException("msg");
-    }
-
 
     public float getEconomyBar() {
         return economyBar;
