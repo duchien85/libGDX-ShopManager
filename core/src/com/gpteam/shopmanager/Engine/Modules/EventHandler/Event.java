@@ -6,13 +6,13 @@ package com.gpteam.shopmanager.Engine.Modules.EventHandler;
 public class Event {
     private String[] text;
 
-    public Event(String class, String text) {
+    public Event(String className, String text) {
         this.text = new String[2];
-        this.text[0] = class;
+        this.text[0] = className;
         this.text[1] = text;
     }
     
-    public String getClass() {
+    public String getClassName() {
         return text[0];
     }
 
