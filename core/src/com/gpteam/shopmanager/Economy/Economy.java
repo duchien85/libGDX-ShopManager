@@ -2,6 +2,7 @@ package com.gpteam.shopmanager.Economy;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.gpteam.shopmanager.Engine.Modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.Variables.Variables;
 
 import java.math.BigDecimal;
 
