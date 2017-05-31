@@ -11,9 +11,19 @@ import com.gpteam.shopmanager.Engine.Modules.TextHandler.Libraries.PL;
  * Created by masmix on 18.01.2017.
  */
 public final class TextHandler implements Module {
+    private TextHandler instance = null;
     private TextHandler() {
 			ErrorHandler.handleUnsupportedOperationException("msg");
 			}
+
+    public TextHandler getInstance() {
+        if (instance == null)
+            instance = new TextHandler();
+
+        languageMap.put("EN", EN.class);
+        languageMap.put("PL", PL.class);
+        return instance;
+    }
 
     private static HashMap<String, Class> languageMap = new HashMap<String, Class>();
 
