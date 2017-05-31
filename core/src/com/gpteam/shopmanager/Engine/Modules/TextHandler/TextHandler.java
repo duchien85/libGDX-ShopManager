@@ -30,11 +30,6 @@ public final class TextHandler implements Module {
     public static final String EN = "EN";
     public static final String PL = "PL";
 
-    public static void initialize() {
-        languageMap.put("EN", EN.class);
-        languageMap.put("PL", PL.class);
-    }
-
     /**
      * @param language Language the game is suppose
      *                 to be in. Available languages:<p>
