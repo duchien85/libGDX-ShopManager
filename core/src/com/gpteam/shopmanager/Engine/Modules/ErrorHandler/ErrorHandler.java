@@ -5,9 +5,16 @@ import com.gpteam.shopmanager.Engine.Interfaces.Module;
 /*
  * Created by masmix on 11.02.2017.
  */
-public final class ErrorHandler implements Module {
+public class ErrorHandler implements Module {
+    private ErrorHandler instance = null;
     private ErrorHandler() {
 	ErrorHandler.handleUnsupportedOperationException("msg");
+    }
+
+    public ErrorHandler getInstance() {
+        if (instance == null)
+            instance = new ErrorHandler();
+        return instance;
     }
 
     public static void handleIllegalArgumentException(String message) {
