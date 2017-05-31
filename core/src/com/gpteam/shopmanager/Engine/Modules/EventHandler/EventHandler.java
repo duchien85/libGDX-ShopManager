@@ -8,9 +8,16 @@ import java.util.ArrayList;
 /*
  * Created by masmix on 13.05.2017.
  */
-public final class EventHandler implements Module {
+public class EventHandler implements Module {
+    private EventHandler instance = null;
     private EventHandler() {
         ErrorHandler.handleUnsupportedOperationException("msg");
+    }
+
+    public EventHandler getInstance() {
+        if (instance == null)
+            instance = new EventHandler();
+        return instance;
     }
 
     private static ArrayList<Event> events = new ArrayList<Event>();
