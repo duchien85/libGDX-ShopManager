@@ -13,8 +13,7 @@ import java.util.HashMap;
  */
 public class Engine implements Runnable {
     private static Engine instance = null;
-
-    private Engine() {}
+    private Engine() { ErrorHandler.handleUnsupportedOperationException("msg"); }
 
     private HashMap<String,Class> modules;
     private Economy economy;
