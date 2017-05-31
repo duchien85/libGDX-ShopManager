@@ -12,6 +12,8 @@ import com.gpteam.shopmanager.Engine.Modules.TextHandler.Libraries.PL;
  */
 public final class TextHandler implements Module {
     private TextHandler instance = null;
+    private static HashMap<String, Class> languageMap;
+
     private TextHandler() {
 			ErrorHandler.handleUnsupportedOperationException("msg");
 			}
@@ -20,12 +22,12 @@ public final class TextHandler implements Module {
         if (instance == null)
             instance = new TextHandler();
 
+        languageMap = new HashMap<String, Class>();
         languageMap.put("EN", EN.class);
         languageMap.put("PL", PL.class);
+
         return instance;
     }
-
-    private static HashMap<String, Class> languageMap = new HashMap<String, Class>();
 
     public static final String EN = "EN";
     public static final String PL = "PL";
