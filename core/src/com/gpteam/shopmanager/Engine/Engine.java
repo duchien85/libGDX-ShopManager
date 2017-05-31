@@ -12,13 +12,19 @@ import java.util.HashMap;
  * Created by masmix on 07.02.2017.
  */
 public class Engine implements Runnable {
+    private static Engine instance = null;
+
+    private Engine() {}
+
     private HashMap<String,Class> modules;
     private Economy economy;
     private GameDate gameDate;
     private Time time;
-    
-    private Engine() {
-    		ErrorHandler.handleUnsupportedOperationException("msg");
+
+    public static Engine getInstance() {
+        if (instance == null)
+            instance = new Engine();
+        return instance;
     }
 
     @Override
