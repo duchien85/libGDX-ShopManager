@@ -11,7 +11,7 @@ import java.util.HashMap;
 /*
  * Created by masmix on 07.02.2017.
  */
-public class Engine implements Runnable {
+public class Engine {
     private static Engine instance = null;
     private Engine() { ErrorHandler.handleUnsupportedOperationException("msg"); }
 
@@ -19,6 +19,7 @@ public class Engine implements Runnable {
     private Economy economy;
     private GameDate gameDate;
     private Time time;
+    private static boolean initialized = false;
 
     public static Engine getInstance() {
         if (instance == null)
@@ -26,26 +27,16 @@ public class Engine implements Runnable {
         return instance;
     }
 
-    @Override
-    public void run() {
-        // normal, "my" stuff
-        initialize();
-
-        // graphic stuff goes to libGDX:
-        Gdx.app.postRunnable(new Runnable() {
-            @Override
-            public void run() {
-            }
-        });
-    }
-
     public void initialize() {
-        modules = new HashMap<String, Class>();
-        modules.put("ErrorHandler", ErrorHandler.class);
-
-        economy = new Economy();
-        gameDate = new GameDate();
-        time = new Time();
+        if (!initialized) {
+            modules = new HashMap<String, Class>();
+            modules.put("ErrorHandler", ErrorHandler.class);
+            economy = new Economy();
+            gameDate = new GameDate();
+            time = new Time();
+            initialized = true;
+        }
+        Engine.getInstance();
     }
 
     @SuppressWarnings("unchecked")
