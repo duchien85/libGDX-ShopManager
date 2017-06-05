@@ -6,12 +6,12 @@ import com.gpteam.shopmanager.Engine.Interfaces.Module;
  * Created by masmix on 11.02.2017.
  */
 public class ErrorHandler implements Module {
-    private ErrorHandler instance = null;
+    private static ErrorHandler instance = null;
     private ErrorHandler() {
 	ErrorHandler.handleUnsupportedOperationException("msg");
     }
 
-    public ErrorHandler getInstance() {
+    public static ErrorHandler getInstance() {
         if (instance == null)
             instance = new ErrorHandler();
         return instance;
