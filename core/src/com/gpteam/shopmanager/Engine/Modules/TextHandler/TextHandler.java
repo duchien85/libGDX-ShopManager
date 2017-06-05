@@ -11,14 +11,14 @@ import com.gpteam.shopmanager.Engine.Modules.TextHandler.Libraries.PL;
  * Created by masmix on 18.01.2017.
  */
 public final class TextHandler implements Module {
-    private TextHandler instance = null;
+    private static TextHandler instance = null;
     private static HashMap<String, Class> languageMap;
 
     private TextHandler() {
 			ErrorHandler.handleUnsupportedOperationException("msg");
 			}
 
-    public TextHandler getInstance() {
+    public static TextHandler getInstance() {
         if (instance == null)
             instance = new TextHandler();
 
