@@ -9,12 +9,12 @@ import java.util.ArrayList;
  * Created by masmix on 13.05.2017.
  */
 public class EventHandler implements Module {
-    private EventHandler instance = null;
+    private static EventHandler instance = null;
     private EventHandler() {
         ErrorHandler.handleUnsupportedOperationException("msg");
     }
 
-    public EventHandler getInstance() {
+    public static EventHandler getInstance() {
         if (instance == null)
             instance = new EventHandler();
         return instance;
