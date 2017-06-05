@@ -18,6 +18,10 @@ public final class TextHandler implements Module {
 			ErrorHandler.handleUnsupportedOperationException("msg");
 			}
 
+    /**
+     * Initialization of class resources is done here
+     * @return TextHandler instance
+     */
     public static TextHandler getInstance() {
         if (instance == null)
             instance = new TextHandler();
