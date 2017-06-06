@@ -19,3 +19,4 @@ public final class ProductView {
 
     public static String[] APPLE = { appleName, APPLE_SERIALNAME, appleDescription };
 }
+// TODO singleton
