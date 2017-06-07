@@ -13,6 +13,7 @@ public final class Logger {
     // Both sending and receiving of packed strings that contain
     // messages important for the logger must be handled
     // with regular arrays.
+    // TODO different types of logs: warning,
     
     private Logger() {
         ErrorHandler.handleUnsupportedOperationException("msg");
