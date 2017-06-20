@@ -9,9 +9,9 @@ public class Log {
     private String[] log;
     private ErrorType errorType;
 
-    public Log(String[] log, ErrorType errorType) {
-        this.log = log;
-        this.errorType = errorType;
+    public Log(Loggable log) {
+        this.log = log.log;
+        this.errorType = log.errorType;
     }
 
     public String[] getLog() {

@@ -1,0 +1,4 @@
+interface Loggable {
+public String[] log;
+public ErrorType errorType;
+}
