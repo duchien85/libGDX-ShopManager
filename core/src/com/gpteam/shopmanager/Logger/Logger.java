@@ -28,14 +28,14 @@ public final class Logger {
         logs.add(log);
     }
 
-    public static Log getNextLog() {
+    private static Log getNextLog() {
         if (index < length)
             return logs.get(index++);
         else
             return null;
     }
 
-    public ArrayList<Log> getAllLogs() {
+    private ArrayList<Log> getAllLogs() {
         return logs;
     }
 }
