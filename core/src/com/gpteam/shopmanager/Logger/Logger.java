@@ -19,9 +19,16 @@ public class Logger {
         ErrorHandler.handleUnsupportedOperationException("msg");
     }
 
+    private Logger instance = null;
     private ArrayList<Log> logs = new ArrayList<Log>();
     private int index = 0;
     private int length = 0;
+
+    public Logger getInstance() {
+        if (instance == null)
+            instance = new Logger();
+        return instance;
+    }
 
     public void sendLog(Log log) {
         length++;
