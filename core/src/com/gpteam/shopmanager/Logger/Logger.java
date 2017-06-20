@@ -23,7 +23,7 @@ public final class Logger {
     private static int index = 0;
     private static int length = 0;
 
-    public static void receiveLog(Log log) {
+    public static void sendLog(Log log) {
         length++;
         logs.add(log);
     }
