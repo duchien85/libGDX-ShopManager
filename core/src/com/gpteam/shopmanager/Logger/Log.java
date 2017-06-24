@@ -20,6 +20,14 @@ public class Log {
         return log;
     }
 
+    public String getLogMessage() {
+        return log[1];
+    }
+
+    public String getLogClassName() {
+        return log[0];
+    }
+
     public ErrorType getErrorType() {
         return errorType;
     }
