@@ -1,9 +1,9 @@
-package com.gpteam.shopmanager.Area;
+package com.gpteam.shopmanager.district;
 
 /*
  * Created by masmix on 28.01.2017.
  */
-public class Area {
+public class District {
     private String areaName;
     private int population;
 
