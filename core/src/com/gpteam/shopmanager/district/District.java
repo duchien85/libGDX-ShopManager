@@ -9,4 +9,8 @@ public class District {
 
     private static int MIN_POPULATION_AMOUNT = 0;
     private static int MAX_POPULATION_AMOUNT = 5000;
+
+    public District(String areaName) {
+        this.areaName = areaName;
+    }
 }
