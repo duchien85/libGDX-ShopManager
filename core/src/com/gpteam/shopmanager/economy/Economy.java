@@ -1,7 +1,7 @@
 package com.gpteam.shopmanager.economy;
 
 import com.badlogic.gdx.math.MathUtils;
-import com.gpteam.shopmanager.engine.modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.variables.Variables;
 
 /*

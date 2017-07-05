@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.engine.modules.Game_data;
+package com.gpteam.shopmanager.engine.modules.game_data;
 
 import com.gpteam.shopmanager.time.Date;
 

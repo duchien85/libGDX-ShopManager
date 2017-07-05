@@ -3,7 +3,7 @@ package com.gpteam.shopmanager.variables;
 import com.gpteam.shopmanager.character.CharacterInfo;
 import com.gpteam.shopmanager.deprecated.NamesLoader;
 import com.gpteam.shopmanager.economy.Economy;
-import com.gpteam.shopmanager.engine.modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.npc.NPCHandler;
 import com.gpteam.shopmanager.needs.Needs;
 import com.gpteam.shopmanager.product.Product;

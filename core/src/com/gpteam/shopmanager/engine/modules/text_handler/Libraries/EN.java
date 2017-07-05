@@ -1,6 +1,6 @@
-package com.gpteam.shopmanager.engine.modules.TextHandler.Libraries;
+package com.gpteam.shopmanager.engine.modules.text_handler.Libraries;
 
-import com.gpteam.shopmanager.engine.modules.TextHandler.Text;
+import com.gpteam.shopmanager.engine.modules.text_handler.Text;
 
 /*
  * Created by masmix on 18.01.2017.

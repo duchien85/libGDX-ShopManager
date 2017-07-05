@@ -1,6 +1,6 @@
-package com.gpteam.shopmanager.engine.modules.TextHandler;
+package com.gpteam.shopmanager.engine.modules.text_handler;
 
-import com.gpteam.shopmanager.engine.modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.needs.Needs;
 import com.gpteam.shopmanager.product.ProductView;
 import com.gpteam.shopmanager.society.SocietyClass;

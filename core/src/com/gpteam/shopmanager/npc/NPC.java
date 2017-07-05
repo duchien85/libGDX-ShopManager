@@ -1,7 +1,7 @@
 package com.gpteam.shopmanager.npc;
 
 import com.gpteam.shopmanager.character.CharacterInfo;
-import com.gpteam.shopmanager.npc.AI.AI;
+import com.gpteam.shopmanager.npc.ai.AI;
 import com.gpteam.shopmanager.needs.Needs;
 import com.gpteam.shopmanager.needs.Needs.ENeeds;
 import com.gpteam.shopmanager.society.SocietyClass;

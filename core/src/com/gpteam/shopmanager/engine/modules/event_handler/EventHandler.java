@@ -1,7 +1,7 @@
-package com.gpteam.shopmanager.engine.modules.EventHandler;
+package com.gpteam.shopmanager.engine.modules.event_handler;
 
 import com.gpteam.shopmanager.engine.interfaces.Module;
-import com.gpteam.shopmanager.engine.modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 
 import java.util.ArrayList;
 
@@ -20,16 +20,16 @@ public class EventHandler implements Module {
         return instance;
     }
 
-    private ArrayList<com.gpteam.shopmanager.engine.modules.EventHandler.Event> events = new ArrayList<com.gpteam.shopmanager.engine.modules.EventHandler.Event>();
+    private ArrayList<com.gpteam.shopmanager.engine.modules.event_handler.Event> events = new ArrayList<com.gpteam.shopmanager.engine.modules.event_handler.Event>();
     private int size;
     private int index = 0;
 
-    public void add(com.gpteam.shopmanager.engine.modules.EventHandler.Event event) {
+    public void add(com.gpteam.shopmanager.engine.modules.event_handler.Event event) {
         events.add(event);
         updateSize();
     }
 
-    public com.gpteam.shopmanager.engine.modules.EventHandler.Event getNext() {
+    public com.gpteam.shopmanager.engine.modules.event_handler.Event getNext() {
         updateSize();
         if (index <= size - 1)
             return events.get(index++);

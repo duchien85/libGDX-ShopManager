@@ -40,7 +40,7 @@ public class NPCHandler {
     public void addNpcs(int npcCount) {
         if (validate(npcCount)) {
             for (int i = 0; i < npcCount; i++)
-                npcs.add(com.gpteam.shopmanager.npc.NPCBuilder.NPCBuilder.newNPC());
+                npcs.add(com.gpteam.shopmanager.npc.npc_builder.NPCBuilder.newNPC());
             this.npcCount += npcCount;
             updateNpcCount();
         }
@@ -50,14 +50,14 @@ public class NPCHandler {
     public void addNpcs(int npcCount, SocietyClass societyClass) {
         if (validate(npcCount)) {
             for (int i = 0; i < npcCount; i++)
-                npcs.add(com.gpteam.shopmanager.npc.NPCBuilder.NPCBuilder.newNPC(societyClass));
+                npcs.add(com.gpteam.shopmanager.npc.npc_builder.NPCBuilder.newNPC(societyClass));
         }
     }
 
     public void addNpcs(int npcCount, boolean allRandom) {
         if (validate(npcCount)) {
             for (int i = 0; i < npcCount; i++)
-                npcs.add(com.gpteam.shopmanager.npc.NPCBuilder.NPCBuilder.newNPC());
+                npcs.add(com.gpteam.shopmanager.npc.npc_builder.NPCBuilder.newNPC());
             this.npcCount += npcCount;
             updateNpcCount();
         }
@@ -82,7 +82,7 @@ public class NPCHandler {
 //    }
 
     private void initialize() {
-        npcs = com.gpteam.shopmanager.npc.NPCBuilder.NPCBuilder.newNPCArrayList(npcCount);
+        npcs = com.gpteam.shopmanager.npc.npc_builder.NPCBuilder.newNPCArrayList(npcCount);
     }
 
     private void updateNpcCount() {

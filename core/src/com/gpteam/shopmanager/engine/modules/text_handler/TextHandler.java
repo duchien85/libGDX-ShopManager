@@ -1,8 +1,8 @@
-package com.gpteam.shopmanager.engine.modules.TextHandler;
+package com.gpteam.shopmanager.engine.modules.text_handler;
 
 import java.util.HashMap;
 
-import com.gpteam.shopmanager.engine.modules.TextHandler.Libraries.PL;
+import com.gpteam.shopmanager.engine.modules.text_handler.Libraries.PL;
 
 /*
  * Created by masmix on 18.01.2017.
@@ -12,7 +12,7 @@ public final class TextHandler implements com.gpteam.shopmanager.engine.interfac
     private static HashMap<String, Class> languageMap;
 
     private TextHandler() {
-			com.gpteam.shopmanager.engine.modules.ErrorHandler.ErrorHandler.handleUnsupportedOperationException("msg");
+			com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler.handleUnsupportedOperationException("msg");
 			}
 
     /**
@@ -24,7 +24,7 @@ public final class TextHandler implements com.gpteam.shopmanager.engine.interfac
             instance = new TextHandler();
 
         languageMap = new HashMap<String, Class>();
-        languageMap.put("EN", com.gpteam.shopmanager.engine.modules.TextHandler.Libraries.EN.class);
+        languageMap.put("EN", com.gpteam.shopmanager.engine.modules.text_handler.Libraries.EN.class);
         languageMap.put("PL", PL.class);
 
         return instance;
@@ -45,13 +45,13 @@ public final class TextHandler implements com.gpteam.shopmanager.engine.interfac
                 languageMap.get(language).getDeclaredMethod("initialize").invoke(null);
             }
             catch (Exception e) {
-                com.gpteam.shopmanager.engine.modules.TextHandler.Libraries.EN.initialize();
+                com.gpteam.shopmanager.engine.modules.text_handler.Libraries.EN.initialize();
                 e.printStackTrace();
             }
         }
         else {
 //            ErrorListener.notify();
-            com.gpteam.shopmanager.engine.modules.ErrorHandler.ErrorHandler.handleIllegalArgumentException("There's no such region. Found: " + language + ".");
+            com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler.handleIllegalArgumentException("There's no such region. Found: " + language + ".");
         }
     }
 }
