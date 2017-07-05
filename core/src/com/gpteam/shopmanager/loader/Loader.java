@@ -16,7 +16,6 @@ public class Loader {
     }
 
     private static Loader instance = null;
-
     private File file;
     private FileReader fileReader;
     private BufferedReader bufferedReader;
