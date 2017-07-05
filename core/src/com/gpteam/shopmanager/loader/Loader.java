@@ -15,14 +15,14 @@ public class Loader {
         ErrorHandler.handleUnsupportedOperationException("msg");
     }
 
-    private Loader instance = null;
+    private static Loader instance = null;
 
     private File file;
     private FileReader fileReader;
     private BufferedReader bufferedReader;
     private boolean initialized = false;
 
-    public Loader getInstance() {
+    public static Loader getInstance() {
         if (instance == null)
             instance = new Loader();
         return instance;
