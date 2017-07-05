@@ -1,6 +1,6 @@
 package com.gpteam.shopmanager.npc.NPCBuilder;
 
-import com.gpteam.shopmanager.engine.Modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.engine.modules.ErrorHandler.ErrorHandler;
 import com.gpteam.shopmanager.npc.NPC;
 import com.gpteam.shopmanager.society.SocietyClass;
 

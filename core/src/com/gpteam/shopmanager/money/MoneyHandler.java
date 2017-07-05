@@ -1,6 +1,6 @@
 package com.gpteam.shopmanager.money;
 
-import com.gpteam.shopmanager.engine.Modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.engine.modules.ErrorHandler.ErrorHandler;
 
 /*
  * Created by masmix on 23.12.2016.

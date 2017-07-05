@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.engine.Interfaces;
+package com.gpteam.shopmanager.engine.interfaces;
 
 /*
  * Created by masmix on 15.04.2017.

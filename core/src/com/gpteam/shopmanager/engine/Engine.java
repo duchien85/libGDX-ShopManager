@@ -2,8 +2,8 @@ package com.gpteam.shopmanager.engine;
 
 import com.badlogic.gdx.Gdx;
 import com.gpteam.shopmanager.economy.Economy;
-import com.gpteam.shopmanager.engine.Modules.ErrorHandler.ErrorHandler;
-import com.gpteam.shopmanager.engine.Modules.Game_data.GameDate;
+import com.gpteam.shopmanager.engine.modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.engine.modules.Game_data.GameDate;
 import com.gpteam.shopmanager.time.Time;
 
 import java.util.HashMap;

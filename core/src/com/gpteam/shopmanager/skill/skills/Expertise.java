@@ -1,7 +1,7 @@
-package com.gpteam.shopmanager.skill.Skills;
+package com.gpteam.shopmanager.skill.skills;
 
-import com.gpteam.shopmanager.engine.Modules.ErrorHandler.ErrorHandler;
-import com.gpteam.shopmanager.engine.Modules.TextHandler.Text;
+import com.gpteam.shopmanager.engine.modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.engine.modules.TextHandler.Text;
 import com.gpteam.shopmanager.variables.Variables;
 
 /*

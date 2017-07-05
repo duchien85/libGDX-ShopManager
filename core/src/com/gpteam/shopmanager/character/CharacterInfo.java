@@ -1,11 +1,11 @@
 package com.gpteam.shopmanager.character;
 
-import com.gpteam.shopmanager.engine.Modules.ErrorHandler.ErrorHandler;
-import com.gpteam.shopmanager.engine.Modules.ErrorHandler.ErrorListener;
-import com.gpteam.shopmanager.engine.Modules.ErrorHandler.ErrorType;
+import com.gpteam.shopmanager.engine.modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.engine.modules.ErrorHandler.ErrorListener;
+import com.gpteam.shopmanager.engine.modules.ErrorHandler.ErrorType;
 import com.gpteam.shopmanager.player.Sex;
 import com.gpteam.shopmanager.random_generator.RandGen;
-import com.gpteam.shopmanager.engine.Modules.TextHandler.Text;
+import com.gpteam.shopmanager.engine.modules.TextHandler.Text;
 
 import static com.gpteam.shopmanager.variables.Variables.*;
 

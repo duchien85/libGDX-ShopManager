@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.Eevents;
+package com.gpteam.shopmanager.events;
 
 /*
  * Created by masmix on 13.02.2017.

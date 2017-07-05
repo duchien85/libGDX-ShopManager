@@ -1,7 +1,7 @@
-package com.gpteam.shopmanager.deprecated.Traffic;
+package com.gpteam.shopmanager.deprecated.traffic;
 
 import com.gpteam.shopmanager.deprecated.ErrorMessages;
-import com.gpteam.shopmanager.engine.Modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.engine.modules.ErrorHandler.ErrorHandler;
 import com.gpteam.shopmanager.random_generator.RandGen;
 
 import static com.gpteam.shopmanager.variables.Variables.MAX_TRAFFIC_LOAD;

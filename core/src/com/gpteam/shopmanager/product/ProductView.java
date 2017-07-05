@@ -1,7 +1,7 @@
 package com.gpteam.shopmanager.product;
 
-import com.gpteam.shopmanager.engine.Modules.ErrorHandler.ErrorHandler;
-import com.gpteam.shopmanager.engine.Modules.TextHandler.Text;
+import com.gpteam.shopmanager.engine.modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.engine.modules.TextHandler.Text;
 
 /*
  * Created by masmix on 14.05.2017.

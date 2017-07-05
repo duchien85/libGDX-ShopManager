@@ -1,11 +1,11 @@
-package com.gpteam.shopmanager.engine.Modules.TextHandler;
+package com.gpteam.shopmanager.engine.modules.TextHandler;
 
-import com.gpteam.shopmanager.engine.Modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.engine.modules.ErrorHandler.ErrorHandler;
 import com.gpteam.shopmanager.needs.Needs;
 import com.gpteam.shopmanager.product.ProductView;
 import com.gpteam.shopmanager.society.SocietyClass;
 import com.gpteam.shopmanager.character.CharacterInfo;
-import com.gpteam.shopmanager.skill.Skills.Expertise;
+import com.gpteam.shopmanager.skill.skills.Expertise;
 
 /*
  * Created by masmix on 18.01.2017.

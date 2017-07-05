@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.engine.Modules.ErrorHandler;
+package com.gpteam.shopmanager.engine.modules.ErrorHandler;
 
 /*
  * Created by masmix on 21.03.2017.

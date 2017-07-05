@@ -1,6 +1,6 @@
 package com.gpteam.shopmanager.inventory;
 
-import com.gpteam.shopmanager.engine.Modules.ErrorHandler.ErrorHandler;
+import com.gpteam.shopmanager.engine.modules.ErrorHandler.ErrorHandler;
 import com.gpteam.shopmanager.product.Product;
 import com.gpteam.shopmanager.time.Date;
 import com.gpteam.shopmanager.variables.Variables;

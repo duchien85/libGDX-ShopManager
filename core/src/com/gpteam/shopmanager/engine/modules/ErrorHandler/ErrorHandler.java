@@ -1,6 +1,6 @@
-package com.gpteam.shopmanager.engine.Modules.ErrorHandler;
+package com.gpteam.shopmanager.engine.modules.ErrorHandler;
 
-import com.gpteam.shopmanager.engine.Interfaces.Module;
+import com.gpteam.shopmanager.engine.interfaces.Module;
 
 /*
  * Created by masmix on 11.02.2017.

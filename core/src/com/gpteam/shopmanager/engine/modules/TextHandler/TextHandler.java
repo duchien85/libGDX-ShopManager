@@ -1,18 +1,18 @@
-package com.gpteam.shopmanager.engine.Modules.TextHandler;
+package com.gpteam.shopmanager.engine.modules.TextHandler;
 
 import java.util.HashMap;
 
-import com.gpteam.shopmanager.engine.Modules.TextHandler.Libraries.PL;
+import com.gpteam.shopmanager.engine.modules.TextHandler.Libraries.PL;
 
 /*
  * Created by masmix on 18.01.2017.
  */
-public final class TextHandler implements com.gpteam.shopmanager.engine.Interfaces.Module {
+public final class TextHandler implements com.gpteam.shopmanager.engine.interfaces.Module {
     private static TextHandler instance = null;
     private static HashMap<String, Class> languageMap;
 
     private TextHandler() {
-			com.gpteam.shopmanager.engine.Modules.ErrorHandler.ErrorHandler.handleUnsupportedOperationException("msg");
+			com.gpteam.shopmanager.engine.modules.ErrorHandler.ErrorHandler.handleUnsupportedOperationException("msg");
 			}
 
     /**
@@ -24,7 +24,7 @@ public final class TextHandler implements com.gpteam.shopmanager.engine.Interfac
             instance = new TextHandler();
 
         languageMap = new HashMap<String, Class>();
-        languageMap.put("EN", com.gpteam.shopmanager.engine.Modules.TextHandler.Libraries.EN.class);
+        languageMap.put("EN", com.gpteam.shopmanager.engine.modules.TextHandler.Libraries.EN.class);
         languageMap.put("PL", PL.class);
 
         return instance;
@@ -45,13 +45,13 @@ public final class TextHandler implements com.gpteam.shopmanager.engine.Interfac
                 languageMap.get(language).getDeclaredMethod("initialize").invoke(null);
             }
             catch (Exception e) {
-                com.gpteam.shopmanager.engine.Modules.TextHandler.Libraries.EN.initialize();
+                com.gpteam.shopmanager.engine.modules.TextHandler.Libraries.EN.initialize();
                 e.printStackTrace();
             }
         }
         else {
 //            ErrorListener.notify();
-            com.gpteam.shopmanager.engine.Modules.ErrorHandler.ErrorHandler.handleIllegalArgumentException("There's no such region. Found: " + language + ".");
+            com.gpteam.shopmanager.engine.modules.ErrorHandler.ErrorHandler.handleIllegalArgumentException("There's no such region. Found: " + language + ".");
         }
     }
 }

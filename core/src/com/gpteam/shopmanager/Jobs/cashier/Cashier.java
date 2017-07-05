@@ -1,7 +1,7 @@
 package com.gpteam.shopmanager.Jobs.cashier;
 
 import com.gpteam.shopmanager.character.CharacterInfo;
-import com.gpteam.shopmanager.skill.Skills.Expertise;
+import com.gpteam.shopmanager.skill.skills.Expertise;
 
 /*
  * Created by masmix on 15.05.2017.
