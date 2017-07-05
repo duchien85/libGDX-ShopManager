@@ -6,8 +6,8 @@ import com.badlogic.gdx.graphics.FPSLogger;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.gpteam.shopmanager.Screens.GameScreen;
-import com.gpteam.shopmanager.Society.SocietyClass;
+import com.gpteam.shopmanager.screens.GameScreen;
+import com.gpteam.shopmanager.society.SocietyClass;
 
 public class GameMain extends Game {
     public SpriteBatch batch;
