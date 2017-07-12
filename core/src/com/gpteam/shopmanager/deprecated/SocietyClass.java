@@ -1,6 +1,6 @@
 package com.gpteam.shopmanager.deprecated;
 
-import com.gpteam.shopmanager.random_generator.RandGen;
+import com.gpteam.shopmanager.engine.modules.random_generator.RandGen;
 
 /*
  * Created by masmix on 18.01.2017.

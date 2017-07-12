@@ -4,7 +4,7 @@ import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorListener;
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorType;
 import com.gpteam.shopmanager.player.Sex;
-import com.gpteam.shopmanager.random_generator.RandGen;
+import com.gpteam.shopmanager.engine.modules.random_generator.RandGen;
 import com.gpteam.shopmanager.engine.modules.text_handler.Text;
 
 import static com.gpteam.shopmanager.variables.Variables.*;

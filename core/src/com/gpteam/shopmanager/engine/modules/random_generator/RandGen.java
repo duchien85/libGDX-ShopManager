@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.random_generator;
+package com.gpteam.shopmanager.engine.modules.random_generator;
 
 import com.badlogic.gdx.math.MathUtils;
 import com.gpteam.shopmanager.character.CharacterInfo;
