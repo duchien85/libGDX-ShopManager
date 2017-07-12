@@ -11,6 +11,7 @@ public class Date {
 
     public Date() {
         calendar = new GregorianCalendar();
+        calendar.set(Calendar.MONTH, Calendar.MONTH + 1);
     }
 
     /**
