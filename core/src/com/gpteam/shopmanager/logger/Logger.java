@@ -20,7 +20,7 @@ public class Logger {
     }
 
     private Logger instance = null;
-    private ArrayList<com.gpteam.shopmanager.logger.Log> logs = new ArrayList<com.gpteam.shopmanager.logger.Log>();
+    private ArrayList<Log> logs = new ArrayList<Log>();
     private int index = 0;
     private int length = 0;
 
@@ -30,19 +30,19 @@ public class Logger {
         return instance;
     }
 
-    public void sendLog(com.gpteam.shopmanager.logger.Log log) {
+    public void sendLog(Log log) {
         length++;
         logs.add(log);
     }
 
-    private com.gpteam.shopmanager.logger.Log getNextLog() {
+    private Log getNextLog() {
         if (index < length)
             return logs.get(index++);
         else
             return null;
     }
 
-    private ArrayList<com.gpteam.shopmanager.logger.Log> getAllLogs() {
+    private ArrayList<Log> getAllLogs() {
         return logs;
     }
 }
