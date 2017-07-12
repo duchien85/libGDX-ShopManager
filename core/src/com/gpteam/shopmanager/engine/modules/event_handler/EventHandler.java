@@ -20,16 +20,16 @@ public class EventHandler implements Module {
         return instance;
     }
 
-    private ArrayList<com.gpteam.shopmanager.engine.modules.event_handler.Event> events = new ArrayList<com.gpteam.shopmanager.engine.modules.event_handler.Event>();
+    private ArrayList<Event> events = new ArrayList<Event>();
     private int size;
     private int index = 0;
 
-    public void add(com.gpteam.shopmanager.engine.modules.event_handler.Event event) {
+    public void add(Event event) {
         events.add(event);
         updateSize();
     }
 
-    public com.gpteam.shopmanager.engine.modules.event_handler.Event getNext() {
+    public Event getNext() {
         updateSize();
         if (index <= size - 1)
             return events.get(index++);
