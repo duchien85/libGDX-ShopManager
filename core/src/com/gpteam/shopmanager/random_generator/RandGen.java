@@ -14,42 +14,34 @@ import static com.gpteam.shopmanager.variables.Variables.*;
 /*
  * Created by masmix on 04.02.2017.
  */
-public class RandGen {
-    private static RandGen instance = null;
-
+public final class RandGen {
     private RandGen() {
         ErrorHandler.handleUnsupportedOperationException("msg");
     }
 
-    public static RandGen getInstance() {
-        if (instance == null)
-            instance = new RandGen();
-        return instance;
-    }
+    private static ArrayList<String> names = Loader.getAll();
 
-    private static ArrayList<String> names = Loader.getInstance().getAll(); // TODO THIS IS PROBABLY A BAD WAY TO HANDLE THIS. TEST THIS!!!
-
-    public CharacterInfo generateCharacterInfo() {
+    public static CharacterInfo generateCharacterInfo() {
         return new CharacterInfo(getRandomName(), getRandomAge(), getRandomSex());
     }
 
-    public String getRandomName() {
+    public static String getRandomName() {
         return names.get(MathUtils.random(0, names.size() - 1));
     }
 
-    public int getRandomAge() {
+    public static int getRandomAge() {
         return MathUtils.random(MIN_AGE_LENGTH, MAX_AGE_LENGTH);
     }
 
-    public Sex getRandomSex() {
+    public static Sex getRandomSex() {
         return Sex.getRandom();
     }
 
-    public SocietyClass getRandomSocietyClass() {
+    public static SocietyClass getRandomSocietyClass() {
         return SocietyClass.getRandom();
     }
 
-    public int getRandomTrafficLoad() {
+    public static int getRandomTrafficLoad() {
         return MathUtils.random(MIN_TRAFFIC_LOAD, MAX_TRAFFIC_LOAD);
     }
 }
