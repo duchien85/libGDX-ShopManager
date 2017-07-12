@@ -27,6 +27,18 @@ public class Date {
         return getYear() == otherDate.getYear() && getMonth() == otherDate.getMonth() && getDay() == otherDate.getDay();
     }
 
+    public boolean equalsYear(Date otherDate) {
+        return getYear() == otherDate.getYear();
+    }
+
+    public boolean equalsMonth(Date otherDate) {
+        return getMonth() == otherDate.getMonth();
+    }
+
+    public boolean equalsDay(Date otherDate) {
+        return getDay() == otherDate.getDay();
+    }
+
     @Override
     public String toString() {
         return calendar.get(Calendar.DAY_OF_MONTH) + "." + calendar.get(Calendar.MONTH + 1) + "." + calendar.get(Calendar.YEAR);
