@@ -10,24 +10,17 @@ import static com.gpteam.shopmanager.variables.Variables.NAMES_PATH;
 /*
  * Created by masmix on 04.02.2017.
  */
-public class Loader {
+public final class Loader {
+    private static File file;
+    private static FileReader fileReader;
+    private static BufferedReader bufferedReader;
+    private static boolean initialized = false;
+
     private Loader() {
         ErrorHandler.handleUnsupportedOperationException("msg");
     }
 
-    private static Loader instance = null;
-    private File file;
-    private FileReader fileReader;
-    private BufferedReader bufferedReader;
-    private boolean initialized = false;
-
-    public static Loader getInstance() {
-        if (instance == null)
-            instance = new Loader();
-        return instance;
-    }
-
-    public void initialize() {
+    public static void initialize() {
             file = new File(NAMES_PATH);
             try { fileReader = new FileReader(file); }
             catch (FileNotFoundException e) { e.printStackTrace(); }
@@ -35,13 +28,13 @@ public class Loader {
             initialized = true;
     }
 
-    public void initialize(String filePath) {
+    public static void initialize(String filePath) {
         file = new File(filePath);
         try { fileReader = new FileReader(file); } catch (FileNotFoundException e) { e.printStackTrace(); }
         bufferedReader = new BufferedReader(fileReader);
     }
 
-    public ArrayList<String> getAll() {
+    public static ArrayList<String> getAll() {
         if (!initialized)
             initialize();
         String line;
@@ -54,7 +47,7 @@ public class Loader {
         return strings;
     }
 
-    public BufferedReader getBufferedReader() {
+    public static BufferedReader getBufferedReader() {
         if (!initialized)
             initialize();
         return bufferedReader;
