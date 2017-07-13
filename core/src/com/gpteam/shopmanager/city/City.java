@@ -10,8 +10,8 @@ public class City {
     private int population;
     private District[] districts;
 
-    // TODO figure out how to handle assigning npcs to
-    // TODO individual areas of the city
+    // TODO figure out how to handle assigning npcs
+    // to individual areas of the city
 
     public City(String name, String... districts) {
         this.name = name;
