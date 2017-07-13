@@ -5,7 +5,7 @@ import com.gpteam.shopmanager.time.Date;
 /*
  * Created by masmix on 23.12.2016.
  */
-public class GameDate { // TODO Figure out whetver to use this class or my own Time class to hanlde game time
+public class GameDate {
     private Date currentDate;
     private Date dateStarted;
 
