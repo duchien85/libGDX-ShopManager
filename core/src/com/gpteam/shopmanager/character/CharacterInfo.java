@@ -38,8 +38,10 @@ public class CharacterInfo {
     public void setCharacterInfo(String name, int age, Sex sex) {
             if (validate(name, age, sex))
                 assign(name, age, sex);
-            else
+            else {
+                ErrorListener.notify(ErrorType.INVALID_CHAR_INFO);
                 ErrorHandler.handleIllegalArgumentException("");
+            }
     }
 
     public String getName() {
