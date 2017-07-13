@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.character;
 
+import com.gpteam.shopmanager.engine.modules.error_handler.Error;
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorListener;
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorType;
@@ -16,13 +17,15 @@ public class CharacterInfo {
     private String name;
     private int age;
     private Sex sex;
+    private String errorMessage;
 
     public CharacterInfo(String name, int age, Sex sex) {
         if (validate(name, age, sex))
             assign(name, age, sex);
         else {
-            ErrorListener.notify(ErrorType.INVALID_CHAR_INFO);
-            ErrorHandler.handleIllegalArgumentException("One of the arguments was invalid. Found: name: " + name + ", age: " + age + ", sex: " + sex.toString());
+            errorMessage = "One of the arguments was invalid. Found: name: \" + name + \", age: \" + age + \", sex: \" + sex.toString()";
+            ErrorListener.notify(new Error(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_CHAR_INFO));
+            ErrorHandler.handleIllegalArgumentException(errorMessage);
         }
     }
 
@@ -39,8 +42,9 @@ public class CharacterInfo {
             if (validate(name, age, sex))
                 assign(name, age, sex);
             else {
-                ErrorListener.notify(ErrorType.INVALID_CHAR_INFO);
-                ErrorHandler.handleIllegalArgumentException("");
+                errorMessage = "";
+                ErrorListener.notify(new Error(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_CHAR_INFO));
+                ErrorHandler.handleIllegalArgumentException(errorMessage);
             }
     }
 
@@ -52,8 +56,9 @@ public class CharacterInfo {
         if (validate(name))
             this.name = name;
         else {
-            ErrorListener.notify(ErrorType.INVALID_NAME);
-            ErrorHandler.handleIllegalArgumentException(Text.ERROR_SET_NAME);
+            errorMessage = Text.ERROR_SET_NAME;
+            ErrorListener.notify(new Error(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_NAME));
+            ErrorHandler.handleIllegalArgumentException(errorMessage);
         }
     }
 
@@ -65,8 +70,9 @@ public class CharacterInfo {
         if (validate(age))
             this.age = age;
         else {
-            ErrorListener.notify(ErrorType.INVALID_AGE);
-            ErrorHandler.handleIllegalArgumentException(Text.ERROR_SET_AGE);
+            errorMessage = Text.ERROR_SET_AGE;
+            ErrorListener.notify(new Error(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_AGE));
+            ErrorHandler.handleIllegalArgumentException(errorMessage);
         }
     }
 
@@ -78,8 +84,9 @@ public class CharacterInfo {
         if (validate(sex))
             this.sex = sex;
         else {
-            ErrorListener.notify(ErrorType.INVALID_SEX);
-            ErrorHandler.handleIllegalArgumentException(Text.ERROR_SET_SEX);
+            errorMessage = Text.ERROR_SET_SEX;
+            ErrorListener.notify(new Error(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_SEX));
+            ErrorHandler.handleIllegalArgumentException(errorMessage);
         }
     }
 
