@@ -9,10 +9,11 @@ public class Log {
     private String[] log;
     private ErrorType errorType;
 
-    public Log(String className, String message) {
+    public Log(String className, String message, ErrorType errorType) {
         this.log = new String[2];
         this.log[0] = className;
         this.log[1] = message;
+        this.errorType = errorType;
     }
 
     public String[] getLog() {
