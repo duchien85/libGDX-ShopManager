@@ -6,6 +6,8 @@ import com.gpteam.shopmanager.engine.modules.text_handler.Text;
  * Created by masmix on 18.01.2017.
  */
 public final class PL {
+    private PL() {}
+
     public static void initialize() {
         Text.expertise = "Ekspertyza";
         Text.expertiseDescription = "";
