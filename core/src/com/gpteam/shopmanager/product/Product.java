@@ -40,8 +40,8 @@ public class Product {
         this.name = name;
     }
 
-    public void setSerialName(String serialName) {
-        this.serialName = serialName;
+    public String getSerialName() {
+        return serialName;
     }
 
     public String getDescription() {
@@ -50,10 +50,6 @@ public class Product {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public String getSerialName() {
-        return serialName;
     }
 
     public float getPrice() {
