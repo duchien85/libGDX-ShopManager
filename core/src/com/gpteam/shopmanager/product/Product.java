@@ -16,10 +16,7 @@ public class Product {
     private Date expirationDate;
 
     /**
-     * {@link ProductView}
-     * @param pVName Product name from ProductView class
-     * @param pVSerialName Product serial name from ProductView class
-     * @param pVDescription Product description from ProductView class
+     * @param pVProduct String array from {@link ProductView} class
      * @param price
      * @param quality
      * @param quantity
