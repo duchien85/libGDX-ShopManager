@@ -9,14 +9,5 @@ import com.gpteam.shopmanager.engine.modules.text_handler.Text;
 public final class ProductView {
     private ProductView() { ErrorHandler.handleUnsupportedOperationException("msg"); }
 
-    /** Apple */
-    public static String appleName = Text.appleName;
-    public static String appleDescription = Text.appleDescription;
-    public static final String APPLE_SERIALNAME = "apple";
-
-    /** Next thing */
-
-
-    public static String[] APPLE = { appleName, APPLE_SERIALNAME, appleDescription };
+    public static String[] APPLE = { Text.appleName, Text.APPLE_SERIALNAME, Text.appleDescription };
 }
-// TODO singleton
