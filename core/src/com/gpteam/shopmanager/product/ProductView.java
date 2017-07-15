@@ -6,7 +6,7 @@ import com.gpteam.shopmanager.engine.modules.text_handler.Text;
 /**
  * Created by masmix on 14.05.2017.
 
- * Class needs to be initialized AFTER TextHandler class
+ * Class must be initialized AFTER TextHandler class
  */
 public final class ProductView {
     public static String[] APPLE;
