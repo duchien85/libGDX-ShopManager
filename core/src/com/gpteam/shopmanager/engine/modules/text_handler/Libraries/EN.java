@@ -36,5 +36,8 @@ public final class EN {
         Text.student = "Student";
 
         Text.ERROR_MESSAGE_1 = "";
+
+        Text.appleName = "Apple";
+        Text.appleDescription = "desc";
     }
 }

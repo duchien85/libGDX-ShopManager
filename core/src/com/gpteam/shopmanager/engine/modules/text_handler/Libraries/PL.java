@@ -36,5 +36,8 @@ public final class PL {
         Text.student = "Studenci";
 
         Text.ERROR_MESSAGE_1 = "";
+
+        Text.appleName = "Jabłko";
+        Text.appleDescription = "Opis";
     }
 }
