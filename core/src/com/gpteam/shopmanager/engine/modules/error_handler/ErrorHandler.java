@@ -15,8 +15,8 @@ public final class ErrorHandler implements Module {
     }
 
     public static void handleNoSuchMethodException(String message) {
-        try { throw new NoSuchMethodException(message);
-        } catch (NoSuchMethodException e) { e.printStackTrace(); }
+        try { throw new NoSuchMethodException(message); }
+        catch (NoSuchMethodException e) { e.printStackTrace(); }
     }
 
     public static void handleUnsupportedOperationException(String message) {
