@@ -7,7 +7,12 @@ import com.gpteam.shopmanager.engine.modules.text_handler.Text;
  * Created by masmix on 14.05.2017.
  */
 public final class ProductView {
+    public static String[] APPLE;
+
     private ProductView() { ErrorHandler.handleUnsupportedOperationException("msg"); }
 
-    public static String[] APPLE = { Text.appleName, Text.APPLE_SERIALNAME, Text.appleDescription };
+    public static void initialize() {
+        APPLE = new String[]{Text.appleName, Text.APPLE_SERIALNAME, Text.appleDescription};
+    }
+
 }
