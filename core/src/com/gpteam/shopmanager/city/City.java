@@ -13,11 +13,17 @@ public class City {
     // TODO figure out how to handle assigning npcs
     // to individual areas of the city
 
-    public City(String name, String... districts) {
+    public City(String name, boolean initialize, String... districts) {
         this.name = name;
         this.districts = new District[districts.length];
 
         for (int i = 0; i < districts.length; i++)
             this.districts[i] = new District(districts[i]);
+
+        if (initialize) {
+            for (int i = 0; i < this.districts.length; i++) {
+                this.districts[i].
+            }
+        }
     }
 }
