@@ -13,4 +13,8 @@ public class District {
     public District(String areaName) {
         this.areaName = areaName;
     }
+
+    public int getPopulationAmount() {
+        return population;
+    }
 }
