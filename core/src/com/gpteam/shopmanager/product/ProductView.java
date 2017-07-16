@@ -19,12 +19,12 @@ import com.gpteam.shopmanager.engine.modules.text_handler.Text;
  * Class must be initialized after TextHandler class!
  */
 public final class ProductView {
-    public static String[] APPLE;
+    public static String[] apple;
 
     private ProductView() { ErrorHandler.handleUnsupportedOperationException("msg"); }
 
     public static void initialize() {
-        APPLE = new String[]{Text.appleName, Text.APPLE_SERIALNAME, Text.appleDescription};
+        apple = new String[]{Text.appleName, Text.APPLE_SERIALNAME, Text.appleDescription};
     }
 
 }
