@@ -1,6 +1,6 @@
 package com.gpteam.shopmanager.city;
 
-import com.gpteam.shopmanager.district.District;
+import com.gpteam.shopmanager.city.district.District;
 
 /*
  * Created by masmix on 02.02.2017.

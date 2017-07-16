@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.district;
+package com.gpteam.shopmanager.city.district;
 
 /*
  * Created by masmix on 28.01.2017.
