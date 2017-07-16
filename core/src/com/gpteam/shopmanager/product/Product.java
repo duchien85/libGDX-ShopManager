@@ -17,9 +17,9 @@ public class Product {
 
     /**
      * @param pVProduct String array from {@link ProductView} class
-     * @param price
-     * @param quality
-     * @param quantity
+     * @param price price of a single product
+     * @param quality quality of the whole product quantity
+     * @param quantity quantity of all the single products
      * @param expirationDate format: YYYY.MM.DD
      */
     public Product(String[] pVProduct, float price, short quality, int quantity, Date expirationDate) {
