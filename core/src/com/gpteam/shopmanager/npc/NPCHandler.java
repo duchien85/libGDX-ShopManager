@@ -20,11 +20,8 @@ public class NPCHandler {
     // TODO COME UP WITH BEST WAY TO HANDLE VALIDATING ARGUMENTS AND ASSIGNING THEM TO CLASS VARIABLES !!! (Character class needs exact same thing)
     // TODO Figure out validating - too much validate methods in different classes that use themselves!
     public NPCHandler(int npcCount) {
-        if (validate(npcCount)) {
-            updateNpcCount();
-            initialize();
-        }
-        else throw new IllegalArgumentException("npcCount must be between 0 - 10000. Found: " + npcCount);
+        this.npcCount = npcCount;
+        initialize();
     }
     
     public NPCHandler() {
@@ -39,30 +36,22 @@ public class NPCHandler {
     }
 
     public void addNpcs(int npcCount) {
-        if (validate(npcCount)) {
-            for (int i = 0; i < npcCount; i++)
-                npcs.add(newNPC());
-            this.npcCount += npcCount;
-            updateNpcCount();
-        }
-        else throw new IllegalArgumentException();
+        for (int i = 0; i < npcCount; i++)
+            npcs.add(newNPC());
+        this.npcCount += npcCount;
+        updateNpcCount();
     }
 
     public void addNpcs(int npcCount, SocietyClass societyClass) {
-        if (validate(npcCount)) {
-            for (int i = 0; i < npcCount; i++)
-                npcs.add(newNPC(societyClass));
-        }
+        for (int i = 0; i < npcCount; i++)
+            npcs.add(newNPC(societyClass));
     }
 
     public void addNpcs(int npcCount, boolean allRandom) {
-        if (validate(npcCount)) {
-            for (int i = 0; i < npcCount; i++)
-                npcs.add(newNPC());
-            this.npcCount += npcCount;
-            updateNpcCount();
-        }
-        else throw new IllegalArgumentException("npcCount must be between 0 - 10000. Found: " + npcCount);
+        for (int i = 0; i < npcCount; i++)
+            npcs.add(newNPC());
+        this.npcCount += npcCount;
+        updateNpcCount();
     }
     
     public void removeNpc(NPC npc) {
@@ -88,9 +77,5 @@ public class NPCHandler {
 
     private void updateNpcCount() {
         npcCount = npcs.size();
-    }
-
-    private boolean validate(int npcCount) {
-        return npcCount + this.npcCount <= MAX_NPC_AMOUNT && npcCount + this.npcCount >= MIN_NPC_AMOUNT;
     }
 }
