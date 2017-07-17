@@ -27,6 +27,10 @@ public final class EN {
         Text.ERROR_SET_NAME = "Invalid name. Name is either too long or too short. It must contain at least 2 characters, up to 25";
         Text.ERROR_SET_AGE = "Invalid age. Age must be at least 12 and no higher than 120";
         Text.ERROR_SET_SEX = "Invalid sex. Sex must be either male or female";
+        Text.age = "years old";
+
+        Text.male = "male";
+        Text.female = "female";
 
         Text.rich = "Rich";
         Text.poor = "Poor";

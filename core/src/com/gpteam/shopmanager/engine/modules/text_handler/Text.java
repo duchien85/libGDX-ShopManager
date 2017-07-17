@@ -2,6 +2,7 @@ package com.gpteam.shopmanager.engine.modules.text_handler;
 
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.needs.Needs;
+import com.gpteam.shopmanager.player.Sex;
 import com.gpteam.shopmanager.product.ProductView;
 import com.gpteam.shopmanager.society.SocietyClass;
 import com.gpteam.shopmanager.character.CharacterInfo;
@@ -41,6 +42,12 @@ public final class Text {
     public static String ERROR_SET_NAME;
     public static String ERROR_SET_AGE;
     public static String ERROR_SET_SEX;
+    public static String age;
+    /**
+     * {@link Sex}
+     **************************************************/
+    public static String male;
+    public static String female;
 
     /**
      * {@link SocietyClass}
