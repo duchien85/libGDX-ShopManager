@@ -5,6 +5,7 @@ import com.gpteam.shopmanager.society.SocietyClass;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import static com.gpteam.shopmanager.npc.npc_builder.NPCBuilder.*;
 import static com.gpteam.shopmanager.variables.Variables.MAX_NPC_AMOUNT;
 import static com.gpteam.shopmanager.variables.Variables.MIN_NPC_AMOUNT;
 
@@ -17,7 +18,7 @@ public class NPCHandler {
 
 
     // TODO COME UP WITH BEST WAY TO HANDLE VALIDATING ARGUMENTS AND ASSIGNING THEM TO CLASS VARIABLES !!! (Character class needs exact same thing)
-
+    // TODO Figure out validating - too much validate methods in different classes that use themselves!
     public NPCHandler(int npcCount) {
         if (validate(npcCount)) {
             updateNpcCount();
@@ -40,7 +41,7 @@ public class NPCHandler {
     public void addNpcs(int npcCount) {
         if (validate(npcCount)) {
             for (int i = 0; i < npcCount; i++)
-                npcs.add(com.gpteam.shopmanager.npc.npc_builder.NPCBuilder.newNPC());
+                npcs.add(newNPC());
             this.npcCount += npcCount;
             updateNpcCount();
         }
@@ -50,14 +51,14 @@ public class NPCHandler {
     public void addNpcs(int npcCount, SocietyClass societyClass) {
         if (validate(npcCount)) {
             for (int i = 0; i < npcCount; i++)
-                npcs.add(com.gpteam.shopmanager.npc.npc_builder.NPCBuilder.newNPC(societyClass));
+                npcs.add(newNPC(societyClass));
         }
     }
 
     public void addNpcs(int npcCount, boolean allRandom) {
         if (validate(npcCount)) {
             for (int i = 0; i < npcCount; i++)
-                npcs.add(com.gpteam.shopmanager.npc.npc_builder.NPCBuilder.newNPC());
+                npcs.add(newNPC());
             this.npcCount += npcCount;
             updateNpcCount();
         }
@@ -82,13 +83,13 @@ public class NPCHandler {
 //    }
 
     private void initialize() {
-        npcs = com.gpteam.shopmanager.npc.npc_builder.NPCBuilder.newNPCArrayList(npcCount);
+        npcs = newNPCArrayList(npcCount);
     }
 
     private void updateNpcCount() {
         npcCount = npcs.size();
     }
-    
+
     private boolean validate(int npcCount) {
         return npcCount + this.npcCount <= MAX_NPC_AMOUNT && npcCount + this.npcCount >= MIN_NPC_AMOUNT;
     }
