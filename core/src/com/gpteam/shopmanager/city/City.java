@@ -1,6 +1,8 @@
 package com.gpteam.shopmanager.city;
 
-import com.gpteam.shopmanager.city.district.District;
+import com.gpteam.shopmanager.deprecated.district.District;
+import com.gpteam.shopmanager.npc.NPCHandler;
+import com.gpteam.shopmanager.variables.Variables;
 
 /*
  * Created by masmix on 02.02.2017.
@@ -8,22 +10,15 @@ import com.gpteam.shopmanager.city.district.District;
 public class City {
     private String name;
     private int population;
-    private District[] districts;
+    private NPCHandler npcHandler;
 
     // TODO figure out how to handle assigning npcs
     // to individual areas of the city
 
-    public City(String name, boolean initialize, String... districts) {
+    public City(String name, int population) {
         this.name = name;
-        this.districts = new District[districts.length];
-
-        for (int i = 0; i < districts.length; i++)
-            this.districts[i] = new District(districts[i]);
-
-        if (initialize) {
-            for (int i = 0; i < this.districts.length; i++) {
-                this.districts[i].
-            }
+        if (population >= Variables.MIN_NPC_AMOUNT && population <= Variables.MAX_NPC_AMOUNT) {
+            npcHandler = new NPCHandler(population);
         }
     }
 }
