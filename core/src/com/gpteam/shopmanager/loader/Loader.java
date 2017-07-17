@@ -32,6 +32,7 @@ public final class Loader {
         file = new File(filePath);
         try { fileReader = new FileReader(file); } catch (FileNotFoundException e) { e.printStackTrace(); }
         bufferedReader = new BufferedReader(fileReader);
+        initialized = true;
     }
 
     public static ArrayList<String> getAll() {
