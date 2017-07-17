@@ -8,7 +8,7 @@ import java.util.ArrayList;
 public final class ErrorListener {
     private static ArrayList<Error> errors;
 
-    public static void notify(Error error) {
-        errors.add(error);
+    public static void notify(String className, String errorMessage, ErrorType errorType) {
+        errors.add(new Error(className, errorMessage, errorType));
     }
 }

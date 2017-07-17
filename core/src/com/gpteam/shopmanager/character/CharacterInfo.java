@@ -24,7 +24,7 @@ public class CharacterInfo {
             assign(name, age, sex);
         else {
             errorMessage = "One of the arguments was invalid. Found: name: " + name + ", age: " + age + ", sex: " + sex.toString();
-            ErrorListener.notify(new Error(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_CHAR_INFO));
+            ErrorListener.notify(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_CHAR_INFO);
             ErrorHandler.handleIllegalArgumentException(errorMessage);
         }
     }
@@ -46,7 +46,7 @@ public class CharacterInfo {
                 assign(name, age, sex);
             else {
                 errorMessage = "";
-                ErrorListener.notify(new Error(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_CHAR_INFO));
+                ErrorListener.notify(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_CHAR_INFO);
                 ErrorHandler.handleIllegalArgumentException(errorMessage);
             }
     }
@@ -60,7 +60,7 @@ public class CharacterInfo {
             this.name = name;
         else {
             errorMessage = Text.ERROR_SET_NAME;
-            ErrorListener.notify(new Error(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_NAME));
+            ErrorListener.notify(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_NAME);
             ErrorHandler.handleIllegalArgumentException(errorMessage);
         }
     }
@@ -74,7 +74,7 @@ public class CharacterInfo {
             this.age = age;
         else {
             errorMessage = Text.ERROR_SET_AGE;
-            ErrorListener.notify(new Error(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_AGE));
+            ErrorListener.notify(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_AGE);
             ErrorHandler.handleIllegalArgumentException(errorMessage);
         }
     }
@@ -88,7 +88,7 @@ public class CharacterInfo {
             this.sex = sex;
         else {
             errorMessage = Text.ERROR_SET_SEX;
-            ErrorListener.notify(new Error(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_SEX));
+            ErrorListener.notify(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_SEX);
             ErrorHandler.handleIllegalArgumentException(errorMessage);
         }
     }
