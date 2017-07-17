@@ -10,6 +10,10 @@ import java.util.ArrayList;
  */
 public class EventHandler implements Module {
     private EventHandler instance = null;
+    private ArrayList<Event> events = new ArrayList<Event>();
+    private int size;
+    private int index = 0;
+
     private EventHandler() {
         ErrorHandler.handleUnsupportedOperationException("msg");
     }
@@ -19,10 +23,6 @@ public class EventHandler implements Module {
             instance = new EventHandler();
         return instance;
     }
-
-    private ArrayList<Event> events = new ArrayList<Event>();
-    private int size;
-    private int index = 0;
 
     public void add(Event event) {
         events.add(event);
