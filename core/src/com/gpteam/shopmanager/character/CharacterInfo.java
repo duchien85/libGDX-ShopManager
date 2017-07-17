@@ -23,7 +23,7 @@ public class CharacterInfo {
         if (validate(name, age, sex))
             assign(name, age, sex);
         else {
-            errorMessage = "One of the arguments was invalid. Found: name: \" + name + \", age: \" + age + \", sex: \" + sex.toString()";
+            errorMessage = "One of the arguments was invalid. Found: name: " + name + ", age: " + age + ", sex: " + sex.toString();
             ErrorListener.notify(new Error(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_CHAR_INFO));
             ErrorHandler.handleIllegalArgumentException(errorMessage);
         }
@@ -35,7 +35,10 @@ public class CharacterInfo {
 
     @Override
     public String toString() {
-        return "name: " + name + ", age: " + age + ", sex: " + sex.toString();
+        if (sex.equals(Sex.MALE))
+            return name + ", " + age + ", " + Text.male + ", " + age + " " + Text.age;
+        else
+            return name + ", " + age + ", " + Text.female + ", " + Text.age;
     }
 
     public void setCharacterInfo(String name, int age, Sex sex) {
