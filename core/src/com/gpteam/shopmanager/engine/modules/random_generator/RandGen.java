@@ -25,6 +25,7 @@ public final class RandGen {
         return new CharacterInfo(getRandomName(), getRandomAge(), getRandomSex());
     }
 
+    // TODO 2 arraylists/arrays containing names and surnames, from Loader.
     public static String getRandomName() {
         return names.get(MathUtils.random(0, names.size() - 1));
     }
