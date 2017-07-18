@@ -36,9 +36,9 @@ public class CharacterInfo {
     @Override
     public String toString() {
         if (sex.equals(Sex.MALE))
-            return name + ", " + age + ", " + Text.male + ", " + age + " " + Text.age;
+            return name + ", " + age + " " + Text.age + ", " + Text.male;
         else
-            return name + ", " + age + ", " + Text.female + ", " + Text.age;
+            return name + ", " + age + " " + Text.age + ", " + Text.female;
     }
 
     public void setCharacterInfo(String name, int age, Sex sex) {
