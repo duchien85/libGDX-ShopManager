@@ -15,7 +15,9 @@ public class NPC extends AI {
     private SocietyClass societyClass;
 
     public NPC() {
-        initialize();
+        characterInfo = new CharacterInfo();
+        needs = new Needs();
+        societyClass = SocietyClass.getRandom();
     }
 
     public NPC(CharacterInfo characterInfo, Needs needs, SocietyClass societyClass) {
@@ -40,11 +42,5 @@ public class NPC extends AI {
 
     public int getNeedValue(ENeeds need) {
         return needs.getNeed(need);
-    }
-
-    private void initialize() {
-        characterInfo = new CharacterInfo();
-        needs = new Needs();
-        societyClass = SocietyClass.getRandom();
     }
 }
