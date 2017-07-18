@@ -60,10 +60,6 @@ public class NPCHandler {
         }
     }
 
-//    public NPC[] generateRandomNPC() {
-//        // TODO figure out how to handle generating and storing npcs
-//    }
-
     private void initialize() {
         npcs = newNPCArrayList(npcCount);
     }
