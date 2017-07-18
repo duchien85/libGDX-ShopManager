@@ -46,13 +46,6 @@ public class NPCHandler {
         for (int i = 0; i < npcCount; i++)
             npcs.add(newNPC(societyClass));
     }
-
-    public void addNpcs(int npcCount, boolean allRandom) {
-        for (int i = 0; i < npcCount; i++)
-            npcs.add(newNPC());
-        this.npcCount += npcCount;
-        updateNpcCount();
-    }
     
     public void removeNpc() {
         npcs.remove(0);
