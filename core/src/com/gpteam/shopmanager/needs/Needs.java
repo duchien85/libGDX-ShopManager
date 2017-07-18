@@ -40,12 +40,12 @@ public class Needs {
             ErrorHandler.handleIllegalArgumentException("Need not found in HashMap. Found: " + need.toString() + ", " + value);
     }
 
-    /************************************************************
+    /**
      * @param needs Needs array to fill Needs container (key)
      * @param values Values array to fill Needs container (value)
      *
      * <p>needs.length must be equal to values.length</p>
-     ************************************************************/
+     */
     private void initialize(ENeeds[] needs, int[] values) {
         if (needs.length == values.length)
             fillHashMap(needs, values);
