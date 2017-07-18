@@ -29,6 +29,7 @@ public class EventHandler implements Module {
         updateSize();
     }
 
+    // TODO the UI class that will use this class to get the event info in order to display it, should be designed to be a tool, there shouldn't be much stuff you have to do with it
     public Event getNext() {
         updateSize();
         if (index <= size - 1)
