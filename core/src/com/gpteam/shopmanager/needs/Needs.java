@@ -18,7 +18,8 @@ public class Needs {
     }
 
     public Needs() {
-        initialize();
+        for (ENeeds x : ENeeds.values())
+            needs.put(x, 10);
     }
 
     public int getNeed(ENeeds need) {
@@ -38,36 +39,5 @@ public class Needs {
             needs.put(need, value);
         else
             ErrorHandler.handleIllegalArgumentException("Need not found in HashMap. Found: " + need.toString() + ", " + value);
-    }
-
-    /**
-     * @param needs Needs array to fill Needs container (key)
-     * @param values Values array to fill Needs container (value)
-     *
-     * <p>needs.length must be equal to values.length</p>
-     */
-    private void initialize(ENeeds[] needs, int[] values) {
-        if (needs.length == values.length)
-            fillHashMap(needs, values);
-        else
-            ErrorHandler.handleIllegalArgumentException(("Needs array must be the same length as Values array. Found:\nneeds: " + needs.length + "\nvalues: " + values.length));
-    }
-
-    public void initialize() {
-        if (!containerInitialized) {
-            fillHashMap(); }
-        else
-            try { throw new InstantiationException("NeedsHandler has already been initialized."); }
-            catch (InstantiationException e) { e.printStackTrace(); }
-    }
-
-    private void fillHashMap() {
-        for (ENeeds x : ENeeds.values())
-            needs.put(x, 10);
-    }
-
-    private void fillHashMap(ENeeds[] needs, int[] values) {
-        for (int i = 0; i < needs.length; i++)
-            this.needs.put(needs[i], values[i]);
     }
 }
