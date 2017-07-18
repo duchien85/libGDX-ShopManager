@@ -20,6 +20,6 @@ public final class ErrorHandler implements Module {
     }
 
     public static void handleUnsupportedOperationException(String message) {
-        throw new UnsupportedOperationException();
+        throw new UnsupportedOperationException(message);
     }
 }
