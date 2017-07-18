@@ -54,17 +54,17 @@ public class NPCHandler {
         updateNpcCount();
     }
     
-    public void removeNpc(NPC npc) {
-        if (npcs.contains(npc)) {
-            npcs.remove(npc);
-            updateNpcCount();
-        }
-        else throw new IllegalArgumentException();
+    public void removeNpc() {
+        npcs.remove(0);
+        updateNpcCount();
     }
     
-    public void removeNpcs(NPC... npcs) {
-            this.npcs.removeAll(Arrays.asList(npcs));
+    public void removeNpcs(int npcCount) {
+        if (npcCount <= npcs.size() - 1) {
+            for (int i = 0; i < npcCount; i++)
+                npcs.remove(i);
             updateNpcCount();
+        }
     }
 
 //    public NPC[] generateRandomNPC() {
