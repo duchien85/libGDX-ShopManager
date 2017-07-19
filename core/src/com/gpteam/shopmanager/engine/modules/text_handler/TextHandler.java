@@ -33,8 +33,8 @@ public final class TextHandler implements Module {
         return instance;
     }
 
-    public static final String EN = "EN";
-    public static final String PL = "PL";
+    public final String EN = "EN";
+    public final String PL = "PL";
 
     /**
      * @param language Language the game is suppose
@@ -42,7 +42,7 @@ public final class TextHandler implements Module {
      *                 - EN (English)<p>
      *                 - PL (Polish)
      */
-    public static void setLanguage(String language) {
+    public void setLanguage(String language) {
         if (languageMap.containsKey(language)) {
             try {
                 languageMap.get(language).getDeclaredMethod("initialize").invoke(null);
