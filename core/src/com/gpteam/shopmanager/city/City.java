@@ -20,4 +20,8 @@ public class City {
             npcHandler = new NPCHandler(population);
         }
     }
+
+    public void updatePopulation() {
+        population = npcHandler.currentNpcCount();
+    }
 }
