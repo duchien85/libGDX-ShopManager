@@ -2,17 +2,20 @@ package com.gpteam.shopmanager.engine.modules.text_handler;
 
 import java.util.HashMap;
 
+import com.gpteam.shopmanager.engine.interfaces.Module;
+import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
+import com.gpteam.shopmanager.engine.modules.text_handler.Libraries.EN;
 import com.gpteam.shopmanager.engine.modules.text_handler.Libraries.PL;
 
 /*
  * Created by masmix on 18.01.2017.
  */
-public final class TextHandler implements com.gpteam.shopmanager.engine.interfaces.Module {
+public final class TextHandler implements Module {
     private static TextHandler instance = null;
     private static HashMap<String, Class> languageMap;
 
     private TextHandler() {
-			com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler.handleUnsupportedOperationException("msg");
+			ErrorHandler.handleUnsupportedOperationException("msg");
 			}
 
     /**
@@ -24,7 +27,7 @@ public final class TextHandler implements com.gpteam.shopmanager.engine.interfac
             instance = new TextHandler();
 
         languageMap = new HashMap<String, Class>();
-        languageMap.put("EN", com.gpteam.shopmanager.engine.modules.text_handler.Libraries.EN.class);
+        languageMap.put("EN", EN.class);
         languageMap.put("PL", PL.class);
 
         return instance;
@@ -51,7 +54,7 @@ public final class TextHandler implements com.gpteam.shopmanager.engine.interfac
         }
         else {
 //            ErrorListener.notify();
-            com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler.handleIllegalArgumentException("There's no such region. Found: " + language + ".");
+            ErrorHandler.handleIllegalArgumentException("There's no such region. Found: " + language + ".");
         }
     }
 }
