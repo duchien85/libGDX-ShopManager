@@ -15,11 +15,15 @@ import static com.gpteam.shopmanager.variables.Variables.*;
  * Created by masmix on 04.02.2017.
  */
 public final class RandGen {
+    private static ArrayList<String> names;
+
     private RandGen() {
         ErrorHandler.handleUnsupportedOperationException("msg");
     }
 
-    private static ArrayList<String> names = Loader.getAll();
+    public static void initialize() {
+        names = Loader.getAll();
+    }
 
     public static CharacterInfo generateCharacterInfo() {
         return new CharacterInfo(getRandomName(), getRandomAge(), getRandomSex());
