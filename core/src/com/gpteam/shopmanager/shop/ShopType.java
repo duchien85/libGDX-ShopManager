@@ -1,5 +1,5 @@
 package com.gpteam.shopmanager.shop;
 
-public class ShopType {
+class ShopType {
     enum ShopTypes { MEAT, DETAIL, ELECTRONICS, FURNITURE }
 }
