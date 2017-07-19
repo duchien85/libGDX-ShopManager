@@ -6,7 +6,7 @@ import com.gpteam.shopmanager.shop.Shop;
 import java.util.ArrayList;
 
 public class Detailer extends Company {
-    // TODO default product-selling company
+    // default product-selling company - Detailer
     private ArrayList<Shop> shops;
     private float capital;
 }
