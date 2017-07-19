@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.Jobs.cashier;
+package com.gpteam.shopmanager.jobs.cashier;
 
 import com.gpteam.shopmanager.character.CharacterInfo;
 import com.gpteam.shopmanager.skill.skills.Expertise;
