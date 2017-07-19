@@ -7,8 +7,10 @@ import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.engine.modules.text_handler.Libraries.EN;
 import com.gpteam.shopmanager.engine.modules.text_handler.Libraries.PL;
 
-/*
- * Created by masmix on 18.01.2017.
+/**
+ * Created by masmix on 18.01.2017.<p>
+ * TextHandler class that handles <i>all text translation</i> in the game.<p>
+ * This class should be the first to initialize via first {@link #getInstance()} and {@link #setLanguage(String language)} methods.
  */
 public final class TextHandler implements Module {
     private static TextHandler instance = null;
