@@ -38,7 +38,7 @@ public final class TextHandler implements com.gpteam.shopmanager.engine.interfac
      *                 to be in. Available languages:<p>
      *                 - EN (English)<p>
      *                 - PL (Polish)
-     **************************************************/
+     */
     public static void setLanguage(String language) {
         if (languageMap.containsKey(language)) {
             try {
