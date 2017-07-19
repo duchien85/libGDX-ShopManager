@@ -1,6 +1,5 @@
 package com.gpteam.shopmanager.character;
 
-import com.gpteam.shopmanager.engine.modules.error_handler.Error;
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorListener;
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorType;

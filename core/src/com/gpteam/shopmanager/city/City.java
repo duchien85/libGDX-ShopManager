@@ -1,6 +1,5 @@
 package com.gpteam.shopmanager.city;
 
-import com.gpteam.shopmanager.deprecated.district.District;
 import com.gpteam.shopmanager.npc.NPCHandler;
 import com.gpteam.shopmanager.variables.Variables;
 
