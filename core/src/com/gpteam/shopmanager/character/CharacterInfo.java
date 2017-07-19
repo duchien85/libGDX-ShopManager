@@ -82,6 +82,10 @@ public class CharacterInfo {
         return sex;
     }
 
+    public String getSexString() {
+        return sex.toString();
+    }
+
     public void setSex(Sex sex) {
         if (validate(sex))
             this.sex = sex;
