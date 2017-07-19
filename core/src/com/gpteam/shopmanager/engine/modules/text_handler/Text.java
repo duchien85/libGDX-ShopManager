@@ -15,6 +15,7 @@ public final class Text {
     private Text() {
         ErrorHandler.handleUnsupportedOperationException("msg");
     }
+
     /**
      * {@link Expertise}
      **************************************************/
@@ -43,6 +44,7 @@ public final class Text {
     public static String ERROR_SET_AGE;
     public static String ERROR_SET_SEX;
     public static String age;
+
     /**
      * {@link Sex}
      **************************************************/
