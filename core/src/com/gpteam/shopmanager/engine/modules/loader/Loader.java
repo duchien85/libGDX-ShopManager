@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.loader;
+package com.gpteam.shopmanager.engine.modules.loader;
 
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 

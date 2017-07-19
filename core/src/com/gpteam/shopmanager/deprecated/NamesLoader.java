@@ -1,6 +1,6 @@
 package com.gpteam.shopmanager.deprecated;
 
-import com.gpteam.shopmanager.loader.Loader;
+import com.gpteam.shopmanager.engine.modules.loader.Loader;
 
 import java.io.IOException;
 import java.util.ArrayList;

@@ -3,7 +3,7 @@ package com.gpteam.shopmanager.engine.modules.random_generator;
 import com.badlogic.gdx.math.MathUtils;
 import com.gpteam.shopmanager.character.CharacterInfo;
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
-import com.gpteam.shopmanager.loader.Loader;
+import com.gpteam.shopmanager.engine.modules.loader.Loader;
 import com.gpteam.shopmanager.player.Sex;
 import com.gpteam.shopmanager.society.SocietyClass;
 
