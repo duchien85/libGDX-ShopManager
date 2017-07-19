@@ -3,6 +3,8 @@ package com.gpteam.shopmanager.product;
 import com.gpteam.shopmanager.time.Date;
 import com.gpteam.shopmanager.engine.modules.text_handler.TextHandler;
 
+import java.math.BigDecimal;
+
 // TODO add constraints
 /*
  * Created by masmix on 23.12.2016.
@@ -11,7 +13,7 @@ public class Product {
     private String name;
     private String serialName;
     private String description;
-    private float price;
+    private BigDecimal price;
     private short quality;
     private int quantity;
     private Date expirationDate;
@@ -24,7 +26,7 @@ public class Product {
      * @param quantity quantity of all the single products
      * @param expirationDate format: YYYY.MM.DD
      */
-    public Product(String[] pVProduct, float price, short quality, int quantity, Date expirationDate) {
+    public Product(String[] pVProduct, BigDecimal price, short quality, int quantity, Date expirationDate) {
         this.name = pVProduct[0];
         this.serialName = pVProduct[1];
         this.description = pVProduct[2];
@@ -54,11 +56,11 @@ public class Product {
         this.description = description;
     }
 
-    public float getPrice() {
+    public BigDecimal getPrice() {
         return price;
     }
 
-    public void setPrice(float price) {
+    public void setPrice(BigDecimal price) {
         this.price = price;
     }
 
