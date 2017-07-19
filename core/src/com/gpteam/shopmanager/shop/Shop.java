@@ -7,4 +7,5 @@ import com.gpteam.shopmanager.inventory.Inventory;
  */
 public class Shop {
     private Inventory inventory;
+    private ShopType shopType;
 }
