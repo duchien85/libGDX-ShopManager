@@ -14,14 +14,14 @@ import static com.gpteam.shopmanager.variables.Variables.MIN_NPC_AMOUNT;
  */
 public class NPCHandler {
     private ArrayList<NPC> npcs;
-    private int npcCount = 0;
+    private int npcCount;
 
 
     // TODO COME UP WITH BEST WAY TO HANDLE VALIDATING ARGUMENTS AND ASSIGNING THEM TO CLASS VARIABLES !!! (Character class needs exact same thing)
     // TODO Figure out validating - too much validate methods in different classes that use themselves!
     public NPCHandler(int npcCount) {
         this.npcCount = npcCount;
-        initialize();
+        npcs = newNPCArrayList(npcCount);
     }
     
     public NPCHandler() {
@@ -58,10 +58,6 @@ public class NPCHandler {
                 npcs.remove(i);
             updateNpcCount();
         }
-    }
-
-    private void initialize() {
-        npcs = newNPCArrayList(npcCount);
     }
 
     private void updateNpcCount() {
