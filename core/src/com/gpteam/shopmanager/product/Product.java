@@ -1,6 +1,7 @@
 package com.gpteam.shopmanager.product;
 
 import com.gpteam.shopmanager.time.Date;
+import com.gpteam.shopmanager.engine.modules.text_handler.TextHandler;
 
 // TODO add constraints
 /*
@@ -16,6 +17,7 @@ public class Product {
     private Date expirationDate;
 
     /**
+     * Remember to initialize the {@link TextHandler} class first!<p>
      * @param pVProduct String array from {@link ProductView} class
      * @param price price of a single product
      * @param quality quality of the whole product quantity
