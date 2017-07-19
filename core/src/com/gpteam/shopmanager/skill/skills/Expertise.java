@@ -9,6 +9,7 @@ import com.gpteam.shopmanager.variables.Variables;
  */
 public class Expertise {
     private short skillLevel;
+    private short currentSkillPoints; // TODO certain amount of skillpoints required to get to next skillLevel
     
     public Expertise() {
     		skillLevel = 0;
