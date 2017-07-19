@@ -40,7 +40,8 @@ public final class TextHandler implements Module {
 
     /**
      * @param language Language the game is suppose
-     *                 to be in. Available languages:<p>
+     *                 to be in.<p>
+     *                 Available languages:<p>
      *                 - EN (English)<p>
      *                 - PL (Polish)
      */
