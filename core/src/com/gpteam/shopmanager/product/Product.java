@@ -97,6 +97,10 @@ public class Product {
     public void setExpirationDate(Date expirationDate) {
         this.expirationDate = expirationDate;
     }
+    
+    public void setExpirationDate(int day, int month, int day) {
+    				// TODO setting expiration date with given parameters
+    }
 
     public int getExpirationDay() {
         return expirationDate.getDay();
