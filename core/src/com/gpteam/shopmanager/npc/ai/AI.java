@@ -16,4 +16,6 @@ public class AI {
 
     public void browse() {
     }
+
+    // TODO npcs migrate from zone to zone (two zones - one in an area near shop - npcs can buy stuff, second zone - too far from shop)
 }
