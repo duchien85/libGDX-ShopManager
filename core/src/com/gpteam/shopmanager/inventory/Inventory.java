@@ -44,7 +44,7 @@ public class Inventory {
             ErrorHandler.handleIllegalArgumentException("msg");
     }
 
-    public void removeProducts(String[] pVSerialName) {
+    public void removeProducts(String... pVSerialName) {
         for (int i = 0; i < pVSerialName.length; i++) {
             if (this.products.containsKey(pVSerialName[i]))
                 this.products.remove(pVSerialName[i]);
