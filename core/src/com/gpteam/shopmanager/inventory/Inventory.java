@@ -15,6 +15,7 @@ import java.util.HashMap;
 public class Inventory {
     private HashMap<String, Product> products;
     private ArrayList<String> serialNames;
+    private int allProductQuantity;
 
     public Inventory(Product... products) {
         this.products = new HashMap<String, Product>();
@@ -25,6 +26,12 @@ public class Inventory {
     public Inventory() {
         products = new HashMap<String, Product>();
         serialNames = new ArrayList<String>();
+    }
+
+    public void updateProductQuantity() {
+        allProductQuantity = 0;
+        for (int i = 0; i < products.size() - 1; i++)
+            allProductQuantity += products.get(serialNames.get(i)).getQuantity();
     }
 
     public void put(Product product) {
