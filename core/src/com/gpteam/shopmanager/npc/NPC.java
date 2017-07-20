@@ -29,7 +29,7 @@ public class NPC extends AI {
     public NPC(SocietyClass societyClass) {
         characterInfo = new CharacterInfo();
         needs = new Needs();
-        societyClass = societyClass;
+        this.societyClass = societyClass;
     }
 
     public CharacterInfo getCharacterInfo() {
