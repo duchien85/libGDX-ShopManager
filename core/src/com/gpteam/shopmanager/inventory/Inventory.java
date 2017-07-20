@@ -127,4 +127,8 @@ public class Inventory {
             serialNames.add(x.getSerialName());
         }
     }
+
+    private boolean validate(String pVSerialName) {
+        return products.containsKey(pVSerialName);
+    }
 }
