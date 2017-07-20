@@ -19,7 +19,7 @@ public class Inventory {
 
     public Inventory(Product... products) {
         this.products = new HashMap<String, Product>();
-        serialNames = new ArrayList<String>();
+        serialNames = new ArrayList<String>(products.length);
         initialize(products);
     }
 
