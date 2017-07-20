@@ -5,6 +5,7 @@ import com.gpteam.shopmanager.product.Product;
 import com.gpteam.shopmanager.time.Date;
 import com.gpteam.shopmanager.variables.Variables;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -54,15 +55,20 @@ public class Inventory {
         return products.get(pVSerialName).getDescription();
     }
     
-    public float getProductPrice(String pVSerialName) {
+    public String getProductPrice(String pVSerialName) {
         return products.get(pVSerialName).getPrice();
     }
     
-    public void setProductPrice(String pVSerialName, float price) {
-        if (price >= 0)
+    public void setProductPrice(String pVSerialName, String price) {
+        if (Integer.valueOf(price) >= 0)
             products.get(pVSerialName).setPrice(price);
         else
             ErrorHandler.handleIllegalArgumentException("msg");
+    }
+
+    public void addProductPrice(String pVSerialName, String amount) {
+        if (Integer.valueOf(amount) >= 0 && validate(pVSerialName))
+            products.get(pVSerialName).addPrice(amount);
     }
     
     public short getProductQuality(String pVSerialName) {
