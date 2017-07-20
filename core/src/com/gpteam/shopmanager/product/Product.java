@@ -65,6 +65,11 @@ public class Product {
         return price.toPlainString();
     }
 
+    public void setPrice(String price) {
+        this.price = new BigDecimal(price, new MathContext(30, RoundingMode.HALF_UP));
+        this.price.setScale(2);
+    }
+
     public void addPrice(String amount) {
         this.price = this.price.add(new BigDecimal(amount)); // TODO test
     }
