@@ -14,33 +14,23 @@ public class NPC extends AI {
     private Needs needs;
     private SocietyClass societyClass;
 
-    public NPC() {
-        characterInfo = new CharacterInfo();
-        needs = new Needs();
-        societyClass = SocietyClass.getRandom();
-    }
-
-    public NPC(CharacterInfo characterInfo, Needs needs, SocietyClass societyClass) {
-        this.characterInfo = characterInfo;
-        this.needs = needs;
-        this.societyClass = societyClass;
-    }
-
-    public NPC(SocietyClass societyClass) {
-        characterInfo = new CharacterInfo();
-        needs = new Needs();
-        societyClass = societyClass;
-    }
+    public NPC() {}
 
     public CharacterInfo getCharacterInfo() {
+        if (characterInfo == null)
+            characterInfo = new CharacterInfo();
         return characterInfo;
     }
 
     public SocietyClass getSocietyClass() {
+        if (societyClass == null)
+            societyClass = SocietyClass.getRandom();
         return societyClass;
     }
 
     public int getNeedValue(ENeeds need) {
+        if (needs == null)
+            needs = new Needs();
         return needs.getNeed(need);
     }
 }

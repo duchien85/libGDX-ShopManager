@@ -5,6 +5,7 @@ import com.gpteam.shopmanager.product.Product;
 import com.gpteam.shopmanager.time.Date;
 import com.gpteam.shopmanager.variables.Variables;
 
+import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -14,16 +15,23 @@ import java.util.HashMap;
 public class Inventory {
     private HashMap<String, Product> products;
     private ArrayList<String> serialNames;
+    private int allProductQuantity;
 
     public Inventory(Product... products) {
         this.products = new HashMap<String, Product>();
-        serialNames = new ArrayList<String>();
+        serialNames = new ArrayList<String>(products.length);
         initialize(products);
     }
 
     public Inventory() {
         products = new HashMap<String, Product>();
         serialNames = new ArrayList<String>();
+    }
+
+    public void updateProductQuantity() {
+        allProductQuantity = 0;
+        for (int i = 0; i < products.size() - 1; i++)
+            allProductQuantity += products.get(serialNames.get(i)).getQuantity();
     }
 
     public void put(Product product) {
@@ -43,7 +51,7 @@ public class Inventory {
             ErrorHandler.handleIllegalArgumentException("msg");
     }
 
-    public void removeProducts(String[] pVSerialName) {
+    public void removeProducts(String... pVSerialName) {
         for (int i = 0; i < pVSerialName.length; i++) {
             if (this.products.containsKey(pVSerialName[i]))
                 this.products.remove(pVSerialName[i]);
@@ -54,15 +62,20 @@ public class Inventory {
         return products.get(pVSerialName).getDescription();
     }
     
-    public float getProductPrice(String pVSerialName) {
+    public String getProductPrice(String pVSerialName) {
         return products.get(pVSerialName).getPrice();
     }
     
-    public void setProductPrice(String pVSerialName, float price) {
-        if (price >= 0)
+    public void setProductPrice(String pVSerialName, String price) {
+        if (Integer.valueOf(price) >= 0)
             products.get(pVSerialName).setPrice(price);
         else
             ErrorHandler.handleIllegalArgumentException("msg");
+    }
+
+    public void addProductPrice(String pVSerialName, String amount) {
+        if (Integer.valueOf(amount) >= 0 && validate(pVSerialName))
+            products.get(pVSerialName).addPrice(amount);
     }
     
     public short getProductQuality(String pVSerialName) {
@@ -120,5 +133,9 @@ public class Inventory {
             this.products.put(x.getSerialName(), x);
             serialNames.add(x.getSerialName());
         }
+    }
+
+    private boolean validate(String pVSerialName) {
+        return products.containsKey(pVSerialName);
     }
 }
