@@ -28,16 +28,16 @@ public class Date {
         return getYear() == otherDate.getYear() && getMonth() == otherDate.getMonth() && getDay() == otherDate.getDay();
     }
 
-    public boolean equalsYear(Date otherDate) {
-        return getYear() == otherDate.getYear();
+    public boolean equalsYear(int year) {
+        return getYear() == year;
     }
 
-    public boolean equalsMonth(Date otherDate) {
-        return getMonth() == otherDate.getMonth();
+    public boolean equalsMonth(int month) {
+        return getMonth() == month;
     }
 
-    public boolean equalsDay(Date otherDate) {
-        return getDay() == otherDate.getDay();
+    public boolean equalsDay(int day) {
+        return getDay() == day;
     }
 
     @Override
