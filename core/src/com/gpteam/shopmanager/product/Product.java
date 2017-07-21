@@ -67,7 +67,7 @@ public class Product {
 
     public void setPrice(String price) {
         this.price = new BigDecimal(price, new MathContext(30, RoundingMode.HALF_UP));
-        this.price.setScale(2);
+        this.price = this.price.setScale(2);
     }
 
     public void addPrice(String amount) {
