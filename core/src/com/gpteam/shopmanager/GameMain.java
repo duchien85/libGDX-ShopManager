@@ -19,6 +19,7 @@ public class GameMain extends Game {
     public static final int SCREEN_WIDTH = 1280;
     public static final int SCREEN_HEIGHT = 720;
 
+    // TODO add materials to the game from which the products are created - adds the possibility for the use to own a producer company
 
     public GameMain() {
         camera = new OrthographicCamera();
