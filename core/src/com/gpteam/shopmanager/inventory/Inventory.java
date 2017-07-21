@@ -77,6 +77,8 @@ public class Inventory {
     public void addProductPrice(String pVSerialName, String amount) {
         if (Integer.valueOf(amount) >= 0 && validate(pVSerialName))
             products.get(pVSerialName).addPrice(amount);
+        else
+            ErrorHandler.handleIllegalArgumentException("msg");
     }
     
     public short getProductQuality(String pVSerialName) {
