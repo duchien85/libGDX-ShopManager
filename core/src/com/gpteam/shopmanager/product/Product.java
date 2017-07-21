@@ -35,7 +35,7 @@ public class Product {
         this.serialName = pVProduct[1];
         this.description = pVProduct[2];
         this.price = new BigDecimal(price, new MathContext(30, RoundingMode.HALF_UP));
-        this.price.setScale(2);
+        this.price = this.price.setScale(2);
         this.quality = quality;
         this.quantity = quantity;
         this.expirationDate = expirationDate;
