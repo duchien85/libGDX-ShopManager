@@ -5,7 +5,6 @@ import com.gpteam.shopmanager.product.Product;
 import com.gpteam.shopmanager.time.Date;
 import com.gpteam.shopmanager.variables.Variables;
 
-import java.math.BigDecimal;
 import java.util.ArrayList;
 import java.util.HashMap;
 
@@ -15,7 +14,7 @@ import java.util.HashMap;
 public class Inventory {
     private HashMap<String, Product> products;
     private ArrayList<String> serialNames;
-    private int allProductQuantity;
+    private int allProductsQuantity;
 
     public Inventory(Product... products) {
         this.products = new HashMap<String, Product>();
@@ -29,9 +28,9 @@ public class Inventory {
     }
 
     public void updateProductQuantity() {
-        allProductQuantity = 0;
+        allProductsQuantity = 0;
         for (int i = 0; i < products.size() - 1; i++)
-            allProductQuantity += products.get(serialNames.get(i)).getQuantity();
+            allProductsQuantity += products.get(serialNames.get(i)).getQuantity();
     }
 
     public void put(Product product) {
