@@ -58,6 +58,8 @@ public class Inventory {
     }
 
     public String getProductDescription(String pVSerialName) {
+        if (!products.containsKey(pVSerialName))
+            ErrorHandler.handleIllegalArgumentException("msg");
         return products.get(pVSerialName).getDescription();
     }
     
