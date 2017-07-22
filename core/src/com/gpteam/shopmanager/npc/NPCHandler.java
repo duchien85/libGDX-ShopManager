@@ -55,7 +55,7 @@ public class NPCHandler {
     public void removeNpcs(int npcCount) {
         if (npcCount <= npcs.size() - 1) {
             for (int i = 0; i < npcCount; i++)
-                npcs.remove(i);
+                npcs.remove(0); // TODO check if it's working properly
             updateNpcCount();
         }
     }
