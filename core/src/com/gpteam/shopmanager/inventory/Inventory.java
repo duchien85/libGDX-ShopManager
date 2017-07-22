@@ -51,6 +51,8 @@ public class Inventory {
     }
 
     public void removeProducts(String... pVSerialName) {
+        if (!products.containsKey(pVSerialName))
+            ErrorHandler.handleNoSuchFieldException("msg");
         for (int i = 0; i < pVSerialName.length; i++) {
             if (this.products.containsKey(pVSerialName[i]))
                 this.products.remove(pVSerialName[i]);
