@@ -22,4 +22,9 @@ public final class ErrorHandler implements Module {
     public static void handleUnsupportedOperationException(String message) {
         throw new UnsupportedOperationException(message);
     }
+
+    public static void handleNoSuchFieldException(String message) {
+        try { throw new NoSuchFieldException(message); }
+        catch (NoSuchFieldException e) { e.printStackTrace(); }
+    }
 }
