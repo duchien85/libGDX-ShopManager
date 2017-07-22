@@ -68,7 +68,8 @@ public class Inventory {
     }
     
     public void setProductPrice(String pVSerialName, String price) {
-        if (Integer.valueOf(price) >= 0)
+        if (products.containsKey(pVSerialName) &&
+            Integer.valueOf(price) >= 0)
             products.get(pVSerialName).setPrice(price);
         else
             ErrorHandler.handleIllegalArgumentException("msg");
