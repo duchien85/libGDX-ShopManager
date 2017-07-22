@@ -35,7 +35,7 @@ public class Logger {
         logs.add(log);
     }
 
-    private Log getNextLog() {
+    private Log getNextLog() { // TODO make this method better
         if (index < length)
             return logs.get(index++);
         else
