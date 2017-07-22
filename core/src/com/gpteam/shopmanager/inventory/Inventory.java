@@ -78,7 +78,7 @@ public class Inventory {
     }
 
     public void addProductPrice(String pVSerialName, String amount) {
-        if (validate(pVSerialName) && Integer.valueOf(amount) >= 0)
+        if (products.containsKey(pVSerialName) && Integer.valueOf(amount) >= 0)
             products.get(pVSerialName).addPrice(amount);
         else
             ErrorHandler.handleIllegalArgumentException("msg");
