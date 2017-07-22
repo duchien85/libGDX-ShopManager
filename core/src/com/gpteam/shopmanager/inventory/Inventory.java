@@ -27,7 +27,7 @@ public class Inventory {
         serialNames = new ArrayList<String>();
     }
 
-    public void updateProductQuantity() {
+    public void updateProductsQuantity() {
         allProductsQuantity = 0;
         for (int i = 0; i < products.size() - 1; i++)
             allProductsQuantity += products.get(serialNames.get(i)).getQuantity();
