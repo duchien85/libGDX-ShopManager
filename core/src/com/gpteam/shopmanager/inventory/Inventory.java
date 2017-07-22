@@ -110,7 +110,7 @@ public class Inventory {
     }
     
     public void setProductQuantity(String pVSerialName, int quantity) {
-        if (quantity >= Variables.MIN_QUANTITY && quantity <= Variables.MAX_QUANTITY)
+        if (quantity >= Variables.MIN_QUANTITY && quantity <= Variables.MAX_QUANTITY && products.containsKey(pVSerialName))
             products.get(pVSerialName).setQuantity(quantity);
         else
             ErrorHandler.handleIllegalArgumentException("msg");
