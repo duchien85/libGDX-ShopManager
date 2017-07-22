@@ -22,10 +22,12 @@ import com.gpteam.shopmanager.engine.modules.text_handler.TextHandler;
 public final class ProductView {
     public static String[] apple;
 
+    public static final String APPLE_SERIALNAME = "APPLE";
+
     private ProductView() { ErrorHandler.handleUnsupportedOperationException("msg"); }
 
     public static void initialize() {
-        apple = new String[]{Text.appleName, Text.APPLE_SERIALNAME, Text.appleDescription};
+        apple = new String[]{Text.appleName, APPLE_SERIALNAME, Text.appleDescription};
     }
 
 }

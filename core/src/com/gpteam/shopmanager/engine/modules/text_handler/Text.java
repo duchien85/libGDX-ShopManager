@@ -70,7 +70,6 @@ public final class Text {
      * {@link ProductView}
      **************************************************/
     // Apple
-    public static final String APPLE_SERIALNAME = "APPLE";
     public static String appleName;
     public static String appleDescription;
 }
