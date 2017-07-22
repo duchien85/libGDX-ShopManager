@@ -7,13 +7,13 @@ import com.gpteam.shopmanager.engine.modules.error_handler.ErrorType;
  */
 public class Log {
     private String[] log;
-    private ErrorType errorType;
+    private LogType logType;
 
-    public Log(String className, String message, ErrorType errorType) {
+    public Log(String className, String message, LogType errorType) {
         this.log = new String[2];
         this.log[0] = className;
         this.log[1] = message;
-        this.errorType = errorType;
+        this.logType = errorType;
     }
 
     public String[] getLog() {
@@ -28,7 +28,7 @@ public class Log {
         return log[0];
     }
 
-    public ErrorType getErrorType() {
-        return errorType;
+    public LogType getErrorType() {
+        return logType;
     }
 }
