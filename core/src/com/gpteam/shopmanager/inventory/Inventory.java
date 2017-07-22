@@ -86,7 +86,9 @@ public class Inventory {
     }
                                                         
     public void subProductQuality(String pVSerialName, short quality) {
-        if (quality <= Variables.MAX_QUALITY && quality >= Variables.MIN_QUALITY)
+        if (products.containsKey(pVSerialName) &&
+            quality <= Variables.MAX_QUALITY &&
+            quality >= Variables.MIN_QUALITY)
             products.get(pVSerialName).subQuality(quality);
         else
             ErrorHandler.handleIllegalArgumentException("msg");
