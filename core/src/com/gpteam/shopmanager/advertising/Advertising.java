@@ -6,6 +6,7 @@ import java.math.BigDecimal;
 
 public final class Advertising {
     private String funds;
+    public static enum AdSources { Newspaper, Radio, TV }
 
 
     public String getAdsRevenue() {
