@@ -7,14 +7,6 @@ import java.math.BigDecimal;
 public final class Advertising {
     private String funds;
 
-        /**
-         * Method that returns most possible outcome of the given
-         * increase or decrease of ads funding
-         * @return
-         */
-    private String[] estimateOutcome(String funds) {
-        return null;
-    }
 
     public String getAdsRevenue() {
         return null;
@@ -27,5 +19,14 @@ public final class Advertising {
     }
 
     public void decreaseFunds(AdSource adSource, String funds) {
+    }
+
+    /**
+     * Method that returns most possible outcome of the given
+     * increase or decrease of ads funding
+     * @return
+     */
+    private String[] estimateOutcome(String funds) {
+        return null;
     }
 }
