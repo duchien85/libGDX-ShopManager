@@ -3,14 +3,14 @@ package com.gpteam.shopmanager.advertising;
 import java.math.BigDecimal;
 
 public final class Advertising {
-
     private String funds;
+
         /**
          * Method that returns most possible outcome of the given
          * increase or decrease of ads funding
          * @return
          */
-    public String[] estimateOutcome(String funds) {
+    private String[] estimateOutcome(String funds) {
         return null;
     }
 
