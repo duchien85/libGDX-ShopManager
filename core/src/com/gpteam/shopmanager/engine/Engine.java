@@ -11,24 +11,23 @@ import java.util.HashMap;
 /*
  * Created by masmix on 07.02.2017.
  */
-public class Engine implements Runnable {
-    private static Engine instance = null;
-    private Engine() { ErrorHandler.handleUnsupportedOperationException("msg"); }
-
+public final class Engine implements Runnable {
     private HashMap<String,Class> modules;
     private Economy economy;
     private GameDate gameDate;
     private Time time;
-
-    public static Engine getInstance() {
-        if (instance == null)
-            instance = new Engine();
-        return instance;
-    }
+    /**
+     *
+     */
+    public static int citizens;
+    /**
+     *
+     */
+    public static int[] citizenSocietyClasses;
 
     @Override
     public void run() {
-        // normal, "my" stuff
+        // number crunchy stuff
         initialize();
 
         // graphic stuff goes to libGDX:
