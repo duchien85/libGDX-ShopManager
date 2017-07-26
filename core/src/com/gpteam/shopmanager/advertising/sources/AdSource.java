@@ -8,9 +8,11 @@ public interface AdSource {
     /**
      * Increase funding of ads,
      */
-    public void increaseFunds();
+    public void increaseFunds(String funds);
 
-    public void decreaseFunds();
+    public void decreaseFunds(String funds);
+
+    public void setFunds(String funds);
 
     /**
      * Get the amount of bots that have been influenced
