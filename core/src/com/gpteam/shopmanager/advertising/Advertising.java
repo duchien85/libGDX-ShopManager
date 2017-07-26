@@ -20,10 +20,6 @@ public final class Advertising {
         return null;
     }
 
-    public int getIntAdsRevenue() {
-        return 0;
-    }
-
     public void setFunds(AdSource adSource, String funds) {
     }
 
