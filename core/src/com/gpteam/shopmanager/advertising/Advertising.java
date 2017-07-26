@@ -1,5 +1,7 @@
 package com.gpteam.shopmanager.advertising;
 
+import com.gpteam.shopmanager.advertising.sources.AdSource;
+
 import java.math.BigDecimal;
 
 public final class Advertising {
@@ -22,12 +24,12 @@ public final class Advertising {
         return 0;
     }
 
-    public void setFunds(String funds) {
+    public void setFunds(AdSource adSource, String funds) {
     }
 
-    public void increaseFunds(String funds) {
+    public void increaseFunds(AdSource adSource, String funds) {
     }
 
-    public void decreaseFunds(String funds) {
+    public void decreaseFunds(AdSource adSource, String funds) {
     }
 }
