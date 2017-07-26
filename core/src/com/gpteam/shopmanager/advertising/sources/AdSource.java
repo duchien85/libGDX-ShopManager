@@ -14,7 +14,7 @@ public interface AdSource {
      * Get the amount of bots that have been influenced
      * by ads, only from desired society class.
      */
-    public int getSocietyClassEffectivnes(SocietyClass societyClass);
+    public int getSocietyClassEffectiveness(SocietyClass societyClass);
 
     /**
      * Get the amount of total bots influenced by ads.
