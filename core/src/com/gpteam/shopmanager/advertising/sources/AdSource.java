@@ -19,5 +19,5 @@ public interface AdSource {
     /**
      * Get the amount of total bots influenced by ads.
      */
-    public void getAdEffectivnes();
+    public int getAdEffectiveness();
 }
