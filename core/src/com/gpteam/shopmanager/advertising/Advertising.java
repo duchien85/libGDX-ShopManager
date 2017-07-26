@@ -16,7 +16,7 @@ public final class Advertising {
         return null;
     }
 
-    public String getStringAdsRevenue() {
+    public String getAdsRevenue() {
         return null;
     }
 
