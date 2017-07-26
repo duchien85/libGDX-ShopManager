@@ -12,13 +12,16 @@ public final class Advertising {
         return null;
     }
 
-    public void setFunds(AdSource adSource, String funds) {
+    public void setFunds(AdSources adSource, String funds) {
     }
 
-    public void increaseFunds(AdSource adSource, String funds) {
+    public void increaseFunds(String funds) {
     }
 
-    public void decreaseFunds(AdSource adSource, String funds) {
+    public void increaseFunds(AdSources adSource, String funds) {
+    }
+
+    public void decreaseFunds(AdSources adSource, String funds) {
     }
 
     /**
