@@ -10,6 +10,8 @@ public interface AdSource {
      */
     public void increaseFunds();
 
+    public void decreaseFunds();
+
     /**
      * Get the amount of bots that have been influenced
      * by ads, only from desired society class.
