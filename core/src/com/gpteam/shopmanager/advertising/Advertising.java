@@ -16,12 +16,26 @@ public final class Advertising {
     public void setFunds(AdSources adSource, String funds) {
     }
 
+    /**
+     * Increases funds evenly spread to all ad sources from {@code AdSources} class
+     * @param funds the exact number of funds increase
+     */
     public void increaseFunds(String funds) {
     }
 
+    /**
+     * Increases funds to the ad source given as the first argument.
+     * @param adSource Ad source that is going to have it's funds increased
+     * @param funds the exact amount of increase to the funds of the chosen ad source
+     */
     public void increaseFunds(AdSources adSource, String funds) {
     }
 
+    /**
+     * Dncreases funds to the ad source given as the first argument.
+     * @param adSource ad source that is going to have it's funds decreased
+     * @param funds the exact amount of increase to the funds of the chosen ad source
+     */
     public void decreaseFunds(AdSources adSource, String funds) {
     }
 
