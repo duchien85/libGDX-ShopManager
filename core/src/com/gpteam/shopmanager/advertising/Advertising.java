@@ -40,6 +40,14 @@ public final class Advertising {
     }
 
     /**
+     * Returns all active ad sources
+     * @return Ad sources array, filled with active ad sources.
+     */
+    public AdSources[] getAdSources() {
+        return null;
+    }
+
+    /**
      * Method that returns most possible outcome of the given
      * increase or decrease of ads funding
      * @return
