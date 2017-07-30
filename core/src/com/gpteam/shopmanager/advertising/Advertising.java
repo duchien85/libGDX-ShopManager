@@ -47,6 +47,11 @@ public final class Advertising {
         return null;
     }
 
+    public void enableSource(AdSources adSource) {
+    }
+
+    public void disableSource(AdSources adSource) {
+    }
     /**
      * Method that returns most possible outcome of the given
      * increase or decrease of ads funding
