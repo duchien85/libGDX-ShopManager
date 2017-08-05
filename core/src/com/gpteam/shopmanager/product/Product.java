@@ -35,7 +35,7 @@ public class Product {
         this.serialName = pVProduct[1];
         this.description = pVProduct[2];
         this.price = new BigDecimal(price, new MathContext(30, RoundingMode.HALF_UP));
-        this.price = this.price.setScale(2);
+        this.price = this.price.setScale(SCALE);
         this.quality = quality;
         this.quantity = quantity;
         this.expirationDate = expirationDate;
@@ -67,15 +67,17 @@ public class Product {
 
     public void setPrice(String price) {
         this.price = new BigDecimal(price, new MathContext(30, RoundingMode.HALF_UP));
-        this.price = this.price.setScale(2);
+        this.price = this.price.setScale(SCALE);
     }
 
     public void addPrice(String amount) {
-        this.price = this.price.add(new BigDecimal(amount)); // TODO test
+        price = price.add(new BigDecimal(amount));
+        price = price.setScale(SCALE);
     }
 
     public void subPrice(String amount) {
-        this.price = this.price.subtract(new BigDecimal(amount)); // TODO test
+        price = price.subtract(new BigDecimal(amount));
+        price = price.setScale(SCALE);
     }
 
     public short getQuality() {
