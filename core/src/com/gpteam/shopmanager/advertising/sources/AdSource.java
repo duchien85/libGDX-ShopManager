@@ -5,6 +5,12 @@ import com.gpteam.shopmanager.society.SocietyClass;
 import java.math.BigDecimal;
 
 public abstract class AdSource {
+    private String funds;
+    private int adEffectiveness;
+
+    private static final int MIN_FUNDS = 0;
+    private static final int MAX_FUNDS = 100000;
+
     /**
      * Increase funding of ads,
      */
