@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.engine.modules.error_handler;
+package com.gpteam.shopmanager.engine.modules.error_handler.error;
 
 public class Error {
     private String className;
