@@ -9,14 +9,14 @@ import com.gpteam.shopmanager.engine.modules.text_handler.TextHandler;
  *
  * ProductView class that contains the information on all products in the game.
  * That information is stored in individual arrays named as the product name.
- * Each index contains different info on the product from {@link Text} class.<p>
- * Use this class to create {@link Product} class objects more easily.<p>
- * It goes as follows:<p>
- *                                                         example:<p>
- * index 0: product name                                   productName<p>
- * index 1: product serial name                            PRODUCT_SERIALNAME<p>
- * index 2: product description                            productDescription<p>
- * --------------------------------------------------------------------------<p>
+ * Each index contains different info on the product from {@link Text} class.
+ * Use this class to create {@link Product} class objects more easily.<br>
+ * It goes as follows:
+ * <ul>
+ * <li>index 0: product name                               productName</li>
+ * <li>index 1: product serial name                        PRODUCT_SERIALNAME</li>
+ * <li>index 2: product description                        productDescription</li>
+ * </ul>
  * Class must be initialized after {@link  TextHandler} class!
  */
 public final class ProductView {

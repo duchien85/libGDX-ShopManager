@@ -9,7 +9,7 @@ import com.gpteam.shopmanager.engine.modules.text_handler.Libraries.PL;
 
 /**
  * Created by masmix on 18.01.2017.<p>
- * TextHandler class that handles <i>all text translation</i> in the game.<p>
+ * TextHandler class that handles <i>all text translation</i> in the game.
  * This class should be the first to initialize via first {@link #getInstance()} and {@link #setLanguage(String language)} methods.
  */
 public final class TextHandler implements Module {
@@ -39,11 +39,12 @@ public final class TextHandler implements Module {
     public final String PL = "PL";
 
     /**
-     * @param language Language the game is suppose
-     *                 to be in.<p>
-     *                 Available languages:<p>
-     *                 - EN (English)<p>
-     *                 - PL (Polish)
+     * @param language Language the game is suppose to be in.<p>
+     *                 Available languages:
+     *                 <ul>
+     *                 <li>- {@code EN} (English)</li>
+     *                 <li>- {@code PL} (Polish)</li>
+     *                 </ul>
      */
     public void setLanguage(String language) {
         if (languageMap.containsKey(language)) {

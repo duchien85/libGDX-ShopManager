@@ -22,7 +22,7 @@ public class Product {
     private static final int BIGDECIMAL_SCALE = 2;
 
     /**
-     * Remember to initialize the {@link TextHandler} class first!<p>
+     * Remember to initialize the {@link TextHandler} class first!
      * @param pVProduct String array from {@link ProductView} class
      * @param price price of a single product (this field is converted
      *              to BigDecimal object, make sure to round 2 places
