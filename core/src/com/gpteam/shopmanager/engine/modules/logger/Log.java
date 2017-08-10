@@ -1,7 +1,5 @@
 package com.gpteam.shopmanager.engine.modules.logger;
 
-import com.gpteam.shopmanager.engine.modules.error_handler.ErrorType;
-
 /*
  * Created by masmix on 08.05.2017.
  */
