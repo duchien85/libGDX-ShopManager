@@ -1,5 +1,8 @@
 package com.gpteam.shopmanager.engine.modules.error_handler;
 
+import com.gpteam.shopmanager.engine.modules.error_handler.error.Error;
+import com.gpteam.shopmanager.engine.modules.error_handler.error.ErrorType;
+
 import java.util.ArrayList;
 
 /*
@@ -10,7 +13,9 @@ public final class ErrorListener {
 
     private ErrorListener() {}
 
-    public static void notify(String className, String errorMessage, ErrorType errorType) {
-        errors.add(new Error(className, errorMessage, errorType));
+    public static void notify(Error error) {
+        if (errors == null)
+            errors = new ArrayList<Error>();
+        errors.add(error);
     }
 }
