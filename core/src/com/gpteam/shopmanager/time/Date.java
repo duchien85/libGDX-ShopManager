@@ -3,13 +3,17 @@ package com.gpteam.shopmanager.time;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-/*
- * Created by masmix on 14.05.2017.
+/**
+ * Created by masmix on 14.05.2017.<p>
+ * {@code GregorianCalendar} wrapper class. Main difference from {@code GregorianCalendar}
+ * is that this class starts counting {@code Calendar.MONTH} from 1, instead of 0 to 12, instead of 11.
  */
 public class Date {
     private Calendar calendar;
 
-
+    /**
+     * Constructs a default {@code Date} ({@code GregorianCalendar} using current time and date.
+     */
     public Date() {
         calendar = new GregorianCalendar();
         calendar.set(Calendar.MONTH, Calendar.MONTH + 1);
