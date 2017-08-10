@@ -19,7 +19,7 @@ public class Product {
     private short quality;
     private int quantity;
     private Date expirationDate;
-    private static final int SCALE = 2;
+    private static final int BIGDECIMAL_SCALE = 2;
 
     /**
      * Remember to initialize the {@link TextHandler} class first!<p>
@@ -36,7 +36,7 @@ public class Product {
         this.serialName = pVProduct[1];
         this.description = pVProduct[2];
         this.price = new BigDecimal(price, new MathContext(30, RoundingMode.HALF_UP));
-        this.price = this.price.setScale(SCALE);
+        this.price = this.price.setScale(BIGDECIMAL_SCALE);
         this.quality = quality;
         this.quantity = quantity;
         this.expirationDate = expirationDate;
@@ -68,17 +68,17 @@ public class Product {
 
     public void setPrice(String price) {
         this.price = new BigDecimal(price, new MathContext(30, RoundingMode.HALF_UP));
-        this.price = this.price.setScale(SCALE);
+        this.price = this.price.setScale(BIGDECIMAL_SCALE);
     }
 
     public void addPrice(String amount) {
         price = price.add(new BigDecimal(amount));
-        price = price.setScale(SCALE);
+        price = price.setScale(BIGDECIMAL_SCALE);
     }
 
     public void subPrice(String amount) {
         price = price.subtract(new BigDecimal(amount));
-        price = price.setScale(SCALE);
+        price = price.setScale(BIGDECIMAL_SCALE);
     }
 
     public short getQuality() {
