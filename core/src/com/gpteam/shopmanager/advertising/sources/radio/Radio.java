@@ -1,4 +1,6 @@
 package com.gpteam.shopmanager.advertising.sources.radio;
 
-public class Radio {
+import com.gpteam.shopmanager.advertising.sources.AdSource;
+
+public class Radio extends AdSource {
 }
