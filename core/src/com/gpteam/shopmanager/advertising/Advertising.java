@@ -55,7 +55,7 @@ public final class Advertising {
     /**
      * Method that returns most possible outcome of the given
      * increase or decrease of ads funding
-     * @return
+     * @return array containing information about the outcome
      */
     private String[] estimateOutcome(String funds) {
         return null;
