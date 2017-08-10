@@ -9,9 +9,30 @@ import java.util.GregorianCalendar;
 public class Date {
     private Calendar calendar;
 
+
     public Date() {
         calendar = new GregorianCalendar();
         calendar.set(Calendar.MONTH, Calendar.MONTH + 1);
+    }
+
+    /**
+     *
+     * @param day 1 - 31
+     */
+    public Date(int day) {
+        calendar = new GregorianCalendar();
+        calendar.set(Calendar.DAY_OF_MONTH, day);
+    }
+
+    /**
+     * Month argument starts at 1 (January) and ends at 12(December)
+     * @param day
+     * @param month 1 - 12
+     */
+    public Date (int day, int month) {
+        calendar = new GregorianCalendar();
+        calendar.set(Calendar.DAY_OF_MONTH, day);
+        calendar.set(Calendar.MONTH, month - 1);
     }
 
     /**
@@ -21,7 +42,7 @@ public class Date {
      * @param day 1 - 31
      */
     public Date(int year, int month, int day) {
-        calendar = new GregorianCalendar(year, month, day);
+        calendar = new GregorianCalendar(year, month - 1, day);
     }
 
     public boolean equals(Date otherDate) {
