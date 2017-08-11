@@ -66,8 +66,8 @@ public abstract class AdSource {
     }
 
     public void setFunds(String funds) {
-        if (Double.valueOf(funds) >= Double.valueOf(MIN_FUNDS)
-                && Double.valueOf(funds) <= Double.valueOf(MAX_FUNDS))
+        if (Double.valueOf(funds) < Double.valueOf(MIN_FUNDS)
+                || Double.valueOf(funds) > Double.valueOf(MAX_FUNDS))
             ErrorHandler.handleIllegalArgumentException("msg");
 
             this.funds = new BigDecimal(funds, new MathContext(30, RoundingMode.HALF_UP));
