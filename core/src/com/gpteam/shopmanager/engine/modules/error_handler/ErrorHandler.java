@@ -33,4 +33,8 @@ public final class ErrorHandler implements Module {
     public static void handleNoSuchElementException(String message) {
         throw new NoSuchElementException(message);
     }
+
+    public static void handleNullPointerException(String message) {
+        throw new NullPointerException(message);
+    }
 }
