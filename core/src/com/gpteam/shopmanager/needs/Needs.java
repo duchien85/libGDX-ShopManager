@@ -23,11 +23,10 @@ public class Needs {
     }
 
     public int getNeed(ENeeds need) {
-        if (needs.containsKey(need))
-            return needs.get(need);
-        else
-            ErrorHandler.handleIllegalArgumentException("Needs container does not contain provided need.");
-        return 1;
+        if (!needs.containsKey(need))
+            ErrorHandler.handleNoSuchElementException("Needs container does not contain provided need.");
+
+        return needs.get(need);
     }
 
     public HashMap<ENeeds, Integer> getNeedsHashMap() {
@@ -35,9 +34,13 @@ public class Needs {
     }
 
     public void updateNeed(ENeeds need, int value) {
-        if (needs.containsKey(need) && value >= Variables.MIN_NEED_VALUE && value <= Variables.MAX_NEED_VALUE)
-            needs.put(need, value);
-        else
-            ErrorHandler.handleIllegalArgumentException("Need not found in HashMap. Found: " + need.toString() + ", " + value);
+        if (!needs.containsKey(need))
+            ErrorHandler.handleNoSuchElementException("Needs container does not contain provided need.");
+
+        if (value < Variables.MIN_NEED_VALUE
+                || value > Variables.MAX_NEED_VALUE)
+            ErrorHandler.handleIllegalArgumentException("msg");
+
+        needs.put(need, value);
     }
 }

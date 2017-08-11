@@ -44,15 +44,17 @@ public class Inventory {
     }
 
     public void removeProduct(String pVSerialName) {
-        if (products.containsKey(pVSerialName))
-            products.remove(pVSerialName);
-        else
-            ErrorHandler.handleIllegalArgumentException("msg");
+        if (!products.containsKey(pVSerialName))
+            ErrorHandler.handleNoSuchElementException("msg");
+
+        products.remove(pVSerialName);
+
     }
 
     public void removeProducts(String... pVSerialName) {
         if (!products.containsKey(pVSerialName))
-            ErrorHandler.handleNoSuchFieldException("msg");
+            ErrorHandler.handleNoSuchElementException("msg");
+
         for (int i = 0; i < pVSerialName.length; i++) {
             if (this.products.containsKey(pVSerialName[i]))
                 this.products.remove(pVSerialName[i]);
@@ -61,7 +63,8 @@ public class Inventory {
 
     public String getProductDescription(String pVSerialName) {
         if (!products.containsKey(pVSerialName))
-            ErrorHandler.handleIllegalArgumentException("msg");
+            ErrorHandler.handleNoSuchElementException("msg");
+
         return products.get(pVSerialName).getDescription();
     }
     
@@ -70,18 +73,23 @@ public class Inventory {
     }
     
     public void setProductPrice(String pVSerialName, String price) {
-        if (products.containsKey(pVSerialName) &&
-            Integer.valueOf(price) >= 0)
-            products.get(pVSerialName).setPrice(price);
-        else
+        if (!products.containsKey(pVSerialName))
+            ErrorHandler.handleNoSuchElementException("msg");
+
+        if (Integer.valueOf(price) < 0)
             ErrorHandler.handleIllegalArgumentException("msg");
+
+        products.get(pVSerialName).setPrice(price);
     }
 
     public void addProductPrice(String pVSerialName, String amount) {
-        if (products.containsKey(pVSerialName) && Integer.valueOf(amount) >= 0)
-            products.get(pVSerialName).addPrice(amount);
-        else
+        if (!products.containsKey(pVSerialName))
+            ErrorHandler.handleNoSuchElementException("msg");
+
+        if (Integer.valueOf(amount) < 0)
             ErrorHandler.handleIllegalArgumentException("msg");
+
+        products.get(pVSerialName).addPrice(amount);
     }
     
     public int getProductQuality(String pVSerialName) {
@@ -89,12 +97,15 @@ public class Inventory {
     }
                                                         
     public void subProductQuality(String pVSerialName, short quality) {
-        if (products.containsKey(pVSerialName) &&
-            quality <= Variables.MAX_QUALITY &&
-            quality >= Variables.MIN_QUALITY)
-            products.get(pVSerialName).subQuality(quality);
-        else
+        if (!products.containsKey(pVSerialName))
+            ErrorHandler.handleNoSuchElementException("msg");
+
+        if (quality < Variables.MIN_QUALITY
+                || quality > Variables.MAX_QUALITY)
             ErrorHandler.handleIllegalArgumentException("msg");
+
+        products.get(pVSerialName).subQuality(quality);
+
     }
     
     public int getProductQuantity(String pVSerialName) {
@@ -102,25 +113,33 @@ public class Inventory {
     }
     
     public void subProductQuantity(String pVSerialName, int quantity) {
-        if (products.containsKey(pVSerialName) &&
-            products.get(pVSerialName).getQuantity() - quantity >= Variables.MIN_QUANTITY &&
-            products.get(pVSerialName).getQuantity() - quantity <= Variables.MAX_QUANTITY)
-            products.get(pVSerialName).setQuantity(0);
-        else
-            products.get(pVSerialName).subQuantity(quantity);
+        if (!products.containsKey(pVSerialName))
+            ErrorHandler.handleNoSuchElementException("msg");
+
+        if (products.get(pVSerialName).getQuantity() - quantity < Variables.MIN_QUANTITY
+                || products.get(pVSerialName).getQuantity() - quantity > Variables.MAX_QUANTITY)
+            ErrorHandler.handleIllegalArgumentException("msg");
+
+        products.get(pVSerialName).subQuantity(quantity);
     }
 
     public void addProductQuantity(String pVSerialName, int quantity) {
-        if (products.containsKey(pVSerialName) &&
-            products.get(pVSerialName).getQuantity() + quantity <= Variables.MAX_QUANTITY &&
-            products.get(pVSerialName).getQuantity() + quantity >= Variables.MIN_QUANTITY)
-            products.get(pVSerialName).addQuantity(quantity);
+        if (!products.containsKey(pVSerialName))
+            ErrorHandler.handleNoSuchElementException("msg");
+
+        if (products.get(pVSerialName).getQuantity() + quantity < Variables.MIN_QUANTITY
+                || products.get(pVSerialName).getQuantity() + quantity > Variables.MAX_QUANTITY)
+            ErrorHandler.handleIllegalArgumentException("msg");
+
+        products.get(pVSerialName).addQuantity(quantity);
     }
     
     public void setProductQuantity(String pVSerialName, int quantity) {
-        if (products.containsKey(pVSerialName) &&
-            quantity >= Variables.MIN_QUANTITY &&
-            quantity <= Variables.MAX_QUANTITY )
+        if (!products.containsKey(pVSerialName))
+            ErrorHandler.handleNoSuchElementException("msg");
+
+        if (quantity < Variables.MIN_QUANTITY
+                || quantity > Variables.MAX_QUANTITY )
             products.get(pVSerialName).setQuantity(quantity);
         else
             ErrorHandler.handleIllegalArgumentException("msg");

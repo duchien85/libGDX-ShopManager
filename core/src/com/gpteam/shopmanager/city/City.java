@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.city;
 
+import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.npc.NPCHandler;
 import com.gpteam.shopmanager.variables.Variables;
 
@@ -15,10 +16,10 @@ public class City {
     // to individual areas of the city
 
     public City(String name, int population) {
-        this.name = name;
-        if (population >= Variables.MIN_NPC_AMOUNT && population <= Variables.MAX_NPC_AMOUNT) {
-            npcHandler = new NPCHandler(population);
-        }
+        if (population < Variables.MIN_NPC_AMOUNT || population > Variables.MAX_NPC_AMOUNT)
+            ErrorHandler.handleIllegalArgumentException("msg");
+        // TODO more validation
+        npcHandler = new NPCHandler(population); // TODO receive npc handler instance in constructor?
     }
 
     public void updatePopulation() {

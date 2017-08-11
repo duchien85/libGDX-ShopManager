@@ -16,10 +16,11 @@ public class Expertise {
     }
 
     public Expertise(short skillLevel) {
-        if (skillLevel <= Variables.MAX_SKILL_LEVEL && skillLevel >= Variables.MIN_SKILL_LEVEL)
-            this.skillLevel = skillLevel;
-        else
-            ErrorHandler.handleIllegalArgumentException("Incorrect skill level.");
+        if (skillLevel < Variables.MIN_SKILL_LEVEL
+                || skillLevel > Variables.MAX_SKILL_LEVEL)
+            ErrorHandler.handleIllegalArgumentException("Incorrect skill level. Found: " + skillLevel);
+
+        this.skillLevel = skillLevel;
     }
 
     public short getSkillLevel() {
@@ -27,17 +28,19 @@ public class Expertise {
     }
 
     public void raiseSkill(short skillLevel) {
-        if (this.skillLevel + skillLevel <= Variables.MAX_SKILL_LEVEL && this.skillLevel + skillLevel >= Variables.MIN_SKILL_LEVEL)
-            this.skillLevel += skillLevel;
-        else
-            ErrorHandler.handleIllegalArgumentException("MSG");
+        if (this.skillLevel + skillLevel < Variables.MIN_SKILL_LEVEL
+                || this.skillLevel + skillLevel > Variables.MAX_SKILL_LEVEL)
+            ErrorHandler.handleIllegalArgumentException("Incorrect skill level. Found: " + skillLevel);
+
+        this.skillLevel += skillLevel;
     }
 
     public void lowerSkill(short skillLevel) {
-        if (this.skillLevel - skillLevel <= Variables.MAX_SKILL_LEVEL && this.skillLevel - skillLevel >= Variables.MIN_SKILL_LEVEL)
-            this.skillLevel -= skillLevel;
-        else
-            ErrorHandler.handleIllegalArgumentException("MSG");
+        if (this.skillLevel - skillLevel < Variables.MIN_SKILL_LEVEL
+                || this.skillLevel - skillLevel > Variables.MAX_SKILL_LEVEL)
+            ErrorHandler.handleIllegalArgumentException("Incorrect skill level. Found: " + skillLevel);
+
+        this.skillLevel -= skillLevel;
     }
 
     public String getName() {
