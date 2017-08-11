@@ -1,9 +1,5 @@
 package com.gpteam.shopmanager.advertising;
 
-import com.gpteam.shopmanager.advertising.sources.AdSource;
-
-import java.math.BigDecimal;
-
 public final class Advertising {
     private String funds;
     public static enum AdSources { Newspaper, Radio, TV }
