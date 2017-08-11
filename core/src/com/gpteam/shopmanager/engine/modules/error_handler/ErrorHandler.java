@@ -30,7 +30,7 @@ public final class ErrorHandler implements Module {
         catch (NoSuchFieldException e) { e.printStackTrace(); }
     }
 
-    public static void handleNoSuchElementException(String msg) {
-        throw new NoSuchElementException("msg");
+    public static void handleNoSuchElementException(String message) {
+        throw new NoSuchElementException(message);
     }
 }
