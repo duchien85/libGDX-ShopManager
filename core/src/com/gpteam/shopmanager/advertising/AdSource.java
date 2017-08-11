@@ -42,7 +42,7 @@ public abstract class AdSource {
      * Increases funds to the ad source.
      * @param amount the exact amount of increase to the funds of the chosen ad source
      */ // TODO more logic that corresponds to the javadoc
-    public void increaseFunds(String amount) {
+    protected void increaseFunds(String amount) {
         if (this.funds.doubleValue() + Double.valueOf(amount) < Double.valueOf(MIN_FUNDS)
                 || this.funds.doubleValue() + Double.valueOf(amount) > Double.valueOf(MAX_FUNDS))
             ErrorHandler.handleIllegalArgumentException("msg");
@@ -55,7 +55,7 @@ public abstract class AdSource {
      * Dncreases funds to the ad source.
      * @param amount the exact amount of decrease to the funds of the chosen ad source
      */
-    public void decreaseFunds(String amount) {
+    protected void decreaseFunds(String amount) {
         if (this.funds.doubleValue() - Double.valueOf(amount) < Double.valueOf(MIN_FUNDS)
                 || this.funds.doubleValue() - Double.valueOf(amount) > Double.valueOf(MAX_FUNDS))
             ErrorHandler.handleIllegalArgumentException("msg");
@@ -65,7 +65,7 @@ public abstract class AdSource {
 
     }
 
-    public void setFunds(String funds) {
+    protected void setFunds(String funds) {
         if (Double.valueOf(funds) < Double.valueOf(MIN_FUNDS)
                 || Double.valueOf(funds) > Double.valueOf(MAX_FUNDS))
             ErrorHandler.handleIllegalArgumentException("msg");
@@ -79,21 +79,21 @@ public abstract class AdSource {
      * @return Ad sources array, filled with active ad sources.
      */
     // TODO Think about writing separate class that contains information about the ad sources (current funds, etc) - not only the enum
-    public AdSources[] getAdSources() {
+    protected AdSources[] getAdSources() {
         return null;
     }
 
     /**
      * Get the amount of bots that have been influenced by ads from {@code SocietyClass}, given as the argument.
      */
-    public int getSocietyClassEffectiveness(SocietyClass societyClass) {
+    protected int getSocietyClassEffectiveness(SocietyClass societyClass) {
         return 0;
     }
 
     /**
      * Get the amount of total bots influenced by ads.
      */
-    public int getAdEffectiveness() {
+    protected int getAdEffectiveness() {
         return 0;
     }
 }
