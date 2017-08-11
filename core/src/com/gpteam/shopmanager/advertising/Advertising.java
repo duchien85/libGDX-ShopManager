@@ -1,9 +1,13 @@
 package com.gpteam.shopmanager.advertising;
 
+import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
+
 import java.util.ArrayList;
+import java.util.Map;
 
 public final class Advertising {
     private String funds;
+    private Map<AdSources, AdSource> adSources;
 
     public Advertising() {
         // TODO instantiation of ad sources should be done here?
@@ -27,9 +31,13 @@ public final class Advertising {
     /**
      * Increases funds to the ad source given as the first argument.
      * @param adSource Ad source that is going to have it's funds increased
-     * @param funds the exact amount of increase to the funds of the chosen ad source
+     * @param amount the exact amount of increase to the funds of the chosen ad source
      */
-    public void increaseFunds(AdSources adSource, String funds) {
+    public void increaseFunds(AdSources adSource, String amount) {
+        if (!adSources.containsKey(adSource))
+            ErrorHandler.handleIllegalArgumentException("msg");
+
+        adSources.get(adSource).increaseFunds(amount);
     }
 
     /**
