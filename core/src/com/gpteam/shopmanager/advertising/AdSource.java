@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.advertising.sources;
+package com.gpteam.shopmanager.advertising;
 
 import com.gpteam.shopmanager.advertising.Advertising;
 import com.gpteam.shopmanager.advertising.Advertising.AdSources;
@@ -38,7 +38,7 @@ public abstract class AdSource {
 
     /**
      * Increases funds to the ad source.
-     * @param funds the exact amount of increase to the funds of the chosen ad source
+     * @param amount the exact amount of increase to the funds of the chosen ad source
      */ // TODO more logic that corresponds to the javadoc
     public void increaseFunds(String amount) {
         if (this.funds.doubleValue() + Double.valueOf(amount) < Double.valueOf(MIN_FUNDS)
@@ -51,7 +51,7 @@ public abstract class AdSource {
 
     /**
      * Dncreases funds to the ad source.
-     * @param funds the exact amount of decrease to the funds of the chosen ad source
+     * @param amount the exact amount of decrease to the funds of the chosen ad source
      */
     public void decreaseFunds(String amount) {
         if (this.funds.doubleValue() - Double.valueOf(amount) < Double.valueOf(MIN_FUNDS)
