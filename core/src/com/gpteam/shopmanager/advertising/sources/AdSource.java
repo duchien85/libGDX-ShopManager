@@ -13,23 +13,22 @@ import java.math.RoundingMode;
 public abstract class AdSource {
     private BigDecimal funds;
     private int adEffectiveness;
+    private String name;
 
     public static enum AdSources { Newspaper, Radio, TV }
 
-    private final String MIN_FUNDS;
+    private final String MIN_FUNDS = "0";
     private final String MAX_FUNDS;
 
     /**
      * Not all ad sources will have the same constraints for their funds. For example a radio
-     * will have smaller numbers from TV.
-     * @param funds
-     * @param MIN_FUNDS
+     * will have smaller numbers than TV.
+     * @param name the ad source name
      * @param MAX_FUNDS maximum amount of possible funding
      */
-    public AdSource(String funds, String MIN_FUNDS, String MAX_FUNDS) {
-        this.funds = new BigDecimal(funds, new MathContext(30, RoundingMode.HALF_UP));
+    public AdSource(String name, String MAX_FUNDS) {
+        this.funds = new BigDecimal(MIN_FUNDS, new MathContext(30, RoundingMode.HALF_UP));
         Utils.setScale(this.funds, 2);
-        this.MIN_FUNDS = MIN_FUNDS;
         this.MAX_FUNDS = MAX_FUNDS;
     }
 
