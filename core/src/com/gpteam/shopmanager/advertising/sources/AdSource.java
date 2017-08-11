@@ -23,8 +23,9 @@ public abstract class AdSource {
     }
 
     /**
-     * Increase funding of ads,
-     */
+     * Increases funds evenly spread to all ad sources from {@code AdSources} class
+     * @param funds the exact number of funds increase
+     */ // TODO more logic that corresponds to the javadoc
     public void increaseFunds(String amount) {
         if (this.funds.doubleValue() + Double.valueOf(amount) >= Double.valueOf(MIN_FUNDS)
                 && this.funds.doubleValue() + Double.valueOf(amount) <= Double.valueOf(MAX_FUNDS)) {
@@ -35,6 +36,11 @@ public abstract class AdSource {
             ErrorHandler.handleIllegalArgumentException("msg");
     }
 
+    /**
+     * Dncreases funds to the ad source given as the first argument.
+     * @param adSource ad source that is going to have it's funds decreased
+     * @param funds the exact amount of increase to the funds of the chosen ad source
+     */
     public void decreaseFunds(String amount) {
         if (this.funds.doubleValue() - Double.valueOf(amount) >= Double.valueOf(MIN_FUNDS)
                 && this.funds.doubleValue() - Double.valueOf(amount) <= Double.valueOf(MAX_FUNDS)) {
