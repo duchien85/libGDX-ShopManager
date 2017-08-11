@@ -4,8 +4,8 @@ import com.gpteam.shopmanager.time.Date;
 import com.gpteam.shopmanager.engine.modules.text_handler.TextHandler;
 
 import java.math.BigDecimal;
-import java.math.MathContext;
-import java.math.RoundingMode;
+
+import static com.gpteam.shopmanager.engine.modules.utility.Utils.setScale;
 
 // TODO add constraints
 /*
@@ -36,14 +36,10 @@ public class Product {
         this.serialName = pVProduct[1];
         this.description = pVProduct[2];
         this.price = new BigDecimal(price);
-        setScale(this.price);
+        setScale(this.price, BIGDECIMAL_SCALE);
         this.quality = quality;
         this.quantity = quantity;
         this.expirationDate = expirationDate;
-    }
-
-    private void setScale(BigDecimal bigDecimal) {
-        bigDecimal = bigDecimal.setScale(BIGDECIMAL_SCALE, BigDecimal.ROUND_HALF_UP);
     }
 
     public String getName() {
@@ -72,18 +68,17 @@ public class Product {
 
     public void setPrice(String price) {
         this.price = new BigDecimal(price);
-        setScale(this.price);
+        setScale(this.price, BIGDECIMAL_SCALE);
     }
 
     public void addPrice(String amount) {
         price = price.add(new BigDecimal(amount));
-        setScale(price);
+        setScale(this.price, BIGDECIMAL_SCALE); // TODO figure out if this is needed here
     }
 
     public void subPrice(String amount) {
         price = price.subtract(new BigDecimal(amount));
-        setScale(price);
-    }
+        setScale(this.price, BIGDECIMAL_SCALE);    }
 
     public short getQuality() {
         return quality;
