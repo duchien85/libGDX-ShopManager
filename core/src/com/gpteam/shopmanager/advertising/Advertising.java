@@ -47,6 +47,7 @@ public final class Advertising {
      * Returns all active ad sources
      * @return Ad sources array, filled with active ad sources.
      */
+    // TODO Think about writing separate class that contains information about the ad sources (current funds, etc) - not only the enum
     public AdSources[] getAdSources() {
         return null;
     }
