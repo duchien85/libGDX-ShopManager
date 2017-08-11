@@ -1,5 +1,7 @@
 package com.gpteam.shopmanager.advertising;
 
+import java.util.ArrayList;
+
 public final class Advertising {
     private String funds;
     public static enum AdSources { Newspaper, Radio, TV }
@@ -44,7 +46,7 @@ public final class Advertising {
      * @return Ad sources array, filled with active ad sources.
      */
     // TODO Think about writing separate class that contains information about the ad sources (current funds, etc) - not only the enum
-    public AdSources[] getAdSources() {
+    public ArrayList<AdSource> getAllAdSources() {
         return null;
     }
 
