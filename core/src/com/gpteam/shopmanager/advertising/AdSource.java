@@ -3,6 +3,7 @@ package com.gpteam.shopmanager.advertising;
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.engine.modules.utility.Utils;
 import com.gpteam.shopmanager.society.SocietyClass;
+import com.sun.istack.internal.NotNull;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
@@ -25,6 +26,9 @@ public abstract class AdSource {
      * @param MAX_FUNDS maximum amount of possible funding
      */
     public AdSource(AdSources adSource, String name, String MAX_FUNDS) {
+        if (name == null || MAX_FUNDS == null)
+            ErrorHandler.handleNullPointerException("msg");
+
         if (!AdSources.contains(adSource))
             ErrorHandler.handleIllegalArgumentException("msg");
 
@@ -43,6 +47,9 @@ public abstract class AdSource {
      * @param amount the exact amount of increase to the funds of the chosen ad source
      */ // TODO more logic that corresponds to the javadoc
     protected void increaseFunds(String amount) {
+        if (amount == null)
+            ErrorHandler.handleNullPointerException("msg");
+
         if (this.funds.doubleValue() + Double.valueOf(amount) < Double.valueOf(MIN_FUNDS)
                 || this.funds.doubleValue() + Double.valueOf(amount) > Double.valueOf(MAX_FUNDS))
             ErrorHandler.handleIllegalArgumentException("msg");
@@ -56,6 +63,9 @@ public abstract class AdSource {
      * @param amount the exact amount of decrease to the funds of the chosen ad source
      */
     protected void decreaseFunds(String amount) {
+        if (amount == null)
+            ErrorHandler.handleNullPointerException("msg");
+
         if (this.funds.doubleValue() - Double.valueOf(amount) < Double.valueOf(MIN_FUNDS)
                 || this.funds.doubleValue() - Double.valueOf(amount) > Double.valueOf(MAX_FUNDS))
             ErrorHandler.handleIllegalArgumentException("msg");
@@ -66,6 +76,9 @@ public abstract class AdSource {
     }
 
     protected void setFunds(String funds) {
+        if (funds == null)
+            ErrorHandler.handleNullPointerException("msg");
+
         if (Double.valueOf(funds) < Double.valueOf(MIN_FUNDS)
                 || Double.valueOf(funds) > Double.valueOf(MAX_FUNDS))
             ErrorHandler.handleIllegalArgumentException("msg");
