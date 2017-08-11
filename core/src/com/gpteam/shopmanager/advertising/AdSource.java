@@ -28,8 +28,8 @@ public abstract class AdSource {
         if (!AdSources.contains(adSource))
             ErrorHandler.handleIllegalArgumentException("msg");
 
-        if (Integer.valueOf(name) < Integer.valueOf(MIN_FUNDS)
-                || Integer.valueOf(name) > Integer.valueOf(MAX_FUNDS))
+        if (Double.valueOf(name) < Double.valueOf(MIN_FUNDS)
+                || Double.valueOf(name) > Double.valueOf(MAX_FUNDS))
             ErrorHandler.handleIllegalArgumentException("msg");
 
         this.adSource = adSource;
