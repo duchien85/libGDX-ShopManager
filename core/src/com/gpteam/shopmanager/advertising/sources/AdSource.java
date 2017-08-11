@@ -26,25 +26,30 @@ public abstract class AdSource {
      * Increase funding of ads,
      */
     public void increaseFunds(String amount) {
-        if (this.funds.doubleValue() + Double.valueOf(amount) >= Double.valueOf(MIN_FUNDS) &&
-            this.funds.doubleValue() + Double.valueOf(amount) <= Double.valueOf(MAX_FUNDS))
-            this.funds = this.funds.add(new BigDecimal(amount)); // TODO test
+        if (this.funds.doubleValue() + Double.valueOf(amount) >= Double.valueOf(MIN_FUNDS)
+                && this.funds.doubleValue() + Double.valueOf(amount) <= Double.valueOf(MAX_FUNDS)) {
+            this.funds = this.funds.add(new BigDecimal(amount));
+            Utils.setScale(this.funds, 2);
+        }
         else
             ErrorHandler.handleIllegalArgumentException("msg");
     }
 
     public void decreaseFunds(String amount) {
-        if (this.funds.doubleValue() - Double.valueOf(amount) >= Double.valueOf(MIN_FUNDS) &&
-            this.funds.doubleValue() - Double.valueOf(amount) <= Double.valueOf(MAX_FUNDS))
-            this.funds = this.funds.subtract(new BigDecimal(amount)); // TODO test
+        if (this.funds.doubleValue() - Double.valueOf(amount) >= Double.valueOf(MIN_FUNDS)
+                && this.funds.doubleValue() - Double.valueOf(amount) <= Double.valueOf(MAX_FUNDS)) {
+            this.funds = this.funds.subtract(new BigDecimal(amount));
+            Utils.setScale(this.funds, 2);
+        }
         else
             ErrorHandler.handleIllegalArgumentException("msg");
     }
 
     public void setFunds(String funds) {
-        if (Double.valueOf(funds) >= Double.valueOf(MIN_FUNDS) &&
-            Double.valueOf(funds) <= Double.valueOf(MAX_FUNDS)) {
+        if (Double.valueOf(funds) >= Double.valueOf(MIN_FUNDS)
+                && Double.valueOf(funds) <= Double.valueOf(MAX_FUNDS)) {
             this.funds = new BigDecimal(funds, new MathContext(30, RoundingMode.HALF_UP));
+            Utils.setScale(this.funds, 2);
         }
         else
             ErrorHandler.handleIllegalArgumentException("msg");
