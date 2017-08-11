@@ -1,7 +1,5 @@
 package com.gpteam.shopmanager.advertising;
 
-import com.gpteam.shopmanager.advertising.Advertising;
-import com.gpteam.shopmanager.advertising.Advertising.AdSources;
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.engine.modules.utility.Utils;
 import com.gpteam.shopmanager.society.SocietyClass;
@@ -14,8 +12,7 @@ public abstract class AdSource {
     private BigDecimal funds;
     private int adEffectiveness;
     private String name;
-
-    public static enum AdSources { Newspaper, Radio, TV }
+    private AdSources adSource;
 
     private final String MIN_FUNDS = "0";
     private final String MAX_FUNDS;
@@ -23,14 +20,19 @@ public abstract class AdSource {
     /**
      * Not all ad sources will have the same constraints for their funds. For example a radio
      * will have smaller numbers than TV.
-     * @param name the ad source name
+     * @param adSource ad source from {@code AdSources class}
+     * @param name ad source name
      * @param MAX_FUNDS maximum amount of possible funding
      */
-    public AdSource(String name, String MAX_FUNDS) {
+    public AdSource(AdSources adSource, String name, String MAX_FUNDS) {
+        if (!AdSources.contains(adSource))
+            ErrorHandler.handleIllegalArgumentException("msg");
+
         if (Integer.valueOf(name) < Integer.valueOf(MIN_FUNDS)
                 || Integer.valueOf(name) > Integer.valueOf(MAX_FUNDS))
             ErrorHandler.handleIllegalArgumentException("msg");
 
+        this.adSource = adSource;
         this.funds = new BigDecimal(MIN_FUNDS, new MathContext(30, RoundingMode.HALF_UP));
         Utils.setScale(this.funds, 2);
         this.MAX_FUNDS = MAX_FUNDS;
