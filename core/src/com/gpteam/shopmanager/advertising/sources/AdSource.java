@@ -19,6 +19,13 @@ public abstract class AdSource {
     private final String MIN_FUNDS;
     private final String MAX_FUNDS;
 
+    /**
+     * Not all ad sources will have the same constraints for their funds. For example a radio
+     * will have smaller numbers from TV.
+     * @param funds
+     * @param MIN_FUNDS
+     * @param MAX_FUNDS maximum amount of possible funding
+     */
     public AdSource(String funds, String MIN_FUNDS, String MAX_FUNDS) {
         this.funds = new BigDecimal(funds, new MathContext(30, RoundingMode.HALF_UP));
         Utils.setScale(this.funds, 2);
@@ -74,8 +81,7 @@ public abstract class AdSource {
     }
 
     /**
-     * Get the amount of bots that have been influenced
-     * by ads, only from desired society class.
+     * Get the amount of bots that have been influenced by ads from {@code SocietyClass}, given as the argument.
      */
     public int getSocietyClassEffectiveness(SocietyClass societyClass) {
         return 0;
@@ -89,10 +95,12 @@ public abstract class AdSource {
     }
 
     /**
-     * Calculates the most possible outcome of the given increase or decrease of ads funding
+     * Calculates the most possible outcome of the given increase or decrease of ads funding.
+     * If you want to check the decrease to the funds, simply put "-" in front of your value, eg. "-1000".
+     * You don't need to put a "+" sign when you want to check the increase to the funds
      * <ul>
-     *   <li>index 0: minimum increase in ???</li>
-     *   <li>index 1: maximum increase in ???</li>
+     *   <li>index 0: minimum increase in effectiveness</li>
+     *   <li>index 1: maximum increase in effectiveness</li>
      *   <li>index 2: most probable amount of bots influenced</li>
      * </ul>
      * @return array containing information about the outcome
