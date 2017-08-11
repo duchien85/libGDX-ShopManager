@@ -1,26 +1,42 @@
 package com.gpteam.shopmanager.advertising.sources;
 
+import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.society.SocietyClass;
 
 import java.math.BigDecimal;
+import java.math.MathContext;
+import java.math.RoundingMode;
 
 public abstract class AdSource {
-    private String funds;
+    private BigDecimal funds;
     private int adEffectiveness;
-
-    private static final int MIN_FUNDS = 0;
-    private static final int MAX_FUNDS = 100000;
 
     /**
      * Increase funding of ads,
      */
-    public void increaseFunds(String funds) {
+    public void increaseFunds(String amount) {
+        if (this.funds.doubleValue() + Double.valueOf(amount) >= Double.valueOf(MIN_FUNDS) &&
+            this.funds.doubleValue() + Double.valueOf(amount) <= Double.valueOf(MAX_FUNDS))
+            this.funds = this.funds.add(new BigDecimal(amount)); // TODO test
+        else
+            ErrorHandler.handleIllegalArgumentException("msg");
     }
 
-    public void decreaseFunds(String funds) {
+    public void decreaseFunds(String amount) {
+        if (this.funds.doubleValue() - Double.valueOf(amount) >= Double.valueOf(MIN_FUNDS) &&
+            this.funds.doubleValue() - Double.valueOf(amount) <= Double.valueOf(MAX_FUNDS))
+            this.funds = this.funds.subtract(new BigDecimal(amount)); // TODO test
+        else
+            ErrorHandler.handleIllegalArgumentException("msg");
     }
 
     public void setFunds(String funds) {
+        if (Double.valueOf(funds) >= Double.valueOf(MIN_FUNDS) &&
+            Double.valueOf(funds) <= Double.valueOf(MAX_FUNDS)) {
+            this.funds = new BigDecimal(funds, new MathContext(30, RoundingMode.HALF_UP));
+        }
+        else
+            ErrorHandler.handleIllegalArgumentException("msg");
     }
 
     /**
