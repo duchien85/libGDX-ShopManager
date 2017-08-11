@@ -4,7 +4,6 @@ import java.util.ArrayList;
 
 public final class Advertising {
     private String funds;
-    public static enum AdSources { Newspaper, Radio, TV }
 
     public Advertising() {
         // TODO instantiation of ad sources should be done here?
