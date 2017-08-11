@@ -65,6 +65,19 @@ public abstract class AdSource {
     }
 
     /**
+     * Calculates the most possible outcome of the given increase or decrease of ads funding
+     * <ul>
+     *   <li>index 0: minimum increase in ???</li>
+     *   <li>index 1: maximum increase in ???</li>
+     *   <li>index 2: most probable amount of bots influenced</li>
+     * </ul>
+     * @return array containing information about the outcome
+     */
+    private String[] estimateOutcome(String funds) {
+        return null;
+    }
+
+    /**
      * Get the amount of bots that have been influenced
      * by ads, only from desired society class.
      */
