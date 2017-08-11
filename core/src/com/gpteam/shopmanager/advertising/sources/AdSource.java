@@ -1,5 +1,7 @@
 package com.gpteam.shopmanager.advertising.sources;
 
+import com.gpteam.shopmanager.advertising.Advertising;
+import com.gpteam.shopmanager.advertising.Advertising.AdSources;
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.engine.modules.utility.Utils;
 import com.gpteam.shopmanager.society.SocietyClass;
@@ -25,11 +27,10 @@ public abstract class AdSource {
     }
 
     /**
-     * Increases funds to the ad source given as the first argument.
-     * @param adSource Ad source that is going to have it's funds increased
+     * Increases funds to the ad source.
      * @param funds the exact amount of increase to the funds of the chosen ad source
      */ // TODO more logic that corresponds to the javadoc
-    public void increaseFunds(AdSources adSource, String amount) {
+    public void increaseFunds(String amount) {
         if (this.funds.doubleValue() + Double.valueOf(amount) >= Double.valueOf(MIN_FUNDS)
                 && this.funds.doubleValue() + Double.valueOf(amount) <= Double.valueOf(MAX_FUNDS)) {
             this.funds = this.funds.add(new BigDecimal(amount));
@@ -40,11 +41,10 @@ public abstract class AdSource {
     }
 
     /**
-     * Dncreases funds to the ad source given as the first argument.
-     * @param adSource ad source that is going to have it's funds decreased
-     * @param funds the exact amount of increase to the funds of the chosen ad source
+     * Dncreases funds to the ad source.
+     * @param funds the exact amount of decrease to the funds of the chosen ad source
      */
-    public void decreaseFunds(AdSources adSource, String amount) {
+    public void decreaseFunds(String amount) {
         if (this.funds.doubleValue() - Double.valueOf(amount) >= Double.valueOf(MIN_FUNDS)
                 && this.funds.doubleValue() - Double.valueOf(amount) <= Double.valueOf(MAX_FUNDS)) {
             this.funds = this.funds.subtract(new BigDecimal(amount));
@@ -54,7 +54,7 @@ public abstract class AdSource {
             ErrorHandler.handleIllegalArgumentException("msg");
     }
 
-    public void setFunds(AdSources adSource, String funds) {
+    public void setFunds(String funds) {
         if (Double.valueOf(funds) >= Double.valueOf(MIN_FUNDS)
                 && Double.valueOf(funds) <= Double.valueOf(MAX_FUNDS)) {
             this.funds = new BigDecimal(funds, new MathContext(30, RoundingMode.HALF_UP));
