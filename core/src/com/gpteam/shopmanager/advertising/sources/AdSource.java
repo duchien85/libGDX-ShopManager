@@ -27,6 +27,10 @@ public abstract class AdSource {
      * @param MAX_FUNDS maximum amount of possible funding
      */
     public AdSource(String name, String MAX_FUNDS) {
+        if (Integer.valueOf(name) < Integer.valueOf(MIN_FUNDS)
+                || Integer.valueOf(name) > Integer.valueOf(MAX_FUNDS))
+            ErrorHandler.handleIllegalArgumentException("msg");
+
         this.funds = new BigDecimal(MIN_FUNDS, new MathContext(30, RoundingMode.HALF_UP));
         Utils.setScale(this.funds, 2);
         this.MAX_FUNDS = MAX_FUNDS;
