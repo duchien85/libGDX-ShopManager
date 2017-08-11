@@ -8,6 +8,10 @@ public final class Advertising {
     private String funds;
     public static enum AdSources { Newspaper, Radio, TV }
 
+    public Advertising() {
+        // TODO instantiation of ad sources should be done here?
+        // Ad sources: Newspaper, Radio, TV
+    }
 
     public String getAdsRevenue() {
         return null;
