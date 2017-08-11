@@ -16,7 +16,7 @@ public class Product {
     private String serialName;
     private String description;
     private BigDecimal price;
-    private short quality;
+    private int quality;
     private int quantity;
     private Date expirationDate;
     private static final int BIGDECIMAL_SCALE = 2;
@@ -80,11 +80,11 @@ public class Product {
         price = price.subtract(new BigDecimal(amount));
         setScale(this.price, BIGDECIMAL_SCALE);    }
 
-    public short getQuality() {
+    public int getQuality() {
         return quality;
     }
 
-    public void setQuality(short quality) {
+    public void setQuality(int quality) {
         this.quality = quality;
     }
     

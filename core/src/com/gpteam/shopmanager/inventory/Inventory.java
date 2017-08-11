@@ -84,7 +84,7 @@ public class Inventory {
             ErrorHandler.handleIllegalArgumentException("msg");
     }
     
-    public short getProductQuality(String pVSerialName) {
+    public int getProductQuality(String pVSerialName) {
         return products.get(pVSerialName).getQuality();
     }
                                                         
