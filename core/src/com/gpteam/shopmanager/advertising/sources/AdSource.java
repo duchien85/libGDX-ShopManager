@@ -92,19 +92,4 @@ public abstract class AdSource {
     public int getAdEffectiveness() {
         return 0;
     }
-
-    /**
-     * Calculates the most possible outcome of the given increase or decrease of ads funding.
-     * If you want to check the decrease to the funds, simply put "-" in front of your value, eg. "-1000".
-     * You don't need to put a "+" sign when you want to check the increase to the funds
-     * <ul>
-     *   <li>index 0: minimum increase in effectiveness</li>
-     *   <li>index 1: maximum increase in effectiveness</li>
-     *   <li>index 2: most probable amount of bots influenced</li>
-     * </ul>
-     * @return array containing information about the outcome
-     */
-    private String[] estimateOutcome(String funds) {
-        return null;
-    }
 }
