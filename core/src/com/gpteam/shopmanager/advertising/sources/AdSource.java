@@ -12,6 +12,8 @@ public abstract class AdSource {
     private BigDecimal funds;
     private int adEffectiveness;
 
+    public static enum AdSources { Newspaper, Radio, TV }
+
     private final String MIN_FUNDS;
     private final String MAX_FUNDS;
 
@@ -23,10 +25,11 @@ public abstract class AdSource {
     }
 
     /**
-     * Increases funds evenly spread to all ad sources from {@code AdSources} class
-     * @param funds the exact number of funds increase
+     * Increases funds to the ad source given as the first argument.
+     * @param adSource Ad source that is going to have it's funds increased
+     * @param funds the exact amount of increase to the funds of the chosen ad source
      */ // TODO more logic that corresponds to the javadoc
-    public void increaseFunds(String amount) {
+    public void increaseFunds(AdSources adSource, String amount) {
         if (this.funds.doubleValue() + Double.valueOf(amount) >= Double.valueOf(MIN_FUNDS)
                 && this.funds.doubleValue() + Double.valueOf(amount) <= Double.valueOf(MAX_FUNDS)) {
             this.funds = this.funds.add(new BigDecimal(amount));
@@ -41,7 +44,7 @@ public abstract class AdSource {
      * @param adSource ad source that is going to have it's funds decreased
      * @param funds the exact amount of increase to the funds of the chosen ad source
      */
-    public void decreaseFunds(String amount) {
+    public void decreaseFunds(AdSources adSource, String amount) {
         if (this.funds.doubleValue() - Double.valueOf(amount) >= Double.valueOf(MIN_FUNDS)
                 && this.funds.doubleValue() - Double.valueOf(amount) <= Double.valueOf(MAX_FUNDS)) {
             this.funds = this.funds.subtract(new BigDecimal(amount));
@@ -51,7 +54,7 @@ public abstract class AdSource {
             ErrorHandler.handleIllegalArgumentException("msg");
     }
 
-    public void setFunds(String funds) {
+    public void setFunds(AdSources adSource, String funds) {
         if (Double.valueOf(funds) >= Double.valueOf(MIN_FUNDS)
                 && Double.valueOf(funds) <= Double.valueOf(MAX_FUNDS)) {
             this.funds = new BigDecimal(funds, new MathContext(30, RoundingMode.HALF_UP));
