@@ -10,11 +10,12 @@ import java.math.MathContext;
 import java.math.RoundingMode;
 
 /**
- * Each instance of this class is it's own ad source. Contains the operations such as increase
- * to the funds of add source {@link #increaseFunds}, etc. Make sure you add a corresponding
- * entry to the {@link AdSources} enum.<p>
- * {@code Funds}, {@code amount} fields should always be passed as a {@code String}, in integer
- * format.
+ * Each instance of this class is it's own ad source. Contains the operations such
+ * as increase to the funds of add source {@link #increaseFunds}, etc. Make sure
+ * you add a corresponding entry to the {@link AdSources} enum.
+ *
+ * <p> {@code Funds}, {@code amount} fields should always be passed as {@code String},
+ * in integer format.
  */
 // TODO much later - make funds decimal
 public final class AdSource {
@@ -108,7 +109,8 @@ public final class AdSource {
     }
 
     /**
-     * Get the amount of bots that have been influenced by ads from {@code SocietyClass}, given as the argument.
+     * Get the amount of bots that have been influenced by ads from {@code SocietyClass},
+     * given as the argument.
      */
     protected int getSocietyClassEffectiveness(SocietyClass societyClass) {
         return 0;

@@ -7,13 +7,16 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
- * Main class for the game's feature that lets the player advertise his company to attract attention
- * of ai. It uses the {@link AdSource} class, with the help of {@link AdSources} enum. Each instance
- * of {@code AdSource} class is a separate ad source (currently TV, Radio, Newspaper)<p>
- * Validating of {@code funds}, {@code amount} fields, given as arguments is done in {@code AdSource}
- * class. This class only validates the {@code adSource} argument. {@code funds}, {@code amount}
- * arguments are of {@code String} type. When decreasing funds, don't use the minus (-) sign. Always
- * pass regular Strings without sign.
+ * Main class for the game's feature that lets the player advertise his company
+ * to attract attention of ai. It uses the {@link AdSource} class, with the help
+ * of {@link AdSources} enum. Each instance of {@code AdSource} class is a
+ * separate ad source (currently TV, Radio, Newspaper)
+ *
+ * <p>Validating of {@code funds}, {@code amount} fields, given as arguments is
+ * done in {@code AdSource} class. This class only validates the {@code adSource}
+ * argument. {@code funds}, {@code amount} arguments are of {@code String} type.
+ * When decreasing funds, don't use the minus (-) sign. Always pass regular
+ * Strings without sign.
  */
 // TODO add logic that influences ai under the effect of advertising
 public final class Advertising {
@@ -83,14 +86,17 @@ public final class Advertising {
     }
 
     /**
-     * Calculates the most possible outcome of the given increase or decrease of ads funding. If you
-     * want to check the decrease to the funds, simply put "-" in front of your value, eg. "-1000".
-     * You don't need to put a "+" sign when you want to check the increase to the funds.
+     * Calculates the most possible outcome of the given increase or decrease of ads
+     * funding. If you want to check the decrease to the funds, simply put "-" in
+     * front of your value, eg. "-1000". You don't need to put a "+" sign when you
+     * want to check the increase to the funds.
+     *
      * <ul>
      *  <li>index 0: minimum increase in effectiveness</li>
      *  <li>index 1: maximum increase in effectiveness</li>
      *  <li>index 2: most probable amount of bots influenced</li>
      * </ul>
+     *
      * @return array containing information about the outcome
      */
     private String[] estimateOutcome(String funds) {
