@@ -5,6 +5,15 @@ import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 import java.util.ArrayList;
 import java.util.Map;
 
+/**
+ * Main class for the game's feature that lets the player to advertise his company to attract
+ * attention of ai. It uses the {@link AdSource} class, with the help of {@link AdSources} enum.
+ * Each instance of {@code AdSource} class is a separate ad source (currently TV, Radio, Newspaper)
+ * Validating of {@code funds}, {@code amount} fields, given as arguments is done in {@code AdSource}
+ * class. This class only validates the {@code adSource} argument. {@code funds}, {@code amount}
+ * arguments are of {@code String} type.<p>
+ * When decreasing funds, don't use the minus (-) sign. Always pass regular Strings without signs.
+ */
 public final class Advertising {
     private String funds;
     private Map<AdSources, AdSource> adSources;
