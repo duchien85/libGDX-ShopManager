@@ -77,6 +77,11 @@ public final class Advertising {
 
     public void disableSource(AdSources adSource) {
     }
+
+    public String getFunds() {
+        return funds;
+    }
+
     /**
      * Calculates the most possible outcome of the given increase or decrease of ads funding. If you
      * want to check the decrease to the funds, simply put "-" in front of your value, eg. "-1000".
