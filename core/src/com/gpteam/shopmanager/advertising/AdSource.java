@@ -16,6 +16,7 @@ import java.math.RoundingMode;
  * {@code Funds}, {@code amount} fields should always be passed as a {@code String}, in integer
  * format.
  */
+// TODO much later - make funds decimal
 public final class AdSource {
     private BigDecimal funds;
     private int adEffectiveness;
