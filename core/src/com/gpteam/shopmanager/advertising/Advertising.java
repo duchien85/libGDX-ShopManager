@@ -12,9 +12,9 @@ import java.util.Map;
  * Validating of {@code funds}, {@code amount} fields, given as arguments is done in {@code AdSource}
  * class. This class only validates the {@code adSource} argument. {@code funds}, {@code amount}
  * arguments are of {@code String} type. When decreasing funds, don't use the minus (-) sign. Always
- * pass regular Strings without signs.
+ * pass regular Strings without sign.
  */
-// TODO add logic that influences ai that is under the effect of advertising
+// TODO add logic that influences ai under the effect of advertising
 public final class Advertising {
     private String funds;
     private Map<AdSources, AdSource> adSources;
