@@ -14,6 +14,7 @@ import java.util.Map;
  * arguments are of {@code String} type. When decreasing funds, don't use the minus (-) sign. Always
  * pass regular Strings without signs.
  */
+// TODO add logic that influences ai that is under the effect of advertising
 public final class Advertising {
     private String funds;
     private Map<AdSources, AdSource> adSources;
