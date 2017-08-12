@@ -12,7 +12,9 @@ import java.math.RoundingMode;
 /**
  * Each instance of this class is it's own ad source. Contains the operations such as increase
  * to the funds of add source {@link #increaseFunds}, etc. Make sure you add a corresponding
- * entry to the {@link AdSources} enum.
+ * entry to the {@link AdSources} enum.<p>
+ * {@code Funds}, {@code amount} fields should always be passed as a {@code String}, in integer
+ * format.
  */
 public final class AdSource {
     private BigDecimal funds;
