@@ -3,6 +3,7 @@ package com.gpteam.shopmanager.advertising;
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.Map;
 
 /**
@@ -20,8 +21,12 @@ public final class Advertising {
     private Map<AdSources, AdSource> adSources;
 
     public Advertising() {
-        // TODO instantiation of ad sources should be done here?
-        // Ad sources: Newspaper, Radio, TV
+        adSources = new HashMap<AdSources, AdSource>(3);
+        funds = "0";
+
+        adSources.put(AdSources.NEWSPAPER, new AdSource(AdSources.NEWSPAPER, "Gazeta", "10000"));
+        adSources.put(AdSources.RADIO,     new AdSource(AdSources.RADIO, "Radio", "15000"));
+        adSources.put(AdSources.TV,        new AdSource(AdSources.TV, "Radio", "100000"));
     }
 
     public String getAdsRevenue() {
