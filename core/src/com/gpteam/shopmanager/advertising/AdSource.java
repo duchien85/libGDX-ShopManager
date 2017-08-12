@@ -9,6 +9,11 @@ import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
 
+/**
+ * Use this class
+ * Handles operations such as increasing the funds of the add source {@link #increaseFunds}
+ *
+ */
 public final class AdSource {
     private BigDecimal funds;
     private int adEffectiveness;
@@ -85,15 +90,6 @@ public final class AdSource {
 
             this.funds = new BigDecimal(funds, new MathContext(30, RoundingMode.HALF_UP));
             Utils.setScale(this.funds, 2);
-    }
-
-    /**
-     * Returns all active ad sources
-     * @return Ad sources array, filled with active ad sources.
-     */
-    // TODO Think about writing separate class that contains information about the ad sources (current funds, etc) - not only the enum
-    protected AdSources[] getAdSources() {
-        return null;
     }
 
     /**
