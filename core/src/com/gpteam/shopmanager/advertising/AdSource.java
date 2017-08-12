@@ -9,7 +9,7 @@ import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
 
-public abstract class AdSource {
+public final class AdSource {
     private BigDecimal funds;
     private int adEffectiveness;
     private String name;
