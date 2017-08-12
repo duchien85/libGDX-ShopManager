@@ -95,6 +95,18 @@ public final class AdSource {
             Utils.setScale(this.funds, 2);
     }
 
+    protected BigDecimal getFunds() {
+        return funds;
+    }
+
+    protected String getStringFunds() {
+        return funds.toString();
+    }
+
+    protected int getIntFunds() {
+        return funds.intValue();
+    }
+
     /**
      * Get the amount of bots that have been influenced by ads from {@code SocietyClass}, given as the argument.
      */
