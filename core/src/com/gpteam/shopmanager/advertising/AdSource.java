@@ -10,9 +10,9 @@ import java.math.MathContext;
 import java.math.RoundingMode;
 
 /**
- * Use this class
- * Handles operations such as increasing the funds of the add source {@link #increaseFunds}
- *
+ * Each instance of this class is it's own ad source. Contains the operations such as increase
+ * to the funds of add source {@link #increaseFunds}, etc. Make sure you add a corresponding
+ * entry to the {@link AdSources} enum.
  */
 public final class AdSource {
     private BigDecimal funds;
