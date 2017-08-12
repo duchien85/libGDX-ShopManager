@@ -39,8 +39,8 @@ public final class AdSource {
         if (!AdSources.contains(adSource))
             ErrorHandler.handleIllegalArgumentException("msg");
 
-        if (Double.valueOf(name) < Double.valueOf(MIN_FUNDS)
-                || Double.valueOf(name) > Double.valueOf(MAX_FUNDS))
+        if (Integer.valueOf(name) < Integer.valueOf(MIN_FUNDS)
+                || Integer.valueOf(name) > Integer.valueOf(MAX_FUNDS))
             ErrorHandler.handleIllegalArgumentException("msg");
 
         this.adSource = adSource;
@@ -57,8 +57,8 @@ public final class AdSource {
         if (amount == null)
             ErrorHandler.handleNullPointerException("msg");
 
-        if (this.funds.doubleValue() + Double.valueOf(amount) < Double.valueOf(MIN_FUNDS)
-                || this.funds.doubleValue() + Double.valueOf(amount) > Double.valueOf(MAX_FUNDS))
+        if (this.funds.intValue() + Integer.valueOf(amount) < Integer.valueOf(MIN_FUNDS)
+                || this.funds.intValue() + Integer.valueOf(amount) > Integer.valueOf(MAX_FUNDS))
             ErrorHandler.handleIllegalArgumentException("msg");
 
             this.funds = this.funds.add(new BigDecimal(amount));
@@ -73,8 +73,8 @@ public final class AdSource {
         if (amount == null)
             ErrorHandler.handleNullPointerException("msg");
 
-        if (this.funds.doubleValue() - Double.valueOf(amount) < Double.valueOf(MIN_FUNDS)
-                || this.funds.doubleValue() - Double.valueOf(amount) > Double.valueOf(MAX_FUNDS))
+        if (this.funds.intValue() - Integer.valueOf(amount) < Integer.valueOf(MIN_FUNDS)
+                || this.funds.intValue() - Integer.valueOf(amount) > Integer.valueOf(MAX_FUNDS))
             ErrorHandler.handleIllegalArgumentException("msg");
 
             this.funds = this.funds.subtract(new BigDecimal(amount));
@@ -86,8 +86,8 @@ public final class AdSource {
         if (funds == null)
             ErrorHandler.handleNullPointerException("msg");
 
-        if (Double.valueOf(funds) < Double.valueOf(MIN_FUNDS)
-                || Double.valueOf(funds) > Double.valueOf(MAX_FUNDS))
+        if (Integer.valueOf(funds) < Integer.valueOf(MIN_FUNDS)
+                || Integer.valueOf(funds) > Integer.valueOf(MAX_FUNDS))
             ErrorHandler.handleIllegalArgumentException("msg");
 
             this.funds = new BigDecimal(funds, new MathContext(30, RoundingMode.HALF_UP));
