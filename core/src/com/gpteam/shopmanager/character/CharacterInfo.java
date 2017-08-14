@@ -1,9 +1,9 @@
 package com.gpteam.shopmanager.character;
 
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
-import com.gpteam.shopmanager.engine.modules.error_handler.ErrorListener;
-import com.gpteam.shopmanager.engine.modules.error_handler.error.Error;
-import com.gpteam.shopmanager.engine.modules.error_handler.error.ErrorType;
+import com.gpteam.shopmanager.deprecated.ErrorListener;
+import com.gpteam.shopmanager.deprecated.error.Error;
+import com.gpteam.shopmanager.deprecated.error.ErrorType;
 import com.gpteam.shopmanager.player.Sex;
 import com.gpteam.shopmanager.engine.modules.random_generator.RandGen;
 import com.gpteam.shopmanager.engine.modules.text_handler.Text;
@@ -22,7 +22,7 @@ public class CharacterInfo {
     public CharacterInfo(String name, int age, Sex sex) {
         if (!validate(name, age, sex)) {
             errorMessage = "One of the arguments was invalid. Found: name: " + name + ", age: " + age + ", sex: " + sex.toString();
-            ErrorListener.notify(new Error(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_CHAR_INFO));
+            ErrorListener.notify(new Error(this.getClass(), errorMessage, ErrorType.INVALID_CHAR_INFO));
             ErrorHandler.handleIllegalArgumentException(errorMessage);
         }
             assign(name, age, sex);
@@ -43,7 +43,7 @@ public class CharacterInfo {
     public void setCharacterInfo(String name, int age, Sex sex) {
         if (!validate(name, age, sex)) {
             errorMessage = "";
-            ErrorListener.notify(new Error(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_CHAR_INFO));
+            ErrorListener.notify(new Error(this.getClass(), errorMessage, ErrorType.INVALID_CHAR_INFO));
             ErrorHandler.handleIllegalArgumentException(errorMessage);
         }
         assign(name, age, sex);
@@ -56,7 +56,7 @@ public class CharacterInfo {
     public void setName(String name) {
         if (!validate(name)) {
             errorMessage = Text.ERROR_SET_NAME;
-            ErrorListener.notify(new Error(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_NAME));
+            ErrorListener.notify(new Error(this.getClass(), errorMessage, ErrorType.INVALID_NAME));
             ErrorHandler.handleIllegalArgumentException(errorMessage);
         }
         this.name = name;
@@ -69,7 +69,7 @@ public class CharacterInfo {
     public void setAge(int age) {
         if (!validate(age)) {
             errorMessage = Text.ERROR_SET_AGE;
-            ErrorListener.notify(new Error(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_AGE));
+            ErrorListener.notify(new Error(this.getClass(), errorMessage, ErrorType.INVALID_AGE));
             ErrorHandler.handleIllegalArgumentException(errorMessage);
         }
         this.age = age;
@@ -86,7 +86,7 @@ public class CharacterInfo {
     public void setSex(Sex sex) {
         if (validate(sex)) {
             errorMessage = Text.ERROR_SET_SEX;
-            ErrorListener.notify(new Error(this.getClass().getSimpleName(), errorMessage, ErrorType.INVALID_SEX));
+            ErrorListener.notify(new Error(this.getClass(), errorMessage, ErrorType.INVALID_SEX));
             ErrorHandler.handleIllegalArgumentException(errorMessage);
         }
         this.sex = sex;

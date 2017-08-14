@@ -17,6 +17,6 @@ public class AndroidLauncher extends AndroidApplication {
 		config.useWakelock = true;
 		config.hideStatusBar = true;
 
-		initialize(new GameMain(), config);
+		initialize(new Init(), config);
 	}
 }
