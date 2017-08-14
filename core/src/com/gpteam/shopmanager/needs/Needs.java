@@ -9,31 +9,31 @@ import java.util.HashMap;
  * Created by masmix on 19.01.2017.
  */
 public class Needs {
-    private HashMap<ENeeds, Integer> needs;
+    private HashMap<NeedTypes, Integer> needs;
     private NeedsLogic needsLogic;
     private boolean containerInitialized = false;
 
-    public enum ENeeds {
+    public enum NeedTypes {
         HUNGER, ENTERTAINMENT, APPAREL, HAPPINESS, LUXURY, FIX, AWARNESS
     }
 
     public Needs() {
-        for (ENeeds x : ENeeds.values())
+        for (NeedTypes x : NeedTypes.values())
             needs.put(x, 10);
     }
 
-    public int getNeed(ENeeds need) {
+    public int getNeed(NeedTypes need) {
         if (!needs.containsKey(need))
             ErrorHandler.handleNoSuchElementException("Needs container does not contain provided need.");
 
         return needs.get(need);
     }
 
-    public HashMap<ENeeds, Integer> getNeedsHashMap() {
+    public HashMap<NeedTypes, Integer> getNeedsHashMap() {
         return needs;
     }
 
-    public void updateNeed(ENeeds need, int value) {
+    public void updateNeed(NeedTypes need, int value) {
         if (!needs.containsKey(need))
             ErrorHandler.handleNoSuchElementException("Needs container does not contain provided need.");
 

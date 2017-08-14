@@ -3,7 +3,7 @@ package com.gpteam.shopmanager.npc;
 import com.gpteam.shopmanager.character.CharacterInfo;
 import com.gpteam.shopmanager.npc.ai.AI;
 import com.gpteam.shopmanager.needs.Needs;
-import com.gpteam.shopmanager.needs.Needs.ENeeds;
+import com.gpteam.shopmanager.needs.Needs.NeedTypes;
 import com.gpteam.shopmanager.society.SocietyClass;
 
 /*
@@ -32,7 +32,7 @@ public class NPC extends AI {
         return societyClass;
     }
 
-    public int getNeedValue(ENeeds need) {
+    public int getNeedValue(NeedTypes need) {
         if (needs == null)
             needs = new Needs();
         return needs.getNeed(need);
