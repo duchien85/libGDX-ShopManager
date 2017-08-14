@@ -5,8 +5,8 @@ public class Error {
     private String errorMessage;
     private ErrorType errorType;
 
-    public Error(String className, String errorMessage, ErrorType errorType) {
-        this.className = className;
+    public Error(Class _class, String errorMessage, ErrorType errorType) {
+        this.className = _class.getSimpleName();
         this.errorMessage = errorMessage;
         this.errorType = errorType;
     }
