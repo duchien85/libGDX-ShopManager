@@ -56,4 +56,28 @@ public final class Engine implements Runnable {
     public void update() {
         economy.update();
     }
+
+    public HashMap<String, Class> getModules() {
+        return modules;
+    }
+
+    public Economy getEconomy() {
+        return economy;
+    }
+
+    public GameDate getGameDate() {
+        return gameDate;
+    }
+
+    public Time getTime() {
+        return time;
+    }
+
+    public static int getCitizens() {
+        return citizens;
+    }
+
+    public static int[] getCitizenSocietyClasses() {
+        return citizenSocietyClasses;
+    }
 }
