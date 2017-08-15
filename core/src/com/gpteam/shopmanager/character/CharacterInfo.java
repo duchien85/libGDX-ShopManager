@@ -84,7 +84,7 @@ public class CharacterInfo {
     }
 
     public void setSex(Sex sex) {
-        if (validate(sex)) {
+        if (!validate(sex)) {
             errorMessage = Text.ERROR_SET_SEX;
             ErrorListener.notify(new Error(this.getClass(), errorMessage, ErrorType.INVALID_SEX));
             ErrorHandler.handleIllegalArgumentException(errorMessage);
