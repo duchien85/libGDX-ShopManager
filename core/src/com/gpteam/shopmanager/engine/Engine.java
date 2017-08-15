@@ -18,7 +18,6 @@ public final class Engine {
     /**
      *
      */
-    public static int[] citizenSocietyClasses;
 
     public void initialize() {
 
@@ -34,9 +33,5 @@ public final class Engine {
 
     public static int getCitizens() {
         return citizens;
-    }
-
-    public static int[] getCitizenSocietyClasses() {
-        return citizenSocietyClasses;
     }
 }
