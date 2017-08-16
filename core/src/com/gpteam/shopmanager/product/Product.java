@@ -12,9 +12,8 @@ import static com.gpteam.shopmanager.engine.modules.utility.Utils.setScale;
  * Created by masmix on 23.12.2016.
  */
 public class Product {
-    private String name;
+    private ProductType productType;
     private String serialName;
-    private String description;
     private BigDecimal price;
     private int quality;
     private int quantity;
@@ -23,17 +22,15 @@ public class Product {
 
     /**
      * Remember to initialize the {@link TextHandler} class first!
-     * @param pVProduct String array from {@link ProductView} class
+     * @param pVProduct String array from {@link ProductType} class
      * @param price price of a single product (this field is converted to BigDecimal object,
      *             make sure to pass it this way: 2 places after comma eg. 1.23)
      * @param quality quality of the whole product quantity
      * @param quantity quantity of all the single products
      * @param expirationDate format: YYYY.MM.DD
      */
-    public Product(String[] pVProduct, String price, short quality, int quantity, Date expirationDate) {
-        this.name = pVProduct[0];
-        this.serialName = pVProduct[1];
-        this.description = pVProduct[2];
+    public Product(ProductType productType, String price, short quality, int quantity, Date expirationDate) {
+        this.productType = productType;
         this.price = new BigDecimal(price);
         setScale(this.price, BIGDECIMAL_SCALE);
         this.quality = quality;
