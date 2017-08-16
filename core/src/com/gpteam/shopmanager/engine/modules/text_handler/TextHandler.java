@@ -15,8 +15,8 @@ import com.gpteam.shopmanager.engine.modules.text_handler.Libraries.PL;
 public final class TextHandler implements Module {
     private HashMap<String, Class> languageMap;
 
-    public final String EN = "EN";
-    public final String PL = "PL";
+    public static final String EN = "EN";
+    public static final String PL = "PL";
 
     public void initialize() {
         languageMap = new HashMap<String, Class>();
@@ -25,6 +25,8 @@ public final class TextHandler implements Module {
     }
 
     /**
+     * You can use public Strings provided by this class, instead of writing your own language
+     * name. That way you make sure there is no exception.
      * Available languages:<br>
      * <ul>
      *  <li>{@code EN} (English)</li>
