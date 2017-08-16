@@ -19,6 +19,7 @@ public class City {
         if (population < Variables.MIN_NPC_AMOUNT || population > Variables.MAX_NPC_AMOUNT)
             ErrorHandler.handleIllegalArgumentException("msg");
         // TODO more validation
+        initializePopulation();
         npcHandler = new NPCHandler(population); // TODO receive npc handler instance in constructor?
     }
 
