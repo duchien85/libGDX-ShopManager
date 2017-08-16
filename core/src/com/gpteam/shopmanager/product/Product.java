@@ -24,9 +24,8 @@ public class Product {
     /**
      * Remember to initialize the {@link TextHandler} class first!
      * @param pVProduct String array from {@link ProductView} class
-     * @param price price of a single product (this field is converted
-     *              to BigDecimal object, make sure to round 2 places
-     *              after comma e.g. 1.23)
+     * @param price price of a single product (this field is converted to BigDecimal object,
+     *             make sure to pass it this way: 2 places after comma eg. 1.23)
      * @param quality quality of the whole product quantity
      * @param quantity quantity of all the single products
      * @param expirationDate format: YYYY.MM.DD
