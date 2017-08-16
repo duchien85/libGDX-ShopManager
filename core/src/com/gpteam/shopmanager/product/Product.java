@@ -24,14 +24,14 @@ public class Product {
 
     /**
      * Remember to initialize the {@link TextHandler} class first!
-     * @param pVProduct String array from {@link ProductType} class
+     * @param productType enum value of the product you are creating
      * @param price price of a single product (this field is converted to BigDecimal object,
      *             make sure to pass it this way: 2 places after comma eg. 1.23)
      * @param quality quality of the whole product quantity
-     * @param quantity quantity of all the single products
+     * @param quantity quantity this product
      * @param expirationDate format: YYYY.MM.DD
      */
-    public Product(ProductType productType, String price, short quality, int quantity, Date expirationDate) {
+    public Product(ProductType productType, String price, int quality, int quantity, Date expirationDate) {
         this.productType = productType;
         this.price = new BigDecimal(price);
         setScale(this.price, BIGDECIMAL_SCALE);
