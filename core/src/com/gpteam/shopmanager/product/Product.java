@@ -1,5 +1,7 @@
 package com.gpteam.shopmanager.product;
 
+import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
+import com.gpteam.shopmanager.engine.modules.text_handler.Text;
 import com.gpteam.shopmanager.time.Date;
 import com.gpteam.shopmanager.engine.modules.text_handler.TextHandler;
 
@@ -39,11 +41,9 @@ public class Product {
     }
 
     public String getName() {
-        return name;
-    }
-
-    public void setName(String name) {
-        this.name = name;
+        if (productType == ProductType.APPLE)
+            return Text.appleName;
+        return null;
     }
 
     public String getSerialName() {
@@ -51,11 +51,9 @@ public class Product {
     }
 
     public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
+        if (productType == ProductType.APPLE)
+            return Text.appleDescription;
+        return null;
     }
 
     public String getPrice() {
