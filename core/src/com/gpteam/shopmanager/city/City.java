@@ -23,6 +23,9 @@ public class City {
         npcHandler = new NPCHandler(population); // TODO receive npc handler instance in constructor?
     }
 
+    private void initializePopulation() {
+    }
+
     public void updatePopulation() {
         population = npcHandler.currentNpcCount();
     }
