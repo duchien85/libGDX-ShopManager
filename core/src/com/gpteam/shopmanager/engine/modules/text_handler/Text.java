@@ -3,7 +3,7 @@ package com.gpteam.shopmanager.engine.modules.text_handler;
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.needs.Needs;
 import com.gpteam.shopmanager.player.Sex;
-import com.gpteam.shopmanager.product.ProductView;
+import com.gpteam.shopmanager.product.ProductType;
 import com.gpteam.shopmanager.society.SocietyClass;
 import com.gpteam.shopmanager.character.CharacterInfo;
 import com.gpteam.shopmanager.skill.skills.Expertise;
@@ -67,13 +67,12 @@ public final class Text {
     public static String ERROR_MESSAGE_1;
 
     /**
-     * {@link ProductView}
+     * {@link ProductType}
      **************************************************/
     // Apple
-    private static String appleName;
-    private static String appleDescription;
-    private static final String APPLE_SERIALNAME = "APPLE";
-    public static final String[] APPLE = new String[] { appleName, appleDescription, APPLE_SERIALNAME };}
+    public static String appleName;
+    public static String appleDescription;
+    public static final String APPLE_SERIALNAME = "APPLE";
 }
 
 
