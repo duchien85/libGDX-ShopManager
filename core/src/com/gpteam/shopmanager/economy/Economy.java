@@ -7,6 +7,9 @@ import com.gpteam.shopmanager.variables.Variables;
 /*
  * Created by masmix on 02.02.2017.
  */
+// TODO should handle every object ifluenced by economy, except the player's economy.
+// Reason for this is that every price should be affected by "world economy",
+// but the player has to adjust his prices - this is the part of the game
 public class Economy {
     private float economyBar;
     private float dailyVariation;
