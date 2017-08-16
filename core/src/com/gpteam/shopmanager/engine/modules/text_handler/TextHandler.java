@@ -10,41 +10,29 @@ import com.gpteam.shopmanager.engine.modules.text_handler.Libraries.PL;
 /**
  * Created by masmix on 18.01.2017.<p>
  * TextHandler class that handles <i>all text translation</i> in the game.
- * This class should be the first to initialize via first {@link #getInstance()} and {@link #setLanguage(String language)} methods.
+ * This class should be the first to initialize via {@link #initialize()} and {@link #setLanguage(String language)} methods.
  */
 public final class TextHandler implements Module {
-    private static TextHandler instance = null;
-    private static HashMap<String, Class> languageMap;
-
-    private TextHandler() {
-			ErrorHandler.handleUnsupportedOperationException("msg");
-			}
-
-    /**
-     * Initialization of class resources is done here
-     * @return TextHandler instance
-     */
-    public static TextHandler getInstance() {
-        if (instance == null)
-            instance = new TextHandler();
-
-        languageMap = new HashMap<String, Class>();
-        languageMap.put("EN", EN.class);
-        languageMap.put("PL", PL.class);
-
-        return instance;
-    }
+    private HashMap<String, Class> languageMap;
 
     public final String EN = "EN";
     public final String PL = "PL";
 
+    public void initialize() {
+        languageMap = new HashMap<String, Class>();
+        languageMap.put("EN", EN.class);
+        languageMap.put("PL", PL.class);
+    }
+
     /**
+     * Available languages:<br>
+     * <ul>
+     *  <li>{@code EN} (English)</li>
+     *  <li>{@code PL} (Polish)</li>
+     * </ul>
      * @param language Language the game is suppose to be in.<p>
      *                 Available languages:
-     *                 <ul>
-     *                 <li>- {@code EN} (English)</li>
-     *                 <li>- {@code PL} (Polish)</li>
-     *                 </ul>
+     *
      */
     public void setLanguage(String language) {
         if (languageMap.containsKey(language)) {
