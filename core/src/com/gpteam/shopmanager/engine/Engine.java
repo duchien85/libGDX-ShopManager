@@ -11,17 +11,10 @@ public final class Engine {
     public Economy economy;
     public GameDate gameDate;
     public Time time;
-    /**
-     *
-     */
+    /** comment here */
     public static int citizens;
-    /**
-     *
-     */
 
     public void initialize() {
-
-
         economy = new Economy();
         gameDate = new GameDate();
         time = new Time();
