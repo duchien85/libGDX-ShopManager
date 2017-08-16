@@ -15,7 +15,6 @@ import static com.gpteam.shopmanager.engine.modules.utility.Utils.setScale;
  */
 public class Product {
     private ProductType productType;
-    private String serialName;
     private BigDecimal price;
     private int quality;
     private int quantity;
@@ -44,10 +43,6 @@ public class Product {
         if (productType == ProductType.APPLE)
             return Text.appleName;
         return null;
-    }
-
-    public String getSerialName() {
-        return serialName;
     }
 
     public String getDescription() {
