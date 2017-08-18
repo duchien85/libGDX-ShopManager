@@ -51,6 +51,10 @@ public class Product {
         return null;
     }
 
+    public ProductType getProductType() {
+        return productType;
+    }
+
     public String getPrice() {
         return price.toPlainString();
     }
