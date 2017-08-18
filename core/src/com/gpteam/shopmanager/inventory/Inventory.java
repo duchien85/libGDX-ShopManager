@@ -2,6 +2,7 @@ package com.gpteam.shopmanager.inventory;
 
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.product.Product;
+import com.gpteam.shopmanager.product.ProductType;
 import com.gpteam.shopmanager.time.Date;
 import com.gpteam.shopmanager.variables.Variables;
 
@@ -12,35 +13,35 @@ import java.util.HashMap;
  * Created by masmix on 24.12.2016.
  */
 public class Inventory {
-    private HashMap<String, Product> products;
-    private ArrayList<String> serialNames;
+    private HashMap<ProductType, Product> products;
+    private ArrayList<ProductType> productTypes;
     private int allProductsQuantity;
 
     public Inventory(Product... products) {
-        this.products = new HashMap<String, Product>();
-        serialNames = new ArrayList<String>(products.length);
+        this.products = new HashMap<ProductType, Product>();
+        productTypes = new ArrayList<ProductType>(products.length);
         initialize(products);
     }
 
     public Inventory() {
-        products = new HashMap<String, Product>();
-        serialNames = new ArrayList<String>();
+        products = new HashMap<ProductType, Product>();
+        productTypes = new ArrayList<ProductType>();
     }
 
     public void updateProductsQuantity() {
         allProductsQuantity = 0;
         for (int i = 0; i < products.size() - 1; i++)
-            allProductsQuantity += products.get(serialNames.get(i)).getQuantity();
+            allProductsQuantity += products.get(productTypes.get(i)).getQuantity();
     }
 
     public void put(Product product) {
-        products.put(product.getSerialName(), product);
-        serialNames.add(product.getSerialName());
+        products.put(product.getProductType(), product);
+        productTypes.add(product.getProductType());
     }
 
     public void put(Product... products) {
         for (Product x : products)
-            this.products.put(x.getSerialName(), x);
+            this.products.put(x.getProductType(), x);
     }
 
     public void removeProduct(String pVSerialName) {
@@ -152,7 +153,7 @@ public class Inventory {
     public String[] getAllProductDescriptions() {
         String[] descriptions = new String[products.size() - 1];
         for (int i = 0; i < descriptions.length; i++)
-            descriptions[i] = products.get(serialNames.get(i)).getDescription();
+            descriptions[i] = products.get(productTypes.get(i)).getDescription();
         return descriptions;
     }
 
@@ -162,8 +163,8 @@ public class Inventory {
 
     private void initialize(Product[] products) {
         for (Product x : products) {
-            this.products.put(x.getSerialName(), x);
-            serialNames.add(x.getSerialName());
+            this.products.put(x.getProductType(), x);
+            productTypes.add(x.getProductType());
         }
     }
 }
