@@ -77,7 +77,7 @@ public class Product {
         this.quality = quality;
     }
     
-    public void subQuality(short quality) {
+    public void subQuality(int quality) {
         this.quality -= quality;
     }
 

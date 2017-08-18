@@ -70,8 +70,8 @@ public final class Variables {
      **************************************************/
     public static final int MAX_QUANTITY = 1000000;
     public static final int MIN_QUANTITY = 0;
-    public static final short MAX_QUALITY = 100;
-    public static final short MIN_QUALITY = 0;
+    public static final int MAX_QUALITY = 100;
+    public static final int MIN_QUALITY = 0;
 
     /**************************************************
      * {@link Economy}
