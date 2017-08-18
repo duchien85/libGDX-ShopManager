@@ -17,20 +17,20 @@ public class Inventory {
     private ArrayList<ProductType> productTypes;
     private int allProductsQuantity;
 
+    public Inventory() {
+        products = new HashMap<ProductType, Product>();
+        productTypes = new ArrayList<ProductType>();
+    }
+
     public Inventory(Product... products) {
         this.products = new HashMap<ProductType, Product>();
         productTypes = new ArrayList<ProductType>(products.length);
         initialize(products);
     }
 
-    public Inventory() {
-        products = new HashMap<ProductType, Product>();
-        productTypes = new ArrayList<ProductType>();
-    }
-
     public void updateProductsQuantity() {
         allProductsQuantity = 0;
-        for (int i = 0; i < products.size() - 1; i++)
+        for (int i = 0; i < products.size(); i++)
             allProductsQuantity += products.get(productTypes.get(i)).getQuantity();
     }
 
@@ -39,115 +39,115 @@ public class Inventory {
         productTypes.add(product.getProductType());
     }
 
-    public void put(Product... products) {
+    public void put(Product... products) { // TODO
         for (Product x : products)
             this.products.put(x.getProductType(), x);
     }
 
-    public void removeProduct(String pVSerialName) {
-        if (!products.containsKey(pVSerialName))
+    public void removeProduct(ProductType productType) {
+        if (!products.containsKey(productType))
             ErrorHandler.handleNoSuchElementException("msg");
 
-        products.remove(pVSerialName);
+        products.remove(productType);
 
     }
 
-    public void removeProducts(String... pVSerialName) {
-        if (!products.containsKey(pVSerialName))
+    public void removeProducts(ProductType... productTypes) {
+        if (!products.containsKey(productTypes))
             ErrorHandler.handleNoSuchElementException("msg");
 
-        for (int i = 0; i < pVSerialName.length; i++) {
-            if (this.products.containsKey(pVSerialName[i]))
-                this.products.remove(pVSerialName[i]);
+        for (int i = 0; i < productTypes.length; i++) {
+            if (this.products.containsKey(productTypes[i]))
+                this.products.remove(productTypes[i]);
         }
     }
 
-    public String getProductDescription(String pVSerialName) {
-        if (!products.containsKey(pVSerialName))
+    public String getProductDescription(ProductType productType) {
+        if (!products.containsKey(productType))
             ErrorHandler.handleNoSuchElementException("msg");
 
-        return products.get(pVSerialName).getDescription();
+        return products.get(productType).getDescription();
     }
     
-    public String getProductPrice(String pVSerialName) {
-        return products.get(pVSerialName).getPrice();
+    public String getProductPrice(ProductType productType) {
+        return products.get(productType).getPrice();
     }
     
-    public void setProductPrice(String pVSerialName, String price) {
-        if (!products.containsKey(pVSerialName))
+    public void setProductPrice(ProductType productType, String price) {
+        if (!products.containsKey(productType))
             ErrorHandler.handleNoSuchElementException("msg");
 
         if (Integer.valueOf(price) < 0)
             ErrorHandler.handleIllegalArgumentException("msg");
 
-        products.get(pVSerialName).setPrice(price);
+        products.get(productType).setPrice(price);
     }
 
-    public void addProductPrice(String pVSerialName, String amount) {
-        if (!products.containsKey(pVSerialName))
+    public void addProductPrice(ProductType productType, String amount) {
+        if (!products.containsKey(productType))
             ErrorHandler.handleNoSuchElementException("msg");
 
         if (Integer.valueOf(amount) < 0)
             ErrorHandler.handleIllegalArgumentException("msg");
 
-        products.get(pVSerialName).addPrice(amount);
+        products.get(productType).addPrice(amount);
     }
     
-    public int getProductQuality(String pVSerialName) {
-        return products.get(pVSerialName).getQuality();
+    public int getProductQuality(ProductType productType) {
+        return products.get(productType).getQuality();
     }
                                                         
-    public void subProductQuality(String pVSerialName, short quality) {
-        if (!products.containsKey(pVSerialName))
+    public void subProductQuality(ProductType productType, int quality) {
+        if (!products.containsKey(productType))
             ErrorHandler.handleNoSuchElementException("msg");
 
         if (quality < Variables.MIN_QUALITY
                 || quality > Variables.MAX_QUALITY)
             ErrorHandler.handleIllegalArgumentException("msg");
 
-        products.get(pVSerialName).subQuality(quality);
+        products.get(productType).subQuality(quality);
 
     }
     
-    public int getProductQuantity(String pVSerialName) {
-        return products.get(pVSerialName).getQuantity();
+    public int getProductQuantity(ProductType productType) {
+        return products.get(productType).getQuantity();
     }
     
-    public void subProductQuantity(String pVSerialName, int quantity) {
-        if (!products.containsKey(pVSerialName))
+    public void subProductQuantity(ProductType productType, int quantity) {
+        if (!products.containsKey(productType))
             ErrorHandler.handleNoSuchElementException("msg");
 
-        if (products.get(pVSerialName).getQuantity() - quantity < Variables.MIN_QUANTITY
-                || products.get(pVSerialName).getQuantity() - quantity > Variables.MAX_QUANTITY)
+        if (products.get(productType).getQuantity() - quantity < Variables.MIN_QUANTITY
+                || products.get(productType).getQuantity() - quantity > Variables.MAX_QUANTITY)
             ErrorHandler.handleIllegalArgumentException("msg");
 
-        products.get(pVSerialName).subQuantity(quantity);
+        products.get(productType).subQuantity(quantity);
     }
 
-    public void addProductQuantity(String pVSerialName, int quantity) {
-        if (!products.containsKey(pVSerialName))
+    public void addProductQuantity(ProductType productType, int quantity) {
+        if (!products.containsKey(productType))
             ErrorHandler.handleNoSuchElementException("msg");
 
-        if (products.get(pVSerialName).getQuantity() + quantity < Variables.MIN_QUANTITY
-                || products.get(pVSerialName).getQuantity() + quantity > Variables.MAX_QUANTITY)
+        if (products.get(productType).getQuantity() + quantity < Variables.MIN_QUANTITY
+                || products.get(productType).getQuantity() + quantity > Variables.MAX_QUANTITY)
             ErrorHandler.handleIllegalArgumentException("msg");
 
-        products.get(pVSerialName).addQuantity(quantity);
+        products.get(productType).addQuantity(quantity);
     }
     
-    public void setProductQuantity(String pVSerialName, int quantity) {
-        if (!products.containsKey(pVSerialName))
+    public void setProductQuantity(ProductType productType, int quantity) {
+        if (!products.containsKey(productType))
             ErrorHandler.handleNoSuchElementException("msg");
 
         if (quantity < Variables.MIN_QUANTITY
                 || quantity > Variables.MAX_QUANTITY )
-            products.get(pVSerialName).setQuantity(quantity);
+            products.get(productType).setQuantity(quantity);
         else
             ErrorHandler.handleIllegalArgumentException("msg");
     }
     
-    public Date getProductExpirationDate(String pVSerialName) {
-        return products.get(pVSerialName).getExpirationDate();
+    public Date getProductExpirationDate(ProductType productType) {
+        return products.get(productType).getExpirationDate();
     }
 
     public String[] getAllProductDescriptions() {
@@ -157,8 +157,8 @@ public class Inventory {
         return descriptions;
     }
 
-    public Product getProduct(String pViewSerialName) {
-        return products.get(pViewSerialName);
+    public Product getProduct(ProductType productType) {
+        return products.get(productType);
     }
 
     private void initialize(Product[] products) {
