@@ -63,8 +63,8 @@ public final class AdSource {
                 || this.funds.intValue() + Integer.valueOf(amount) > Integer.valueOf(MAX_FUNDS))
             ErrorHandler.handleIllegalArgumentException("msg");
 
-            this.funds = this.funds.add(new BigDecimal(amount));
-            Utils.setScale(this.funds, 2);
+        this.funds = this.funds.add(new BigDecimal(amount));
+        Utils.setScale(this.funds, 2);
     }
 
     /**
@@ -79,8 +79,8 @@ public final class AdSource {
                 || this.funds.intValue() - Integer.valueOf(amount) > Integer.valueOf(MAX_FUNDS))
             ErrorHandler.handleIllegalArgumentException("msg");
 
-            this.funds = this.funds.subtract(new BigDecimal(amount));
-            Utils.setScale(this.funds, 2);
+        this.funds = this.funds.subtract(new BigDecimal(amount));
+        Utils.setScale(this.funds, 2);
 
     }
 
@@ -92,8 +92,8 @@ public final class AdSource {
                 || Integer.valueOf(funds) > Integer.valueOf(MAX_FUNDS))
             ErrorHandler.handleIllegalArgumentException("msg");
 
-            this.funds = new BigDecimal(funds, new MathContext(30, RoundingMode.HALF_UP));
-            Utils.setScale(this.funds, 2);
+        this.funds = new BigDecimal(funds, new MathContext(30, RoundingMode.HALF_UP));
+        Utils.setScale(this.funds, 2);
     }
 
     protected BigDecimal getFunds() {
