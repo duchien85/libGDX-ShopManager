@@ -34,7 +34,7 @@ public final class AdSource {
      * @param name ad source name
      * @param MAX_FUNDS maximum amount of possible funding
      */
-    public AdSource(AdSources adSource, String name, String MAX_FUNDS) {
+    AdSource(AdSources adSource, String name, String MAX_FUNDS) {
         if (name == null || MAX_FUNDS == null)
             ErrorHandler.handleNullPointerException("msg");
 
@@ -55,7 +55,7 @@ public final class AdSource {
      * Increases funds to the ad source.
      * @param amount the exact amount of increase to the funds of the chosen ad source
      */ // TODO more logic that corresponds to the javadoc
-    protected void increaseFunds(String amount) {
+    void increaseFunds(String amount) {
         if (amount == null)
             ErrorHandler.handleNullPointerException("msg");
 
@@ -71,7 +71,7 @@ public final class AdSource {
      * Dncreases funds to the ad source.
      * @param amount the exact amount of decrease to the funds of the chosen ad source
      */
-    protected void decreaseFunds(String amount) {
+    void decreaseFunds(String amount) {
         if (amount == null)
             ErrorHandler.handleNullPointerException("msg");
 
@@ -84,7 +84,7 @@ public final class AdSource {
 
     }
 
-    protected void setFunds(String funds) {
+    void setFunds(String funds) {
         if (funds == null)
             ErrorHandler.handleNullPointerException("msg");
 
@@ -96,15 +96,15 @@ public final class AdSource {
         Utils.setScale(this.funds, 2);
     }
 
-    protected BigDecimal getFunds() {
+    BigDecimal getFunds() {
         return funds;
     }
 
-    protected String getStringFunds() {
+    String getStringFunds() {
         return funds.toString();
     }
 
-    protected int getIntFunds() {
+    int getIntFunds() {
         return funds.intValue();
     }
 
@@ -112,14 +112,14 @@ public final class AdSource {
      * Get the amount of bots that have been influenced by ads from {@code SocietyClass},
      * given as the argument.
      */
-    protected int getSocietyClassEffectiveness(SocietyClass societyClass) {
+    int getSocietyClassEffectiveness(SocietyClass societyClass) {
         return 0;
     }
 
     /**
      * Get the amount of total bots influenced by ads.
      */
-    protected int getAdEffectiveness() {
+    int getAdEffectiveness() {
         return 0;
     }
 }
