@@ -28,8 +28,8 @@ public final class AdSource {
     private final String MAX_FUNDS;
 
     /**
-     * Not all ad sources will have the same constraints for their funds. For example a radio
-     * will have smaller numbers than TV.
+     * Not all ad sources will have the same constraints for their funds. For example
+     * a radio will have smaller maximum available funding, than TV.
      * @param adSource ad source from {@code AdSources class}
      * @param name ad source name
      * @param MAX_FUNDS maximum amount of possible funding
