@@ -9,9 +9,9 @@ import com.gpteam.shopmanager.character.CharacterInfo;
 import com.gpteam.shopmanager.skill.skills.Expertise;
 
 /**
- * Created by masmix on 18.01.2017.<p>
- * Contains all the text that is in the game. Use {@link TextHandler} class to initialize
+ * Created by masmix on 18.01.2017.
  *
+ * <p>Contains all the text that is in the game. Use {@link TextHandler} class to initialize
  */
 public final class Text {
     private Text() {

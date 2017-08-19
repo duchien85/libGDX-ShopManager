@@ -8,9 +8,11 @@ import com.gpteam.shopmanager.engine.modules.text_handler.Libraries.EN;
 import com.gpteam.shopmanager.engine.modules.text_handler.Libraries.PL;
 
 /**
- * Created by masmix on 18.01.2017.<p>
- * TextHandler class that handles <i>all text translation</i> in the game.
- * This class should be the first to initialize via {@link #initialize()} and {@link #setLanguage(String language)} methods.
+ * Created by masmix on 18.01.2017.
+ *
+ * <p>TextHandler class that handles <i>all text translation</i> in the game. This class should be
+ * the first to initialize via {@link #initialize()} and {@link #setLanguage(String language)}
+ * methods.
  */
 public final class TextHandler implements Module {
     private HashMap<String, Class> languageMap;
@@ -25,16 +27,15 @@ public final class TextHandler implements Module {
     }
 
     /**
-     * You can use public Strings provided by this class, instead of writing your own language
-     * name. That way you make sure there is no exception.
+     * You can use public Strings provided by this class, instead of writing your own language name.
+     * That way you make sure there is no exception.
      * Available languages:<br>
      * <ul>
      *  <li>{@code EN} (English)</li>
      *  <li>{@code PL} (Polish)</li>
      * </ul>
-     * @param language Language the game is suppose to be in.<p>
-     *                 Available languages:
      *
+     * @param language Language the game is suppose to be in.
      */
     public void setLanguage(String language) {
         if (languageMap.containsKey(language)) {

@@ -6,10 +6,11 @@ import com.sun.tracing.dtrace.ModuleName;
 import java.util.NoSuchElementException;
 
 /**
- * Created by masmix on 11.02.2017.<p>
- * ErrorHandler handles error throwing. The puropose of every single method in this
- * class is to handle exception throwing in a clean way. Every method takes a single
- * {@code String} variable - {@code message}.
+ * Created by masmix on 11.02.2017.
+ *
+ * <p>ErrorHandler handles error throwing. The puropose of every single method in this class is to
+ * handle exception throwing in a clean way. Every method takes a single {@code String} variable -
+ * {@code message}.
  */
 public final class ErrorHandler implements Module {
     private ErrorHandler() {

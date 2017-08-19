@@ -21,7 +21,8 @@ public class CharacterInfo {
 
     public CharacterInfo(String name, int age, Sex sex) {
         if (!validate(name, age, sex)) {
-            errorMessage = "One of the arguments was invalid. Found: name: " + name + ", age: " + age + ", sex: " + sex.toString();
+            errorMessage = "One of the arguments was invalid. Found: name: "
+                    + name + ", age: " + age + ", sex: " + sex.toString();
             ErrorListener.notify(new Error(this.getClass(), errorMessage, ErrorType.INVALID_CHAR_INFO));
             ErrorHandler.handleIllegalArgumentException(errorMessage);
         }

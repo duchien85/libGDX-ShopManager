@@ -18,64 +18,46 @@ public final class Variables {
     private Variables() {
         ErrorHandler.handleUnsupportedOperationException("msg");
     }
-    /**************************************************
+    /**
      * {@link NamesLoader}
      * NAMES_PATH - location of file with random names
-     **************************************************/
+     */
     public final static String NAMES_PATH = "names.txt";
 
-    /**************************************************
-     * {@link CharacterInfo}
-     **************************************************/
+    /** {@link CharacterInfo} */
     public final static int MAX_NAME_LENGTH = 25;
     public final static int MIN_NAME_LENGTH = 2;
     public final static int MAX_AGE_LENGTH = 120;
     public final static int MIN_AGE_LENGTH = 16;
 
-    /**************************************************
-     * {@link SkillLogic}
-     **************************************************/
+    /** {@link SkillLogic} */
     public final static int MAX_SKILL_LEVEL = 120;
     public final static int MIN_SKILL_LEVEL = 0;
 
-    /**************************************************
-     * {@link NPCHandler}
-     **************************************************/
+    /** {@link NPCHandler} */
     public final static int MAX_NPC_AMOUNT = 10000;
     public final static int MIN_NPC_AMOUNT = 0;
 
-    /**************************************************
-     * {@link TrafficHandler}
-     **************************************************/
+    /** {@link TrafficHandler} */
     public final static int MAX_TRAFFIC_LOAD = 100;
     public final static int MIN_TRAFFIC_LOAD = 0;
 
-    /**************************************************
-     * {@link Time}
-     * DELAY - time between time incrementation
-     * in milliseconds (1 second = 1000 milliseconds)
-     * SECONDS - amount of seconds in a minute
-     **************************************************/
+    /** {@link Time}<p>time between time incrementation in milliseconds (1 second = 1000 milliseconds) */
     public final static int DELAY = 500;
+    /** amount of seconds in a minute */
     public final static int SECONDS = 10;
 
-    /**************************************************
-     * {@link Needs}
-     **************************************************/
+    /** {@link Needs} */
     public final static int MIN_NEED_VALUE = 0;
     public final static int MAX_NEED_VALUE = 100;
 
-    /**************************************************
-     * {@link Product}
-     **************************************************/
+    /** {@link Product} */
     public static final int MAX_QUANTITY = 1000000;
     public static final int MIN_QUANTITY = 0;
     public static final int MAX_QUALITY = 100;
     public static final int MIN_QUALITY = 0;
 
-    /**************************************************
-     * {@link Economy}
-     **************************************************/
+    /** {@link Economy} */
     public static final float MIN_DAILY_VARIATION = -0.4f;
     public static final float MAX_DAILY_VARIATION = 0.4f;
     public static final float MAX_ECONOMY_BAR_VALUE = 5.0f;

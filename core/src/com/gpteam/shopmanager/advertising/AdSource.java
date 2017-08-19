@@ -10,12 +10,12 @@ import java.math.MathContext;
 import java.math.RoundingMode;
 
 /**
- * Each instance of this class is it's own ad source. Contains the operations such as
- * increase to the funds of add source {@link #increaseFunds}, etc. Make sure you add a
- * corresponding entry to the {@link AdSources} enum.
+ * Each instance of this class is it's own ad source. Contains the operations such as increase to
+ * the funds of add source {@link #increaseFunds}, etc. Make sure you add a corresponding entry to
+ * the {@link AdSources} enum.
  *
- * <p> {@code Funds}, {@code amount} fields should always be passed as {@code String},
- * in integer format.
+ * <p> {@code Funds}, {@code amount} fields should always be passed as {@code String}, in integer
+ * format.
  */
 // TODO much later - make funds decimal
 final class AdSource {
@@ -28,8 +28,9 @@ final class AdSource {
     private final String MAX_FUNDS;
 
     /**
-     * Not all ad sources will have the same constraints for their funds. For example
-     * a radio will have smaller maximum available funding, than TV.
+     * Not all ad sources will have the same constraints for their funds. For example a radio will
+     * have smaller maximum available funding, than TV.
+     *
      * @param adSource ad source from {@code AdSources class}
      * @param name ad source name
      * @param MAX_FUNDS maximum amount of possible funding
@@ -53,6 +54,7 @@ final class AdSource {
 
     /**
      * Increases funds to the ad source.
+     *
      * @param amount the exact amount of increase to the funds of the chosen ad source
      */ // TODO more logic that corresponds to the javadoc
     void increaseFunds(String amount) {
@@ -69,6 +71,7 @@ final class AdSource {
 
     /**
      * Dncreases funds to the ad source.
+     *
      * @param amount the exact amount of decrease to the funds of the chosen ad source
      */
     void decreaseFunds(String amount) {
@@ -109,8 +112,8 @@ final class AdSource {
     }
 
     /**
-     * Get the amount of bots that have been influenced by ads from {@code SocietyClass},
-     * given as the argument.
+     * Get the amount of bots that have been influenced by ads from {@code SocietyClass}, given as
+     * the argument.
      */
     int getSocietyClassEffectiveness(SocietyClass societyClass) {
         return 0;

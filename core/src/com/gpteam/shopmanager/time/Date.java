@@ -4,9 +4,10 @@ import java.util.Calendar;
 import java.util.GregorianCalendar;
 
 /**
- * Created by masmix on 14.05.2017.<p>
- * {@code GregorianCalendar} wrapper class. Main difference from {@code GregorianCalendar}
- * is that this class starts counting {@code Calendar.MONTH} from 1, instead of 0 to 12, instead of 11.
+ * Created by masmix on 14.05.2017.
+ *
+ * <p> {@code GregorianCalendar} wrapper class. Main difference from {@code GregorianCalendar} is
+ * that this class starts counting {@code Calendar.MONTH} from 1 to 12, instead of 0 to 11.
  */
 public class Date {
     private Calendar calendar;
@@ -30,6 +31,7 @@ public class Date {
 
     /**
      * Month argument starts at 1 (January) and ends at 12(December)
+     *
      * @param day
      * @param month 1 - 12
      */
@@ -40,7 +42,8 @@ public class Date {
     }
 
     /**
-     * YYYY.MM.DDDD
+     * Format: YYYY.MM.DDDD
+     *
      * @param year XXXX
      * @param month 1 - 12
      * @param day 1 - 31
@@ -50,7 +53,9 @@ public class Date {
     }
 
     public boolean equals(Date otherDate) {
-        return getYear() == otherDate.getYear() && getMonth() == otherDate.getMonth() && getDay() == otherDate.getDay();
+        return getYear() == otherDate.getYear()
+                && getMonth() == otherDate.getMonth()
+                && getDay() == otherDate.getDay();
     }
 
     public boolean equalsYear(int year) {
@@ -67,7 +72,9 @@ public class Date {
 
     @Override
     public String toString() {
-        return calendar.get(Calendar.DAY_OF_MONTH) + "." + calendar.get(Calendar.MONTH + 1) + "." + calendar.get(Calendar.YEAR); // TODO test if month call is working properly
+        return calendar.get(Calendar.DAY_OF_MONTH) + "."
+                + calendar.get(Calendar.MONTH + 1) + "."
+                + calendar.get(Calendar.YEAR); // TODO test if month call is working properly
     }
 
     public long getTime() {
@@ -87,7 +94,6 @@ public class Date {
     }
 
     /**
-     *
      * @param month 1 - 12
      */
     public void setMonth(int month) {
