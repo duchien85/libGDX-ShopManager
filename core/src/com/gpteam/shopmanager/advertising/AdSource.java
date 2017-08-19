@@ -18,7 +18,7 @@ import java.math.RoundingMode;
  * in integer format.
  */
 // TODO much later - make funds decimal
-public final class AdSource {
+final class AdSource {
     private BigDecimal funds;
     private int adEffectiveness;
     private String name;
