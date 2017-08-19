@@ -56,7 +56,7 @@ public class Product {
     }
 
     public String getPrice() {
-        return price.toPlainString();
+        return price.toPlainString(); // TODO check if this method returns format: X.XX
     }
 
     public void setPrice(String price) {
