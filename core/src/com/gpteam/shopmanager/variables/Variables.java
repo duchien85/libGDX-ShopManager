@@ -20,7 +20,7 @@ public final class Variables {
     }
     /**
      * {@link NamesLoader}
-     * NAMES_PATH - location of file with random names
+     * <p>NAMES_PATH - location of file with random names
      */
     public final static String NAMES_PATH = "names.txt";
 
@@ -42,7 +42,8 @@ public final class Variables {
     public final static int MAX_TRAFFIC_LOAD = 100;
     public final static int MIN_TRAFFIC_LOAD = 0;
 
-    /** {@link Time}<p>time between time incrementation in milliseconds (1 second = 1000 milliseconds) */
+    /** {@link Time}
+     * <p>time between time incrementation in milliseconds (1 second = 1000 milliseconds) */
     public final static int DELAY = 500;
     /** amount of seconds in a minute */
     public final static int SECONDS = 10;
