@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.advertising;
 
+import com.gpteam.shopmanager.deprecated.error.Error;
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.engine.modules.utility.Utils;
 import com.gpteam.shopmanager.society.SocietyClass;
@@ -128,12 +129,20 @@ final class AdSource {
     }
     
     void activate() {
+        if (active)
+            ErrorHandler.handleUnsupportedOperationException(adSource.name() + "is already active.");
+
+        active = true;
     }
     
     void deactivate() {
+        if (!active)
+            ErrorHandler.handleUnsupportedOperationException(adSource.name() + "is already inactive.");
+
+        active = false;
     }
     
     boolean isActive() {
-    				return active;
-    	}
+        return active;
+    }
 }
