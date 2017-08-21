@@ -23,6 +23,7 @@ final class AdSource {
     private int adEffectiveness;
     private String name;
     private AdSources adSource;
+    private boolean active;
 
     private final String MIN_FUNDS = "0";
     private final String MAX_FUNDS;
@@ -125,4 +126,14 @@ final class AdSource {
     int getAdEffectiveness() {
         return 0;
     }
+    
+    void activate() {
+    }
+    
+    void deactivate() {
+    }
+    
+    boolean isActive() {
+    				return active;
+    	}
 }
