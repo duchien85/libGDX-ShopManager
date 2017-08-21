@@ -70,10 +70,18 @@ public final class Advertising {
         return null;
     }
 
-    public void enableSource(AdSources adSource) {
+    public void activateSource(AdSources adSource) {
+        if (!adSources.containsKey(adSource))
+            ErrorHandler.handleIllegalArgumentException("Argument is not in adSources arraylist.");
+
+        adSources.get(adSource).activate();
     }
 
-    public void disableSource(AdSources adSource) {
+    public void deactivateSource(AdSources adSource) {
+        if (!adSources.containsKey(adSource))
+            ErrorHandler.handleIllegalArgumentException("Argument is not in adSources arraylist.");
+
+        adSources.get(adSource).deactivate();
     }
 
     public String getAdsRevenue() {
