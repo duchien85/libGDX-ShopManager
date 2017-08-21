@@ -31,6 +31,14 @@ public final class Advertising {
     }
 
     /**
+     *
+     */
+    public void update() {
+        // TODO this method should update all ad sources influence and report it here
+        // it should be done once every second?
+    }
+
+    /**
      * Increases funds evenly spread to all ad sources from {@code AdSources} class
      *
      * @param funds the exact number of funds increase
