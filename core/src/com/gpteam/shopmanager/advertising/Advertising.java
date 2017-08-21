@@ -30,13 +30,6 @@ public final class Advertising {
         adSources.put(AdSources.TV,        new AdSource(AdSources.TV, "Radio", "100000"));
     }
 
-    public String getAdsRevenue() {
-        return null;
-    }
-
-    public void setFunds(AdSources adSource, String funds) {
-    }
-
     /**
      * Increases funds evenly spread to all ad sources from {@code AdSources} class
      *
@@ -81,6 +74,13 @@ public final class Advertising {
     }
 
     public void disableSource(AdSources adSource) {
+    }
+
+    public String getAdsRevenue() {
+        return null;
+    }
+
+    public void setFunds(AdSources adSource, String funds) {
     }
 
     public String getFunds() {
