@@ -23,7 +23,8 @@ public abstract class Product {
     private Date expirationDate;
 
     /**
-     * Remember to initialize the {@link TextHandler} class first!
+     * Base class for all products in the game. Use specific classes as this class is only
+     * a blueprint for them, as it is abstract.
      *
      * @param productType enum value of the product you are creating
      * @param price price of a single product (this field is converted to BigDecimal object,
