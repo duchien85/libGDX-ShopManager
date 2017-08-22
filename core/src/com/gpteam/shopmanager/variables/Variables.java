@@ -63,4 +63,7 @@ public final class Variables {
     public static final float MAX_DAILY_VARIATION = 0.4f;
     public static final float MAX_ECONOMY_BAR_VALUE = 5.0f;
     public static final float MIN_ECONOMY_BAR_VALUE = 0.0f;
+
+    /** Scale for BigDecimal objects that deal with money */
+    public static final int MONEY_SCALE = 2;
 }
