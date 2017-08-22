@@ -108,8 +108,8 @@ final class AdSource {
         return funds.toString();
     }
 
-    int getIntFunds() {
-        return funds.intValue();
+    double getDoubleFunds() {
+        return funds.doubleValue();
     }
 
     /**
