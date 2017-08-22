@@ -10,6 +10,8 @@ import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
 
+import static com.gpteam.shopmanager.engine.modules.utility.Utils.MONEY_SCALE;
+
 /**
  * Each instance of this class is it's own ad source. Contains the operations such as increase to
  * the funds of add source {@link #increaseFunds}, etc. Make sure you add a corresponding entry to
@@ -49,8 +51,8 @@ final class AdSource {
             ErrorHandler.handleIllegalArgumentException("msg");
 
         this.adSource = adSource;
-        this.funds = new BigDecimal(MIN_FUNDS, new MathContext(30, RoundingMode.HALF_UP));
-        Utils.setScale(this.funds, 2);
+        this.funds = new BigDecimal(MIN_FUNDS);
+        this.funds = this.funds.setScale(MONEY_SCALE, BigDecimal.ROUND_HALF_UP);
         this.MAX_FUNDS = MAX_FUNDS;
     }
 
@@ -63,12 +65,12 @@ final class AdSource {
         if (amount == null)
             ErrorHandler.handleNullPointerException("msg");
 
-        if (this.funds.intValue() + Integer.valueOf(amount) < Integer.valueOf(MIN_FUNDS)
-                || this.funds.intValue() + Integer.valueOf(amount) > Integer.valueOf(MAX_FUNDS))
+        if (funds.intValue() + Integer.valueOf(amount) < Integer.valueOf(MIN_FUNDS)
+                || funds.intValue() + Integer.valueOf(amount) > Integer.valueOf(MAX_FUNDS))
             ErrorHandler.handleIllegalArgumentException("msg");
 
-        this.funds = this.funds.add(new BigDecimal(amount));
-        Utils.setScale(this.funds, 2);
+        funds = funds.add(new BigDecimal(amount));
+        funds = funds.setScale(MONEY_SCALE, BigDecimal.ROUND_HALF_UP);
     }
 
     /**
@@ -80,12 +82,12 @@ final class AdSource {
         if (amount == null)
             ErrorHandler.handleNullPointerException("msg");
 
-        if (this.funds.intValue() - Integer.valueOf(amount) < Integer.valueOf(MIN_FUNDS)
-                || this.funds.intValue() - Integer.valueOf(amount) > Integer.valueOf(MAX_FUNDS))
+        if (funds.intValue() - Integer.valueOf(amount) < Integer.valueOf(MIN_FUNDS)
+                || funds.intValue() - Integer.valueOf(amount) > Integer.valueOf(MAX_FUNDS))
             ErrorHandler.handleIllegalArgumentException("msg");
 
-        this.funds = this.funds.subtract(new BigDecimal(amount));
-        Utils.setScale(this.funds, 2);
+        funds = funds.subtract(new BigDecimal(amount));
+        funds = funds.setScale(MONEY_SCALE, BigDecimal.ROUND_HALF_UP);
 
     }
 
@@ -98,7 +100,7 @@ final class AdSource {
             ErrorHandler.handleIllegalArgumentException("msg");
 
         this.funds = new BigDecimal(funds, new MathContext(30, RoundingMode.HALF_UP));
-        Utils.setScale(this.funds, 2);
+        this.funds = this.funds.setScale(MONEY_SCALE, BigDecimal.ROUND_HALF_UP);
     }
 
     BigDecimal getFunds() {
