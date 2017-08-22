@@ -18,7 +18,6 @@ public class Product {
     private int quality;
     private int quantity;
     private Date expirationDate;
-    private static final int BIGDECIMAL_SCALE = 2;
 
     /**
      * Remember to initialize the {@link TextHandler} class first!
