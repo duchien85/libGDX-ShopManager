@@ -1,16 +1,13 @@
 package com.gpteam.shopmanager.advertising;
 
-import com.gpteam.shopmanager.deprecated.error.Error;
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
-import com.gpteam.shopmanager.engine.modules.utility.Utils;
 import com.gpteam.shopmanager.society.SocietyClass;
-import com.sun.istack.internal.NotNull;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
 import java.math.RoundingMode;
 
-import static com.gpteam.shopmanager.engine.modules.utility.Utils.MONEY_SCALE;
+import static com.gpteam.shopmanager.variables.Variables.MONEY_SCALE;
 
 /**
  * Each instance of this class is it's own ad source. Contains the operations such as increase to
