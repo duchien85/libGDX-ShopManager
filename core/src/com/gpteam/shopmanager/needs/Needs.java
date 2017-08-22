@@ -13,10 +13,6 @@ public class Needs {
     private NeedsLogic needsLogic;
     private boolean containerInitialized = false;
 
-    public enum NeedTypes {
-        HUNGER, ENTERTAINMENT, APPAREL, HAPPINESS, LUXURY, FIX, AWARNESS
-    }
-
     public Needs() {
         for (NeedTypes x : NeedTypes.values())
             needs.put(x, 10);
