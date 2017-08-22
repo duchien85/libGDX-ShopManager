@@ -1,6 +1,8 @@
 package com.gpteam.shopmanager.product;
 
 import com.gpteam.shopmanager.engine.modules.text_handler.Text;
+import com.gpteam.shopmanager.needs.NeedTypes;
+import com.gpteam.shopmanager.needs.Needs;
 import com.gpteam.shopmanager.time.Date;
 import com.gpteam.shopmanager.engine.modules.text_handler.TextHandler;
 
@@ -12,8 +14,9 @@ import static com.gpteam.shopmanager.variables.Variables.MONEY_SCALE;
 /*
  * Created by masmix on 23.12.2016.
  */
-public class Product {
+public abstract class Product {
     private ProductType productType;
+    private ProductCategory productCategory;
     private BigDecimal price;
     private int quality;
     private int quantity;
@@ -29,12 +32,13 @@ public class Product {
      * @param quantity quantity of this product
      * @param expirationDate format: YYYY.MM.DD
      */
-    public Product(ProductType productType, String price, int quality, int quantity, Date expirationDate) {
-        this.productType = productType;
+    public Product(String price, int quality, int quantity, Date expirationDate, ProductType productType, ProductCategory productCategory) {
         this.price = new BigDecimal(price).setScale(MONEY_SCALE, BigDecimal.ROUND_HALF_UP);
         this.quality = quality;
         this.quantity = quantity;
         this.expirationDate = expirationDate;
+        this.productType = productType;
+        this.productCategory = productCategory;
     }
 
     public String getName() {
@@ -51,6 +55,10 @@ public class Product {
 
     public ProductType getProductType() {
         return productType;
+    }
+
+    public ProductCategory getProductCategory() {
+        return productCategory;
     }
 
     public String getPrice() {
