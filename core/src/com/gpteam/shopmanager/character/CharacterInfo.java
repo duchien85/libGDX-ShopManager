@@ -17,16 +17,13 @@ public class CharacterInfo {
     private String name;
     private int age;
     private Sex sex;
-    private String errorMessage;
+
 
     public CharacterInfo(String name, int age, Sex sex) {
-        if (!validate(name, age, sex)) {
-            errorMessage = "One of the arguments was invalid. Found: name: "
-                    + name + ", age: " + age + ", sex: " + sex.toString();
-            ErrorListener.notify(new Error(this.getClass(), errorMessage, ErrorType.INVALID_CHAR_INFO));
-            ErrorHandler.handleIllegalArgumentException(errorMessage);
-        }
-            assign(name, age, sex);
+        if (!validate(name, age, sex))
+            ErrorHandler.handleIllegalArgumentException("One of the arguments was invalid. Found: name: "
+                    + name + ", age: " + age + ", sex: " + sex.toString());
+        assign(name, age, sex);
     }
 
     public CharacterInfo() {
@@ -42,11 +39,8 @@ public class CharacterInfo {
     }
 
     public void setCharacterInfo(String name, int age, Sex sex) {
-        if (!validate(name, age, sex)) {
-            errorMessage = "";
-            ErrorListener.notify(new Error(this.getClass(), errorMessage, ErrorType.INVALID_CHAR_INFO));
-            ErrorHandler.handleIllegalArgumentException(errorMessage);
-        }
+        if (!validate(name, age, sex))
+            ErrorHandler.handleIllegalArgumentException("msg");
         assign(name, age, sex);
     }
 
@@ -55,11 +49,8 @@ public class CharacterInfo {
     }
 
     public void setName(String name) {
-        if (!validate(name)) {
-            errorMessage = Text.ERROR_SET_NAME;
-            ErrorListener.notify(new Error(this.getClass(), errorMessage, ErrorType.INVALID_NAME));
-            ErrorHandler.handleIllegalArgumentException(errorMessage);
-        }
+        if (!validate(name))
+            ErrorHandler.handleIllegalArgumentException(Text.ERROR_SET_NAME);
         this.name = name;
     }
 
@@ -68,11 +59,8 @@ public class CharacterInfo {
     }
 
     public void setAge(int age) {
-        if (!validate(age)) {
-            errorMessage = Text.ERROR_SET_AGE;
-            ErrorListener.notify(new Error(this.getClass(), errorMessage, ErrorType.INVALID_AGE));
-            ErrorHandler.handleIllegalArgumentException(errorMessage);
-        }
+        if (!validate(age))
+            ErrorHandler.handleIllegalArgumentException(Text.ERROR_SET_AGE);
         this.age = age;
     }
 
@@ -85,11 +73,8 @@ public class CharacterInfo {
     }
 
     public void setSex(Sex sex) {
-        if (!validate(sex)) {
-            errorMessage = Text.ERROR_SET_SEX;
-            ErrorListener.notify(new Error(this.getClass(), errorMessage, ErrorType.INVALID_SEX));
-            ErrorHandler.handleIllegalArgumentException(errorMessage);
-        }
+        if (!validate(sex))
+            ErrorHandler.handleIllegalArgumentException(Text.ERROR_SET_SEX);
         this.sex = sex;
     }
 
