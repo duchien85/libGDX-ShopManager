@@ -12,6 +12,7 @@ import java.util.HashMap;
 /*
  * Created by masmix on 24.12.2016.
  */
+// TODO add validation
 public class Inventory {
     private HashMap<ProductType, Product> products;
     private ArrayList<ProductType> productTypes;
