@@ -1,13 +1,12 @@
 package com.gpteam.shopmanager.product;
 
-import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.engine.modules.text_handler.Text;
 import com.gpteam.shopmanager.time.Date;
 import com.gpteam.shopmanager.engine.modules.text_handler.TextHandler;
 
 import java.math.BigDecimal;
 
-import static com.gpteam.shopmanager.engine.modules.utility.Utils.setScale;
+import static com.gpteam.shopmanager.variables.Variables.MONEY_SCALE;
 
 // TODO add constraints
 /*
@@ -33,8 +32,7 @@ public class Product {
      */
     public Product(ProductType productType, String price, int quality, int quantity, Date expirationDate) {
         this.productType = productType;
-        this.price = new BigDecimal(price);
-        setScale(this.price, BIGDECIMAL_SCALE);
+        this.price = new BigDecimal(price).setScale(MONEY_SCALE, BigDecimal.ROUND_HALF_UP);
         this.quality = quality;
         this.quantity = quantity;
         this.expirationDate = expirationDate;
@@ -61,18 +59,16 @@ public class Product {
     }
 
     public void setPrice(String price) {
-        this.price = new BigDecimal(price);
-        setScale(this.price, BIGDECIMAL_SCALE);
+        this.price = new BigDecimal(price).setScale(MONEY_SCALE, BigDecimal.ROUND_HALF_UP);;
     }
 
     public void addPrice(String amount) {
-        price = price.add(new BigDecimal(amount));
-        setScale(this.price, BIGDECIMAL_SCALE); // TODO figure out if this is needed here
+        price = price.add(new BigDecimal(amount)).setScale(MONEY_SCALE, BigDecimal.ROUND_HALF_UP);;
     }
 
     public void subPrice(String amount) {
-        price = price.subtract(new BigDecimal(amount));
-        setScale(this.price, BIGDECIMAL_SCALE);    }
+        price = price.subtract(new BigDecimal(amount)).setScale(MONEY_SCALE, BigDecimal.ROUND_HALF_UP);;
+    }
 
     public int getQuality() {
         return quality;
