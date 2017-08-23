@@ -20,21 +20,24 @@ public class Economy {
     }
     
     public void raiseEconomyBar(float amount) {
-        if (amount + economyBar < Variables.MIN_ECONOMY_BAR_VALUE || amount + economyBar > Variables.MAX_ECONOMY_BAR_VALUE)
+        if (amount + economyBar < Variables.MIN_ECONOMY_BAR_VALUE
+                || amount + economyBar > Variables.MAX_ECONOMY_BAR_VALUE)
             ErrorHandler.handleIllegalArgumentException("msg");
 
         economyBar += amount;
     }
     
     public void lowerEconomyBar(float amount) {
-        if (amount - economyBar < Variables.MIN_ECONOMY_BAR_VALUE || amount - economyBar > Variables.MAX_ECONOMY_BAR_VALUE)
+        if (amount - economyBar < Variables.MIN_ECONOMY_BAR_VALUE
+                || amount - economyBar > Variables.MAX_ECONOMY_BAR_VALUE)
     		ErrorHandler.handleIllegalArgumentException("msg");
 
         economyBar -= amount;
     }
     
     public void setEconomyBar(float economyBar) {
-        if (economyBar < Variables.MIN_ECONOMY_BAR_VALUE || economyBar > Variables.MAX_ECONOMY_BAR_VALUE)
+        if (economyBar < Variables.MIN_ECONOMY_BAR_VALUE
+                || economyBar > Variables.MAX_ECONOMY_BAR_VALUE)
             ErrorHandler.handleIllegalArgumentException("msg");
 
         this.economyBar = economyBar;
