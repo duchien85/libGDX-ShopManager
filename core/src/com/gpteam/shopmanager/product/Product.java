@@ -23,8 +23,8 @@ public abstract class Product {
     private Date expirationDate;
 
     /**
-     * Base class for all products in the game. Use specific classes as this class is only
-     * a blueprint for them, as it is abstract.
+     * Base class for all products in the game. Use specific classes as this class is only a blueprint for them,
+     * as it is abstract.
      *
      * @param productType enum value of the product you are creating
      * @param price price of a single product (this field is converted to BigDecimal object,
@@ -33,7 +33,8 @@ public abstract class Product {
      * @param quantity quantity of this product
      * @param expirationDate format: YYYY.MM.DD
      */
-    public Product(String price, int quality, int quantity, Date expirationDate, ProductType productType, ProductCategory productCategory) {
+    public Product(String price, int quality, int quantity,
+                   Date expirationDate, ProductType productType, ProductCategory productCategory) {
         this.price = new BigDecimal(price).setScale(MONEY_SCALE, BigDecimal.ROUND_HALF_UP);
         this.quality = quality;
         this.quantity = quantity;
