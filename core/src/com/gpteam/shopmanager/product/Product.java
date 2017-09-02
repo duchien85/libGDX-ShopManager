@@ -1,10 +1,7 @@
 package com.gpteam.shopmanager.product;
 
 import com.gpteam.shopmanager.engine.modules.text_handler.Text;
-import com.gpteam.shopmanager.needs.NeedTypes;
-import com.gpteam.shopmanager.needs.Needs;
 import com.gpteam.shopmanager.time.Date;
-import com.gpteam.shopmanager.engine.modules.text_handler.TextHandler;
 
 import java.math.BigDecimal;
 
