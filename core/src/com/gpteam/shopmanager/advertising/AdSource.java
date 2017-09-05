@@ -14,8 +14,8 @@ import static com.gpteam.shopmanager.variables.Variables.MONEY_SCALE;
  * Make sure you add a corresponding entry to the {@link AdSources} enum. Each instance of this
  * class is it's own ad source.
  *
- * <p>{@code Funds}, {@code amount} fields should always be passed as {@code String}, in integer
- * format.
+ * <p>{@code Funds}, {@code amount} fields should always be passed as a {@code String}, in
+ * {@code integer} format.
  */
 // TODO much later - make funds decimal
 final class AdSource {
