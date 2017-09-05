@@ -73,7 +73,7 @@ final class AdSource {
     /**
      * Dncreases funds to the ad source.
      *
-     * @param amount the exact amount of decrease to the funds of the chosen ad source
+     * @param amount the exact amount of funds decrease to the chosen ad source
      */
     void decreaseFunds(String amount) {
         if (amount == null)
