@@ -117,6 +117,8 @@ final class AdSource {
      * the argument.
      */
     int getSocietyClassEffectiveness(SocietyClass societyClass) {
+        if (societyClass == null || !SocietyClass.contains(societyClass))
+            ErrorHandler.handleNullPointerException("msg");
         return 0;
     }
 
