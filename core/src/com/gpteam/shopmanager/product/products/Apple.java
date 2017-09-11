@@ -19,4 +19,13 @@ public class Apple extends Product {
     public Apple(String price, int quality, int quantity, Date expirationDate) {
         super(price, quality, quantity, expirationDate, ProductType.APPLE, ProductCategory.FOOD);
     }
+    @Override
+    public String getName() {
+    		return Text.appleName;
+    }
+    
+    @Override
+    public String getDescription() {
+    		return Text.appleDescription;
+    }
 }

@@ -40,17 +40,9 @@ public abstract class Product {
         this.productCategory = productCategory;
     }
 
-    public String getName() {
-        if (productType == ProductType.APPLE)
-            return Text.appleName;
-        return null;
-    }
+    public abstract String getName();
 
-    public String getDescription() {
-        if (productType == ProductType.APPLE)
-            return Text.appleDescription;
-        return null;
-    }
+    public abstract String getDescription();
 
     public ProductType getProductType() {
         return productType;
