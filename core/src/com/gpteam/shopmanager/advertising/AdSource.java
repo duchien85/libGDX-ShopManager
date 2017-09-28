@@ -10,11 +10,12 @@ import java.math.RoundingMode;
 import static com.gpteam.shopmanager.variables.Variables.MONEY_SCALE;
 
 /**
- * Contains operations such as increase to the funds of ad source {@link #increaseFunds}, etc.
- * Make sure you add a corresponding entry to the {@link AdSources} enum. Each instance of this
- * class is it's own ad source.
+ * Contains operations such as increase to the funds {@link #increaseFunds} of specified ad source.
+ * Each instance of this class is it's own ad source.
+ * 
+ * <p>Make sure you add a corresponding entry to the {@link AdSources} enum. 
  *
- * <p>{@code Funds}, {@code amount} fields should always be passed as a {@code String}, in
+ * <p>{@code funds}, {@code amount} fields should always be passed as a {@code String}, in
  * {@code integer} format.
  */
 // TODO much later - make funds decimal
