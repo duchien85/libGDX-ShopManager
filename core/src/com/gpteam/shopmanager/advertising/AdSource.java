@@ -10,7 +10,7 @@ import java.math.RoundingMode;
 import static com.gpteam.shopmanager.variables.Variables.MONEY_SCALE;
 
 /**
- * Contains operations such as increase to the funds of add source {@link #increaseFunds}, etc.
+ * Contains operations such as increase to the funds of ad source {@link #increaseFunds}, etc.
  * Make sure you add a corresponding entry to the {@link AdSources} enum. Each instance of this
  * class is it's own ad source.
  *
