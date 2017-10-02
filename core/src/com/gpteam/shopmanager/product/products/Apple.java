@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.product.products;
 
+import com.gpteam.shopmanager.engine.modules.text_handler.Text;
 import com.gpteam.shopmanager.engine.modules.text_handler.TextHandler;
 import com.gpteam.shopmanager.product.Product;
 import com.gpteam.shopmanager.product.ProductCategory;
