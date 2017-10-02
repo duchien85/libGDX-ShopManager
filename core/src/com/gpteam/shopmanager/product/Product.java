@@ -25,7 +25,7 @@ public abstract class Product {
      *
      * @param productType enum value of the product you are creating
      * @param price price of a single product (this field is converted to BigDecimal object,
-     *             make sure to pass it this way: 2 places after comma eg. 1.23)
+     *              make sure to pass it this way: 2 places after comma eg. 1.23)
      * @param quality quality of the whole product quantity
      * @param quantity quantity of this product
      * @param expirationDate format: YYYY.MM.DD
