@@ -43,5 +43,9 @@ public final class PL {
 
         Text.appleName = "Jabłko";
         Text.appleDescription = "Opis";
+
+        Text.newspaper = "Gazeta";
+        Text.radio = "Radio";
+        Text.tv = "TV";
     }
 }

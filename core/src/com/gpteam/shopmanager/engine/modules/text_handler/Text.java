@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.engine.modules.text_handler;
 
+import com.gpteam.shopmanager.advertising.AdSources;
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.needs.Needs;
 import com.gpteam.shopmanager.player.Sex;
@@ -75,6 +76,13 @@ public final class Text {
     public static String appleName;
     public static String appleDescription;
     public static final String APPLE_SERIALNAME = "APPLE";
+
+    /**
+     * {@link AdSources}
+     **************************************************/
+    public static String newspaper;
+    public static String radio;
+    public static String tv;
 }
 
 

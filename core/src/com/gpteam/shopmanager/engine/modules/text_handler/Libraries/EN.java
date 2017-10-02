@@ -43,5 +43,9 @@ public final class EN {
 
         Text.appleName = "Apple";
         Text.appleDescription = "desc";
+
+        Text.newspaper = "Newspaper";
+        Text.radio = "Radio";
+        Text.tv = "TV";
     }
 }
