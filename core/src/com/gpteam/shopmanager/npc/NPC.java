@@ -15,6 +15,14 @@ public class NPC extends AI {
     private SocietyClass societyClass;
 
     public NPC() {}
+    
+    public NPC(boolean initialize) {
+    if (initialize) {
+    characterInfo = new CharacterInfo();
+    needs = new Needs();
+    societyClass = new SocietyClass();
+    }
+    }
 
     public NPC(SocietyClass societyClass) {
         this.societyClass = societyClass;
