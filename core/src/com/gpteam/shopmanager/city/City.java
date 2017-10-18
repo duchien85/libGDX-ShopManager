@@ -9,28 +9,28 @@ import com.gpteam.shopmanager.variables.Variables;
  */
 public class City {
     private String name;
-    private int population;
+    private int citizens;
     private NPCHandler npcHandler;
 
     // TODO figure out how to handle assigning npcs
     // to individual areas of the city
 
-    public City(String name, int population) {
-        if (population < Variables.MIN_NPC_AMOUNT || population > Variables.MAX_NPC_AMOUNT)
+    public City(String name, int citizens) {
+        if (citizens < Variables.MIN_NPC_AMOUNT || citizens > Variables.MAX_NPC_AMOUNT)
             ErrorHandler.handleIllegalArgumentException("msg");
         // TODO more validation
-        initializePopulation(); // TODO initialize bots in this method
-        npcHandler = new NPCHandler(population); // TODO receive npc handler instance in constructor?
+        initializeCitizens(); // TODO initialize bots in this method
+        npcHandler = new NPCHandler(citizens); // TODO receive npc handler instance in constructor?
     }
 
-    private void initializePopulation() {
+    private void initializeCitizens() { // TODO needed? initialization already in constructor - in NPCHandler
     }
 
-    public void updatePopulation() {
-        population = npcHandler.currentNpcCount();
+    public void updateCitizenCount() {
+        citizens = npcHandler.currentNpcCount();
     }
 
-    public int getPopulation() {
-        return population;
+    public int getCitizenCount() {
+        return citizens;
     }
 }
