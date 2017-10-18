@@ -14,8 +14,6 @@ public class NPC extends AI {
     private Needs needs;
     private SocietyClass societyClass;
 
-    public NPC() {}
-    
     /**
     * Set to false if you want to use lazy initialization
     */
