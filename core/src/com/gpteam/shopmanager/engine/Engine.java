@@ -14,6 +14,22 @@ public final class Engine {
     private City[] cities;
     /** comment here */
     public static int citizens;
+    
+    public static final int MAX_CITIES = 3
+    
+    public Engine() {
+    initialize();
+    }
+    
+    /**
+    * Constructor with variable amount of cities, up to a maximum
+    * 3 of cities.
+    */
+    public Engine(City... cities) {
+    if (cities.length() > MAX_CITIES)
+    throw new IllegalArgumentException("msg");
+    this.cities = cities;
+    }
 
     public void initialize() {
         economy = new Economy();
