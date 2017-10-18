@@ -23,7 +23,7 @@ public final class Engine {
     
     /**
     * Constructor with variable amount of cities, up to a maximum
-    * 3 of cities.
+    * of 3.
     */
     public Engine(City... cities) {
     if (cities.length() > MAX_CITIES)
