@@ -11,6 +11,7 @@ public final class Engine {
     public Economy economy;
     public GameDate gameDate;
     public Time time;
+    private City[] cities;
     /** comment here */
     public static int citizens;
 
