@@ -16,6 +16,9 @@ public class NPC extends AI {
 
     public NPC() {}
     
+    /**
+    * Set to false if you want to use lazy initialization
+    */
     public NPC(boolean initialize) {
     if (initialize) {
     characterInfo = new CharacterInfo();
