@@ -28,6 +28,7 @@ final class AdSource {
 
     private final String MIN_FUNDS = "0";
     private final String MAX_FUNDS;
+    private final String MAX_NEWSPAPER_FUNDS = "50000000";
 
     /**
      * Not all ad sources will have the same constraints for their funds. For example "radio" ad source 
@@ -37,7 +38,7 @@ final class AdSource {
      * @param name ad source name
      * @param MAX_FUNDS maximum amount of possible funding
      */
-    AdSource(AdSources adSource, String name, String MAX_FUNDS) {
+    private AdSource(AdSources adSource, String name, String MAX_FUNDS) {
         if (name == null || MAX_FUNDS == null)
             ErrorHandler.handleNullPointerException("msg");
 
@@ -52,6 +53,10 @@ final class AdSource {
         this.funds = new BigDecimal(MIN_FUNDS);
         this.funds = this.funds.setScale(MONEY_SCALE, BigDecimal.ROUND_HALF_UP);
         this.MAX_FUNDS = MAX_FUNDS;
+    }
+    
+    public AdSource getNewspaperInstance() {
+    			return new AdSource(AdSources.NEWSPAPER, Text.newspaper, MAX_NEWSPAPER_FUNDS);
     }
 
     /**
