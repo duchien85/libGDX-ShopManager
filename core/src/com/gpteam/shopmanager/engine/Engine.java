@@ -36,7 +36,7 @@ public final class Engine {
         gameDate = new GameDate();
         time = new Time();
         
-        AdSource newspaper = new AdSource(AdSources.NEWSPAPER, Text.newspaper, "500000");
+        AdSource newspaper = AdSource.getNewspaperInstance();
     }
 
     public void update() {
