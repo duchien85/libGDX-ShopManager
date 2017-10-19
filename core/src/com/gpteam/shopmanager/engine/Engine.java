@@ -35,6 +35,8 @@ public final class Engine {
         economy = new Economy();
         gameDate = new GameDate();
         time = new Time();
+        
+        AdSource newspaper = new AdSource(AdSources.NEWSPAPER, Text.newspaper, "500000");
     }
 
     public void update() {
