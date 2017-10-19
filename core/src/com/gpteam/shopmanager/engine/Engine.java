@@ -16,9 +16,11 @@ public final class Engine {
     public static int citizens;
     
     public static final int MAX_CITIES = 3
+    public static final int DEFAULT_CITIES = 2;
     
     public Engine() {
     initialize();
+    cities = new City[2];
     }
     
     /**
