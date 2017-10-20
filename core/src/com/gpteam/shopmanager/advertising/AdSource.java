@@ -29,8 +29,9 @@ final class AdSource {
     private final String MIN_FUNDS = "0";
     private final String MAX_FUNDS;
     
-    private final String MAX_NEWSPAPER_FUNDS = "5000000";
-    private final static String MAX_RADIO_FUNDS = "2000000";
+    private static final String MAX_NEWSPAPER_FUNDS = "5000000";
+    private static final String MAX_RADIO_FUNDS = "2000000";
+    private static final String MAX_TV_FUNDS = "10000000";
 
     /**
      * Not all ad sources will have the same constraints for their funds. For example "radio" ad source 
@@ -63,6 +64,10 @@ final class AdSource {
     
     public AdSource getRadioInstance() {
     			return new AdSource(AdSources.RADIO, Text.radio, MAX_RADIO_FUNDS);
+    }
+    
+    public AdSource getTvInstance() {
+    			return new AdSource(AdSources.TV, Text.tv, MAX_TV_FUNDS);
     }
 
     /**
