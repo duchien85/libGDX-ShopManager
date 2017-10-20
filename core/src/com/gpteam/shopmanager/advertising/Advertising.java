@@ -25,9 +25,9 @@ public final class Advertising {
         adSources = new HashMap<AdSources, AdSource>(3);
         funds = "0";
 
-        adSources.put(AdSources.NEWSPAPER, new AdSource(AdSources.NEWSPAPER, "Gazeta", "10000"));
-        adSources.put(AdSources.RADIO,     new AdSource(AdSources.RADIO, "Radio", "15000"));
-        adSources.put(AdSources.TV,        new AdSource(AdSources.TV, "Radio", "100000"));
+        adSources.put(AdSources.NEWSPAPER, AdSource.getNewspaperInstance());
+        adSources.put(AdSources.RADIO,     AdSource.getRadioInstance());
+        adSources.put(AdSources.TV,        AdSource.getTvInstance());
     }
 
     /**
