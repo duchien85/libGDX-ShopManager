@@ -48,11 +48,11 @@ public final class Engine {
     }
 
     public static int getCitizenCount() {
-    int count = 0;
-    for(int i = 0; i < cities.length(); i++) {
-    		count += cities[i].getCitizenCount;
-    		}
-    		citizens = count;
-     return count;
+        int count = 0;
+        for(int i = 0; i < cities.length(); i++) {
+            count += cities[i].getCitizenCount;
+        }
+        citizens = count;
+        return count;
     }
 }
