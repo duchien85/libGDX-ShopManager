@@ -1,6 +1,7 @@
 package com.gpteam.shopmanager.npc;
 
 import com.gpteam.shopmanager.character.CharacterInfo;
+import com.gpteam.shopmanager.engine.modules.random_generator.RandGen;
 import com.gpteam.shopmanager.needs.NeedTypes;
 import com.gpteam.shopmanager.npc.ai.AI;
 import com.gpteam.shopmanager.needs.Needs;
@@ -18,11 +19,11 @@ public class NPC extends AI {
     * Set to false if you want to use lazy initialization
     */
     public NPC(boolean initialize) {
-    if (initialize) {
-    characterInfo = new CharacterInfo();
-    needs = new Needs();
-    societyClass = new SocietyClass();
-    }
+        if (initialize) {
+            characterInfo = new CharacterInfo();
+            needs = new Needs();
+            societyClass = RandGen.getRandomSocietyClass();
+        }
     }
 
     public NPC(SocietyClass societyClass) {

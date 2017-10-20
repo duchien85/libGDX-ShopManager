@@ -1,5 +1,7 @@
 package com.gpteam.shopmanager.engine;
 
+import com.gpteam.shopmanager.advertising.Advertising;
+import com.gpteam.shopmanager.city.City;
 import com.gpteam.shopmanager.economy.Economy;
 import com.gpteam.shopmanager.engine.modules.game_date.GameDate;
 import com.gpteam.shopmanager.time.Time;
@@ -15,7 +17,7 @@ public final class Engine {
     /** comment here */
     public static int citizens;
     
-    public static final int MAX_CITIES = 3
+    public static final int MAX_CITIES = 3;
     public static final int DEFAULT_CITIES = 2;
     
     public Engine() {
@@ -28,9 +30,9 @@ public final class Engine {
     * of 3.
     */
     public Engine(City... cities) {
-    if (cities.length() > MAX_CITIES)
-    throw new IllegalArgumentException("msg");
-    this.cities = cities;
+        if (cities.length > MAX_CITIES)
+            throw new IllegalArgumentException("msg");
+        this.cities = cities;
     }
 
     public void initialize() {
