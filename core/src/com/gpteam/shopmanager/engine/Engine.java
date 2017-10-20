@@ -38,7 +38,7 @@ public final class Engine {
         gameDate = new GameDate();
         time = new Time();
         
-        AdSource newspaper = AdSource.getNewspaperInstance();
+        Advertising advertising = new Advertising();
     }
 
     public void update() {
