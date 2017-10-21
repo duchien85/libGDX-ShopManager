@@ -47,10 +47,10 @@ public final class Engine {
         economy.update();
     }
 
-    public static int getCitizenCount() {
+    public int getCitizenCount() {
         int count = 0;
-        for(int i = 0; i < cities.length(); i++) {
-            count += cities[i].getCitizenCount;
+        for(int i = 0; i < cities.length; i++) {
+            count += cities[i].getCitizenCount();
         }
         citizens = count;
         return count;
