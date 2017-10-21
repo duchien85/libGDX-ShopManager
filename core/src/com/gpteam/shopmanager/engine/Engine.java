@@ -21,8 +21,8 @@ public final class Engine {
     public static final int DEFAULT_CITIES = 2;
     
     public Engine() {
-    initialize();
-    cities = new City[2];
+        initialize();
+        cities = new City[2];
     }
     
     /**
@@ -49,8 +49,8 @@ public final class Engine {
 
     public int getCitizenCount() {
         int count = 0;
-        for(int i = 0; i < cities.length; i++) {
-            count += cities[i].getCitizenCount();
+        for(City x : cities) {
+            count += x.getCitizenCount();
         }
         citizens = count;
         return count;
