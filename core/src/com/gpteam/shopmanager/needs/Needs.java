@@ -20,7 +20,7 @@ public class Needs {
 
     public int getNeed(NeedTypes need) {
         if (!needs.containsKey(need))
-            ErrorHandler.handleNoSuchElementException("Needs container does not contain provided need.");
+            ErrorHandler.handleNoSuchElementException("object is not of NeedTypes instance.");
 
         return needs.get(need);
     }
@@ -31,7 +31,7 @@ public class Needs {
 
     public void updateNeed(NeedTypes need, int value) {
         if (!needs.containsKey(need))
-            ErrorHandler.handleNoSuchElementException("Needs container does not contain provided need.");
+            ErrorHandler.handleNoSuchElementException("object is not of NeedTypes instance.");
 
         if (value < Variables.MIN_NEED_VALUE
                 || value > Variables.MAX_NEED_VALUE)
