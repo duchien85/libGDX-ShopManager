@@ -1,6 +1,7 @@
 package com.gpteam.shopmanager.advertising;
 
 import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
+import com.gpteam.shopmanager.engine.modules.text_handler.Text;
 import com.gpteam.shopmanager.society.SocietyClass;
 
 import java.math.BigDecimal;
@@ -58,16 +59,16 @@ final class AdSource {
         this.MAX_FUNDS = MAX_FUNDS;
     }
     
-    public AdSource getNewspaperInstance() {
-    			return new AdSource(AdSources.NEWSPAPER, Text.newspaper, MAX_NEWSPAPER_FUNDS);
+    public static AdSource getNewspaperInstance() {
+        return new AdSource(AdSources.NEWSPAPER, Text.newspaper, MAX_NEWSPAPER_FUNDS);
     }
     
-    public AdSource getRadioInstance() {
-    			return new AdSource(AdSources.RADIO, Text.radio, MAX_RADIO_FUNDS);
+    public static AdSource getRadioInstance() {
+        return new AdSource(AdSources.RADIO, Text.radio, MAX_RADIO_FUNDS);
     }
     
-    public AdSource getTvInstance() {
-    			return new AdSource(AdSources.TV, Text.tv, MAX_TV_FUNDS);
+    public static AdSource getTvInstance() {
+        return new AdSource(AdSources.TV, Text.tv, MAX_TV_FUNDS);
     }
 
     /**
