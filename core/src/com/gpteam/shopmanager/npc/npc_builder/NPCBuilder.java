@@ -15,7 +15,7 @@ public final class NPCBuilder {
     }
 
     public static NPC newNPC() {
-        return new NPC();
+        return new NPC(true);
     }
 
     public static NPC newNPC(SocietyClass societyClass) {
