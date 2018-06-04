@@ -14,7 +14,7 @@ import static com.gpteam.shopmanager.variables.Variables.MONEY_SCALE;
  * Contains operations such as increase to the funds {@link #increaseFunds} of specified ad source.
  * Each instance of this class is it's own ad source.
  * 
- * <p>Make sure you add a corresponding entry to the {@link AdSources} enum. 
+ * <p>Make sure you add a corresponding entry to the {@link AdSourceEnum} enum.
  *
  * <p>{@code funds}, {@code amount} fields should always be passed as a {@code String}, in
  * {@code integer} format.
@@ -24,7 +24,7 @@ final class AdSource {
     private BigDecimal funds;
     private int adEffectiveness;
     private String name;
-    private AdSources adSource;
+    private AdSourceEnum adSource;
     private boolean active;
 
     private final String MIN_FUNDS = "0";
@@ -42,11 +42,11 @@ final class AdSource {
      * @param name ad source name
      * @param MAX_FUNDS maximum amount of possible funding
      */
-    private AdSource(AdSources adSource, String name, String MAX_FUNDS) {
+    private AdSource(AdSourceEnum adSource, String name, String MAX_FUNDS) {
         if (name == null || MAX_FUNDS == null)
             ErrorHandler.handleNullPointerException("msg");
 
-        if (!AdSources.contains(adSource))
+        if (!AdSourceEnum.contains(adSource))
             ErrorHandler.handleIllegalArgumentException("msg");
 
         if (Integer.valueOf(name) < Integer.valueOf(MIN_FUNDS)
@@ -60,15 +60,15 @@ final class AdSource {
     }
     
     public static AdSource getNewspaperInstance() {
-        return new AdSource(AdSources.NEWSPAPER, Text.newspaper, MAX_NEWSPAPER_FUNDS);
+        return new AdSource(AdSourceEnum.NEWSPAPER, Text.newspaper, MAX_NEWSPAPER_FUNDS);
     }
     
     public static AdSource getRadioInstance() {
-        return new AdSource(AdSources.RADIO, Text.radio, MAX_RADIO_FUNDS);
+        return new AdSource(AdSourceEnum.RADIO, Text.radio, MAX_RADIO_FUNDS);
     }
     
     public static AdSource getTvInstance() {
-        return new AdSource(AdSources.TV, Text.tv, MAX_TV_FUNDS);
+        return new AdSource(AdSourceEnum.TV, Text.tv, MAX_TV_FUNDS);
     }
 
     /**

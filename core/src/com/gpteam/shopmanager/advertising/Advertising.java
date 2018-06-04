@@ -8,7 +8,7 @@ import java.util.Map;
 
 /**
  * Main class for the game's feature that lets the player advertise his company to attract attention
- * of ai. It uses the {@link AdSource} class, with the help of {@link AdSources} enum. Each instance
+ * of ai. It uses the {@link AdSource} class, with the help of {@link AdSourceEnum} enum. Each instance
  * of {@code AdSource} class is a separate ad source (currently TV, Radio, Newspaper)
  *
  * <p>Validating of {@code funds}, {@code amount} fields, given as arguments is done in
@@ -19,15 +19,15 @@ import java.util.Map;
 // TODO add logic that influences ai under the effect of advertising
 public final class Advertising {
     private String funds;
-    private Map<AdSources, AdSource> adSources;
+    private Map<AdSourceEnum, AdSource> adSources;
 
     public Advertising() {
-        adSources = new HashMap<AdSources, AdSource>(3);
+        adSources = new HashMap<AdSourceEnum, AdSource>(3);
         funds = "0";
 
-        adSources.put(AdSources.NEWSPAPER, AdSource.getNewspaperInstance());
-        adSources.put(AdSources.RADIO,     AdSource.getRadioInstance());
-        adSources.put(AdSources.TV,        AdSource.getTvInstance());
+        adSources.put(AdSourceEnum.NEWSPAPER, AdSource.getNewspaperInstance());
+        adSources.put(AdSourceEnum.RADIO,     AdSource.getRadioInstance());
+        adSources.put(AdSourceEnum.TV,        AdSource.getTvInstance());
     }
 
     /**
@@ -52,7 +52,7 @@ public final class Advertising {
      * @param adSource Ad source that is going to have it's funds increased
      * @param amount the exact amount of increase to the funds of the chosen ad source
      */
-    public void increaseFunds(AdSources adSource, String amount) {
+    public void increaseFunds(AdSourceEnum adSource, String amount) {
         if (!adSources.containsKey(adSource))
             ErrorHandler.handleIllegalArgumentException("msg");
 
@@ -65,7 +65,7 @@ public final class Advertising {
      * @param adSource ad source that is going to have it's funds decreased
      * @param funds the exact amount of increase to the funds of the chosen ad source
      */
-    public void decreaseFunds(AdSources adSource, String funds) {
+    public void decreaseFunds(AdSourceEnum adSource, String funds) {
     }
 
     /**
@@ -78,14 +78,14 @@ public final class Advertising {
         return null;
     }
 
-    public void activateSource(AdSources adSource) {
+    public void activateSource(AdSourceEnum adSource) {
         if (!adSources.containsKey(adSource))
             ErrorHandler.handleIllegalArgumentException("Argument is not in adSources arraylist.");
 
         adSources.get(adSource).activate();
     }
 
-    public void deactivateSource(AdSources adSource) {
+    public void deactivateSource(AdSourceEnum adSource) {
         if (!adSources.containsKey(adSource))
             ErrorHandler.handleIllegalArgumentException("Argument is not in adSources arraylist.");
 
@@ -96,7 +96,7 @@ public final class Advertising {
         return null;
     }
 
-    public void setFunds(AdSources adSource, String funds) {
+    public void setFunds(AdSourceEnum adSource, String funds) {
     }
 
     public String getFunds() {
