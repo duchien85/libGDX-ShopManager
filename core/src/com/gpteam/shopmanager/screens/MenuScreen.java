@@ -1,9 +1,11 @@
 package com.gpteam.shopmanager.screens;
 
-public class MenuScreen {
-private Engine engine;
+import com.gpteam.shopmanager.engine.Engine;
 
-public GameScreen(Engine engine) {
-this.engine = engine;
+public class MenuScreen {
+    private Engine engine;
+
+public MenuScreen(Engine engine) {
+    this.engine = engine;
 }
 }
