@@ -6,14 +6,16 @@ import com.badlogic.gdx.graphics.FPSLogger;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
+import com.gpteam.shopmanager.engine.Engine;
 import com.gpteam.shopmanager.screens.GameScreen;
+import com.gpteam.shopmanager.screens.MenuScreen;
 import com.gpteam.shopmanager.society.SocietyClass;
 
 public class Init extends Game {
     public SpriteBatch batch;
     public OrthographicCamera camera;
     public FPSLogger fpsLogger;
-    public BitmapFont balanceFont;
+    public Engine engine;
     AssetManager assetManager;
 
     public static final int SCREEN_WIDTH = 1280;
@@ -25,6 +27,7 @@ public class Init extends Game {
         camera = new OrthographicCamera();
         fpsLogger = new FPSLogger();
         assetManager = new AssetManager();
+        engine = new Engine();
         camera.position.set(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, 0);
     }
 
@@ -36,8 +39,7 @@ public class Init extends Game {
         System.out.println(SocietyClass.values().length);
 
         batch = new SpriteBatch();
-        balanceFont = assetManager.get("font.fnt", BitmapFont.class);
-        setScreen(new GameScreen(this));
+        setScreen(new MenuScreen(this, engine));
     }
 
 
