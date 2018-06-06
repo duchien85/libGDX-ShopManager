@@ -12,7 +12,6 @@ import com.gpteam.shopmanager.Init;
 public class GameScreen extends ScreenAdapter{
     private Init init;
     private SpriteBatch batch;
-    private BitmapFont balanceFont;
     private Camera camera;
 
 
@@ -20,7 +19,6 @@ public class GameScreen extends ScreenAdapter{
         this.init = init;
         this.batch = init.batch;
         this.camera = init.camera;
-        this.balanceFont = init.balanceFont;
     }
 
     private void updateScene() {
@@ -29,11 +27,10 @@ public class GameScreen extends ScreenAdapter{
     }
 
     private void drawScene() {
-    batch.begin();
 
-        balanceFont.draw(batch, "Saldo: 150,000 zl", 5, Init.SCREEN_HEIGHT - 5);
+        batch.begin();
 
-    batch.end();
+        batch.end();
     }
 
     @Override
@@ -64,6 +61,5 @@ public class GameScreen extends ScreenAdapter{
     @Override
     public void dispose() {
         batch.dispose();
-        balanceFont.dispose();
     }
 }
