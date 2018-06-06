@@ -21,7 +21,6 @@ public class GameScreen extends ScreenAdapter{
         this.batch = init.batch;
         this.camera = init.camera;
         this.balanceFont = init.balanceFont;
-
     }
 
     private void updateScene() {

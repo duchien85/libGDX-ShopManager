@@ -20,21 +20,6 @@ public final class Loader {
         ErrorHandler.handleUnsupportedOperationException("msg");
     }
 
-    public static void initialize() {
-            file = new File(NAMES_PATH);
-            try { fileReader = new FileReader(file); }
-            catch (FileNotFoundException e) { e.printStackTrace(); }
-            bufferedReader = new BufferedReader(fileReader);
-            initialized = true;
-    }
-
-    public static void initialize(String filePath) {
-        file = new File(filePath);
-        try { fileReader = new FileReader(file); } catch (FileNotFoundException e) { e.printStackTrace(); }
-        bufferedReader = new BufferedReader(fileReader);
-        initialized = true;
-    }
-
     public static ArrayList<String> getAll() {
         if (!initialized)
             initialize();
@@ -46,6 +31,21 @@ public final class Loader {
         } catch (IOException e) { e.printStackTrace(); }
 
         return strings;
+    }
+
+    private static void initialize() {
+        file = new File(NAMES_PATH);
+        try { fileReader = new FileReader(file); }
+        catch (FileNotFoundException e) { e.printStackTrace(); }
+        bufferedReader = new BufferedReader(fileReader);
+        initialized = true;
+    }
+
+    private static void initialize(String filePath) {
+        file = new File(filePath);
+        try { fileReader = new FileReader(file); } catch (FileNotFoundException e) { e.printStackTrace(); }
+        bufferedReader = new BufferedReader(fileReader);
+        initialized = true;
     }
 
     public static BufferedReader getBufferedReader() {
