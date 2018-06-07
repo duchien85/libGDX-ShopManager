@@ -2,9 +2,7 @@ package com.gpteam.shopmanager.screens;
 
 import com.badlogic.gdx.ScreenAdapter;
 import com.badlogic.gdx.graphics.Camera;
-import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.gpteam.shopmanager.Init;
 
 /*
  * Created by masmix on 23.12.2016.

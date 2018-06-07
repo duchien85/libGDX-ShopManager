@@ -5,7 +5,6 @@ import com.badlogic.gdx.graphics.FPSLogger;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.gpteam.shopmanager.Init;
 import com.gpteam.shopmanager.engine.Engine;
 
 public class MenuScreen extends ScreenAdapter {

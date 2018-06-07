@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager;
+package com.gpteam.shopmanager.screens;
 
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.assets.AssetManager;
