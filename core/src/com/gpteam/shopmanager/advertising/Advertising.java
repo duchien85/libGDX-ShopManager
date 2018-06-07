@@ -116,6 +116,7 @@ public final class Advertising {
      *
      * @return array containing information about the outcome
      */
+    // TODO split into two methods: estimateIncreaseOutcome, estimateDecreaseOutcome
     private String[] estimateOutcome(String funds) {
         return null;
     }
