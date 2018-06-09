@@ -12,8 +12,8 @@ public class MenuScreen extends ScreenAdapter {
     private SpriteBatch batch;
     private OrthographicCamera camera;
     private FPSLogger fpsLogger;
-    private Engine engine;
     private BitmapFont balanceFont;
+    private Engine engine;
 
     MenuScreen(ToolBundle toolBundle) {
         batch = toolBundle.batch;
