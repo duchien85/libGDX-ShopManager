@@ -6,20 +6,21 @@ import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.gpteam.shopmanager.engine.Engine;
+import com.gpteam.shopmanager.screens.tool_bundle.ToolBundle;
 
 public class MenuScreen extends ScreenAdapter {
     private SpriteBatch batch;
     private OrthographicCamera camera;
     private FPSLogger fpsLogger;
-    private BitmapFont balanceFont;
     private Engine engine;
+    private BitmapFont balanceFont;
 
-public MenuScreen(Init init, Engine engine) {
-    batch = init.batch;
-    camera = init.camera;
-    fpsLogger = init.fpsLogger;;
-    this.engine = engine;
-}
+    MenuScreen(ToolBundle toolBundle) {
+        batch = toolBundle.batch;
+        camera = toolBundle.camera;
+        fpsLogger = toolBundle.fpsLogger;
+        engine = toolBundle.engine;
+    }
 
     @Override
     public void render(float delta) {

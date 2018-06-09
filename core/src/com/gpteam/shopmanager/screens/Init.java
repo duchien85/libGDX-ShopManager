@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.gpteam.shopmanager.engine.Engine;
 import com.gpteam.shopmanager.screens.GameScreen;
 import com.gpteam.shopmanager.screens.MenuScreen;
+import com.gpteam.shopmanager.screens.tool_bundle.ToolBundle;
 import com.gpteam.shopmanager.society.SocietyClass;
 
 public class Init extends Game {
@@ -16,7 +17,9 @@ public class Init extends Game {
     public OrthographicCamera camera;
     public FPSLogger fpsLogger;
     public Engine engine;
-    AssetManager assetManager;
+    public AssetManager assetManager;
+
+    private ToolBundle toolBundle;
 
     public static final int SCREEN_WIDTH = 1280;
     public static final int SCREEN_HEIGHT = 720;
@@ -39,7 +42,8 @@ public class Init extends Game {
         System.out.println(SocietyClass.values().length);
 
         batch = new SpriteBatch();
-        setScreen(new MenuScreen(this, engine));
+        toolBundle = new ToolBundle(batch, camera, fpsLogger, engine, assetManager);
+        setScreen(new MenuScreen(toolBundle));
     }
 
 
