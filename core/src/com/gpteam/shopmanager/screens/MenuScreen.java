@@ -15,11 +15,8 @@ public class MenuScreen extends ScreenAdapter {
     private BitmapFont balanceFont;
     private Engine engine;
 
-    MenuScreen(ToolBundle toolBundle) {
-        batch = toolBundle.batch;
-        camera = toolBundle.camera;
-        fpsLogger = toolBundle.fpsLogger;
-        engine = toolBundle.engine;
+    MenuScreen(ShopManager game) {
+        this.game = game;
     }
 
     @Override
