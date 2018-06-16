@@ -1,6 +1,6 @@
 package com.gpteam.shopmanager.city;
 
-import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
+import com.gpteam.shopmanager.game.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.npc.NPCHandler;
 import com.gpteam.shopmanager.variables.Variables;
 

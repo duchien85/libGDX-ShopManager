@@ -1,12 +1,14 @@
 package com.gpteam.shopmanager.screens;
 
+import com.badlogic.gdx.ApplicationAdapter;
+import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Game;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.FPSLogger;
 import com.badlogic.gdx.graphics.OrthographicCamera;
 import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
-import com.gpteam.shopmanager.engine.Engine;
+import com.gpteam.shopmanager.game.engine.Engine;
 import com.gpteam.shopmanager.society.SocietyClass;
 
 public class ShopManager extends Game {
@@ -40,6 +42,9 @@ public class ShopManager extends Game {
         setScreen(new MenuScreen(this));
     }
 
+    @Override
+    public void resize(int width, int height) {
+    }
 
     private void updateScene() {
 //	    float deltaTime = Gdx.graphics.getDeltaTime();
@@ -53,5 +58,17 @@ public class ShopManager extends Game {
     public void render() {
         super.render();
         fpsLogger.log();
+    }
+
+    @Override
+    public void pause() {
+    }
+
+    @Override
+    public void resume() {
+    }
+
+    @Override
+    public void dispose() {
     }
 }

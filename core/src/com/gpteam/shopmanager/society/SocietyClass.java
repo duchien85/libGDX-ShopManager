@@ -1,6 +1,6 @@
 package com.gpteam.shopmanager.society;
 
-import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
+import com.gpteam.shopmanager.game.engine.modules.error_handler.ErrorHandler;
 
 /*
  * Created by masmix on 18.01.2017.

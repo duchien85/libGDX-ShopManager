@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.engine.modules.event_handler;
+package com.gpteam.shopmanager.game.engine.modules.event_handler;
 
 /*
  * Created by masmix on 13.05.2017.

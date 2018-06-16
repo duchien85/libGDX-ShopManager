@@ -1,7 +1,7 @@
-package com.gpteam.shopmanager.engine.modules.event_handler;
+package com.gpteam.shopmanager.game.engine.modules.event_handler;
 
-import com.gpteam.shopmanager.engine.interfaces.Module;
-import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
+import com.gpteam.shopmanager.game.engine.interfaces.Module;
+import com.gpteam.shopmanager.game.engine.modules.error_handler.ErrorHandler;
 
 import java.util.ArrayList;
 

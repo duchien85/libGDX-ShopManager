@@ -1,7 +1,7 @@
-package com.gpteam.shopmanager.engine.modules.text_handler;
+package com.gpteam.shopmanager.game.engine.modules.text_handler;
 
 import com.gpteam.shopmanager.advertising.AdSourceEnum;
-import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
+import com.gpteam.shopmanager.game.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.needs.Needs;
 import com.gpteam.shopmanager.player.Sex;
 import com.gpteam.shopmanager.product.ProductType;

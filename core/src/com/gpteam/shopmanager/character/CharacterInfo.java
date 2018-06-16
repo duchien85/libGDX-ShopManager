@@ -1,12 +1,12 @@
 package com.gpteam.shopmanager.character;
 
-import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
+import com.gpteam.shopmanager.game.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.deprecated.ErrorListener;
 import com.gpteam.shopmanager.deprecated.error.Error;
 import com.gpteam.shopmanager.deprecated.error.ErrorType;
 import com.gpteam.shopmanager.player.Sex;
-import com.gpteam.shopmanager.engine.modules.random_generator.RandGen;
-import com.gpteam.shopmanager.engine.modules.text_handler.Text;
+import com.gpteam.shopmanager.game.engine.modules.random_generator.RandGen;
+import com.gpteam.shopmanager.game.engine.modules.text_handler.Text;
 
 import static com.gpteam.shopmanager.variables.Variables.*;
 

@@ -1,20 +1,20 @@
-package com.gpteam.shopmanager.engine;
+package com.gpteam.shopmanager.game.engine;
 
 import com.gpteam.shopmanager.advertising.Advertising;
 import com.gpteam.shopmanager.city.City;
 import com.gpteam.shopmanager.economy.Economy;
-import com.gpteam.shopmanager.engine.modules.game_date.GameDate;
+import com.gpteam.shopmanager.game.engine.modules.game_date.GameDate;
 import com.gpteam.shopmanager.time.Time;
 
 /*
  * Created by masmix on 07.02.2017.
  */
 public final class Engine {
+    private City[] cities;
+
     public Economy economy;
     public GameDate gameDate;
     public Time time;
-    private City[] cities;
-    /** comment here */
     public static int citizens;
     
     public static final int MAX_CITIES = 3;

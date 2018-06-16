@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.engine.modules.logger;
+package com.gpteam.shopmanager.game.engine.modules.logger;
 
 /*
  * Created by masmix on 08.05.2017.

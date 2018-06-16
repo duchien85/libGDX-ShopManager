@@ -1,7 +1,7 @@
 package com.gpteam.shopmanager.advertising;
 
-import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
-import com.gpteam.shopmanager.engine.modules.text_handler.Text;
+import com.gpteam.shopmanager.game.engine.modules.error_handler.ErrorHandler;
+import com.gpteam.shopmanager.game.engine.modules.text_handler.Text;
 import com.gpteam.shopmanager.society.SocietyClass;
 
 import java.math.BigDecimal;

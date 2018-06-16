@@ -1,11 +1,11 @@
-package com.gpteam.shopmanager.engine.modules.text_handler;
+package com.gpteam.shopmanager.game.engine.modules.text_handler;
 
 import java.util.HashMap;
 
-import com.gpteam.shopmanager.engine.interfaces.Module;
-import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
-import com.gpteam.shopmanager.engine.modules.text_handler.Libraries.EN;
-import com.gpteam.shopmanager.engine.modules.text_handler.Libraries.PL;
+import com.gpteam.shopmanager.game.engine.interfaces.Module;
+import com.gpteam.shopmanager.game.engine.modules.error_handler.ErrorHandler;
+import com.gpteam.shopmanager.game.engine.modules.text_handler.Libraries.EN;
+import com.gpteam.shopmanager.game.engine.modules.text_handler.Libraries.PL;
 
 /**
  * Created by masmix on 18.01.2017.
@@ -43,7 +43,7 @@ public final class TextHandler implements Module {
                 languageMap.get(language).getDeclaredMethod("initialize").invoke(null);
             }
             catch (Exception e) {
-                com.gpteam.shopmanager.engine.modules.text_handler.Libraries.EN.initialize();
+                com.gpteam.shopmanager.game.engine.modules.text_handler.Libraries.EN.initialize();
                 e.printStackTrace();
             }
         }

@@ -1,6 +1,6 @@
-package com.gpteam.shopmanager.engine.modules.logger;
+package com.gpteam.shopmanager.game.engine.modules.logger;
 
-import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
+import com.gpteam.shopmanager.game.engine.modules.error_handler.ErrorHandler;
 
 import java.util.ArrayList;
 

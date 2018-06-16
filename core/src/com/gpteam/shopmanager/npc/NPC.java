@@ -1,7 +1,7 @@
 package com.gpteam.shopmanager.npc;
 
 import com.gpteam.shopmanager.character.CharacterInfo;
-import com.gpteam.shopmanager.engine.modules.random_generator.RandGen;
+import com.gpteam.shopmanager.game.engine.modules.random_generator.RandGen;
 import com.gpteam.shopmanager.needs.NeedTypes;
 import com.gpteam.shopmanager.npc.ai.AI;
 import com.gpteam.shopmanager.needs.Needs;

@@ -1,6 +1,6 @@
 package com.gpteam.shopmanager.product;
 
-import com.gpteam.shopmanager.engine.modules.text_handler.Text;
+import com.gpteam.shopmanager.game.engine.modules.text_handler.Text;
 import com.gpteam.shopmanager.time.Date;
 
 import java.math.BigDecimal;

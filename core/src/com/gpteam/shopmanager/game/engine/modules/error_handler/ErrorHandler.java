@@ -1,7 +1,6 @@
-package com.gpteam.shopmanager.engine.modules.error_handler;
+package com.gpteam.shopmanager.game.engine.modules.error_handler;
 
-import com.gpteam.shopmanager.engine.interfaces.Module;
-import com.sun.tracing.dtrace.ModuleName;
+import com.gpteam.shopmanager.game.engine.interfaces.Module;
 
 import java.util.NoSuchElementException;
 

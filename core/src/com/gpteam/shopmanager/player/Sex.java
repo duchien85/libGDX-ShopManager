@@ -1,6 +1,6 @@
 package com.gpteam.shopmanager.player;
 
-import com.gpteam.shopmanager.engine.modules.text_handler.Text;
+import com.gpteam.shopmanager.game.engine.modules.text_handler.Text;
 
 /*
  * Created by masmix on 16.01.2017.
