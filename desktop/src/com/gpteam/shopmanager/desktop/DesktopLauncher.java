@@ -2,7 +2,7 @@ package com.gpteam.shopmanager.desktop;
 
 import com.badlogic.gdx.backends.lwjgl.LwjglApplication;
 import com.badlogic.gdx.backends.lwjgl.LwjglApplicationConfiguration;
-import com.gpteam.shopmanager.screens.ShopManagerGame;
+import com.gpteam.shopmanager.screens.Game;
 
 public class DesktopLauncher {
 	public static void main (String[] arg) {
@@ -12,6 +12,6 @@ public class DesktopLauncher {
 		config.resizable = false;
 		config.title = "Shop Manager v0.1";
 
-		new LwjglApplication(new ShopManagerGame(), config);
+		new LwjglApplication(new Game(), config);
 	}
 }

@@ -5,17 +5,17 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 
 public class MenuScreen implements Screen {
-    private ShopManagerGame shopManagerGame;
+    final Game game;
 
-    MenuScreen(ShopManagerGame shopManagerGame) {
-        this.shopManagerGame = shopManagerGame;
+    MenuScreen(final Game game) {
+        this.game = game;
     }
 
     @Override
     public void render(float delta) {
         Gdx.gl.glClearColor(1, 1, 1, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
-        shopManagerGame.fpsLogger.log();
+        game.fpsLogger.log();
 
         updateScene();
         drawScene();

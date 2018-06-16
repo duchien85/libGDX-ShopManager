@@ -7,6 +7,4 @@ public enum Screen {
 
     // Game screens
     GAME
-
-    public
 }
