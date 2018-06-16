@@ -4,7 +4,7 @@ import android.os.Bundle;
 
 import com.badlogic.gdx.backends.android.AndroidApplication;
 import com.badlogic.gdx.backends.android.AndroidApplicationConfiguration;
-import com.gpteam.shopmanager.screens.Game;
+import com.gpteam.shopmanager.screens.ShopManagerGame;
 
 public class AndroidLauncher extends AndroidApplication {
 	@Override
@@ -18,6 +18,6 @@ public class AndroidLauncher extends AndroidApplication {
 		config.useWakelock = true;
 		config.hideStatusBar = true;
 
-		initialize(new Game(), config);
+		initialize(new ShopManagerGame(), config);
 	}
 }
