@@ -11,7 +11,7 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.gpteam.shopmanager.game.engine.Engine;
 import com.gpteam.shopmanager.society.SocietyClass;
 
-public class ShopManager extends Game {
+public class Game extends com.badlogic.gdx.Game {
     public SpriteBatch batch;
     public OrthographicCamera camera;
     public FPSLogger fpsLogger;
@@ -23,7 +23,7 @@ public class ShopManager extends Game {
 
     // TODO add materials to the game from which the products are created - adds the possibility for the use to own a producer company
 
-    public ShopManager() {
+    public Game() {
         camera = new OrthographicCamera();
         fpsLogger = new FPSLogger();
         assetManager = new AssetManager();

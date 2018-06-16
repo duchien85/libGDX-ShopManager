@@ -1,6 +1,6 @@
 package com.gpteam.shopmanager.deprecated.money;
 
-import com.gpteam.shopmanager.engine.modules.error_handler.ErrorHandler;
+import com.gpteam.shopmanager.game.engine.modules.error_handler.ErrorHandler;
 
 /*
  * Created by masmix on 23.12.2016.

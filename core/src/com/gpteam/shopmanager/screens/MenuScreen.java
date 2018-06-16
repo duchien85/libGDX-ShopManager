@@ -5,9 +5,9 @@ import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 
 public class MenuScreen implements Screen {
-    private ShopManager game;
+    private Game game;
 
-    MenuScreen(ShopManager game) {
+    MenuScreen(Game game) {
         this.game = game;
     }
 
