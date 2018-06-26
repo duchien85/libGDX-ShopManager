@@ -18,4 +18,24 @@ public abstract class Money {
     public static BigDecimal toBigDecimal(String value) {
         return new BigDecimal(value).setScale(Variables.MONEY_SCALE, BigDecimal.ROUND_HALF_UP);
     }
+
+    public static boolean isLess(BigDecimal bigDecimal, BigDecimal otherBigDecimal) {
+        return bigDecimal.compareTo(otherBigDecimal) == -1;
+    }
+
+    public static boolean isGreater(BigDecimal bigDecimal, BigDecimal otherBigDecimal) {
+        return bigDecimal.compareTo(otherBigDecimal) == 1;
+    }
+
+    public static boolean isEqual(BigDecimal bigDecimal, BigDecimal otherBigDecimal) {
+        return bigDecimal.compareTo(otherBigDecimal) == 0;
+    }
+
+    public static boolean isEqualOrGreater(BigDecimal bigDecimal, BigDecimal otherBigDecimal) {
+        return isEqual(bigDecimal, otherBigDecimal) && isGreater(bigDecimal, otherBigDecimal);
+    }
+
+    public static boolean isEqualOrLess(BigDecimal bigDecimal, BigDecimal otherBigDecimal) {
+        return isEqual(bigDecimal, otherBigDecimal) && isLess(bigDecimal, otherBigDecimal);
+    }
 }
