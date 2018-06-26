@@ -1,6 +1,5 @@
 package com.gpteam.shopmanager.product;
 
-import com.gpteam.shopmanager.game.engine.modules.text_handler.Text;
 import com.gpteam.shopmanager.time.Date;
 
 import java.math.BigDecimal;
@@ -57,15 +56,19 @@ public abstract class Product {
     }
 
     public void setPrice(String price) {
-        this.price = new BigDecimal(price).setScale(MONEY_SCALE, BigDecimal.ROUND_HALF_UP);;
+        this.price = toBigDecimal(price);
     }
 
-    public void addPrice(String amount) {
-        price = price.add(new BigDecimal(amount)).setScale(MONEY_SCALE, BigDecimal.ROUND_HALF_UP);;
+    public void addPrice(String value) {
+        price = price.add(toBigDecimal(value));
     }
 
-    public void subPrice(String amount) {
-        price = price.subtract(new BigDecimal(amount)).setScale(MONEY_SCALE, BigDecimal.ROUND_HALF_UP);;
+    public void subPrice(String value) {
+        price = price.subtract(toBigDecimal(value));
+    }
+
+    private BigDecimal toBigDecimal(String value) {
+        return new BigDecimal(value).setScale(MONEY_SCALE, BigDecimal.ROUND_HALF_UP);
     }
 
     public int getQuality() {
