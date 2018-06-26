@@ -1,5 +1,6 @@
 package com.gpteam.shopmanager.product;
 
+import com.gpteam.shopmanager.player.Money;
 import com.gpteam.shopmanager.time.Date;
 
 import java.math.BigDecimal;
@@ -56,28 +57,15 @@ public abstract class Product {
     }
 
     public void setPrice(String price) {
-        this.price = toBigDecimal(price);
+        this.price = Money.toBigDecimal(price);
     }
 
     public void addPrice(String value) {
-        price = price.add(toBigDecimal(value));
+        price = price.add(Money.toBigDecimal(value));
     }
 
     public void subPrice(String value) {
-        price = price.subtract(toBigDecimal(value));
-    }
-
-    /**
-     * Instantiates and returns a BigDecimal object from the given value. Sets the scale
-     * and rounding mode to class default.
-     *
-     * <p>Scale: {@link com.gpteam.shopmanager.variables.Variables#MONEY_SCALE}
-     * <p>Rounding Mode: {@link BigDecimal#ROUND_HALF_UP}
-     * @param value the value that the object will have
-     * @return new BigDecimal object set to the given value
-     */
-    private BigDecimal toBigDecimal(String value) {
-        return new BigDecimal(value).setScale(MONEY_SCALE, BigDecimal.ROUND_HALF_UP);
+        price = price.subtract(Money.toBigDecimal(value));
     }
 
     public int getQuality() {
