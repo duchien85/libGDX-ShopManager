@@ -11,6 +11,8 @@ import com.gpteam.shopmanager.skill.SkillLogic;
 import com.gpteam.shopmanager.deprecated.traffic.TrafficHandler;
 import com.gpteam.shopmanager.time.Time;
 
+import java.math.BigDecimal;
+
 /*
  * Created by masmix on 04.02.2017.
  */
@@ -64,6 +66,10 @@ public final class Variables {
     public static final float MAX_ECONOMY_BAR_VALUE = 5.0f;
     public static final float MIN_ECONOMY_BAR_VALUE = 0.0f;
 
-    /** Scale for BigDecimal objects that deal with money */
+
+    /** Game default scale for classes that deal with money.
+     *  Use, when calling {@link BigDecimal#setScale(int, int)}*/
     public static final int MONEY_SCALE = 2;
+    /** Rounding mode for classes involved with BigDecimal objects*/
+    public static final int ROUNDING_MODE = BigDecimal.ROUND_HALF_UP;
 }
