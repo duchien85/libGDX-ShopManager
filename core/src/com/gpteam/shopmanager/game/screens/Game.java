@@ -1,7 +1,5 @@
-package com.gpteam.shopmanager.screens;
+package com.gpteam.shopmanager.game.screens;
 
-import com.badlogic.gdx.ApplicationAdapter;
-import com.badlogic.gdx.ApplicationListener;
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
 import com.badlogic.gdx.graphics.FPSLogger;
@@ -11,7 +9,6 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.gpteam.shopmanager.game.engine.Engine;
-import com.gpteam.shopmanager.society.SocietyClass;
 
 public class Game extends com.badlogic.gdx.Game {
     public Engine engine;
@@ -61,6 +58,9 @@ public class Game extends com.badlogic.gdx.Game {
     public void render() {
         super.render();
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+
+        updateScene();
+        drawScene();
 
         fpsLogger.log();
     }

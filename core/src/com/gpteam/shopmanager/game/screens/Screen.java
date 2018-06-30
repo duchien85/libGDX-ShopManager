@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.screens;
+package com.gpteam.shopmanager.game.screens;
 
 public enum Screen {
     // Menu screens

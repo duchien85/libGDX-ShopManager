@@ -2,7 +2,9 @@ package com.gpteam.shopmanager.advertising;
 
 import com.gpteam.shopmanager.game.engine.modules.error_handler.ErrorHandler;
 import com.gpteam.shopmanager.game.engine.modules.text_handler.Text;
+import com.gpteam.shopmanager.money.Money;
 import com.gpteam.shopmanager.society.SocietyClass;
+import com.gpteam.shopmanager.variables.Variables;
 
 import java.math.BigDecimal;
 import java.math.MathContext;
@@ -116,6 +118,13 @@ final class AdSource {
 
         this.funds = new BigDecimal(funds, new MathContext(30, RoundingMode.HALF_UP));
         this.funds = this.funds.setScale(MONEY_SCALE, BigDecimal.ROUND_HALF_UP);
+    }
+
+    private BigDecimal subtractFunds(String funds) {
+        BigDecimal currentFunds = new BigDecimal(this.funds.toString());
+        currentFunds = currentFunds.subtract(Money.toBigDecimal(funds));
+        currentFunds = currentFunds.setScale(Variables.MONEY_SCALE, Variables.ROUNDING_MODE);
+        return currentFunds;
     }
 
     BigDecimal getFunds() {

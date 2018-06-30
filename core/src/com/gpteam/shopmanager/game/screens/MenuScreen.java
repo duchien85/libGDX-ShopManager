@@ -1,21 +1,27 @@
-package com.gpteam.shopmanager.screens;
+package com.gpteam.shopmanager.game.screens;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
+import com.badlogic.gdx.graphics.OrthographicCamera;
 
 public class MenuScreen implements Screen {
     final Game game;
+    private OrthographicCamera camera;
 
     MenuScreen(final Game game) {
         this.game = game;
+        camera = game.camera;
     }
 
     @Override
     public void render(float delta) {
         Gdx.gl.glClearColor(1, 1, 1, 1);
         Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
+        camera.update();
+
         game.fpsLogger.log();
+        game.batch.setProjectionMatrix(camera.combined);
 
         updateScene();
         drawScene();
@@ -25,6 +31,9 @@ public class MenuScreen implements Screen {
     }
 
     private void drawScene() {
+        game.batch.begin();
+
+        game.batch.end();
     }
 
     @Override

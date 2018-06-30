@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.deprecated.money;
+package com.gpteam.shopmanager.money;
 
 import com.gpteam.shopmanager.game.engine.modules.error_handler.ErrorHandler;
 
