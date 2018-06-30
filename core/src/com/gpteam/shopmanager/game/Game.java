@@ -1,4 +1,4 @@
-package com.gpteam.shopmanager.game.screens;
+package com.gpteam.shopmanager.game;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.assets.AssetManager;
@@ -9,6 +9,7 @@ import com.badlogic.gdx.graphics.g2d.BitmapFont;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.badlogic.gdx.utils.viewport.Viewport;
 import com.gpteam.shopmanager.game.engine.Engine;
+import com.gpteam.shopmanager.game.screens.menu_screen.MenuScreen;
 
 public class Game extends com.badlogic.gdx.Game {
     public Engine engine;
