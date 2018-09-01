@@ -5,6 +5,6 @@ public enum Screen {
     MAIN_MENU,
     OPTIONS,
 
-    // Game screens
+    // ShopManager screens
     GAME
 }

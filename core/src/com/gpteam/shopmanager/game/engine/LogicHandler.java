@@ -3,13 +3,14 @@ package com.gpteam.shopmanager.game.engine;
 import com.gpteam.shopmanager.advertising.Advertising;
 import com.gpteam.shopmanager.city.City;
 import com.gpteam.shopmanager.economy.Economy;
+import com.gpteam.shopmanager.game.ShopManager;
 import com.gpteam.shopmanager.game.engine.modules.game_date.GameDate;
 import com.gpteam.shopmanager.time.Time;
 
 /*
  * Created by masmix on 07.02.2017.
  */
-public final class Engine {
+public class LogicHandler {
     private City[] cities;
 
     public Economy economy;
@@ -17,10 +18,7 @@ public final class Engine {
     public Time time;
     public static int citizens;
     
-    public static final int MAX_CITIES = 3;
-    public static final int DEFAULT_CITIES = 2;
-    
-    public Engine() {
+    public LogicHandler() {
         initialize();
         cities = new City[2];
     }
@@ -29,8 +27,8 @@ public final class Engine {
     * Constructor with variable amount of cities, up to a maximum
     * of 3.
     */
-    public Engine(City... cities) {
-        if (cities.length > MAX_CITIES)
+    public LogicHandler(City... cities) {
+        if (cities.length > ShopManager.MAX_CITIES)
             throw new IllegalArgumentException("msg");
         this.cities = cities;
     }

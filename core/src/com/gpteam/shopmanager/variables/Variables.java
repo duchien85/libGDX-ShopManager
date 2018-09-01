@@ -67,7 +67,7 @@ public final class Variables {
     public static final float MIN_ECONOMY_BAR_VALUE = 0.0f;
 
 
-    /** Game default scale for classes that deal with money.
+    /** ShopManager default scale for classes that deal with money.
      *  Use, when calling {@link BigDecimal#setScale(int, int)}*/
     public static final int MONEY_SCALE = 2;
     /** Rounding mode for classes involved with BigDecimal objects*/
