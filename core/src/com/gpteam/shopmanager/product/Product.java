@@ -1,6 +1,6 @@
 package com.gpteam.shopmanager.product;
 
-import com.gpteam.shopmanager.player.Money;
+import com.gpteam.shopmanager.money.Money;
 import com.gpteam.shopmanager.time.Date;
 
 import java.math.BigDecimal;
