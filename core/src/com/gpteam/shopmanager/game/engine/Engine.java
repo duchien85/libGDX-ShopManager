@@ -29,6 +29,7 @@ public final class Engine {
     * Constructor with variable amount of cities, up to a maximum
     * of 3.
     */
+    // TODO separate, so no variable arguments
     public Engine(City... cities) {
         if (cities.length > MAX_CITIES)
             throw new IllegalArgumentException("msg");
