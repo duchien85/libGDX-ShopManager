@@ -29,6 +29,9 @@ public class LogicHandler {
     */
     public LogicHandler(City... cities) {
         if (cities.length > ShopManager.MAX_CITIES)
+    // TODO separate, so no variable arguments
+    public Engine(City... cities) {
+        if (cities.length > MAX_CITIES)
             throw new IllegalArgumentException("msg");
         this.cities = cities;
     }

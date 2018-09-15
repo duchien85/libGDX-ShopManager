@@ -61,6 +61,7 @@ final class AdSource {
         this.MAX_FUNDS = MAX_FUNDS;
     }
     
+    // TODO rework. getInstance shouldn't make new instance
     public static AdSource getNewspaperInstance() {
         return new AdSource(AdSourceEnum.NEWSPAPER, Text.newspaper, MAX_NEWSPAPER_FUNDS);
     }
