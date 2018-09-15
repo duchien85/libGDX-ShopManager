@@ -10,7 +10,9 @@ import java.util.NoSuchElementException;
  * <p>ErrorHandler handles error throwing. The puropose of every single method in this class is to
  * handle exception throwing in a clean way. Every method takes a single {@code String} variable -
  * {@code message}.
+ * @deprecated bad design
  */
+@Deprecated
 public final class ErrorHandler implements Module {
     private ErrorHandler() {
 	ErrorHandler.handleUnsupportedOperationException("msg");
